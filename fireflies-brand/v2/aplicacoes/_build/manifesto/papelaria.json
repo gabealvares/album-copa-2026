@@ -1,0 +1,72 @@
+[
+ {
+  "rel": "papelaria/cartao-visita_frente",
+  "w": 96,
+  "h": 56,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "papelaria/cartao-visita_90x50mm_sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "papelaria/cartao-visita_verso",
+  "w": 96,
+  "h": 56,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "papelaria/cartao-visita_90x50mm_sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "papelaria/envelope-dl_frente",
+  "w": 220,
+  "h": 110,
+  "unit": "mm",
+  "print": false,
+  "bleed": 0,
+  "pdf": "papelaria/envelope-dl_220x110mm",
+  "png": true
+ },
+ {
+  "rel": "papelaria/envelope-dl_verso-aba",
+  "w": 220,
+  "h": 110,
+  "unit": "mm",
+  "print": false,
+  "bleed": 0,
+  "pdf": "papelaria/envelope-dl_220x110mm",
+  "png": true
+ },
+ {
+  "rel": "papelaria/pasta-A4_frente",
+  "w": 226,
+  "h": 316,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "papelaria/cracha_54x86mm",
+  "w": 60,
+  "h": 92,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "papelaria/certificado-academy_A4-paisagem",
+  "w": 303,
+  "h": 216,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ }
+]

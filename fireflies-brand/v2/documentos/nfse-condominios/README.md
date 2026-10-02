@@ -6,23 +6,24 @@ Recriação do artigo "Novidades da Receita em 01/10/2026: condomínios ganham c
 | arquivo | o que é |
 |---|---|
 | `index.html` | artigo web interativo e autocontido: CSS, JS, sprite de ícones e SVGs do logo inline. As fontes vêm do Google Fonts, com cópia local em `assets/fonts/` |
-| `nfse-condominios.pdf` | versão A4 gerada do mesmo HTML (CSS `@media print`), com 16 páginas |
-| `previews/` | PNG das páginas 1, 2, 4 e da última |
+| `nfse-condominios.pdf` | **versão impressa editorial**, com 17 páginas A4 compostas à mão e sangria total (`_build/impresso.html`) |
+| `previews/` | `impresso-p01…p17.png` (todas as páginas) e `impresso-spread.png` (prancha com as miniaturas) |
 | `assets/` | cópias do que foi usado: `logo/` (sistema final), `icones/`, `condominios-sem-letras.svg` (constelação Domus) e `fonts/` |
 | `_build/fonte.html` | fonte editável, com marcadores `<!--SPRITE-->`, `<!--LOGO-->` etc. |
-| `_build/montar.js` | monta o `index.html` e gera o PDF e os previews |
+| `_build/montar.js` | monta o `index.html` (versão web) |
+| `_build/impresso.html` | fonte da versão impressa: cada `<section class="page">` é uma página A4 fixa (210 × 297 mm, `overflow:hidden`) |
+| `_build/impresso.js` | injeta ícones, logo e constelações, numera as páginas e o sumário, alinha as notas da NFS-e, gera o PDF, os PNGs e a prancha. Também imprime um relatório de colisões por página |
 
 ## Como regerar
 ```bash
 cd fireflies-brand/v2/documentos/nfse-condominios
-node _build/montar.js            # index.html + nfse-condominios.pdf + previews/
-node _build/montar.js --sem-pdf  # só o index.html
+node _build/montar.js     # index.html (web)
+node _build/impresso.js   # nfse-condominios.pdf + previews/impresso-pNN.png + impresso-spread.png
 ```
-Edite sempre o `_build/fonte.html`, não o `index.html`.
-
-O script usa Playwright (`/opt/node22/lib/node_modules/playwright`): `page.emulateMedia({media:'print'})` e depois `page.pdf({format:'A4', printBackground:true, preferCSSPageSize:true})`. Os previews saem com `pdftoppm` (poppler).
-
-Para gerar pelo navegador, use Imprimir → Salvar como PDF → A4, com "Gráficos de fundo" ligado. As margens e o rodapé vêm do CSS.
+- **Web:** edite `_build/fonte.html`, nunca o `index.html`.
+- **Impresso:** edite `_build/impresso.html`. Ao mudar um texto, confira se a página ainda cabe: o conteúdo de cada página é composto à mão e o excedente é cortado, não flui para a seguinte.
+- **PDF:** sai com Playwright (`/opt/node22/lib/node_modules/playwright`), usando `page.pdf({ width:'210mm', height:'297mm', printBackground:true, margin:0, preferCSSPageSize:true })`. Os PNGs saem com `pdftoppm` (poppler).
+- O `@media print` do `index.html` continua lá, para quem imprimir o artigo direto do navegador, mas o PDF oficial é o paginado.
 
 ## Troca de marca
 - **Logo:** sai o Winker Pro e entra o sistema final "Órbita do vagalume", copiado de `../../logo/svg/`:
@@ -59,7 +60,32 @@ Para gerar pelo navegador, use Imprimir → Salvar como PDF → A4, com "Gráfic
 | Checklist dos 10 passos | Interativo, com progresso "x de 10" salvo em `localStorage` (protegido por try/catch). No PDF as caixas aparecem vazias |
 | Grafismo | 1 constelação Condomínios (Domus) no hero, com a lanterna em `currentColor` |
 
-## Impressão (A4)
+## Versão impressa editorial (v2, depois do feedback do cliente)
+O cliente pediu página inteira com fundos e cores, caixas e tabelas sem quebra e menos "cara de IA". O PDF virou uma peça paginada à mão, 17 páginas:
+
+| pág. | composição |
+|---|---|
+| 01 | Capa Anil sangrada, com retícula celeste a 38 %, constelação Domus grande saindo da página, logo negativo, título em Sora 700, autor (símbolo como avatar provisório), data e leitura |
+| 02 | Abertura em Branco: introdução; aviso em nota de margem; 99.05.01, 01/12/2026 e 60 como peças tipográficas, sem caixa; citação do Ato Conjunto nº 4 com fio Anil; sumário com nº de página |
+| 03, 06, 08, 10, 12, 14, 16 | Aberturas das seções 01–07: faixa ou meia página Anil sangrada, número enorme em contorno fino Céu de Anil, título em Sora 700 caixa alta e a constelação do tema (Libra Fisci, Domus, Ascensio, Ratio, Lens, Fluxus, Liber) |
+| 04 | A NFS-e como "documento dentro do documento" sobre Cal: folha branca com campos rotulados A–F, fios pontilhados de preenchimento, total de R$ 935,00 e as exigências como notas de margem alinhadas a cada grupo |
+| 05 | tpCobranca em 2 colunas; os 37 tpDetCobranca em 3 colunas numa página; tabela das siglas |
+| 06 | A pergunta do CMM fecha a seção 01 no alto da abertura da 02 |
+| 07 | Cal: "Em aberto" em fundo chapado; CPF / CNPJ / CIB tipográficos; base legal numa faixa branca |
+| 09 | Meios de pagamento e citação da NT em bloco Anil de 2/3 de página, com aspas âmbar |
+| 10–11 | "Nossa leitura" em faixa Anil com fio Vermelhão; pontos em aberto em linhas com fio; base legal (3 trechos) em faixa Cal |
+| 12–13 | Linha do tempo pontilhada; Emitir ≠ Pagar em faixa Cal; matriz 3 × 4 com ● Sim / ◐ Sim (tendência) / ○ Não + palavra; pendências; "Nossa orientação" em faixa Anil |
+| 14–15 | Checklist de 2 colunas com caixa quadrada e número grande em Sora |
+| 16–17 | Fontes numeradas (sem links: o original não trazia URLs); contracapa Anil sem fólio, com CTA, WhatsApp e a órbita do logo |
+
+Regras aplicadas:
+- **Grid:** 12 colunas sobre as margens do manual (25/22/25/20 mm). O texto ocupa 8 colunas e as notas de margem (Consulte na íntegra, aviso, base legal curta) ficam em Plex Mono 7 pt com fio Anil.
+- **Forma:** sem cantos arredondados, cards, pílulas ou ícones em círculo. Rótulos (NOVO, OBRIGATÓRIO, EM ABERTO) em Mono caixa alta com marcador de ponto.
+- **Cabeçalho e fólio:** cabeçalho corrido "NFS-e · Condomínios" e fólio "● NN / 17" com ponto âmbar em todas as páginas internas.
+- **Cor:** âmbar só na lanterna (logo ou constelação) e em 1 ou 2 marcadores por página. Rubrica e Vermelhão como acento quente.
+- **Paginação:** todas as tabelas e listas ficam inteiras numa página.
+
+## Impressão a partir do navegador (`index.html`, `@media print`)
 - Margens do manual: superior 25, inferior 22, esquerda 25 e direita 20 mm.
 - Rodapé em Mono 7,5 pt: fio Rubrica de 12 mm, "Fireflies Consultoria · Precisão que ilumina decisões." e "Página X de Y" (margin boxes do `@page`).
 - Acordeões abertos, busca e barra de progresso escondidas, caixas de checklist visíveis.
@@ -71,3 +97,4 @@ Para gerar pelo navegador, use Imprimir → Salvar como PDF → A4, com "Gráfic
 - **Fontes oficiais:** o PDF original não tinha os links dessas referências, então elas aparecem como lista sem link. Acrescente as URLs quando houver.
 - O "60 dias, ou 9 semanas, a partir de hoje" é texto fixo, como no original (referência: 02/10/2026).
 - No manual, o rodapé de documento formal pede CNPJ e CRC. Como isto é um artigo, e não um parecer, eles não foram incluídos.
+- **Impresso:** na capa, o avatar do autor também é o símbolo (comentário `PLACEHOLDER` no `impresso.html`). Na contracapa, "Assistir à live completa" aparece sem endereço (`<!-- TODO: link da live -->`). A nota de margem da pág. 03 ("Na versão impressa, o exemplo aparece aberto…") e os rótulos de seção ("Seção 01 · Leiaute" etc.) são textos de navegação da versão impressa, não conteúdo do artigo.

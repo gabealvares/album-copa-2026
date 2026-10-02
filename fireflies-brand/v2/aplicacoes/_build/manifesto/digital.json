@@ -1,0 +1,76 @@
+[
+ {
+  "rel": "digital/img/fireflies-logo-assinatura@2x",
+  "w": 184,
+  "h": 68,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/img/fireflies-logo-assinatura-placa@2x",
+  "w": 200,
+  "h": 84,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/assinatura-email_preview",
+  "w": 600,
+  "h": 250,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/og-image_1200x630",
+  "w": 1200,
+  "h": 630,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/linkedin-capa_4200x700",
+  "w": 4200,
+  "h": 700,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-capa_1128x191",
+  "w": 1128,
+  "h": 191,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/avatar_1080",
+  "w": 1080,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "digital/fundo-videochamada_1920x1080",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ }
+]

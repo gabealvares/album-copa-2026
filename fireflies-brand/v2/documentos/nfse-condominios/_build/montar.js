@@ -1,5 +1,5 @@
 // Monta index.html a partir de fonte.html (injeta sprite de ícones, logo e constelação inline)
-// e gera nfse-condominios.pdf + previews/. Uso: node _build/montar.js
+// Uso: node _build/montar.js  (o PDF é gerado por _build/impresso.js)
 const fs = require('fs'), path = require('path');
 const DIR = path.resolve(__dirname, '..');
 const A = p => fs.readFileSync(path.join(DIR, 'assets', p), 'utf8');
@@ -41,7 +41,8 @@ let html = fs.readFileSync(path.join(__dirname, 'fonte.html'), 'utf8')
 fs.writeFileSync(path.join(DIR, 'index.html'), html);
 console.log('index.html', (html.length / 1024).toFixed(0) + ' KB');
 
-if (process.argv.includes('--sem-pdf')) process.exit(0);
+// O PDF agora vem da versão paginada à mão (_build/impresso.js). Este script só monta o index.html.
+process.exit(0);
 
 const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 const { execSync } = require('child_process');

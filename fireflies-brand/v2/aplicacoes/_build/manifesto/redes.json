@@ -1,0 +1,83 @@
+[
+ {
+  "rel": "redes/instagram_01-manifesto",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/instagram_02-dado",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/instagram_03-dica-sindico",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/carrossel_01-capa",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/carrossel_02-interna",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/carrossel_03-interna",
+  "w": 1080,
+  "h": 1350,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/story_1080x1920",
+  "w": 1080,
+  "h": 1920,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-post_1200x1200",
+  "w": 1200,
+  "h": 1200,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-post_1200x627",
+  "w": 1200,
+  "h": 627,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ }
+]

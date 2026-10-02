@@ -23,7 +23,7 @@ let html = fs.readFileSync(path.join(B, 'impresso.html'), 'utf8')
   .replace(/<!--CONST:([a-z]+)-->/g, (m, n) => fit(A(n === 'condominios' ? 'condominios-sem-letras.svg' : 'constelacoes/' + n + '.svg')))
   .split('<!--S_Y-->').join(S_Y).split('<!--S_T-->').join(S_T).split('<!--S_N-->').join(S_N);
 // fólios e páginas do sumário
-const pages = html.split('<section class="page').length - 1;
+const pages = (html.match(/<section class="page[ "]/g) || []).length;
 let i = 0;
 html = html.replace(/<section class="page/g, m => (i++, m)).replace(/PAGE/g, () => '');
 const out = path.join(B, 'impresso.render.html');
@@ -37,7 +37,6 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
     const pgs = [...document.querySelectorAll('section.page')], pad = n => String(n).padStart(2, '0');
     // números de página
     pgs.forEach((pg, i) => pg.querySelectorAll('.folio .n').forEach(n => n.append(pad(i + 1) + ' / ' + pad(pgs.length))));
-    pgs.forEach((pg, i) => { const s = pg.dataset.sec; if (s) document.body.innerHTML = document.body.innerHTML; });
     const secs = {}; document.querySelectorAll('section.page').forEach((pg, i) => { if (pg.dataset.sec) secs[pg.dataset.sec] = pad(i + 1); });
     document.querySelectorAll('.src li span:last-child').forEach(el => { const m = el.textContent.match(/^PG(\d\d)$/); if (m) el.textContent = secs[m[1]]; });
     // anotações da NFS-e alinhadas aos grupos
@@ -61,7 +60,7 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
   await p.pdf({ path: pdf, width: '210mm', height: '297mm', printBackground: true, margin: { top: 0, right: 0, bottom: 0, left: 0 }, preferCSSPageSize: true });
   await b.close();
   const n = +execSync(`pdfinfo "${pdf}"`).toString().match(/Pages:\s+(\d+)/)[1];
-  console.log('PDF', n, 'páginas (esperado', pages + ')');
+  console.log('PDF', n, 'páginas');
   const prev = path.join(DIR, 'previews');
   fs.readdirSync(prev).filter(f => f.startsWith('impresso-') || f.startsWith('pagina-')).forEach(f => fs.unlinkSync(path.join(prev, f)));
   execSync(`pdftoppm -png -r 100 "${pdf}" "${prev}/impresso-p"`);
