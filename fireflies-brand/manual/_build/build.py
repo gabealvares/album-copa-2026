@@ -147,7 +147,7 @@ erros_html = "".join(f'<figure class="wrong">{b}<figcaption><span class="x" aria
 APP = ROOT / "aplicacoes"
 apps = []
 if APP.exists():
-    pngs = sorted(p for p in APP.rglob("*.png") if "_build" not in p.parts)
+    pngs = sorted(p for p in APP.rglob("*.png") if "_build" not in p.parts and "img" not in p.parts)
     for p in pngs:
         rel = p.relative_to(APP)
         if rel.name == "mockups.png":

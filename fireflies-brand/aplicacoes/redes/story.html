@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Story · 30 dias até a primeira luz</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* Área segura do Stories: 250 px livres no topo e 340 px na base (guia de aplicações 1.4) */
+  .peca { width: 1080px; height: 1920px; }
+  .bg { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+  .topo { position: absolute; left: 96px; top: 280px; }
+  h1 { position: absolute; left: 96px; top: 390px; width: 900px; font-size: 128px; }
+  .etapas { position: absolute; left: 96px; right: 96px; top: 700px; }
+  .etapa { position: relative; padding: 0 0 36px 92px; }
+  .etapa::before { content: ""; position: absolute; left: 21px; top: 30px; bottom: -6px; width: 2px; background: var(--c-line); }
+  .etapa:last-child::before { display: none; }
+  .no { position: absolute; left: 10px; top: 8px; width: 24px; height: 24px; border-radius: 50%; background: var(--ff-papel); opacity: .7; }
+  .etapa.acesa .no { background: var(--lit); opacity: 1; box-shadow: 0 0 0 10px var(--ff-noite), 0 0 0 12px rgba(217,242,74,.5); }
+  .quando { font-size: 22px; }
+  .etapa h2 { font-size: 50px; margin: 4px 0 4px; }
+  .etapa.acesa h2 { color: var(--lit); }
+  .etapa p { font-size: 28px; color: var(--muted); }
+  .cta { position: absolute; left: 96px; right: 96px; top: 1400px; }
+  .botao { display: flex; justify-content: space-between; align-items: center; background: var(--ff-vagalume); color: var(--ff-noite); border-radius: 999px; padding: 30px 44px; font-family: var(--ff-font-body); font-weight: 600; font-size: 38px; }
+  .botao svg { width: 46px; height: 46px; }
+  .zap { margin-top: 22px; font-size: 26px; text-align: center; color: var(--muted); }
+  
+</style></head>
+<body>
+<div class="peca noite">
+  <svg class="bg" data-ff="constelacao" data-w="1080" data-h="1920" data-seed="5" data-step="96" data-chains="5" data-len="5" data-stars="14" data-r="4.5" data-sw="1.75" data-region="0.05,0.84,0.95,0.99" data-lit="0.7,0.9"></svg>
+  <img class="logo topo" src="../../logo/svg/fireflies_logo_horizontal_negativo.svg" style="width:260px" alt="Fireflies Consultoria">
+  <h1 class="display">30 dias até a primeira <span class="lit">luz.</span></h1>
+  <div class="etapas">
+    <div class="etapa"><span class="no"></span><div class="rotulo muted quando">Semana 1</div><h2 class="sub">Diagnóstico</h2><p class="corpo">Gratuito. A gente levanta contas, documentos e pendências.</p></div>
+    <div class="etapa"><span class="no"></span><div class="rotulo muted quando">Semanas 2 e 3</div><h2 class="sub">Organização</h2><p class="corpo">Base conciliada e plano de trabalho.</p></div>
+    <div class="etapa acesa"><span class="no"></span><div class="rotulo muted quando">Semana 4</div><h2 class="sub">Primeiro fechamento</h2><p class="corpo">O primeiro painel, explicado em reunião.</p></div>
+    <div class="etapa"><span class="no"></span><div class="rotulo muted quando">Todo mês</div><h2 class="sub">Rotina</h2><p class="corpo">Fechamento, painel e alertas, com o mesmo responsável.</p></div>
+  </div>
+  <div class="cta">
+    <div class="botao">Agende o diagnóstico gratuito
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13.5 6l6 6-6 6"/></svg></div>
+    <div class="mono zap">WhatsApp +55 11 98245-0527</div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

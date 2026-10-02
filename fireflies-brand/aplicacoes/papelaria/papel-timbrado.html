@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Papel timbrado A4 · Fireflies Consultoria</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* A4 210×297 mm, uso digital (P0) e impressão em escritório: sem sangria, nada a menos de 12 mm da borda.
+     Margens do texto: 25 mm laterais, área útil entre o cabeçalho (45 mm) e o rodapé (30 mm). */
+  @page { size: 210mm 297mm; margin: 0; }
+  .folha { width: 210mm; height: 297mm; background: #fff; }
+  .corte { left: 0; top: 0; width: 210mm; height: 297mm; }
+  .cab { position: absolute; left: 25mm; right: 25mm; top: 18mm; display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 6mm; border-bottom: .3mm solid var(--ff-linha); }
+  .cab img { width: 48mm; }
+  .cab .id { text-align: right; font-size: 6.5pt; line-height: 1.7; color: var(--muted); }
+  .carta { position: absolute; left: 25mm; top: 52mm; width: 150mm; font-size: 10.5pt; line-height: 1.55; color: var(--ff-tinta); }
+  .carta p { margin-bottom: 3.6mm; }
+  .carta .data { color: var(--muted); margin-bottom: 8mm; }
+  .carta .dest { margin-bottom: 7mm; }
+  .carta .assunto { font-weight: 600; margin-bottom: 7mm; }
+  .carta .ass { margin-top: 12mm; }
+  .carta .ass b { font-family: var(--ff-font-display); font-weight: 700; font-size: 12pt; letter-spacing: -0.01em; }
+  .carta .ass small { display: block; font-size: 9pt; color: var(--muted); }
+  .rod { position: absolute; left: 25mm; right: 25mm; bottom: 14mm; padding-top: 4mm; border-top: .3mm solid var(--ff-linha); display: grid; grid-template-columns: 1.25fr 1.2fr .9fr; gap: 6mm; font-size: 7pt; line-height: 1.6; color: var(--muted); }
+  .rod b { color: var(--ff-tinta); font-weight: 600; }
+  .rod .tag { text-align: right; }
+  .rod .tag b { font-family: var(--ff-font-display); font-weight: 600; }
+  .cons { position: absolute; right: 12mm; bottom: 34mm; width: 46mm; height: 30mm; }
+</style></head>
+<body>
+<div class="folha papel">
+  <div class="corte">
+    <div class="cab">
+      <img class="logo" src="../../logo/svg/fireflies_logo_horizontal_positivo.svg" alt="Fireflies Consultoria">
+      <div class="mono id">CONSULTORIA FINANCEIRA,<br>CONTÁBIL E FISCAL · SÃO PAULO</div>
+    </div>
+
+    <!-- Corpo de exemplo: substitua pelo texto do documento -->
+    <div class="carta corpo">
+      <p class="data">São Paulo, 2 de outubro de 2026</p>
+      <p class="dest">Ao Conselho Fiscal do Condomínio [Nome do condomínio]<br>A/C [Nome do síndico ou da síndica]</p>
+      <p class="assunto">Assunto: proposta de auditoria da prestação de contas de 2025</p>
+      <p>Prezados conselheiros,</p>
+      <p>Conforme conversamos em reunião, apresentamos a proposta de auditoria das contas do condomínio referentes ao exercício de 2025. O trabalho confere receitas, despesas, fundo de reserva, inadimplência e contratos com fornecedores, e termina com um relatório executivo escrito para o conselho, em linguagem clara.</p>
+      <p>O cronograma segue o nosso método de 30 dias: diagnóstico na primeira semana, organização e conciliação da base nas semanas 2 e 3 e entrega do relatório na quarta semana, com uma reunião para apresentar os achados antes da assembleia.</p>
+      <p>Cada etapa tem um responsável nomeado. Ficamos à disposição para esclarecer qualquer ponto pelo WhatsApp ou por e-mail.</p>
+      <p>Atenciosamente,</p>
+      <p class="ass"><b>Gabriel Alvares</b><small>Fundador e contador responsável · CRC-SP [a confirmar]</small></p>
+    </div>
+
+    <div class="rod">
+      <div><b>Fireflies Consultoria</b><br>Gabriel Alvares · Contador responsável<br>CRC-SP [a confirmar]</div>
+      <div>WhatsApp +55 11 98245-0527<br>contato@fireflies.com.br<br>Seg. a sex., das 8h às 18h</div>
+      <div class="tag"><b>Precisão que ilumina decisões.</b><br>fireflies.com.br</div>
+    </div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

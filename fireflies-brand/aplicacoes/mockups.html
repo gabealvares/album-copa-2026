@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Prancha de aplicações · Fireflies Consultoria</title>
+<link rel="stylesheet" href="_build/base.css">
+<style>
+  /* Prancha-resumo para o manual. Usa os PNGs exportados: rode render.js antes. */
+  body { background: var(--ff-papel); }
+  .prancha { width: 3200px; padding: 140px 140px 120px; background: var(--ff-papel); color: var(--ff-tinta); font-family: var(--ff-font-body); --lit: var(--ff-oliva); --muted: var(--ff-pedra); }
+  header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 48px; border-bottom: 2px solid var(--ff-linha); margin-bottom: 72px; }
+  header h1 { font-size: 112px; }
+  header .eyebrow { font-size: 26px; margin-bottom: 26px; }
+  header img { width: 460px; }
+  h2 { font-family: var(--ff-font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: .12em; font-size: 24px; color: var(--ff-pedra); margin: 0 0 28px; }
+  .linha { display: flex; gap: 40px; align-items: flex-end; margin-bottom: 80px; }
+  figure { margin: 0; }
+  figure img { display: block; border-radius: 6px; box-shadow: 0 0 0 1px rgba(14,23,38,.08), 0 12px 32px rgba(14,23,38,.12); }
+  figcaption { font-family: var(--ff-font-mono); font-size: 18px; color: var(--ff-pedra); margin-top: 16px; letter-spacing: .02em; }
+  figcaption b { color: var(--ff-tinta); font-weight: 500; }
+  .circ { border-radius: 50% !important; }
+  .mesa { background: #DCE1E1; border-radius: 10px; padding: 44px; display: flex; gap: 36px; align-items: center; }
+  footer { display: flex; justify-content: space-between; border-top: 2px solid var(--ff-linha); padding-top: 32px; font-family: var(--ff-font-mono); font-size: 20px; color: var(--ff-pedra); }
+</style></head>
+<body>
+<div class="prancha">
+  <header>
+    <div><div class="eyebrow">Sistema de identidade · aplicações</div><h1 class="titulo">Números em <span class="lit">sincronia.</span></h1></div>
+    <img class="logo" src="../logo/svg/fireflies_logo_horizontal_positivo.svg" alt="Fireflies Consultoria">
+  </header>
+
+  <h2>Redes · Instagram</h2>
+  <div class="linha">
+    <figure><img src="redes/post-manifesto.png" style="height:582px"><figcaption><b>Post manifesto</b> · 1080×1350</figcaption></figure>
+    <figure><img src="redes/post-dado.png" style="height:582px"><figcaption><b>Post dado</b> · 1080×1350</figcaption></figure>
+    <figure><img src="redes/post-dica-sindico.png" style="height:582px"><figcaption><b>Dica para síndico</b> · 1080×1350</figcaption></figure>
+    <figure><img src="redes/carrossel-01-capa.png" style="height:582px"><figcaption><b>Carrossel capa</b> · 1/7</figcaption></figure>
+    <figure><img src="redes/carrossel-02-interna.png" style="height:582px"><figcaption><b>Carrossel interna</b> · 2/7</figcaption></figure>
+    <figure><img src="redes/story.png" style="height:582px"><figcaption><b>Story</b> · 1080×1920</figcaption></figure>
+  </div>
+
+  <h2>Redes · LinkedIn e perfil  ·  Web</h2>
+  <div class="linha">
+    <figure><img src="redes/linkedin-post.png" style="height:460px"><figcaption><b>Post LinkedIn</b> · 1200×1200</figcaption></figure>
+    <figure><img class="circ" src="redes/avatar-1080.png" style="height:330px"><figcaption><b>Avatar</b> · 1080 (círculo)</figcaption></figure>
+    <figure><img src="web/og-image.png" style="height:460px"><figcaption><b>OG image</b> · 1200×630</figcaption></figure>
+    <figure><img src="web/assinatura-email-preview.png" style="height:230px;background:#fff"><figcaption><b>Assinatura de e-mail</b> · 600 px, HTML</figcaption></figure>
+  </div>
+  <div class="linha">
+    <figure><img src="redes/linkedin-capa.png" style="width:2920px"><figcaption><b>Capa LinkedIn</b> · 4200×700</figcaption></figure>
+  </div>
+
+  <h2>Papelaria</h2>
+  <div class="linha" style="align-items:center">
+    <div>
+      <div class="mesa">
+        <img src="papelaria/cartao-visita-frente.png" style="width:520px">
+        <img src="papelaria/cartao-visita-verso.png" style="width:520px">
+      </div>
+      <figcaption><b>Cartão de visita</b> · 90×50 mm + 3 mm de sangria</figcaption>
+    </div>
+    <figure><img src="papelaria/papel-timbrado.png" style="height:680px"><figcaption><b>Papel timbrado</b> · A4</figcaption></figure>
+    <figure><img src="papelaria/capa-relatorio-auditoria.png" style="height:680px"><figcaption><b>Capa do relatório de auditoria</b> · A4</figcaption></figure>
+  </div>
+  <h2 style="margin-top:0">Academy  ·  Apresentação</h2>
+  <div class="linha" style="align-items:flex-start">
+    <figure><img src="papelaria/certificado-academy.png" style="height:620px"><figcaption><b>Certificado Fireflies Academy</b> · A4 paisagem</figcaption></figure>
+    <figure><img src="apresentacao/slide-01-capa.png" style="height:288px"><figcaption><b>Slide capa</b></figcaption>
+      <img src="apresentacao/slide-02-divisor.png" style="height:288px;margin-top:24px"><figcaption><b>Divisor de seção</b></figcaption></figure>
+    <figure><img src="apresentacao/slide-03-conteudo-dado.png" style="height:288px"><figcaption><b>Conteúdo com dado</b> (tema claro)</figcaption>
+      <img src="apresentacao/slide-04-encerramento.png" style="height:288px;margin-top:24px"><figcaption><b>Encerramento</b> · slides 1920×1080</figcaption></figure>
+  </div>
+
+  <footer><span>Fireflies Consultoria · Precisão que ilumina decisões.</span><span>Números de exemplo marcados como "Dados de exemplo" · CRC-SP a confirmar</span></footer>
+</div>
+</body></html>

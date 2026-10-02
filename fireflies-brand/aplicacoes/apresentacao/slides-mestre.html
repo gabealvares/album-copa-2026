@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Slides-mestre · Fireflies Consultoria</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* 4 layouts-mestre 1920×1080 (16:9). Margem de 120 px. Corpo ≥ 28 px; no máximo 1 número por slide. */
+  @page { size: 1920px 1080px; margin: 0; }
+  .slide { position: relative; width: 1920px; height: 1080px; overflow: hidden; break-after: page; font-family: var(--ff-font-body); }
+  .slide:last-child { break-after: auto; }
+  .abs { position: absolute; }
+  .eyebrow { font-size: 24px; }
+  .pe { position: absolute; left: 120px; right: 120px; bottom: 64px; display: flex; justify-content: space-between; align-items: center; font-size: 18px; color: var(--muted); }
+
+  /* 1 · capa */
+  #s1 .orb { left: 1040px; top: 120px; width: 980px; height: 980px; }
+  #s1 .cons { left: 1180px; top: 250px; width: 600px; height: 560px; }
+  #s1 h1 { left: 120px; top: 360px; width: 1100px; font-size: 168px; }
+  #s1 .sub { left: 120px; top: 720px; width: 820px; font-family: var(--ff-font-body); font-weight: 400; letter-spacing: 0; font-size: 34px; line-height: 1.4; color: var(--muted); }
+  #s1 .ey { left: 120px; top: 300px; }
+
+  /* 2 · divisor */
+  #s2 { background: var(--ff-noite-funda); }
+  #s2 .num { left: 120px; top: 150px; font-size: 26px; }
+  #s2 h2 { left: 120px; top: 395px; font-size: 128px; white-space: nowrap; }
+  #s2 .sub { left: 120px; top: 600px; font-family: var(--ff-font-body); font-weight: 400; letter-spacing: 0; font-size: 36px; color: var(--muted); width: 760px; line-height: 1.4; }
+  #s2 .dias { right: 120px; top: 365px; width: 500px; }
+  #s2 .dias-leg { right: 120px; top: 545px; width: 500px; display: flex; justify-content: space-between; font-size: 20px; }
+
+  /* 3 · conteúdo com dado (tema claro, para projeção em assembleia) */
+  #s3 .ey { left: 120px; top: 110px; }
+  #s3 .exemplo { right: 120px; top: 104px; font-size: 18px; position: absolute; }
+  #s3 h2 { left: 120px; top: 170px; width: 1200px; font-size: 64px; }
+  #s3 .num { left: 120px; top: 380px; font-size: 220px; letter-spacing: -0.045em; color: var(--alert); }
+  #s3 .num small { font-size: 110px; }
+  #s3 .num-leg { left: 128px; top: 610px; font-size: 22px; }
+  #s3 .graf { left: 120px; top: 690px; width: 900px; }
+  #s3 .col { left: 1140px; top: 380px; width: 660px; }
+  #s3 .item { padding: 26px 0; border-top: 2px solid var(--rule); }
+  #s3 .item:last-child { border-bottom: 2px solid var(--rule); }
+  #s3 .item .rotulo { font-size: 18px; color: var(--muted); }
+  #s3 .item p { font-size: 30px; line-height: 1.35; margin-top: 8px; }
+  #s3 .item.ok .rotulo { color: var(--ff-oliva); }
+  #s3 .item.at .rotulo { color: var(--ff-brasa-escura); }
+
+  /* 4 · encerramento */
+  #s4 .ey { left: 120px; top: 170px; }
+  #s4 h2 { left: 120px; top: 230px; width: 1300px; font-size: 112px; }
+  #s4 .contatos { left: 120px; top: 540px; display: grid; grid-template-columns: 200px auto; row-gap: 18px; column-gap: 24px; font-size: 34px; align-items: baseline; }
+  #s4 .contatos .rotulo { font-size: 18px; color: var(--muted); }
+  #s4 .qr { right: 120px; top: 230px; width: 340px; }
+  #s4 .qr img { width: 340px; height: 340px; display: block; }
+  #s4 .qr div { margin-top: 20px; font-size: 20px; text-align: center; }
+  #s4 .cons { right: 0; bottom: 0; width: 820px; height: 360px; }
+</style></head>
+<body>
+
+<section class="slide noite" id="s1">
+  <svg class="abs orb" data-ff="orbita" data-size="980" data-a0="100" data-a1="300" data-sw="60"></svg>
+  <svg class="abs cons" data-ff="constelacao" data-w="600" data-h="560" data-seed="2" data-step="84" data-chains="4" data-len="5" data-stars="8" data-r="6" data-sw="2.2" data-region="0.08,0.08,0.92,0.92" data-lit="0.62,0.45"></svg>
+  <img class="logo abs" src="../../logo/svg/fireflies_logo_horizontal_negativo.svg" style="left:120px;top:100px;width:340px" alt="Fireflies Consultoria">
+  <div class="eyebrow abs ey">Apresentação institucional · 2026</div>
+  <h1 class="display abs">Números em <span class="lit">sincronia.</span></h1>
+  <p class="abs sub">Auditoria de condomínios, contabilidade, fiscal e finanças, com um contador responsável.</p>
+  <div class="pe mono"><span>Gabriel Alvares · Fundador e contador responsável · CRC-SP [a confirmar]</span><span>fireflies.com.br</span></div>
+</section>
+
+<section class="slide noite" id="s2">
+  <div class="eyebrow abs num">Seção 02</div>
+  <h2 class="display abs">Como trabalhamos</h2>
+  <p class="abs sub">30 dias até a primeira luz, em quatro etapas: diagnóstico, organização, primeiro fechamento e rotina.</p>
+  <svg class="abs dias" data-ff="grade" data-cols="10" data-rows="3" data-gap="60" data-r="9" data-lit="29"></svg>
+  <div class="abs dias-leg mono muted"><span>DIA 1</span><span>DIA 30 · PRIMEIRO FECHAMENTO</span></div>
+  <div class="pe mono"><span>Fireflies Consultoria</span><span>02</span></div>
+</section>
+
+<section class="slide papel" id="s3">
+  <div class="eyebrow abs ey">Auditoria · inadimplência</div>
+  <span class="exemplo">Dados de exemplo</span>
+  <h2 class="titulo abs">Três unidades concentram 70% do valor em aberto.</h2>
+  <div class="display abs num">9,0<small>%</small></div>
+  <div class="rotulo abs num-leg muted">Inadimplência em agosto de 2026</div>
+  <svg class="abs graf" data-ff="matriz" data-values="5.2,5.0,5.6,6.1,5.8,6.4,6.9,7.3,7.8,8.1,8.6,9.0" data-max="10" data-rows="10" data-cols="3" data-gap="13" data-r="4" data-bargap="30" data-on="all" data-alert="11" data-track="1"
+       data-labels="SET,OUT,NOV,DEZ,JAN,FEV,MAR,ABR,MAI,JUN,JUL,AGO" data-labsize="14"></svg>
+  <div class="abs col">
+    <div class="item"><div class="rotulo">O que mudou</div><p class="corpo">Alta de 0,4 ponto em relação a julho.</p></div>
+    <div class="item at"><div class="rotulo">● O que preocupa</div><p class="corpo">Três unidades com mais de 90 dias de atraso.</p></div>
+    <div class="item ok"><div class="rotulo">● O que está resolvido</div><p class="corpo">Acordo assinado com uma das unidades, com parcelas em dia.</p></div>
+  </div>
+  <img class="logo abs" src="../../logo/svg/fireflies_logo_condominios-horizontal_positivo.svg" style="left:120px;bottom:56px;width:220px" alt="Fireflies Consultoria · Condomínios">
+  <div class="mono abs" style="right:120px;bottom:72px;font-size:18px;color:var(--muted)">03</div>
+</section>
+
+<section class="slide noite" id="s4">
+  <svg class="abs cons" data-ff="constelacao" data-w="820" data-h="360" data-seed="9" data-step="80" data-chains="4" data-len="5" data-stars="10" data-r="5" data-sw="2" data-region="0.05,0.25,0.98,0.95"></svg>
+  <div class="eyebrow abs ey">Próximo passo</div>
+  <h2 class="titulo abs">Comece pelo diagnóstico.<br><span class="lit">É gratuito.</span></h2>
+  <div class="abs contatos">
+    <span class="rotulo">WhatsApp</span><span class="mono">+55 11 98245-0527</span>
+    <span class="rotulo">E-mail</span><span class="mono">contato@fireflies.com.br</span>
+    <span class="rotulo">Site</span><span class="mono">fireflies.com.br</span>
+    <span class="rotulo">Atendimento</span><span class="corpo muted" style="font-size:30px">Segunda a sexta, das 8h às 18h</span>
+  </div>
+  <div class="abs qr"><img src="../_build/qr/whatsapp-papel.svg" alt="QR para o WhatsApp"><div class="mono muted">Aponte a câmera</div></div>
+  <img class="logo abs" src="../../logo/svg/fireflies_logo_horizontal_negativo.svg" style="left:120px;bottom:72px;width:300px" alt="Fireflies Consultoria">
+  <div class="corpo abs" style="left:470px;bottom:86px;font-size:24px;color:var(--muted)">Precisão que ilumina decisões.</div>
+</section>
+
+<script src="../_build/elementos.js"></script>
+</body></html>

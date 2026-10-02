@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Carrossel · Capa</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  .peca { width: 1080px; height: 1350px; }
+  .topo { position: absolute; left: 88px; right: 88px; top: 96px; display: flex; justify-content: space-between; align-items: center; font-size: 22px; }
+  .pag { font-size: 22px; }
+  .cinco { position: absolute; left: 88px; top: 200px; width: 270px; }
+  .orb { position: absolute; width: 760px; height: 760px; left: -150px; top: 70px; }
+  h1 { position: absolute; left: 88px; top: 720px; width: 900px; font-size: 96px; }
+  .rodape { position: absolute; left: 88px; right: 88px; bottom: 88px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .arraste { font-size: 24px; color: var(--fg); display: flex; align-items: center; gap: 16px; }
+  .arraste svg { width: 40px; height: 40px; color: var(--lit); }
+  .bg { position: absolute; right: 0; top: 160px; width: 560px; height: 520px; }
+</style></head>
+<body>
+<div class="peca noite">
+  <svg class="bg" data-ff="constelacao" data-w="560" data-h="520" data-seed="21" data-step="92" data-chains="4" data-len="5" data-stars="10" data-r="5" data-sw="2" data-region="0.2,0.05,1,0.95" data-lit="0.62,0.48"></svg>
+  <div class="topo"><span class="eyebrow">Condomínio em sincronia</span><span class="mono pag muted">1/7</span></div>
+  <svg class="cinco" data-ff="glifo" data-gap="60" data-r="19" data-bits="11111,10000,10000,11110,00001,00001,10001,01110"></svg>
+  <h1 class="titulo">sinais de que as contas do seu condomínio pedem <span class="lit">auditoria.</span></h1>
+  <div class="rodape">
+    <img class="logo" src="../../logo/svg/fireflies_logo_condominios-horizontal_negativo.svg" style="width:300px" alt="Fireflies Consultoria · Condomínios">
+    <div class="mono arraste">Arraste para o lado
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M14 6l6 6-6 6"/></svg></div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

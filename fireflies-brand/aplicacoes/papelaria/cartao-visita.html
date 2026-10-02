@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Cartão de visita · Gabriel Alvares</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* 90×50 mm + 3 mm de sangria = 96×56 mm. Texto a ≥ 4 mm do corte.
+     Impressão: couché 300 g, laminação fosca, CMYK FOGRA39 (converter na gráfica). */
+  @page { size: 96mm 56mm; margin: 0; }
+  .folha { width: 96mm; height: 56mm; }
+  .corte { left: 3mm; top: 3mm; width: 90mm; height: 50mm; }
+  /* frente */
+  #frente .bg { position: absolute; left: 0; top: 0; width: 96mm; height: 56mm; }
+  #frente .orb { position: absolute; width: 74mm; height: 74mm; right: -26mm; bottom: -32mm; }
+  #frente .marca { position: absolute; left: 7mm; top: 15mm; width: 46mm; }
+  #frente .tag { position: absolute; left: 7mm; bottom: 6mm; font-size: 7.5pt; color: var(--muted); }
+  /* verso */
+  #verso .nome { position: absolute; left: 6mm; top: 6mm; font-size: 13pt; letter-spacing: -0.02em; }
+  #verso .cargo { position: absolute; left: 6mm; top: 12.6mm; font-size: 7.5pt; color: var(--fg); font-weight: 500; }
+  #verso .crc { position: absolute; left: 6mm; top: 16.4mm; font-size: 6.5pt; color: var(--muted); letter-spacing: .04em; }
+  #verso .contatos { position: absolute; left: 6mm; bottom: 6mm; font-size: 7pt; line-height: 1.6; }
+  #verso .contatos span { color: var(--muted); display: inline-block; width: 15mm; font-size: 5.8pt; letter-spacing: .1em; text-transform: uppercase; }
+  #verso .qr { position: absolute; right: 6mm; bottom: 9.5mm; width: 17mm; height: 17mm; }
+  #verso .qr-leg { position: absolute; right: 6mm; bottom: 6mm; width: 17mm; text-align: center; font-size: 5.5pt; letter-spacing: .1em; color: var(--muted); }
+  #verso .ass { position: absolute; right: 6mm; top: 6.6mm; width: 19mm; }
+</style></head>
+<body>
+<div class="folha noite" id="frente">
+  <svg class="orb" data-ff="orbita" data-size="280" data-a0="160" data-a1="290" data-sw="18"></svg>
+  <div class="corte">
+    <img class="logo marca" src="../../logo/svg/fireflies_logo_horizontal_negativo.svg" alt="Fireflies Consultoria">
+    <div class="corpo tag">Precisão que ilumina decisões.</div>
+  </div>
+</div>
+<div class="folha papel" id="verso">
+  <div class="corte">
+    <div class="titulo nome">Gabriel Alvares</div>
+    <div class="corpo cargo">Fundador &amp; Contador Responsável</div>
+    <div class="mono crc">CRC-SP [a confirmar]</div>
+    <img class="logo ass" src="../../logo/svg/fireflies_logo_assinatura_positivo.svg" alt="Fireflies.">
+    <div class="mono contatos">
+      <span>WhatsApp</span>+55 11 98245-0527<br>
+      <span>E-mail</span>contato@fireflies.com.br<br>
+      <span>Site</span>fireflies.com.br
+    </div>
+    <img class="qr" src="../_build/qr/whatsapp-noite.svg" alt="QR para o WhatsApp">
+    <div class="mono qr-leg">WHATSAPP</div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

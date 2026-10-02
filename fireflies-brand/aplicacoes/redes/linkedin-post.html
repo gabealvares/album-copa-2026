@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>LinkedIn · Post painel mensal</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  .peca { width: 1200px; height: 1200px; }
+  .topo { position: absolute; left: 96px; top: 96px; font-size: 22px; }
+  h1 { position: absolute; left: 96px; top: 160px; width: 960px; font-size: 92px; }
+  .painel { position: absolute; left: 96px; right: 96px; top: 420px; background: var(--ff-mare); border-radius: 20px; padding: 40px 48px 36px; }
+  .ph { display: flex; justify-content: space-between; align-items: center; font-size: 18px; }
+  .ph .exemplo { font-size: 15px; }
+  .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin-top: 30px; border-top: 1.5px solid var(--rule); }
+  .kpi { padding: 24px 24px 4px 0; }
+  .kpi + .kpi { padding-left: 28px; border-left: 1.5px solid var(--rule); }
+  .kpi .rotulo { font-size: 15px; color: var(--muted); }
+  .kpi .v { font-family: var(--ff-font-display); font-weight: 700; font-size: 60px; letter-spacing: -0.03em; margin-top: 8px; }
+  .kpi .v small { font-size: 32px; letter-spacing: 0; }
+  .grafico { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: end; margin-top: 28px; }
+  .grafico svg { width: 100%; }
+  .alerta-box { border-left: 3px solid var(--ff-brasa); padding: 4px 0 4px 20px; font-size: 21px; line-height: 1.45; }
+  .alerta-box .rotulo { font-size: 15px; color: var(--ff-brasa); display: block; margin-bottom: 8px; }
+  .rodape { position: absolute; left: 96px; right: 96px; bottom: 80px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .cta { text-align: right; font-size: 20px; line-height: 1.6; }
+  .cta b { color: var(--fg); font-weight: 500; }
+</style></head>
+<body>
+<div class="peca noite">
+  <div class="eyebrow topo">Painel mensal</div>
+  <h1 class="titulo">Todo mês, o seu negócio em uma <span class="lit">tela.</span></h1>
+  <div class="painel">
+    <div class="ph"><span class="rotulo muted">Agosto de 2026 · Empresa exemplo</span><span class="exemplo">Dados de exemplo</span></div>
+    <div class="kpis">
+      <div class="kpi"><div class="rotulo">Receita do mês</div><div class="v"><small>R$ </small>412 mil</div></div>
+      <div class="kpi"><div class="rotulo">Margem</div><div class="v">18,4<small>%</small></div></div>
+      <div class="kpi"><div class="rotulo">Caixa livre</div><div class="v">47 <small>dias</small></div></div>
+    </div>
+    <div class="grafico">
+      <svg data-ff="matriz" data-values="6,7,6,8,9,8,10,11" data-max="12" data-rows="12" data-cols="3" data-gap="13" data-r="3.8" data-bargap="26" data-on="7"
+           data-labels="JAN,FEV,MAR,ABR,MAI,JUN,JUL,AGO" data-labsize="13"></svg>
+      <div class="alerta-box corpo"><span class="rotulo">● 2 alertas</span>ISS de julho em aberto.<br>Contrato de limpeza reajustado em 12%.</div>
+    </div>
+  </div>
+  <div class="rodape">
+    <img class="logo" src="../../logo/svg/fireflies_logo_horizontal_negativo.svg" style="width:300px" alt="Fireflies Consultoria">
+    <div class="mono cta muted"><b>Painel explicado em reunião mensal</b><br>diagnóstico gratuito · fireflies.com.br</div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

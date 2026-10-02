@@ -69,6 +69,6 @@ svg[data-ff] { display: block; overflow: visible; }
 
 /* impressos: página com sangria, área de corte (.corte) e margem de segurança */
 @media print { html, body { background: none; } }
-.folha { position: relative; overflow: hidden; break-after: page; }
+.folha { position: relative; overflow: hidden; break-after: page; font-family: var(--ff-font-body); }
 .folha:last-child { break-after: auto; }
 .corte { position: absolute; }

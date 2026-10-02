@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>LinkedIn · Capa da página</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* 4200×700. O canto inferior esquerdo fica livre: o logo da página se sobrepõe ali.
+     O conteúdo principal fica no centro, que é o que aparece no corte do celular. */
+  .peca { width: 4200px; height: 700px; }
+  .bg { position: absolute; inset: 0; width: 4200px; height: 700px; }
+  .centro { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -54%); text-align: center; }
+  h1 { font-size: 200px; white-space: nowrap; }
+  .eyebrow { font-size: 34px; margin-top: 40px; }
+  .barras { position: absolute; right: 260px; bottom: 120px; width: 620px; }
+  .site { position: absolute; right: 260px; top: 110px; font-size: 32px; }
+</style></head>
+<body>
+<div class="peca noite">
+  <svg class="bg" data-ff="constelacao" data-w="4200" data-h="700" data-seed="8" data-step="110" data-chains="7" data-len="5" data-stars="34" data-r="6" data-sw="2.5"
+       data-region="0.17,0.06,0.78,0.94" data-avoid="0.27,0.1,0.73,0.9" data-lit="0.75,0.3"></svg>
+  <div class="centro">
+    <h1 class="display">Números em <span class="lit">sincronia.</span></h1>
+    <div class="eyebrow">Consultoria financeira, contábil e fiscal · São Paulo</div>
+  </div>
+  <div class="mono site muted">fireflies.com.br</div>
+  <svg class="barras" data-ff="matriz" data-values="5,7,6,9,8,11,13,15" data-max="15" data-rows="15" data-cols="3" data-gap="16" data-r="4.6" data-bargap="30" data-on="all"></svg>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

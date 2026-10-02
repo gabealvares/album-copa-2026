@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Post Instagram · Dado</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  .peca { width: 1080px; height: 1350px; }
+  .topo { position: absolute; left: 88px; right: 88px; top: 96px; display: flex; justify-content: space-between; align-items: center; font-size: 22px; }
+  .topo .exemplo { font-size: 18px; }
+  .orb { position: absolute; width: 520px; height: 520px; left: 40px; top: 170px; }
+  .numero { position: absolute; left: 88px; top: 250px; font-size: 300px; letter-spacing: -0.05em; }
+  .numero small { font-size: 160px; letter-spacing: -0.02em; }
+  .legenda { position: absolute; left: 96px; top: 580px; font-size: 24px; }
+  .grafico { position: absolute; right: 88px; top: 250px; width: 380px; }
+  .grafico-tit { position: absolute; right: 88px; top: 210px; font-size: 18px; }
+  .texto { position: absolute; left: 88px; top: 740px; width: 900px; }
+  .texto h2 { font-size: 80px; }
+  .texto p { margin-top: 36px; font-size: 34px; color: var(--muted); width: 860px; }
+  .rodape { position: absolute; left: 88px; right: 88px; bottom: 88px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .cta { text-align: right; font-size: 21px; line-height: 1.6; }
+  .cta b { color: var(--fg); font-weight: 500; }
+  .sep { position: absolute; left: 88px; right: 88px; top: 660px; height: 1.5px; background: var(--rule); }
+</style></head>
+<body>
+<div class="peca noite">
+  <div class="topo"><span class="eyebrow">Condomínio em sincronia</span><span class="exemplo">Dados de exemplo</span></div>
+
+  <svg class="orb" data-ff="orbita" data-size="520" data-a0="158" data-a1="335" data-sw="34"></svg>
+  <div class="numero display">9<small>%</small></div>
+  <div class="legenda rotulo muted">de inadimplência em agosto</div>
+
+  <div class="grafico-tit rotulo muted">Inadimplência · jan–ago</div>
+  <svg class="grafico" data-ff="matriz" data-values="4.1,4.6,5.0,5.8,6.4,7.1,8.2,9.0" data-max="10" data-rows="18" data-cols="3"
+       data-gap="12" data-r="3.6" data-bargap="20" data-track="1" data-alert="7" data-labels="J,F,M,A,M,J,J,A" data-labsize="14"></svg>
+  <div class="sep"></div>
+
+  <div class="texto">
+    <h2 class="titulo">Três unidades concentram 70% do valor em aberto.</h2>
+    <p class="corpo">Com nome, valor e prazo de cada uma, a cobrança vira rotina, e não conflito na assembleia.</p>
+  </div>
+
+  <div class="rodape">
+    <img class="logo" src="../../logo/svg/fireflies_logo_condominios-horizontal_negativo.svg" style="width:300px" alt="Fireflies Consultoria · Condomínios">
+    <div class="mono cta muted"><b>Peça o raio-X do seu condomínio</b><br>diagnóstico gratuito · link na bio</div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

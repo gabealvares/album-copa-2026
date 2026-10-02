@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Capa · Relatório de auditoria de condomínio</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  /* A4 210×297 mm + 3 mm de sangria = 216×303 mm. Margem de segurança 18 mm.
+     Campos entre colchetes são preenchidos a cada relatório. */
+  @page { size: 216mm 303mm; margin: 0; }
+  .folha { width: 216mm; height: 303mm; }
+  .corte { left: 3mm; top: 3mm; width: 210mm; height: 297mm; }
+  .orb { position: absolute; width: 170mm; height: 170mm; left: 86mm; top: 30mm; }
+  .cons { position: absolute; left: 112mm; top: 56mm; width: 96mm; height: 100mm; }
+  .marca { position: absolute; left: 18mm; top: 18mm; width: 62mm; }
+  .bloco { position: absolute; left: 18mm; top: 166mm; width: 170mm; }
+  .eyebrow { font-size: 8.5pt; }
+  h1 { font-size: 38pt; margin-top: 6mm; }
+  .sub { font-family: var(--ff-font-body); font-weight: 400; font-size: 12.5pt; color: var(--muted); margin-top: 5mm; letter-spacing: 0; line-height: 1.4; }
+  .campos { position: absolute; left: 18mm; right: 18mm; top: 240mm; display: grid; grid-template-columns: 1fr 1fr; column-gap: 10mm; row-gap: 6mm; padding-top: 6mm; border-top: .3mm solid var(--rule); }
+  .campos .rotulo { font-size: 6.5pt; color: var(--muted); }
+  .campos .v { font-size: 11pt; margin-top: 1.6mm; }
+  .pe { position: absolute; left: 18mm; right: 18mm; bottom: 12mm; display: flex; justify-content: space-between; font-size: 6.5pt; color: var(--muted); letter-spacing: .06em; }
+</style></head>
+<body>
+<div class="folha noite">
+  <svg class="orb" data-ff="orbita" data-size="642" data-a0="160" data-a1="350" data-sw="44"></svg>
+  <svg class="cons" data-ff="constelacao" data-w="363" data-h="378" data-seed="31" data-step="52" data-chains="4" data-len="5" data-stars="10" data-r="3.6" data-sw="1.4" data-region="0.12,0.1,0.92,0.9" data-lit="0.62,0.42"></svg>
+  <div class="corte">
+    <img class="logo marca" src="../../logo/svg/fireflies_logo_condominios-horizontal_negativo.svg" alt="Fireflies Consultoria · Condomínios">
+    <div class="bloco">
+      <div class="eyebrow">Relatório de auditoria</div>
+      <h1 class="titulo">Prestação de contas do condomínio, auditada e <span class="lit">explicada.</span></h1>
+      <p class="sub">Relatório executivo para o conselho fiscal e a administração.</p>
+    </div>
+    <div class="campos">
+      <div><div class="rotulo">Condomínio</div><div class="corpo v">[Nome do condomínio]</div></div>
+      <div><div class="rotulo">Período auditado</div><div class="corpo v">[janeiro a dezembro de 2025]</div></div>
+      <div><div class="rotulo">Data de emissão</div><div class="corpo v">[dd/mm/aaaa]</div></div>
+      <div><div class="rotulo">Responsável técnico</div><div class="corpo v">Gabriel Alvares · CRC-SP [nº a confirmar]</div></div>
+    </div>
+    <div class="mono pe"><span>FIREFLIES CONSULTORIA · FIREFLIES.COM.BR</span><span>DOCUMENTO CONFIDENCIAL · USO DO CONSELHO</span></div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>

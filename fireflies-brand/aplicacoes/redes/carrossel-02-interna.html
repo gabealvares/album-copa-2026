@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<title>Carrossel · Interna</title>
+<link rel="stylesheet" href="../_build/base.css">
+<style>
+  .peca { width: 1080px; height: 1350px; }
+  .topo { position: absolute; left: 88px; right: 88px; top: 96px; display: flex; justify-content: space-between; align-items: center; font-size: 22px; }
+  .pag { font-size: 22px; }
+  h1 { position: absolute; left: 88px; top: 190px; width: 900px; font-size: 84px; }
+  .corpo-txt { position: absolute; left: 88px; top: 430px; width: 840px; font-size: 32px; color: var(--muted); }
+  .card { position: absolute; left: 88px; right: 88px; top: 650px; background: var(--ff-mare); border-radius: 20px; padding: 44px 56px; display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: center; }
+  .card svg { width: 300px; }
+  .card .rot { font-size: 18px; margin-bottom: 10px; }
+  .card .valor { font-size: 54px; font-weight: 500; letter-spacing: -0.02em; }
+  .card .nota { font-size: 24px; color: var(--muted); margin-top: 14px; }
+  .card .exemplo { font-size: 16px; margin-bottom: 28px; }
+  .rodape { position: absolute; left: 88px; right: 88px; bottom: 88px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .salve { font-size: 22px; color: var(--muted); }
+</style></head>
+<body>
+<div class="peca noite">
+  <div class="topo"><span class="eyebrow">Sinal 1 de 5</span><span class="mono pag muted">2/7</span></div>
+  <h1 class="titulo">O saldo do banco não bate com o <span class="lit">balancete.</span></h1>
+  <p class="corpo corpo-txt">Uma diferença pequena que se repete todo mês é o primeiro aviso. A conta bancária precisa fechar com o balancete, centavo por centavo.</p>
+  <div class="card">
+        <svg data-ff="matriz" data-values="11,10" data-max="11" data-rows="11" data-cols="5" data-gap="20" data-r="6" data-bargap="56" data-on="all" data-track="1" data-labels="EXTRATO,BALANCETE" data-labsize="17"></svg>
+    <div>
+      <span class="exemplo">Dados de exemplo</span>
+      <div class="rotulo muted rot">Diferença sem explicação</div>
+      <div class="mono valor alerta">R$ 1.240,00</div>
+      <p class="corpo nota">Na auditoria, cada centavo precisa de origem: lançamento, comprovante e responsável.</p>
+    </div>
+  </div>
+  <div class="rodape">
+    <img class="logo" src="../../logo/svg/fireflies_logo_assinatura_negativo.svg" style="width:150px" alt="Fireflies.">
+    <div class="mono salve">Salve para a próxima assembleia</div>
+  </div>
+</div>
+<script src="../_build/elementos.js"></script>
+</body></html>
