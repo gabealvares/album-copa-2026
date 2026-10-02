@@ -1,0 +1,90 @@
+:root {
+  --ff-noite: #06262B; /* Noite — Primária escura · fundos principais, símbolo */
+  --ff-noite-funda: #041C20; /* Noite Funda — Fundos alternativos, rodapés */
+  --ff-mare: #104048; /* Maré — Superfícies sobre Noite, linhas no negativo */
+  --ff-vagalume: #D9F24A; /* Vagalume — Assinatura · a luz. Só sobre fundos escuros */
+  --ff-oliva: #5E6E00; /* Oliva — Luz sobre fundos claros · links, destaques */
+  --ff-brasa: #F5A524; /* Brasa — Alerta/atenção em dados (≤2%). Nunca no logo */
+  --ff-brasa-escura: #B54708; /* Brasa Escura — Texto de alerta sobre fundo claro */
+  --ff-tinta: #0E1726; /* Tinta — Texto sobre fundo claro */
+  --ff-papel: #F3F5F7; /* Papel — Fundo claro padrão */
+  --ff-nevoa: #9DB9B7; /* Névoa — Texto secundário sobre Noite */
+  --ff-pedra: #5A6570; /* Pedra — Texto secundário sobre Papel */
+  --ff-linha: #D5DBE1; /* Linha — Bordas e divisórias no claro */
+  --ff-branco: #FFFFFF; /* Branco —  */
+
+  /* escala noite */
+  --ff-noite-50: #F0F2F2;
+  --ff-noite-100: #DCE1E1;
+  --ff-noite-200: #B4BEBF;
+  --ff-noite-300: #839395;
+  --ff-noite-400: #445C60;
+  --ff-noite-500: #06262B;
+  --ff-noite-600: #051F23;
+  --ff-noite-700: #04191C;
+  --ff-noite-800: #031316;
+  --ff-noite-900: #020D0F;
+
+  /* escala vagalume */
+  --ff-vagalume-50: #FDFEF4;
+  --ff-vagalume-100: #FAFDE6;
+  --ff-vagalume-200: #F4FBC9;
+  --ff-vagalume-300: #ECF9A5;
+  --ff-vagalume-400: #E3F577;
+  --ff-vagalume-500: #D9F24A;
+  --ff-vagalume-600: #B2C63D;
+  --ff-vagalume-700: #8D9D30;
+  --ff-vagalume-800: #6D7925;
+  --ff-vagalume-900: #4C551A;
+
+  /* escala oliva */
+  --ff-oliva-50: #F5F6F0;
+  --ff-oliva-100: #E8EBDB;
+  --ff-oliva-200: #CFD4B3;
+  --ff-oliva-300: #AFB780;
+  --ff-oliva-400: #869240;
+  --ff-oliva-500: #5E6E00;
+  --ff-oliva-600: #4D5A00;
+  --ff-oliva-700: #3D4800;
+  --ff-oliva-800: #2F3700;
+  --ff-oliva-900: #212700;
+
+  /* escala brasa */
+  --ff-brasa-50: #FEFAF2;
+  --ff-brasa-100: #FEF2E0;
+  --ff-brasa-200: #FCE4BD;
+  --ff-brasa-300: #FAD292;
+  --ff-brasa-400: #F8BC5B;
+  --ff-brasa-500: #F5A524;
+  --ff-brasa-600: #C9871E;
+  --ff-brasa-700: #9F6B17;
+  --ff-brasa-800: #7B5312;
+  --ff-brasa-900: #563A0D;
+
+  /* semântica — tema claro */
+  --ff-bg: var(--ff-papel);
+  --ff-surface: var(--ff-branco);
+  --ff-fg: var(--ff-tinta);
+  --ff-fg-muted: var(--ff-pedra);
+  --ff-border: var(--ff-linha);
+  --ff-lit: var(--ff-oliva);        /* "ponto aceso" no claro */
+  --ff-accent: var(--ff-oliva);
+  --ff-alert: var(--ff-brasa-escura);
+
+  /* tipografia */
+  --ff-font-display: "Bricolage Grotesque", "Arial", system-ui, sans-serif;
+  --ff-font-body: "Instrument Sans", "Calibri", system-ui, sans-serif;
+  --ff-font-mono: "JetBrains Mono", ui-monospace, "Consolas", monospace;
+}
+
+/* tema escuro (padrão da marca no digital) */
+[data-theme="dark"], .ff-dark {
+  --ff-bg: var(--ff-noite);
+  --ff-surface: var(--ff-mare);
+  --ff-fg: var(--ff-papel);
+  --ff-fg-muted: var(--ff-nevoa);
+  --ff-border: rgba(243,245,247,.12);
+  --ff-lit: var(--ff-vagalume);
+  --ff-accent: var(--ff-vagalume);
+  --ff-alert: var(--ff-brasa);
+}
