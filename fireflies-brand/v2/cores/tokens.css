@@ -1,0 +1,44 @@
+/* Fireflies Consultoria · identidade v2 · "Carta do Lume" */
+:root {
+  --ff-anil: #17183A; /* Anil de Junho */
+  --ff-anil-profundo: #0F1029; /* Anil Profundo */
+  --ff-cal: #EDEEEA; /* Cal Virgem */
+  --ff-branco: #FFFFFF; /* Branco */
+  --ff-ambar: #F2B544; /* Âmbar de Vagalume */
+  --ff-vermelhao: #E65A3E; /* Vermelhão */
+  --ff-rubrica: #A9301F; /* Vermelhão de Rubrica */
+  --ff-ceu: #6E89B4; /* Céu de Anil */
+  --ff-fuligem: #2A2F3D; /* Fuligem */
+  --ff-pedra: #5E6271; /* Pedra-Sabão */
+  --ff-fumaca: #D2D4DA; /* Fumaça */
+  --ff-sucesso: #2D7550; /* Folha de Bananeira */
+  --ff-alerta: #9A5A06; /* Rapadura */
+  --ff-erro: #A51C45; /* Carmim */
+
+  /* papel claro (padrão de documentos) */
+  --ff-bg: var(--ff-branco);
+  --ff-bg-alt: var(--ff-cal);
+  --ff-fg: var(--ff-fuligem);
+  --ff-fg-strong: var(--ff-anil);
+  --ff-fg-muted: var(--ff-pedra);
+  --ff-line: var(--ff-fumaca);
+  --ff-link: var(--ff-rubrica);
+  --ff-lit: var(--ff-ambar);           /* lanterna: só em forma, com contorno anil no claro */
+  --ff-lit-outline: var(--ff-anil);
+
+  --ff-font-display: "Cormorant Garamond", Garamond, Georgia, serif;
+  --ff-font-body: "IBM Plex Sans", Calibri, Arial, sans-serif;
+  --ff-font-mono: "IBM Plex Mono", Consolas, ui-monospace, monospace;
+}
+/* noite (capas, slides, redes) */
+.ff-noite, [data-theme="noite"] {
+  --ff-bg: var(--ff-anil);
+  --ff-bg-alt: var(--ff-anil-profundo);
+  --ff-fg: var(--ff-cal);
+  --ff-fg-strong: var(--ff-branco);
+  --ff-fg-muted: var(--ff-fumaca);
+  --ff-line: rgba(237,238,234,.16);
+  --ff-link: var(--ff-ambar);
+  --ff-lit: var(--ff-ambar);
+  --ff-lit-outline: transparent;
+}
