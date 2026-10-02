@@ -1,0 +1,602 @@
+<title>Manual de Marca Fireflies</title>
+<meta name="description" content="Manual de identidade visual da Fireflies Consultoria: logo, cores, tipografia, iconografia, elementos gráficos, voz e aplicações.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: noite contínua; índice fixo à esquerda no desktop; pranchas claras ("Papel") só onde a marca precisa ser vista no claro. */
+:root {
+  --noite: #06262B; --funda: #041C20; --mare: #104048; --mare-2: #0B3238;
+  --luz: #D9F24A; --oliva: #5E6E00; --brasa: #F5A524;
+  --papel: #F3F5F7; --tinta: #0E1726; --nevoa: #9DB9B7; --pedra: #5A6570; --linha-c: #D5DBE1;
+  --fg: #F3F5F7; --fg-2: #CFE0DF; --muted: #9DB9B7; --line: rgba(243,245,247,.12);
+  --display: "Bricolage Grotesque", "Arial", system-ui, sans-serif;
+  --body: "Instrument Sans", "Helvetica Neue", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Consolas", monospace;
+  --gutter: clamp(16px, 4vw, 56px);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--noite); color: var(--fg-2); font: 400 16px/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+a { color: var(--luz); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--luz); outline-offset: 3px; border-radius: 4px; }
+code, .mono { font-family: var(--mono); font-size: .86em; }
+.muted { color: var(--muted); }
+
+.shell { display: grid; grid-template-columns: 1fr; }
+@media (min-width: 1100px) { .shell { grid-template-columns: 236px minmax(0, 1fr); } }
+
+/* índice */
+.toc { display: none; }
+@media (min-width: 1100px) {
+  .toc { display: flex; flex-direction: column; gap: 28px; position: sticky; top: env(safe-area-inset-top, 0px); height: 100vh; padding: 36px 24px; border-right: 1px solid var(--line); background: var(--funda); }
+  .toc .mark { width: 132px; }
+  .toc nav { display: flex; flex-direction: column; gap: 2px; }
+  .toc a { color: var(--nevoa); text-decoration: none; font: 500 14px/1 var(--body); padding: 9px 10px; border-radius: 8px; display: flex; gap: 10px; align-items: center; }
+  .toc a::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--mare); flex: none; }
+  .toc a:hover { color: var(--fg); background: var(--mare-2); }
+  .toc a.on { color: var(--fg); }
+  .toc a.on::before { background: var(--luz); box-shadow: 0 0 0 4px rgba(217,242,74,.15); }
+  .toc .ver { margin-top: auto; font: 400 11px/1.5 var(--mono); color: var(--muted); letter-spacing: .06em; }
+}
+
+main { min-width: 0; }
+section { padding-block: clamp(56px, 8vw, 104px); padding-inline: var(--gutter); border-bottom: 1px solid var(--line); }
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
+
+.eyebrow { font: 500 12px/1.3 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--nevoa); margin: 0; display: flex; align-items: center; gap: 10px; }
+.eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--luz); flex: none; }
+h1, h2, h3 { font-family: var(--display); color: var(--fg); margin: 0; text-wrap: balance; }
+h2 { font-size: clamp(36px, 5.2vw, 60px); font-weight: 700; line-height: 1; letter-spacing: -.03em; }
+h2 em, h1 em { font-style: normal; color: var(--luz); }
+h3 { font-size: 22px; font-weight: 600; letter-spacing: -.01em; line-height: 1.2; }
+h4 { margin: 0; }
+.lead { font-size: clamp(18px, 2vw, 21px); line-height: 1.5; max-width: 62ch; color: var(--fg-2); margin: 0; }
+p { margin: 0; max-width: 68ch; }
+.head { display: flex; flex-direction: column; gap: 18px; }
+
+/* hero */
+.hero { position: relative; overflow: hidden; padding-block: clamp(64px, 10vw, 128px); background: radial-gradient(1200px 600px at 85% 20%, #0B3A40 0%, transparent 60%), var(--noite); }
+.hero canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero .wrap { position: relative; gap: 40px; }
+.hero-logo { width: min(560px, 100%); height: auto; }
+.hero h1 { font-size: clamp(40px, 6.4vw, 84px); line-height: .96; letter-spacing: -.035em; font-weight: 700; max-width: 14ch; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 10px 28px; font: 400 12px/1.4 var(--mono); letter-spacing: .08em; color: var(--muted); text-transform: uppercase; }
+.hero-meta b { color: var(--fg); font-weight: 500; }
+
+/* marca */
+.manifesto { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .manifesto { grid-template-columns: repeat(2, 1fr); } }
+.manifesto > div { background: var(--noite); padding: 28px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.manifesto .k { font: 500 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.manifesto .v { font: 600 22px/1.25 var(--display); color: var(--fg); letter-spacing: -.01em; }
+.manifesto .wide { grid-column: 1 / -1; }
+.manifesto .wide .v { font-size: 19px; font-weight: 500; font-family: var(--body); line-height: 1.55; color: var(--fg-2); }
+.values { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.value { border-top: 2px solid var(--mare); padding-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+.value b { font: 600 20px/1.2 var(--display); color: var(--fg); }
+.value:first-child { border-color: var(--luz); }
+.taglines { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.tag { border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 14px; background: var(--mare-2); border: 1px solid var(--line); }
+.tag .t { font: 700 clamp(26px, 3vw, 34px)/1.05 var(--display); color: var(--fg); letter-spacing: -.025em; }
+.tag .t em { font-style: normal; color: var(--luz); }
+.metaphor { display: grid; gap: 28px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 860px) { .metaphor { grid-template-columns: 300px minmax(0, 1fr); } }
+.metaphor .logo { width: 100%; max-width: 300px; height: auto; }
+.legend { display: flex; flex-direction: column; gap: 12px; }
+.legend div { display: flex; gap: 14px; align-items: baseline; }
+.legend .dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid var(--fg); flex: none; transform: translateY(1px); }
+.legend .dot.lit { background: var(--luz); border-color: var(--luz); }
+.legend .bar { width: 22px; height: 5px; border-radius: 3px; background: var(--fg); flex: none; transform: translateY(-2px); }
+
+/* pranchas */
+.board { border-radius: 16px; display: grid; place-items: center; padding: clamp(28px, 5vw, 56px); min-width: 0; }
+.board.light { background: var(--papel); }
+.board.white { background: #fff; }
+.board.dark { background: var(--funda); border: 1px solid var(--line); }
+.board.lime { background: var(--luz); }
+.board .logo { width: 100%; height: auto; display: block; }
+.board figcaption, .cap { font: 400 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--pedra); margin-top: 18px; justify-self: start; }
+.board.dark figcaption { color: var(--muted); }
+.boards { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .boards.two { grid-template-columns: 1fr 1fr; } .boards.three { grid-template-columns: repeat(3, 1fr); } .boards.four { grid-template-columns: repeat(4, 1fr); } }
+.boards figure { margin: 0; }
+.mw-h { max-width: 480px; width: 100%; } .mw-v { max-width: 230px; width: 100%; } .mw-s { max-width: 150px; width: 100%; } .mw-a { max-width: 260px; width: 100%; }
+
+.spec { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .spec { grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); } }
+.construcao { width: 100%; height: auto; display: block; border-radius: 12px; background: var(--papel); }
+.rules { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--line); }
+.rules > div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.rules dt { font: 500 12px/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.rules dd { margin: 0; color: var(--fg-2); }
+.rules dd b { color: var(--fg); font-weight: 600; }
+.clear { position: relative; display: inline-block; padding: 34px; outline: 1.5px dashed var(--oliva); outline-offset: -1px; }
+.clear::after { content: "X"; position: absolute; top: 9px; left: 12px; font: 500 11px var(--mono); color: var(--oliva); }
+.mins { display: flex; flex-wrap: wrap; gap: 28px 40px; align-items: end; }
+.mins figure { margin: 0; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.mins figcaption { font: 400 11px/1.3 var(--mono); color: var(--pedra); letter-spacing: .05em; }
+.fav { width: 64px; height: 64px; display: block; }
+
+.wrongs { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.wrong { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.wrong-box { background: var(--papel); border-radius: 12px; height: 150px; display: grid; place-items: center; padding: 20px; overflow: hidden; position: relative; }
+.wrong-box .logo, .wrong-box > div { width: 190px; }
+.wrong-box > div .logo { width: 190px; }
+.wrong-box.busy { background: repeating-linear-gradient(115deg, #e9a 0 14px, #9ce 14px 28px, #fd6 28px 42px); }
+.wrong-box::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top right, transparent calc(50% - 1px), rgba(181,71,8,.85) 50%, transparent calc(50% + 1px)); }
+.wrong figcaption { font-size: 14px; color: var(--fg-2); display: flex; gap: 8px; }
+.wrong .x { color: var(--brasa); font-weight: 700; }
+
+/* cores */
+.swatches { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+.sw { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.sw-chip { background: var(--c); color: var(--on); border-radius: 14px; aspect-ratio: 1 / 1.05; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: inset 0 0 0 1px rgba(243,245,247,.1); max-width: 100%; }
+.sw:not(.sw-big) .sw-chip { aspect-ratio: 16 / 9; }
+.sw[style*="#06262B"] .sw-chip, .sw[style*="#041C20"] .sw-chip, .sw[style*="#0E1726"] .sw-chip { box-shadow: inset 0 0 0 1px rgba(243,245,247,.28); }
+.sw-name { font: 600 22px/1 var(--display); letter-spacing: -.01em; }
+.sw:not(.sw-big) .sw-name { font-size: 17px; }
+.copy { all: unset; cursor: pointer; font: 500 13px/1 var(--mono); letter-spacing: .04em; align-self: flex-start; padding: 6px 8px; margin: -6px -8px; border-radius: 6px; }
+.copy:hover { background: rgba(127,127,127,.18); }
+.copy:focus-visible { outline: 2px solid currentColor; }
+.copy.done::after { content: " ✓ copiado"; }
+.sw-data { margin: 0; display: grid; gap: 4px; font: 400 12px/1.4 var(--mono); }
+.sw-data div { display: flex; justify-content: space-between; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 4px; }
+.sw-data dt { color: var(--muted); } .sw-data dd { margin: 0; color: var(--fg-2); text-align: right; }
+.sw-use { font-size: 13px; line-height: 1.45; color: var(--muted); }
+.ratio { display: flex; height: 44px; border-radius: 10px; overflow: hidden; font: 500 11px/1 var(--mono); letter-spacing: .06em; }
+.ratio span { display: flex; align-items: center; padding: 0 12px; white-space: nowrap; overflow: hidden; }
+.scales { display: flex; flex-direction: column; gap: 14px; }
+.scale { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 12px; align-items: center; }
+.scale-name { font: 500 12px var(--mono); color: var(--muted); }
+.scale-row { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); border-radius: 8px; overflow: hidden; }
+.sc { height: 40px; display: flex; align-items: flex-end; padding: 4px 5px; }
+.sc span { font: 500 10px/1 var(--mono); }
+.pairs { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+.pair { border-radius: 12px; padding: 16px 18px; display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: center; box-shadow: inset 0 0 0 1px rgba(243,245,247,.08); }
+.pair-aa { font: 700 34px/1 var(--display); grid-row: span 2; }
+.pair-txt { font-size: 14px; font-weight: 600; }
+.pair-r { font: 500 11px/1.3 var(--mono); letter-spacing: .04em; }
+.pair-r.bad { text-decoration: line-through; }
+
+/* tipografia */
+.type-specimens { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .type-specimens { grid-template-columns: 1.3fr 1fr 1fr; } }
+.spec-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 18px; min-width: 0; background: var(--mare-2); }
+.spec-card .big { font-size: 96px; line-height: .9; color: var(--fg); }
+.spec-card .role { font: 500 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--luz); }
+.spec-card .fam { font: 600 22px/1.15 var(--display); color: var(--fg); }
+.spec-card .chars { font-size: 15px; line-height: 1.5; color: var(--fg-2); word-break: break-all; }
+.scale-table { border-top: 1px solid var(--line); }
+.scale-table > div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.scale-table .meta { font: 400 11px/1.5 var(--mono); color: var(--muted); letter-spacing: .04em; }
+.scale-table .meta b { display: block; color: var(--fg); font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.scale-table .s { color: var(--fg); min-width: 0; overflow-wrap: anywhere; }
+.money { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* ícones */
+.icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 8px; }
+.icon-cell { margin: 0; border: 1px solid var(--line); border-radius: 12px; padding: 20px 8px 12px; display: flex; flex-direction: column; align-items: center; gap: 12px; color: var(--fg); --ff-lit: var(--luz); }
+.icon-cell figcaption { font: 400 10.5px/1.2 var(--mono); color: var(--muted); text-align: center; overflow-wrap: anywhere; }
+.icon-cell:hover { background: var(--mare-2); }
+.icon-spec { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .icon-spec { grid-template-columns: 1fr 1fr; } }
+.icon-demo { border-radius: 16px; padding: 28px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; }
+.icon-demo.light { background: var(--papel); color: var(--tinta); --ff-lit: var(--oliva); }
+.icon-demo.dark { background: var(--funda); color: var(--papel); --ff-lit: var(--luz); border: 1px solid var(--line); }
+.icon-demo.alert { --ff-lit: var(--brasa); }
+.icon-groups { display: flex; flex-direction: column; gap: 18px; }
+.ico { flex: none; }
+
+/* elementos */
+.elements { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .elements { grid-template-columns: repeat(2, 1fr); } }
+.el { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--funda); display: flex; flex-direction: column; min-width: 0; }
+.el-art { height: 260px; position: relative; display: grid; place-items: center; overflow: hidden; }
+.el-art canvas, .el-art svg { width: 100%; height: 100%; display: block; }
+.el-txt { padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--line); }
+.el-txt b { font: 600 18px/1.2 var(--display); color: var(--fg); }
+.el-txt span { font-size: 14px; color: var(--muted); }
+.eyebrow-demo { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; padding: 32px; }
+.eyebrow-demo .h { font: 700 44px/.98 var(--display); letter-spacing: -.03em; color: var(--fg); }
+.eyebrow-demo .h em { font-style: normal; color: var(--luz); }
+.btn { display: inline-flex; align-items: center; gap: 10px; background: var(--luz); color: var(--noite); font: 600 15px/1 var(--body); padding: 14px 20px; border-radius: 10px; }
+.btn.ghost { background: transparent; color: var(--fg); box-shadow: inset 0 0 0 1px rgba(243,245,247,.3); }
+
+/* voz */
+.dodont { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 760px) { .dodont { grid-template-columns: 1fr 1fr; } }
+.dd { border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 14px; border: 1px solid var(--line); }
+.dd.do { background: var(--mare-2); }
+.dd h3 { font-size: 18px; display: flex; gap: 10px; align-items: center; }
+.dd ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.dd li { padding-left: 22px; position: relative; }
+.dd.do li::before { content: ""; position: absolute; left: 2px; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--luz); }
+.dd.dont li::before { content: "×"; position: absolute; left: 1px; top: -.05em; color: var(--brasa); font-weight: 700; }
+.dd.dont li { color: var(--muted); }
+.tones { display: grid; gap: 1px; background: var(--line); border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+.tones > div { background: var(--noite); padding: 20px 24px; display: grid; gap: 8px 24px; grid-template-columns: 1fr; }
+@media (min-width: 860px) { .tones > div { grid-template-columns: 200px minmax(0, 1fr); } }
+.tones b { font: 600 16px/1.3 var(--display); color: var(--fg); }
+.tones b small { display: block; font: 400 12px/1.4 var(--body); color: var(--muted); margin-top: 4px; }
+.tones q { color: var(--fg); quotes: "“" "”"; font-size: 16px; }
+
+/* aplicações */
+.apps { columns: 1; column-gap: 16px; }
+@media (min-width: 700px) { .apps { columns: 2; } }
+@media (min-width: 1200px) { .apps { columns: 3; } }
+.app { margin: 0 0 16px; break-inside: avoid; display: flex; flex-direction: column; gap: 8px; }
+.app img { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--line); background: var(--funda); }
+.app figcaption { font: 400 11px/1.3 var(--mono); color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
+
+/* arquivos */
+details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+summary { cursor: pointer; color: var(--fg); font-weight: 500; }
+summary .mono { color: var(--luz); }
+.files { columns: 1; margin: 14px 0 4px; padding: 0; list-style: none; font-size: 12px; color: var(--muted); }
+@media (min-width: 900px) { .files { columns: 2; } }
+.files li { padding: 3px 0; overflow-wrap: anywhere; break-inside: avoid; }
+.handoff { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.handoff > div { border: 1px solid var(--line); border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+.handoff b { color: var(--fg); font-family: var(--display); font-size: 17px; }
+.handoff span { font-size: 14px; color: var(--muted); }
+footer { padding: 48px var(--gutter) 64px; display: flex; flex-wrap: wrap; gap: 16px 40px; align-items: center; justify-content: space-between; font: 400 12px/1.5 var(--mono); color: var(--muted); }
+footer .logo { width: 150px; height: auto; }
+</style>
+
+<div hidden>{{SPRITE}}</div>
+
+<div class="shell">
+<aside class="toc" aria-label="Índice">
+  <a href="#topo" style="padding:0;background:none" aria-label="Início">{{A_NEG}}</a>
+  <nav>
+    <a href="#marca">A marca</a>
+    <a href="#logo">Logo</a>
+    <a href="#cores">Cores</a>
+    <a href="#tipografia">Tipografia</a>
+    <a href="#icones">Iconografia</a>
+    <a href="#elementos">Elementos gráficos</a>
+    <a href="#voz">Voz</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#arquivos">Arquivos</a>
+  </nav>
+  <div class="ver">MANUAL DE MARCA<br>VERSÃO 1.0 · OUT 2026</div>
+</aside>
+
+<main>
+<section class="hero" id="topo">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="wrap">
+    {{LOGO_HERO}}
+    <h1>Precisão que ilumina <em>decisões.</em></h1>
+    <p class="lead">Este manual reúne tudo o que é preciso para produzir material da Fireflies Consultoria: a ideia por trás da marca, o logo e suas regras, cores, tipografia, ícones, elementos gráficos, voz e modelos prontos.</p>
+    <div class="hero-meta"><span><b>Manual de marca</b> · versão 1.0</span><span>Outubro 2026</span><span>Consultoria financeira, contábil e fiscal · São Paulo</span></div>
+  </div>
+</section>
+
+<section id="marca">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">A marca</p>
+      <h2>Nada trabalha <em>sozinho.</em></h2>
+      <p class="lead">Notas, contas, balancetes e rateios chegam dispersos. A Fireflies coloca tudo em fase: contábil, fiscal, financeiro e auditoria trabalhando juntos, com um contador responsável que assina e explica.</p>
+    </div>
+    <div class="manifesto">
+      <div><span class="k">Propósito</span><span class="v">Transformar números dispersos em decisões seguras.</span></div>
+      <div><span class="k">Visão</span><span class="v">Ser a referência em São Paulo em auditoria de condomínios e contabilidade gerencial que o cliente entende.</span></div>
+      <div class="wide"><span class="k">Posicionamento</span><span class="v">Para síndicos e empresas que recebem relatórios mas não têm controle, a Fireflies Consultoria é a consultoria financeira, contábil e fiscal que coloca os números em sincronia: um contador responsável, um painel mensal explicado em reunião e a primeira entrega em 30 dias.</span></div>
+      <div><span class="k">Arquétipo</span><span class="v">Sábio, com o cuidado do Cuidador.</span></div>
+      <div><span class="k">Personalidade</span><span class="v">Precisa sem ser fria. Clara sem ser simplista. Próxima sem ser informal demais.</span></div>
+    </div>
+    <div class="values">
+      <div class="value"><b>Precisão</b><span>Cada número tem origem, conciliação e responsável.</span></div>
+      <div class="value"><b>Clareza</b><span>Se o cliente não entende, o trabalho não terminou.</span></div>
+      <div class="value"><b>Responsabilidade</b><span>Um contador responde pelo projeto do início ao fim.</span></div>
+      <div class="value"><b>Sincronia</b><span>Contábil, fiscal, auditoria e gestão trabalham juntos.</span></div>
+    </div>
+    <div class="taglines">
+      <div class="tag"><span class="eyebrow">Tagline oficial · acompanha o logo</span><span class="t">Precisão que ilumina <em>decisões.</em></span><span class="muted">Fala de confiança e de benefício, vale para todas as linhas e não envelhece. Vai em rodapés, assinatura de e-mail e propostas.</span></div>
+      <div class="tag"><span class="eyebrow">Conceito de campanha</span><span class="t">Números em <em>sincronia.</em></span><span class="muted">Plataforma modular: “Condomínio em sincronia.”, “Impostos em sincronia.”, “Equipe em sincronia.” Vai no site, em aberturas e em campanhas.</span></div>
+    </div>
+    <div class="metaphor">
+      {{SIMBOLO_NEG}}
+      <div class="legend">
+        <h3>O símbolo, lido em voz alta</h3>
+        <p class="muted">Vagalumes sozinhos piscam fora de ritmo. Em enxame, entram em fase. O símbolo desenha isso.</p>
+        <div><span class="dot"></span><span><b style="color:var(--fg)">Cinco nós</b> são os serviços: contábil, fiscal, financeiro, auditoria e processos.</span></div>
+        <div><span class="dot lit"></span><span><b style="color:var(--fg)">O nó aceso</b> é o contador responsável, que coloca os outros em fase.</span></div>
+        <div><span class="bar"></span><span><b style="color:var(--fg)">A órbita</b> é proteção: o cliente nunca fica sozinho com o número.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Logo</p>
+      <h2>Constelação, órbita e <em>uma luz.</em></h2>
+      <p class="lead">O redesenho mantém a lógica do logo anterior (rede de pontos, arco e luz) e corrige o que impedia a produção: gradiente, partículas desfocadas, sete matizes, nós fora de grid e o “E” quebrado. O resultado funciona em uma cor, a 32 px e bordado.</p>
+    </div>
+
+    <div class="boards two">
+      <figure class="board light">{{H_POS}}<figcaption>Horizontal · positivo · versão principal</figcaption></figure>
+      <figure class="board dark">{{H_NEG}}<figcaption>Horizontal · negativo · sobre Noite</figcaption></figure>
+    </div>
+    <div class="boards four">
+      <figure class="board light"><div class="mw-v">{{V_POS}}</div><figcaption>Vertical</figcaption></figure>
+      <figure class="board dark"><div class="mw-v">{{V_NEG}}</div><figcaption>Vertical · negativo</figcaption></figure>
+      <figure class="board light"><div class="mw-s">{{S_POS}}</div><figcaption>Símbolo</figcaption></figure>
+      <figure class="board dark"><div class="mw-s">{{S_NEG}}</div><figcaption>Símbolo · negativo</figcaption></figure>
+    </div>
+    <div class="boards three">
+      <figure class="board white"><div class="mw-a">{{A_POS}}</div><figcaption>Assinatura curta · digital e informal</figcaption></figure>
+      <figure class="board light"><div class="mw-h">{{H_MONO_N}}</div><figcaption>Mono Noite · carimbo, gravação</figcaption></figure>
+      <figure class="board lime"><div class="mw-h">{{H_MONO_N}}</div><figcaption style="color:var(--noite)">Mono Noite sobre Vagalume</figcaption></figure>
+    </div>
+
+    <h3>Linhas da marca</h3>
+    <p class="muted">Arquitetura monolítica: muda só o descritor. Os serviços não ganham sub-marca; o nome é “Consultoria Fiscal”, nunca “Fireflies Fiscal”.</p>
+    <div class="boards two">
+      <figure class="board light">{{COND_POS}}<figcaption>Fireflies Condomínios · síndicos, conselhos, administradoras</figcaption></figure>
+      <figure class="board dark">{{ACAD_NEG}}<figcaption>Fireflies Academy · treinamentos e certificados</figcaption></figure>
+    </div>
+
+    <div class="spec">
+      {{CONSTRUCAO}}
+      <dl class="rules">
+        <div><dt>Malha</dt><dd>Triangular, passo 16 × 14 u em grid de 64 u. Arestas a 0° e ±60°. Cinco nós de raio 3,25 e o vagalume de raio 5.</dd></div>
+        <div><dt>Órbita</dt><dd>Centro (29, 30), raio 27, de −60° a 140°, traço 5, pontas redondas.</dd></div>
+        <div><dt>Vagalume</dt><dd>No positivo, <b>Vagalume com contorno Noite</b>. No negativo, Vagalume puro. No mono, os <b>quatro raios diagonais</b> garantem a leitura sem cor.</dd></div>
+        <div><dt>Wordmark</dt><dd>Bricolage Grotesque 700, convertido em curvas, com espaçamento do par “fl” ajustado. Descritor em JetBrains Mono 500, tracking 0,24 em.</dd></div>
+        <div><dt>Lockup</dt><dd>X = altura-x de “Fireflies”. Símbolo com 1,2× a altura do bloco de texto e afastado 1 X do wordmark.</dd></div>
+        <div><dt>Proteção</dt><dd><b>1 X</b> livre em todos os lados do lockup. No símbolo isolado, ¼ da altura dele.</dd></div>
+      </dl>
+    </div>
+
+    <div class="boards two">
+      <figure class="board light"><div class="clear"><div style="width:min(320px,62vw)">{{H_POS}}</div></div><figcaption>Área de proteção: nada entra no tracejado</figcaption></figure>
+      <figure class="board light">
+        <div class="mins">
+          <figure><div style="width:180px">{{H_POS}}</div><figcaption>Horizontal · 180 px / 40 mm</figcaption></figure>
+          <figure><div style="width:110px">{{V_POS}}</div><figcaption>Vertical · 110 px / 25 mm</figcaption></figure>
+          <figure><div style="width:32px">{{S_POS}}</div><figcaption>Símbolo · 32 px / 8 mm</figcaption></figure>
+          <figure>{{FAVICON}}<figcaption>Abaixo de 32 px: favicon</figcaption></figure>
+        </div>
+        <figcaption>Tamanhos mínimos</figcaption>
+      </figure>
+    </div>
+
+    <h3>Usos incorretos</h3>
+    <div class="wrongs">{{ERROS}}</div>
+  </div>
+</section>
+
+<section id="cores">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Cores</p>
+      <h2>Noite petróleo, <em>luz lima.</em></h2>
+      <p class="lead">A paleta vem do site e foge do azul corporativo das contabilidades e do roxo da Fireflies.ai. A regra é simples: a luz é escassa. Um ponto aceso por peça vale mais que dez.</p>
+    </div>
+    <div class="swatches">{{CORES_PRINCIPAIS}}</div>
+    <div class="ratio" role="img" aria-label="Proporção de uso: 60% Noite ou Papel, 30% neutros, 8% Vagalume ou Oliva, 2% Brasa">
+      <span style="flex:60;background:var(--noite);color:var(--nevoa);box-shadow:inset 0 0 0 1px var(--line)">60% NOITE OU PAPEL</span>
+      <span style="flex:30;background:var(--mare);color:var(--fg)">30% NEUTROS</span>
+      <span style="flex:8;background:var(--luz);color:var(--noite)">8%</span>
+      <span style="flex:2.5;background:var(--brasa);padding:0" title="2% Brasa"></span>
+    </div>
+    <h3>Apoio e função</h3>
+    <div class="swatches">{{CORES_APOIO}}</div>
+    <p class="muted">Clique no código HEX para copiar. O CMYK foi ajustado para Coated FOGRA39 e o Pantone é aproximado: antes da primeira impressão, peça prova de cor e confira no guia físico.</p>
+    <h3>Escalas</h3>
+    <div class="scales">{{ESCALAS}}</div>
+    <h3>Contraste (WCAG 2.2)</h3>
+    <div class="pairs">{{CONTRASTE}}</div>
+    <p class="muted"><b style="color:var(--fg)">Vagalume nunca é texto nem ícone sobre fundo claro.</b> No claro, a luz é Oliva. Botão Vagalume leva texto Noite. Brasa é só alerta em dados (inadimplência, prazo) e nunca entra no logo.</p>
+  </div>
+</section>
+
+<section id="tipografia">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Tipografia</p>
+      <h2>Três vozes, <em>um sistema.</em></h2>
+      <p class="lead">Todas são gratuitas no Google Fonts e já estão no site. No Office, sem as fontes instaladas, use Arial Bold, Calibri e Consolas.</p>
+    </div>
+    <div class="type-specimens">
+      <div class="spec-card"><span class="role">Display · títulos e números grandes</span><span class="big" style="font-family:var(--display);font-weight:700;letter-spacing:-.04em">Aa</span><span class="fam">Bricolage Grotesque</span><span class="chars" style="font-family:var(--display);font-weight:600">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 R$ % ç ã é</span><span class="muted mono">600 · 700 · 800</span></div>
+      <div class="spec-card"><span class="role">Texto · corpo e interface</span><span class="big" style="font-family:var(--body);font-weight:500">Aa</span><span class="fam">Instrument Sans</span><span class="chars">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</span><span class="muted mono">400 · 500 · 600</span></div>
+      <div class="spec-card"><span class="role">Dados · números, rótulos</span><span class="big" style="font-family:var(--mono);font-weight:500;font-size:84px">Aa</span><span class="fam">JetBrains Mono</span><span class="chars mono" style="font-size:14px">R$ 18.200,00 · 12,4% · 30/08</span><span class="muted mono">400 · 500</span></div>
+    </div>
+    <div class="scale-table">
+      <div><span class="meta"><b>Display</b>Bricolage 700<br>56 / 1,0 · −0,03 em</span><span class="s" style="font:700 clamp(34px,5vw,56px)/1 var(--display);letter-spacing:-.03em">Números em <em style="font-style:normal;color:var(--luz)">sincronia.</em></span></div>
+      <div><span class="meta"><b>H1</b>Bricolage 700<br>40 / 1,08</span><span class="s" style="font:700 clamp(28px,4vw,40px)/1.08 var(--display);letter-spacing:-.02em">30 dias até a primeira luz.</span></div>
+      <div><span class="meta"><b>H2</b>Bricolage 600<br>32 / 1,15</span><span class="s" style="font:600 clamp(24px,3vw,32px)/1.15 var(--display);letter-spacing:-.015em">A bagunça entra. A conciliação sai.</span></div>
+      <div><span class="meta"><b>Lead</b>Instrument 400<br>20 / 1,5</span><span class="s" style="font:400 20px/1.5 var(--body);color:var(--fg-2)">Todo mês, o seu negócio em uma tela, com o que mudou, o que preocupa e o que já está resolvido.</span></div>
+      <div><span class="meta"><b>Corpo</b>Instrument 400<br>16 / 1,6 · até 65 caract.</span><span class="s" style="font:400 16px/1.6 var(--body);color:var(--fg-2)">Um contador responsável conduz o projeto do início ao fim, apoiado por especialistas montados sob medida para o seu desafio.</span></div>
+      <div><span class="meta"><b>Eyebrow</b>JetBrains 500<br>12 · +0,12 em · CAIXA ALTA</span><span class="s"><span class="eyebrow">Consultoria financeira, contábil e fiscal · São Paulo</span></span></div>
+      <div><span class="meta"><b>Dado</b>JetBrains 400–500<br>números tabulares</span><span class="s money" style="font-size:28px">R$ 46.200,00 <span style="color:var(--muted);font-size:16px">&nbsp;+8,2% vs. julho</span></span></div>
+    </div>
+    <p class="muted">Destaque uma palavra por título em Vagalume (no escuro) ou Oliva (no claro). O ponto final de títulos curtos faz parte da voz. Valores monetários vão em mono, alinhados à direita.</p>
+  </div>
+</section>
+
+<section id="icones">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Iconografia</p>
+      <h2>{{N_ICONES}} ícones, <em>um ponto aceso.</em></h2>
+      <p class="lead">Grid de 24, área viva de 20, traço de 1,5 com pontas e cantos redondos. Cada ícone tem no máximo um ponto aceso, e ele marca onde está a atenção: o resultado da lupa, o total do fechamento, o pico do painel.</p>
+    </div>
+    <div class="icon-spec">
+      <div class="icon-demo light">{{I:auditoria}}{{I:fiscal}}{{I:condominio}}{{I:painel-mensal}}{{I:responsavel}}{{I:fechamento}}<span class="cap" style="margin:0;width:100%">Claro: traço Tinta, ponto Oliva</span></div>
+      <div class="icon-demo dark">{{I:auditoria}}{{I:fiscal}}{{I:condominio}}{{I:painel-mensal}}{{I:responsavel}}{{I:fechamento}}<span class="cap" style="margin:0;width:100%;color:var(--muted)">Escuro: traço Papel, ponto Vagalume</span></div>
+    </div>
+    <div class="icon-demo light alert" style="gap:16px">{{I:inadimplencia}}{{I:alerta}}<span style="font-size:14px;color:var(--tinta)">Em alertas de dados o ponto pode ser Brasa. É o único lugar da marca onde ela aparece.</span></div>
+    <div class="icon-groups">{{ICONES}}</div>
+    <p class="muted">Use o sprite <code>icones/sprite.svg</code> com <code>&lt;use href="#ff-nome"&gt;</code>. O traço segue <code>currentColor</code> e o ponto segue <code>--ff-lit</code>. Em 16–20 px, defina <code>--ff-stroke: 2</code>.</p>
+  </div>
+</section>
+
+<section id="elementos">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Elementos gráficos</p>
+      <h2>Pontos que <em>entram em fase.</em></h2>
+      <p class="lead">Quatro recursos sustentam as peças sem depender do logo. Use um ou dois por peça, nunca os quatro.</p>
+    </div>
+    <div class="elements">
+      <div class="el"><div class="el-art"><canvas id="dots" aria-label="Gráfico de barras em matriz de pontos"></canvas></div><div class="el-txt"><b>Matriz de pontos</b><span>Barras e áreas feitas de pontos acesos. É o jeito Fireflies de mostrar número. Só a última barra, ou o dado em foco, ganha Vagalume.</span></div></div>
+      <div class="el"><div class="el-art"><canvas id="const" aria-label="Padrão de constelação"></canvas></div><div class="el-txt"><b>Constelação</b><span>Padrão de fundo em malha triangular de 48 px, com linhas finas em Maré. No máximo 3 nós acesos por peça.</span></div></div>
+      <div class="el"><div class="el-art">
+        <svg viewBox="0 0 400 260" aria-label="Órbita como moldura de número"><circle cx="200" cy="140" r="96" fill="none" stroke="#104048" stroke-width="2"/><path d="M248 57 A96 96 0 1 1 116 186" fill="none" stroke="#F3F5F7" stroke-width="14" stroke-linecap="round"/><circle cx="262" cy="80" r="9" fill="#D9F24A"/><text x="200" y="152" text-anchor="middle" font-family="Bricolage Grotesque, Arial" font-weight="700" font-size="58" fill="#F3F5F7" letter-spacing="-2">30</text><text x="200" y="182" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" letter-spacing="2" fill="#9DB9B7">DIAS</text></svg>
+      </div><div class="el-txt"><b>Órbita</b><span>O arco do símbolo, ampliado, emoldura um número, uma foto de rosto ou um selo. Sempre sólido e sem gradiente.</span></div></div>
+      <div class="el"><div class="el-art"><div class="eyebrow-demo"><span class="eyebrow">Especialidade · Condomínios</span><span class="h">Raio-X do seu <em>condomínio.</em></span><span style="display:flex;gap:10px;flex-wrap:wrap"><span class="btn">Agendar diagnóstico</span><span class="btn ghost">Ver como funciona</span></span></div></div><div class="el-txt"><b>Eyebrow e CTA</b><span>Rótulo em mono com o ponto aceso na frente, título com uma palavra iluminada e botão Vagalume com texto Noite.</span></div></div>
+    </div>
+    <p class="muted"><b style="color:var(--fg)">Fotografia:</b> pessoas reais em situação de trabalho (reunião, assembleia, conferência de documentos), com luz quente e natural e fundo escuro ou desfocado. Evite banco de imagem com aperto de mão, calculadora ou gráfico subindo. Sobre foto, aplique véu Noite de 60–80% antes do logo.</p>
+  </div>
+</section>
+
+<section id="voz">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Voz</p>
+      <h2>Precisa, clara e <em>próxima.</em></h2>
+      <p class="lead">A voz é sempre a mesma; o tom muda com quem está lendo. “A gente” vale no site, nas redes e com síndicos e PMEs. Em proposta, contrato, relatório de auditoria e com grandes grupos, use “nós” ou “a Fireflies”.</p>
+    </div>
+    <div class="tones">
+      <div><b>Síndico e conselho<small>Protetor e didático, sem jargão</small></b><q>Sua taxa paga o que deveria? A gente mostra para onde vai cada real e leva o relatório pronto para o conselho.</q></div>
+      <div><b>Empresário e PME<small>Direto, foco em caixa e tempo</small></b><q>Todo mês você sabe quanto entrou, quanto sobrou e o que preocupa. Em dois minutos.</q></div>
+      <div><b>Grande empresa<small>Técnico, sóbrio, “nós”</small></b><q>A Fireflies estrutura conciliação, fechamento e indicadores com um contador responsável e especialistas dimensionados ao escopo.</q></div>
+      <div><b>Redes sociais<small>Leve e curioso, mas exato</small></b><q>Fundo de reserva não é caixa do mês. Entenda a diferença em 3 slides.</q></div>
+    </div>
+    <div class="dodont">
+      <div class="dd do"><h3>Faça</h3><ul>
+        <li>Use número concreto e prazo: “30 dias”, “dois minutos”.</li>
+        <li>Nomeie o responsável.</li>
+        <li>Traduza o termo técnico na primeira vez: “DRE, o resultado do mês”.</li>
+        <li>Dê o alerta com calma e com a solução: “Inadimplência em 9%. Três unidades concentram 70%.”</li>
+        <li>Fale de planejamento tributário “dentro da lei”.</li>
+      </ul></div>
+      <div class="dd dont"><h3>Evite</h3><ul>
+        <li>Superlativo vazio: “a melhor”, “soluções completas”, “disruptivo”.</li>
+        <li>Medo: “Seu condomínio pode estar sendo roubado!”</li>
+        <li>Mais de uma metáfora de luz por peça.</li>
+        <li>Cases ilustrativos apresentados como reais.</li>
+        <li>“Fireflies” sozinho em handle, anúncio ou título de página. Use sempre <b>Fireflies Consultoria</b>.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="aplicacoes">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Aplicações</p>
+      <h2>Pronto para <em>produzir.</em></h2>
+      <p class="lead">Modelos editáveis em HTML/SVG, com PNG e PDF exportados, em <code>aplicacoes/</code>. As medidas seguem o guia de aplicações: Instagram 1080 × 1350, LinkedIn 4200 × 700, cartão 90 × 50 mm com 3 mm de sangria e slides 1920 × 1080.</p>
+    </div>
+    <div class="apps">{{APLICACOES}}</div>
+  </div>
+</section>
+
+<section id="arquivos">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Arquivos</p>
+      <h2>O <em>pacote.</em></h2>
+      <p class="lead">Tudo está na pasta <code>fireflies-brand/</code> do repositório. Os SVGs de logo têm o texto em curvas e não dependem de fonte instalada.</p>
+    </div>
+    <div class="handoff">
+      <div><b>Para a gráfica</b><span>Use <code>logo/svg</code> (vetor), <code>cores/README.md</code> (CMYK e Pantone) e os PDFs em <code>aplicacoes/papelaria</code>. Peça prova de cor.</span></div>
+      <div><b>Para o site</b><span>Use <code>cores/tokens.css</code>, <code>logo/favicon.*</code>, <code>icones/sprite.svg</code> e <code>aplicacoes/web/og-image</code>.</span></div>
+      <div><b>Para redes</b><span>Use <code>logo/avatar-redes-1080.png</code> e os modelos em <code>aplicacoes/redes</code>. O handle é sempre @firefliesconsultoria.</span></div>
+      <div><b>Para o time</b><span>Leia <code>estrategia/plataforma-de-marca.md</code> e <code>estrategia/guia-de-aplicacoes-e-rollout.md</code>, que traz o checklist de lançamento.</span></div>
+    </div>
+    <div>{{ARQUIVOS}}</div>
+    <p class="muted">Ainda falta o cliente confirmar o número do CRC-SP e o CNPJ, que aparecem como “a confirmar” nos modelos.</p>
+  </div>
+</section>
+
+<footer>
+  {{A_NEG}}
+  <span>Fireflies Consultoria · Manual de marca 1.0 · Outubro 2026</span>
+  <span>contato@fireflies.com.br · +55 11 98245-0527</span>
+</footer>
+</main>
+</div>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const C = { noite: '#06262B', mare: '#104048', luz: '#D9F24A', papel: '#F3F5F7', nevoa: '#9DB9B7' };
+  function fit(cv) { const r = cv.getBoundingClientRect(), d = devicePixelRatio || 1; cv.width = Math.max(1, r.width * d); cv.height = Math.max(1, r.height * d); const x = cv.getContext('2d'); x.setTransform(d, 0, 0, d, 0, 0); return [x, r.width, r.height]; }
+
+  // céu de vagalumes que entram em fase (Kuramoto simplificado)
+  const sky = document.getElementById('sky');
+  if (sky) {
+    let flies = [], x, w, h;
+    const init = () => { [x, w, h] = fit(sky); const n = Math.round(Math.min(90, w * h / 9000)); flies = Array.from({ length: n }, () => ({ x: Math.random() * w, y: Math.random() * h, p: Math.random() * Math.PI * 2, f: 0.9 + Math.random() * 0.2, r: 0.8 + Math.random() * 1.6 })); };
+    const draw = (t) => {
+      x.clearRect(0, 0, w, h);
+      const k = Math.min(1, t / 9000) * 0.9; // acoplamento cresce: começam desordenados, terminam em fase
+      let sx = 0, sy = 0; flies.forEach(f => { sx += Math.cos(f.p); sy += Math.sin(f.p); });
+      const mean = Math.atan2(sy, sx);
+      flies.forEach(f => {
+        if (!reduce) f.p += 0.035 * f.f + k * 0.03 * Math.sin(mean - f.p);
+        const b = Math.max(0, Math.sin(f.p)) ** 6;
+        x.beginPath(); x.fillStyle = `rgba(217,242,74,${0.12 + 0.75 * b})`; x.arc(f.x, f.y, f.r + b * 1.4, 0, 7); x.fill();
+        if (b > .4) { x.beginPath(); x.fillStyle = `rgba(217,242,74,${0.08 * b})`; x.arc(f.x, f.y, 10 * b, 0, 7); x.fill(); }
+      });
+      if (!reduce) requestAnimationFrame(draw);
+    };
+    init(); addEventListener('resize', init); requestAnimationFrame(draw);
+  }
+
+  // matriz de pontos
+  const dots = document.getElementById('dots');
+  const vals = [.38, .52, .46, .61, .57, .72, .8, .94];
+  const drawDots = () => {
+    if (!dots) return; const [x, w, h] = fit(dots); x.clearRect(0, 0, w, h);
+    const cols = vals.length, pad = 28, gw = (w - pad * 2) / cols, step = 7, base = h - 34;
+    x.font = '10px "JetBrains Mono", monospace'; x.textAlign = 'center';
+    ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO'].forEach((m, i) => {
+      const cx = pad + gw * i + gw / 2, rows = Math.floor(vals[i] * (base - 20) / step), lit = i === cols - 1;
+      for (let r = 0; r < rows; r++) for (let c = -2; c <= 2; c++) {
+        x.beginPath(); x.fillStyle = lit ? C.luz : (r === rows - 1 ? C.nevoa : 'rgba(157,185,183,.55)'); x.arc(cx + c * step, base - r * step, 1.7, 0, 7); x.fill();
+      }
+      x.fillStyle = C.nevoa; x.fillText(m, cx, h - 12);
+    });
+  };
+
+  // constelação
+  const cst = document.getElementById('const');
+  const drawConst = () => {
+    if (!cst) return; const [x, w, h] = fit(cst); x.clearRect(0, 0, w, h);
+    const sx = 48, sy = 42, pts = [];
+    let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let j = -1; j * sy < h + sy; j++) for (let i = -1; i * sx < w + sx; i++) if (rnd() > .42) pts.push({ x: i * sx + (j % 2 ? sx / 2 : 0), y: j * sy, j, i });
+    x.strokeStyle = C.mare; x.lineWidth = 1;
+    pts.forEach(a => pts.forEach(b => { const d = Math.hypot(a.x - b.x, a.y - b.y); if (a !== b && d < sx * 1.05 && a.x < b.x + .1) { x.beginPath(); x.moveTo(a.x, a.y); x.lineTo(b.x, b.y); x.stroke(); } }));
+    const lit = [Math.floor(pts.length * .3), Math.floor(pts.length * .62), Math.floor(pts.length * .81)];
+    pts.forEach((p, n) => { const on = lit.includes(n); x.beginPath(); x.fillStyle = on ? C.luz : '#2A5A61'; x.arc(p.x, p.y, on ? 4 : 2.6, 0, 7); x.fill(); if (on) { x.beginPath(); x.fillStyle = 'rgba(217,242,74,.14)'; x.arc(p.x, p.y, 12, 0, 7); x.fill(); } });
+  };
+  const redraw = () => { drawDots(); drawConst(); };
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(redraw); addEventListener('resize', redraw);
+
+  // copiar HEX
+  document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () => {
+    const v = b.dataset.copy;
+    const ok = () => { b.classList.add('done'); setTimeout(() => b.classList.remove('done'), 1400); };
+    try { navigator.clipboard.writeText(v).then(ok, () => { const r = document.createRange(); r.selectNodeContents(b); getSelection().removeAllRanges(); getSelection().addRange(r); }); } catch (e) {}
+  }));
+
+  // índice ativo
+  const links = [...document.querySelectorAll('.toc nav a')];
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id)); }), { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
+})();
+</script>
