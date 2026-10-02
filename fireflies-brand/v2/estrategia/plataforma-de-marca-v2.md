@@ -113,7 +113,7 @@ Use estes nomes em briefings, arquivos e conversas.
 | **Retícula** | A grade celeste de coordenadas, usada como fundo de capas, slides e painéis. |
 | **Trilha do Photinus** | A curva em "J" pontilhada que imita o voo de luz do vaga-lume. Indica percurso, etapas e "30 dias até a primeira luz". |
 | **Pingos-Estrela** | Os pingos dos dois "i" do wordmark. O primeiro é a Estrela Acesa (âmbar). O segundo é a Estrela Apagada (cor do texto). Abaixo de 120 px, os dois ficam na cor do texto. |
-| **a Ligadura fl** | O corte próprio do wordmark sobre Cormorant Garamond Bold. |
+| **o E de Luz** | O braço do meio do primeiro E de FIREFLIES, que acende: Vermelhão no claro e Âmbar no escuro. É a herança do E laranja do logo original, agora legível. |
 | **o Selo de Carta** | O selo circular graduado de auditoria/carta celeste, usado para relatórios, certificados da Academy e carimbos. |
 
 **Cores**
@@ -136,7 +136,7 @@ Use estes nomes em briefings, arquivos e conversas.
 
 | Fonte | Uso |
 |---|---|
-| **Cormorant Garamond 600–700** | A voz de gravura: títulos e números de capa. |
+| **Sora 600–700, caixa alta** | A voz do nome: wordmark, títulos e números de capa. Geométrica e digital, com tracking amplo. |
 | **IBM Plex Sans** | A voz de texto. |
 | **IBM Plex Mono** | A voz de livro-razão: dados e rótulos. |
 
@@ -232,5 +232,5 @@ A voz é sempre a mesma: **exata, serena e próxima**. O que muda é o tom.
 
 **Cuidado 3: esoterismo**
 - Estrelas são círculos, nunca ✦.
-- Nada de glow, lua crescente, zodíaco ou olho.
+- Nada de glow difuso, lua literal (o arco do símbolo é o **rastro de luz** do vagalume, não uma lua), zodíaco ou olho.
 - A astronomia aparece como instrumento de medida, não como crença.

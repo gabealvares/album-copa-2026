@@ -69,3 +69,16 @@ Regras:
 | Âmbar #F2B544 (peças de destaque, raras) | mono anil | anil (maior estrela) | Anil | nenhum outro acento |
 | Vermelhão / Rubrica (campanhas pontuais) | mono Cal | Cal | Cal | nenhum |
 | Foto | negativo, sobre véu anil 60–80%; ou positivo sobre área clara e limpa | | | |
+
+---
+
+# Atualização: rodada 3 (decisões com o cliente)
+
+1. **Fonte:** o cliente reprovou a Cormorant serifada ("queria algo mais digital"). Também não escolheu nenhuma das três digitais (Lexend Exa, Unbounded, Outfit) e pediu algo "mais próximo da que eu encaminhei".
+   - **Aprovado:** **Sora 620 em caixa alta**, em lettering próprio, com o **"E de Luz"**: o braço do meio do 1º E acende. Ele é Vermelhão no claro e Âmbar no escuro.
+   - Descritor CONSULTORIA em IBM Plex Sans 300, espaçado até a largura do nome.
+   - Sistema: Sora (títulos), IBM Plex Sans (texto), IBM Plex Mono (dados).
+2. **Símbolo:** o cliente achou que o "Lampyris" (élitros de pontos) perdeu a meia-lua/anel, as estrelas e o brilho do original. Remontamos o símbolo a partir do original em 3 rotas (Lua-constelação, Saturno-lanterna, Rastro que acende).
+   - **Escolhido:** A · Lua-constelação, com um ajuste pedido pelo cliente: "deixar a lua como o rastro do vagalume, só fazendo luz, sem parecer tanto uma lua".
+   - O arco passa a ser o **rastro de luz** do vagalume. Uma ponta é fio e a outra é luz, com transição âmbar → vermelhão no sentido do voo.
+3. **Mantidos:** a paleta Noite de São João, a iconografia v2 (79 ícones, 8 constelações dos serviços, ornamentos e padrões) e o manual de aplicação.

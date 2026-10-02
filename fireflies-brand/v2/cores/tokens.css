@@ -26,7 +26,7 @@
   --ff-lit: var(--ff-ambar);           /* lanterna: só em forma, com contorno anil no claro */
   --ff-lit-outline: var(--ff-anil);
 
-  --ff-font-display: "Cormorant Garamond", Garamond, Georgia, serif;
+  --ff-font-display: "Sora", "Century Gothic", Arial, sans-serif;
   --ff-font-body: "IBM Plex Sans", Calibri, Arial, sans-serif;
   --ff-font-mono: "IBM Plex Mono", Consolas, ui-monospace, monospace;
 }

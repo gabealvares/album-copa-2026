@@ -4,7 +4,7 @@
 >
 > **Base:** paleta "Noite de São João" (`../cores/tokens.json`, contrastes em `../cores/_matriz.md`), plataforma de marca v2 (`../estrategia/plataforma-de-marca-v2.md`), sistema iconográfico "Carta do Lume" (`../iconografia/README.md`) e as medidas técnicas que continuam válidas do guia v1 (`../../estrategia/guia-de-aplicacoes-e-rollout.md`).
 >
-> **Em aberto:** o logo e a fonte de títulos estão em redesenho. Este manual se refere a eles **pelo papel**: *Logo principal (horizontal)*, *Logo vertical*, *Símbolo*, *Símbolo reduzido* e *Fonte de títulos (display)*. A fonte de títulos será uma **sans geométrica em caixa alta**. O nome dela entra onde está marcado **{{FONTE_DISPLAY}}**. Texto corrido em **IBM Plex Sans** e dados em **IBM Plex Mono** já estão decididos.
+> **Em aberto:** o logo e a fonte de títulos estão em redesenho. Este manual se refere a eles **pelo papel**: *Logo principal (horizontal)*, *Logo vertical*, *Símbolo*, *Símbolo reduzido* e *Fonte de títulos (display)*. A fonte de títulos será uma **sans geométrica em caixa alta**. O nome dela entra onde está marcado **Sora**. Texto corrido em **IBM Plex Sans** e dados em **IBM Plex Mono** já estão decididos.
 >
 > **Pranchas:** `pranchas/matriz-de-fundos.png`, `pranchas/distribuicao-de-cor.png` e `pranchas/arvore-claro-escuro.png`. O símbolo das pranchas é **provisório** (arco pontilhado com nós e lanterna âmbar) e só serve para mostrar cor e posição.
 
@@ -33,7 +33,7 @@
 
 | Papel | Fonte | Pesos | Fallback Office | Fallback Google |
 |---|---|---|---|---|
-| **Fonte de títulos (display)** | {{FONTE_DISPLAY}} (sans geométrica, **sempre caixa alta**) | Bold / SemiBold | {{FONTE_DISPLAY_FALLBACK_OFFICE}} (provisório: Century Gothic Bold) | {{FONTE_DISPLAY}} se estiver no Google Fonts; senão Montserrat SemiBold |
+| **Fonte de títulos (display)** | Sora (sans geométrica, **sempre caixa alta**) | Bold / SemiBold | Century Gothic Bold | Sora (disponível no Google Fonts) |
 | **Texto** | IBM Plex Sans | 400, 500, 600 (itálico 400) | Arial | IBM Plex Sans (nativa) |
 | **Dados** | IBM Plex Mono | 400, 500, números tabulares | Consolas | IBM Plex Mono (nativa) |
 
@@ -197,13 +197,13 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 | Nível | Fonte | Tela (pt / px) | Projetor em sala clara (mínimo) |
 |---|---|---|---|
-| Título de capa | {{FONTE_DISPLAY}} Bold, caixa alta, tracking +2% | 54 pt / 72 px | 54 pt |
-| Título de divisor | {{FONTE_DISPLAY}} Bold, caixa alta | 44 pt / 58 px | 44 pt |
-| Título de slide | {{FONTE_DISPLAY}} SemiBold, caixa alta | 28 pt / 38 px | 32 pt |
+| Título de capa | Sora Bold, caixa alta, tracking +2% | 54 pt / 72 px | 54 pt |
+| Título de divisor | Sora Bold, caixa alta | 44 pt / 58 px | 44 pt |
+| Título de slide | Sora SemiBold, caixa alta | 28 pt / 38 px | 32 pt |
 | Eyebrow / rótulo | IBM Plex Mono Medium, caixa alta, tracking +12% | 11 pt / 15 px | 14 pt |
 | Corpo | IBM Plex Sans Regular, entrelinha 1,35 | 18 pt / 24 px | **24 pt** |
 | Destaque no corpo | IBM Plex Sans SemiBold, em Rubrica (claro) ou Âmbar/Vermelhão (escuro) | — | — |
-| Número-chave (KPI) | {{FONTE_DISPLAY}} Bold, números tabulares | 96 pt / 128 px | 96 pt |
+| Número-chave (KPI) | Sora Bold, números tabulares | 96 pt / 128 px | 96 pt |
 | Dados de tabela | IBM Plex Mono Regular | 14 pt / 19 px | 18 pt |
 | Citação | IBM Plex Sans Light/Regular itálico | 28 pt / 38 px | 32 pt |
 | Rodapé | IBM Plex Mono Regular | 9 pt / 12 px | 11 pt |
@@ -243,9 +243,9 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 | Nível | Fonte | Tamanho / entrelinha | Cor (Branco) |
 |---|---|---|---|
-| Título de capa | {{FONTE_DISPLAY}} Bold, caixa alta | 32 pt / 36 pt | Cal (sobre capa Anil) ou Anil |
-| Título do documento (1ª página interna) | {{FONTE_DISPLAY}} Bold, caixa alta | 20 pt / 24 pt | Anil |
-| H1 (seção) | {{FONTE_DISPLAY}} SemiBold, caixa alta, tracking +2% | 14 pt / 18 pt, 18 pt antes | Anil |
+| Título de capa | Sora Bold, caixa alta | 32 pt / 36 pt | Cal (sobre capa Anil) ou Anil |
+| Título do documento (1ª página interna) | Sora Bold, caixa alta | 20 pt / 24 pt | Anil |
+| H1 (seção) | Sora SemiBold, caixa alta, tracking +2% | 14 pt / 18 pt, 18 pt antes | Anil |
 | H2 | IBM Plex Sans SemiBold | 12 pt / 16 pt, 12 pt antes | Anil |
 | H3 | IBM Plex Sans SemiBold | 10,5 pt / 14 pt | Fuligem |
 | Eyebrow / rótulo | IBM Plex Mono Medium, caixa alta, tracking +10% | 8 pt | Rubrica |
@@ -276,7 +276,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Fundo Branco em tudo que é impresso no escritório | Miolo em Cal Virgem ou Anil |
 | Rodapé com responsável técnico, CRC e "Página X de Y" | Rodapé só com "www" |
 | Números em Plex Mono, alinhados à direita | Números em fonte proporcional centralizados |
-| Uma só fonte de títulos ({{FONTE_DISPLAY}}) em caixa alta | Títulos em caixa alta e baixa ou em negrito da Plex "para variar" |
+| Uma só fonte de títulos (Sora) em caixa alta | Títulos em caixa alta e baixa ou em negrito da Plex "para variar" |
 | Contrato e parecer limpos | Padrão, constelação ou marca-d'água em documento jurídico |
 
 ### 5.3 Papel timbrado e envelopes
@@ -335,10 +335,10 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 
 | Peça | Medida | Área segura | Fundo | Logo | Tipografia |
 |---|---|---|---|---|---|
-| **Post (feed)** | 1080×1350 px (4:5) | Conteúdo dentro de 1080×1350; texto a 80 px das bordas; para o grid 3:4, manter o essencial nos 1012 px centrais de altura | Anil (2 de 3) · Cal (1 de 3) | Símbolo 48 px canto inferior direito, ou handle em Mono | Título {{FONTE_DISPLAY}} Bold caixa alta **64–80 px**; corpo Plex Sans 32–36 px; eyebrow Mono 22 px |
+| **Post (feed)** | 1080×1350 px (4:5) | Conteúdo dentro de 1080×1350; texto a 80 px das bordas; para o grid 3:4, manter o essencial nos 1012 px centrais de altura | Anil (2 de 3) · Cal (1 de 3) | Símbolo 48 px canto inferior direito, ou handle em Mono | Título Sora Bold caixa alta **64–80 px**; corpo Plex Sans 32–36 px; eyebrow Mono 22 px |
 | **Carrossel** | 1080×1350 px, 6 a 10 cards (LinkedIn: PDF 1080×1350, 6 a 12 páginas) | Igual ao post | Capa Anil; miolo alterna Cal/Anil por bloco, nunca card a card | Capa: Logo principal Negativo 280 px; cards: numeração "03 / 08" em Mono | Capa 80–96 px; miolo 56 px título, 34 px corpo |
 | **Story / Reels** | 1080×1920 px | Livre: **250 px no topo e 340 px na base**; laterais 64 px | Anil | Símbolo 56 px no topo da área segura | Título 72–88 px; corpo 40 px |
-| **Capa do LinkedIn (página)** | 4200×700 px (mín. 1128×191) | Centro de 3000×500; canto inferior esquerdo livre (o avatar cobre ~ 22% da largura no desktop) | Anil + retícula Céu 30% | Não repetir o logo (o avatar já é o logo) | "Luz medida." {{FONTE_DISPLAY}} 160 px, à direita do centro |
+| **Capa do LinkedIn (página)** | 4200×700 px (mín. 1128×191) | Centro de 3000×500; canto inferior esquerdo livre (o avatar cobre ~ 22% da largura no desktop) | Anil + retícula Céu 30% | Não repetir o logo (o avatar já é o logo) | "Luz medida." Sora 160 px, à direita do centro |
 | **Capa do LinkedIn (perfil)** | 1584×396 px | Terço esquerdo livre (foto) | Anil | Logo principal Negativo 320 px, à direita | Frase de apoio em Plex Sans 36 px + "CRC-SP [nº]" em Mono 24 px |
 | **Avatar** | 1080×1080 px (exibido em círculo) | Símbolo dentro do **círculo de 70%** | Anil de Junho | Símbolo Negativo (Símbolo reduzido abaixo de 64 px de exibição) | — |
 | **OG image / link** | 1200×630 px | Margem 60 px | Anil | Logo principal Negativo 320 px | Título 64 px |
@@ -362,9 +362,9 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 
 | Elemento | Fonte | Tamanho | Cor |
 |---|---|---|---|
-| "CERTIFICADO" | {{FONTE_DISPLAY}} Bold, caixa alta, tracking +8% | 36 pt | Anil |
+| "CERTIFICADO" | Sora Bold, caixa alta, tracking +8% | 36 pt | Anil |
 | "Certificamos que" | IBM Plex Sans Regular | 12 pt | Fuligem |
-| Nome do participante | {{FONTE_DISPLAY}} SemiBold, caixa alta | 28 pt | Anil |
+| Nome do participante | Sora SemiBold, caixa alta | 28 pt | Anil |
 | Curso, carga horária, período, modalidade | IBM Plex Sans Regular / SemiBold no nome do curso | 12 pt | Fuligem; nome do curso em Rubrica |
 | Instrutor e responsável técnico | Plex Sans SemiBold 10 pt + Mono 8 pt (CRC) | | Anil / Pedra-Sabão |
 | Código e verificação | IBM Plex Mono | 8 pt | Pedra-Sabão; QR 18 mm |
@@ -442,7 +442,7 @@ Semáforo nunca só por cor: a ordem **forma → palavra → cor**.
 - Negativo: **−1.234,56** com sinal de menos real (U+2212) em Rubrica; em contabilidade formal, (1.234,56) é aceito **somado** à cor.
 - Percentual: **9,4%** sem espaço; pontos percentuais escritos "p.p.".
 - Datas: **dd/mm/aaaa**; períodos **01/2026–12/2026** (meia-risca).
-- Números grandes de capa e KPI: {{FONTE_DISPLAY}} Bold; a unidade em Plex Mono a 40% do tamanho.
+- Números grandes de capa e KPI: Sora Bold; a unidade em Plex Mono a 40% do tamanho.
 
 ---
 
@@ -490,7 +490,7 @@ Semáforo nunca só por cor: a ordem **forma → palavra → cor**.
 
 | Papel | Instalar | Se não houver (Office) | Google Docs/Slides |
 |---|---|---|---|
-| Títulos | {{FONTE_DISPLAY}} | {{FONTE_DISPLAY_FALLBACK_OFFICE}} (provisório: Century Gothic Bold), caixa alta | {{FONTE_DISPLAY}} ou Montserrat SemiBold |
+| Títulos | Sora | Century Gothic Bold, caixa alta | Sora |
 | Texto | IBM Plex Sans | Arial | IBM Plex Sans |
 | Dados | IBM Plex Mono | Consolas | IBM Plex Mono |
 
@@ -517,16 +517,16 @@ Semáforo nunca só por cor: a ordem **forma → palavra → cor**.
 
 **Por que essa ordem:** o Office e o Google pintam gráficos na ordem das Ênfases. Com Ênfase 1–4 = Anil, Céu, Rubrica, Pedra, todo gráfico novo já sai na ordem da seção 6.1. Âmbar fica na 5ª posição para **não entrar** sozinho em gráficos de até 4 séries: aplique-o à mão no valor de destaque. No tema do slide escuro, troque a série 1 para Cal Virgem manualmente (ou use o layout "Dados · escuro" do template).
 
-Nomeie o tema **"Fireflies 2026"** (arquivo `Fireflies 2026.thmx`) e as fontes do tema: Títulos = {{FONTE_DISPLAY}}, Corpo = IBM Plex Sans.
+Nomeie o tema **"Fireflies 2026"** (arquivo `Fireflies 2026.thmx`) e as fontes do tema: Títulos = Sora, Corpo = IBM Plex Sans.
 
 ### 9.3 Estilos de parágrafo (Word e Google Docs)
 
 | Estilo | Base | Fonte | Tamanho / entrelinha | Espaço antes/depois | Cor | Outros |
 |---|---|---|---|---|---|---|
 | **Normal** | — | IBM Plex Sans | 10 pt / 14,5 pt (exato) | 0 / 6 pt | Fuligem | Justificação à esquerda; hifenização desligada |
-| **Título** | — | {{FONTE_DISPLAY}} Bold, caixa alta | 20 pt / 24 pt | 0 / 12 pt | Anil | — |
+| **Título** | — | Sora Bold, caixa alta | 20 pt / 24 pt | 0 / 12 pt | Anil | — |
 | **Subtítulo** | — | IBM Plex Sans | 12 pt / 16 pt | 0 / 18 pt | Pedra-Sabão | — |
-| **Título 1** | Normal | {{FONTE_DISPLAY}} SemiBold, caixa alta, +2% | 14 pt / 18 pt | 18 / 6 pt | Anil | Manter com o próximo; numeração "1." opcional |
+| **Título 1** | Normal | Sora SemiBold, caixa alta, +2% | 14 pt / 18 pt | 18 / 6 pt | Anil | Manter com o próximo; numeração "1." opcional |
 | **Título 2** | Normal | IBM Plex Sans SemiBold | 12 pt / 16 pt | 12 / 4 pt | Anil | Manter com o próximo |
 | **Título 3** | Normal | IBM Plex Sans SemiBold | 10,5 pt / 14 pt | 10 / 2 pt | Fuligem | — |
 | **Eyebrow** | Normal | IBM Plex Mono Medium, caixa alta, +10% | 8 pt | 0 / 4 pt | Rubrica | — |
@@ -562,7 +562,7 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 - [ ] Tom certo: "nós" em proposta, contrato e relatório; "a gente" em redes e WhatsApp.
 
 **Tipografia e dados**
-- [ ] Títulos em {{FONTE_DISPLAY}} caixa alta; texto em Plex Sans; números em Plex Mono à direita.
+- [ ] Títulos em Sora caixa alta; texto em Plex Sans; números em Plex Mono à direita.
 - [ ] Corpo ≥ 10 pt (documento), ≥ 18 pt (slide de tela), ≥ 24 pt (projetor em sala clara).
 - [ ] Todo texto com contraste ≥ 4,5:1 (conferir na seção 2).
 - [ ] Gráfico com ≤ 4 séries, título que afirma, estado com forma + palavra + cor.
@@ -597,4 +597,4 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 
 ---
 
-*Versão 1.0 · outubro de 2026 · Pendências: nome da {{FONTE_DISPLAY}} e do fallback, arquivos finais do Logo principal, Logo vertical, Símbolo e Símbolo reduzido, definição da versão "Transição quente", CRC e CNPJ.*
+*Versão 1.0 · outubro de 2026 · Pendências: nome da Sora e do fallback, arquivos finais do Logo principal, Logo vertical, Símbolo e Símbolo reduzido, definição da versão "Transição quente", CRC e CNPJ.*
