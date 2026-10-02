@@ -79,17 +79,16 @@ Regras:
 ## 4. Como contar o símbolo
 
 **Em 1 frase (site)**
-> Nosso símbolo é um vaga-lume desenhado como constelação: cada estrela é um serviço, e a lanterna acesa é o contador responsável que coloca todos em fase.
+> Nosso símbolo é o voo de um vaga-lume em volta do nome: atrás, uma constelação de estrelas ligadas, os serviços; na frente, o rastro de luz que acende na ponta, onde está o contador responsável.
 
 **Em 1 parágrafo (apresentação)**
-> Os primeiros atlas celestes, como a *Uranometria* de Bayer, de 1603, transformaram o assombro do céu em medida: cada estrela ganhou nome, posição e grandeza. Desenhamos o nosso vaga-lume com essa mesma gramática. As estrelas do corpo e das asas são os serviços (contábil, fiscal, financeiro, auditoria e processos), cada uma com o seu tamanho e o seu peso. A estrela maior, âmbar, fica na lanterna: é o contador responsável, que responde pelo todo. E a ciência mostra que os vaga-lumes, sozinhos, piscam fora de ritmo e, juntos, entram em fase. É isso que fazemos com os números de um condomínio ou de uma empresa. Nada trabalha sozinho.
+> Os primeiros atlas celestes, como a *Uranometria* de Bayer, de 1603, transformaram o assombro do céu em medida. Nossa marca nasce dessa mesma ideia. Uma órbita leve envolve o nome Fireflies. A metade de trás é uma constelação: um fio fino com estrelas, que são os serviços (contábil, fiscal, financeiro, auditoria e processos). Na metade da frente, o fio esquenta e vira luz, até chegar ao vaga-lume aceso, que é o contador responsável. A ciência mostra que os vaga-lumes, sozinhos, piscam fora de ritmo e, juntos, entram em fase. É isso que fazemos com os números de um condomínio ou de uma empresa. Nada trabalha sozinho.
 
 **Roteiro de 30 segundos (Gabriel, em reunião)**
 > "Deixa eu explicar rapidinho o nosso símbolo, porque ele resume como a gente trabalha.
-> Olha: é um vaga-lume, mas desenhado como constelação, igual aos mapas antigos do céu.
-> Cada estrela é uma área do seu condomínio (ou da sua empresa): contábil, fiscal, financeiro, auditoria.
-> Hoje, provavelmente, cada uma pisca no seu ritmo, e é aí que aparece imposto em dobro, rateio que não fecha, inadimplência que ninguém viu.
-> Essa estrela maior, acesa, é a lanterna. Sou eu, o contador responsável. Meu trabalho é colocar todas em fase.
+> Está vendo essa órbita em volta do nome? Atrás, é uma constelação: cada estrela é uma área do seu condomínio ou da sua empresa (contábil, fiscal, financeiro, auditoria).
+> Sozinhas, elas piscam cada uma no seu ritmo, e é aí que aparece imposto em dobro, rateio que não fecha, inadimplência que ninguém viu.
+> Na frente, a linha vira luz e acende no vaga-lume. Esse sou eu, o contador responsável: meu trabalho é colocar tudo em fase.
 > Em 30 dias você tem a primeira luz: o primeiro painel, explicado, com a minha assinatura."
 
 ---
@@ -103,16 +102,13 @@ Use estes nomes em briefings, arquivos e conversas.
 
 | Nome | O que é |
 |---|---|
-| **o Vagalume** | O símbolo completo: até 7 estrelas mais a Lanterna, ligadas por traço de constelação. |
-| **a Lanterna** | A maior estrela, em âmbar, no abdome. Representa o contador responsável. Sobre fundo claro, leva o **Contorno** anil colado. Em 1 cor, distingue-se por ser a maior. |
-| **os Élitros** | As asas, feitas de triângulos de estrelas que convergem para a Lanterna. |
-| **as Antenas** | 1 estrela e 1 ponto de cada lado da cabeça. |
-| **o Vagalume Miúdo** | A versão pequena (24–32 px): 5 estrelas ligadas por filete contínuo, para favicon, avatar e carimbo. |
-| **Magnitudes** | A escala de pontos: 3 magnitudes mais a Lanterna. Vale para o símbolo, a iconografia e os gráficos. Quanto maior o ponto, maior a importância. |
-| **Traço de Constelação** | A linha de ligação entre estrelas: pontilhada no tamanho de uso, contínua no Miúdo. |
+| **a Órbita** | O símbolo: um único fio elíptico, leve e inclinado, que envolve o nome. A metade de trás é **Constelação** (fio finíssimo com estrelas enfiadas, fria). A metade da frente é **Luz**: o fio engrossa e esquenta (rubrica → vermelhão → âmbar). Nada é colado; é um gesto só. Herda o anel e a meia-lua do logo original. |
+| **o Vagalume** | Fica na ponta da Órbita, acima do E de Luz: a luz acesa com brilho suave e duas asas em fio. Representa o contador responsável que acende os outros. |
+| **o F de Luz** | A versão curta: o F da Sora, com o braço do meio aceso, dentro da mesma Órbita e com o mesmo Vagalume na ponta. Uso em avatar, favicon, app e selo. |
+| **Magnitudes** | A escala de pontos: 3 magnitudes mais a luz do Vagalume. Vale para o símbolo, a iconografia e os gráficos. Quanto maior o ponto, maior a importância. |
+| **Traço de Constelação** | O fio finíssimo com estrelas enfiadas: a metade fria da Órbita e a linguagem das 8 Constelações dos Serviços. |
 | **Retícula** | A grade celeste de coordenadas, usada como fundo de capas, slides e painéis. |
 | **Trilha do Photinus** | A curva em "J" pontilhada que imita o voo de luz do vaga-lume. Indica percurso, etapas e "30 dias até a primeira luz". |
-| **Pingos-Estrela** | Os pingos dos dois "i" do wordmark. O primeiro é a Estrela Acesa (âmbar). O segundo é a Estrela Apagada (cor do texto). Abaixo de 120 px, os dois ficam na cor do texto. |
 | **o E de Luz** | O braço do meio do primeiro E de FIREFLIES, que acende: Vermelhão no claro e Âmbar no escuro. É a herança do E laranja do logo original, agora legível. |
 | **o Selo de Carta** | O selo circular graduado de auditoria/carta celeste, usado para relatórios, certificados da Academy e carimbos. |
 
@@ -209,7 +205,7 @@ A voz é sempre a mesma: **exata, serena e próxima**. O que muda é o tom.
 
 **Frente às contabilidades tradicionais e "online"**
 - Elas competem por mensalidade e entregam guias e PDFs. A Fireflies entrega um mapa: painel mensal, reunião, alerta e um responsável que assina.
-- No visual, elas usam azul corporativo, calculadora e gráfico subindo. A Fireflies usa Anil de Junho, uma Lanterna âmbar e o Vermelhão de Rubrica.
+- No visual, elas usam azul corporativo, calculadora e gráfico subindo. A Fireflies usa Anil de Junho, um Vagalume âmbar e o Vermelhão de Rubrica.
 
 **Frente às auditorias tradicionais e às Big Four**
 - São distantes, caras e escrevem relatório ilegível. A Fireflies tem o rigor do Sábio com o cuidado do Cuidador: relatório executivo que o conselho entende, e um rosto.
