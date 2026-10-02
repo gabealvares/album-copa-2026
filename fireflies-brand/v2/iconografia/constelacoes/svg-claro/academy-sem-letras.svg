@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#17183A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <title>Academy · Liber</title>
+  <polygon points="1,2 63,2 63,61 1,61" fill="none" stroke="#5E6271" stroke-width=".5" stroke-dasharray="2 2" opacity=".55"/>
+  <path d="M28.32 17.44 22.02 14.78" stroke-dasharray="0 3.41"/>
+  <path d="M15.75 14.08 8.92 15.3" stroke-dasharray="0 3.46"/>
+  <path d="M5 20 5 45.72" stroke-dasharray="0 2.86"/>
+  <path d="M8.28 48.65 15.74 47.85" stroke-dasharray="0 3.74"/>
+  <path d="M21.76 49.31 28 53.38" stroke-dasharray="0 3.72"/>
+  <path d="M35.68 17.44 41.98 14.78" stroke-dasharray="0 3.41"/>
+  <path d="M48.25 14.08 55.08 15.3" stroke-dasharray="0 3.46"/>
+  <path d="M59 20 59 45.72" stroke-dasharray="0 2.86"/>
+  <path d="M55.72 48.65 48.26 47.85" stroke-dasharray="0 3.74"/>
+  <path d="M42.24 49.31 36 53.38" stroke-dasharray="0 3.72"/>
+  <path d="M32 23 32 51.22" stroke-dasharray="0 3.13"/>
+  <circle cx="32" cy="19" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="32" cy="56" r="2.6" fill="#17183A" stroke="none"/>
+  <circle cx="19" cy="13.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="5" cy="16" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="5" cy="49" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="19" cy="47.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="45" cy="13.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="59" cy="16" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="59" cy="49" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="45" cy="47.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="12" cy="27" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="12" cy="35" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="52" cy="27" r="1.1" fill="#17183A" stroke="none"/>
+  <circle class="lit" cx="32" cy="7" r="4.2" style="fill:#F2B544;stroke:#17183A" stroke-width="1"/>
+</svg>

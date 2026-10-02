@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" fill="none">
+  <title>Moldura de carta</title>
+  <rect x="10" y="10" width="460" height="280" stroke="#17183A" stroke-width="1.1"/>
+  <rect x="16" y="16" width="448" height="268" stroke="#17183A" stroke-width=".7"/>
+  <rect x="16" y="10" width="20" height="6" fill="#17183A"/><rect x="16" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="56" y="10" width="20" height="6" fill="#17183A"/><rect x="56" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="96" y="10" width="20" height="6" fill="#17183A"/><rect x="96" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="136" y="10" width="20" height="6" fill="#17183A"/><rect x="136" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="176" y="10" width="20" height="6" fill="#17183A"/><rect x="176" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="216" y="10" width="20" height="6" fill="#17183A"/><rect x="216" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="256" y="10" width="20" height="6" fill="#17183A"/><rect x="256" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="296" y="10" width="20" height="6" fill="#17183A"/><rect x="296" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="336" y="10" width="20" height="6" fill="#17183A"/><rect x="336" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="376" y="10" width="20" height="6" fill="#17183A"/><rect x="376" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="416" y="10" width="20" height="6" fill="#17183A"/><rect x="416" y="284" width="20" height="6" fill="#17183A"/>
+  <rect x="456" y="10" width="8" height="6" fill="#17183A"/><rect x="456" y="284" width="8" height="6" fill="#17183A"/>
+  <rect x="10" y="16" width="6" height="20" fill="#17183A"/><rect x="464" y="16" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="56" width="6" height="20" fill="#17183A"/><rect x="464" y="56" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="96" width="6" height="20" fill="#17183A"/><rect x="464" y="96" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="136" width="6" height="20" fill="#17183A"/><rect x="464" y="136" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="176" width="6" height="20" fill="#17183A"/><rect x="464" y="176" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="216" width="6" height="20" fill="#17183A"/><rect x="464" y="216" width="6" height="20" fill="#17183A"/>
+  <rect x="10" y="256" width="6" height="20" fill="#17183A"/><rect x="464" y="256" width="6" height="20" fill="#17183A"/>
+</svg>

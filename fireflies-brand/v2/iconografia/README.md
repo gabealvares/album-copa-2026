@@ -181,3 +181,17 @@ O `icones.js` valida as regras a cada geração: acusa mais de 1 lanterna, mais 
    - o fundo de reserva com tampa lia como lixeira e virou pote de boca larga com nível pontilhado;
    - a lanterna dos padrões ficou mais rara (tiles de 480–720);
    - os ornamentos pequenos ganharam escala na prancha.
+
+## Arquivos com cores aplicadas (para Illustrator, PowerPoint, Canva, Figma)
+
+Os SVGs originais (`svg/`) usam `currentColor` e variáveis CSS, o que é ideal para web. Para programas de design e Office, use as versões com cor já aplicada:
+
+| Pasta | Uso | Traço | Linhas secundárias | Lanterna |
+|---|---|---|---|---|
+| `*/svg-claro/` e `*/png-claro/` | fundos Branco e Cal | Anil | Pedra-Sabão | Âmbar com contorno Anil |
+| `*/svg-escuro/` e `*/png-escuro/` | fundo Anil | Cal | Céu de Anil | Âmbar |
+| `*/svg-mono-anil/` e `*/png-mono-anil/` | 1 cor, carimbo, gravação | Anil | Anil | Anil (a maior estrela) |
+
+- Os PNGs têm fundo transparente: ícones em 512 px, constelações e ornamentos em 1024 px de largura.
+- Os padrões ficam em `padroes/png/*-2000.png` (2000 × 2000 px, repetíveis).
+- Para regerar: `node _build/exportar-cores-png.js`.

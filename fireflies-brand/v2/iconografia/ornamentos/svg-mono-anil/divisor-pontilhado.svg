@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 24" width="480" height="24" fill="none">
+  <title>Divisor pontilhado</title>
+  <path d="M8 12H222" fill="none" stroke="#17183A" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0 5.94"/>
+  <path d="M258 12H472" fill="none" stroke="#17183A" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="0 5.94"/>
+  <circle cx="240" cy="12" r="4.2" fill="#17183A"/>
+  <circle cx="229" cy="12" r="1.4" fill="#17183A"/>
+  <circle cx="251" cy="12" r="1.4" fill="#17183A"/>
+</svg>
