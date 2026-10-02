@@ -20,11 +20,10 @@ function rodape(o, { ref = '', pag, total, sufixo = 'Confidencial' } = {}) {
 }
 function rodapeTimbrado(o) {
   const x = o + ML, s = pt(7.5);
-  let r = line(x, o + A4H - 18.6, x + 12, o + A4H - 18.6, C.rubrica, pt(0.75));
-  r += t('Fireflies Consultoria · ' + CNPJ + ' · São Paulo/SP', { f: 'mono4', s, x, y: o + A4H - 14, fill: C.pedra });
-  r += t('WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br', { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
-  r += t('Responsável técnico', { f: 'mono4', s, x: o + A4W - MR, y: o + A4H - 14, fill: C.pedra, a: 'end' });
-  r += t('Gabriel Alvares, ' + CRC, { f: 'mono4', s, x: o + A4W - MR, y: o + A4H - 10, fill: C.pedra, a: 'end' });
+  let r = line(x, o + A4H - 22.6, x + 12, o + A4H - 22.6, C.rubrica, pt(0.75));
+  r += t('Fireflies Consultoria · ' + CNPJ + ' · São Paulo/SP', { f: 'mono4', s, x, y: o + A4H - 18, fill: C.pedra });
+  r += t('WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br', { f: 'mono4', s, x, y: o + A4H - 14, fill: C.pedra });
+  r += t('Responsável técnico: Gabriel Alvares, ' + CRC, { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
   return r;
 }
 // cabeçalho da 1ª página interna: logo principal 40 mm; nas demais, símbolo 8 mm
@@ -104,7 +103,7 @@ for (const versao of ['grafica', 'escritorio']) {
   if (versao === 'grafica') {
     const p = padrao('reticula-celeste-claro', { k: 5 / 60, lit: C.pedra, cor: { '#17183A': C.pedra } });
     defs += p.def;
-    b += rect(0, 0, o + ML - 7, H, p.fill, ' opacity=".55"');
+    b += rect(0, 0, o + ML - 7, H, p.fill, ' opacity=".8"');
   }
   b += logo('horizontal', 'digital', { w: 45, x: o + ML, y: o + 15 }).svg;
   b += rodapeTimbrado(o);
@@ -290,11 +289,11 @@ for (const versao of ['grafica', 'escritorio']) {
   F.p('O conselho fiscal pergunta se o condomínio deveria ter retido o ISS das notas de manutenção de elevadores e de bombas emitidas entre janeiro e junho de 2026, e o que fazer com as notas já pagas sem retenção.');
   F.h1('2. Análise');
   F.p('A legislação do Município de São Paulo atribui ao condomínio edilício, quando toma determinados serviços, a responsabilidade pela retenção e pelo recolhimento do ISS. Entre esses serviços estão os de conservação e manutenção. O enquadramento depende do código do serviço em cada nota e do cadastro do prestador.');
-  F.p('Das 14 notas do período, 9 se enquadram na hipótese de retenção e somam R$ 4.215,60 de ISS não retido. Nas outras 5, o prestador é optante pelo regime que dispensa a retenção, e não há ajuste a fazer.');
+  F.p('Das 14 notas do período, 9 se enquadram na hipótese de retenção e somam R$ 4.215,60 de ISS não retido. Nas outras 5, o serviço não se enquadra na hipótese de retenção, e não há ajuste a fazer. (Dados de exemplo.)');
   F.h1('3. Conclusão');
   {
     const cy = F.y;
-    const r = para('Recomendamos (i) reter o ISS a partir da próxima nota, com a guia emitida pela administradora; (ii) pedir aos prestadores o comprovante de recolhimento das 9 notas de 01/2026 a 06/2026; e (iii) registrar o tema em ata na próxima reunião do conselho. **Se o recolhimento não for comprovado em 30 dias, o condomínio deve recolher o imposto e cobrar o prestador.**', { s: pt(10), lh: pt(14.5), w: TW - 8, x: ML + 6, y: cy + pt(10) * 0.8, fill: C.fuligem, bf: 'sans6', bfill: C.anil });
+    const r = para('Recomendamos (i) reter o ISS a partir da próxima nota, com a guia emitida pela administradora; (ii) pedir aos prestadores o comprovante de recolhimento das 9 notas de 01/2026 a 06/2026; e (iii) registrar o tema em ata na próxima reunião do conselho. **Se o recolhimento não for comprovado em 30 dias, recomendamos que o condomínio, como responsável, regularize o imposto e cobre o valor do prestador.**', { s: pt(10), lh: pt(14.5), w: TW - 8, x: ML + 6, y: cy + pt(10) * 0.8, fill: C.fuligem, bf: 'sans6', bfill: C.anil });
     F.add(rect(ML, cy - 1.5, pt(3), r.y - cy + 4, C.rubrica) + r.svg);
     F.y = r.y + 6;
   }
@@ -305,7 +304,7 @@ for (const versao of ['grafica', 'escritorio']) {
   b += t('Gabriel Alvares', { f: 'sans6', s: pt(10), x: ML, y: sy + 5, fill: C.anil });
   b += t('Contador responsável · ' + CRC, { f: 'mono4', s: pt(8), x: ML, y: sy + 9.5, fill: C.pedra });
   b += t('São Paulo, 2 de outubro de 2026', { f: 'sans4', s: pt(10), x: A4W - MR, y: sy + 5, fill: C.fuligem, a: 'end' });
-  b += rodape(0, { ref: 'PT-007/2026', pag: 1, total: 1, sufixo: 'Modelo com dados de exemplo' });
+  b += rodape(0, { ref: 'PT-007/2026', pag: 1, total: 1, sufixo: 'Modelo' });
   L.save(DIR + 'parecer-tecnico_A4', { w: A4W, h: A4H, unit: 'mm', bg: C.branco, body: b + F.svg, pdf: true, title: 'Fireflies Consultoria · parecer técnico / nota técnica (modelo)' });
 }
 L.flush('documentos');
