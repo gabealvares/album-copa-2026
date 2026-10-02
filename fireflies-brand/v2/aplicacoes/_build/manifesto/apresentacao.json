@@ -1,0 +1,82 @@
+[
+ {
+  "rel": "apresentacao/slide-01-capa-escura",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-02-capa-clara",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-03-divisor",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-04-conteudo",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-05-dados",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-06-citacao",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-07-tabela",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ },
+ {
+  "rel": "apresentacao/slide-08-encerramento",
+  "w": 1920,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "apresentacao/fireflies-apresentacao-template",
+  "png": true
+ }
+]

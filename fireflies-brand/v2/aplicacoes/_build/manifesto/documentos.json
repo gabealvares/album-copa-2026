@@ -1,0 +1,82 @@
+[
+ {
+  "rel": "documentos/papel-timbrado_A4-sangria3mm",
+  "w": 216,
+  "h": 303,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "documentos/papel-timbrado_A4-escritorio",
+  "w": 210,
+  "h": 297,
+  "unit": "mm",
+  "print": false,
+  "bleed": 0,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "documentos/proposta-comercial_01-capa",
+  "w": 216,
+  "h": 303,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "documentos/proposta-comercial_A4-sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "documentos/proposta-comercial_02-interna",
+  "w": 216,
+  "h": 303,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "documentos/proposta-comercial_A4-sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "documentos/relatorio-auditoria_01-capa",
+  "w": 216,
+  "h": 303,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "documentos/relatorio-auditoria_A4-sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "documentos/relatorio-auditoria_01-capa-escritorio",
+  "w": 210,
+  "h": 297,
+  "unit": "mm",
+  "print": false,
+  "bleed": 0,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "documentos/relatorio-auditoria_02-interna",
+  "w": 216,
+  "h": 303,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": "documentos/relatorio-auditoria_A4-sangria3mm",
+  "png": true
+ },
+ {
+  "rel": "documentos/parecer-tecnico_A4",
+  "w": 210,
+  "h": 297,
+  "unit": "mm",
+  "print": false,
+  "bleed": 0,
+  "pdf": true,
+  "png": true
+ }
+]
