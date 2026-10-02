@@ -33,7 +33,7 @@
 
 | Papel | Fonte | Pesos | Fallback Office | Fallback Google |
 |---|---|---|---|---|
-| **Fonte de títulos (display)** | **Sora** (sans geométrica; **caixa alta nos títulos curtos**, até ~6 palavras; títulos longos em caixa alta e baixa) | 600 / 700 | Century Gothic Bold | Sora (nativa no Google Fonts) |
+| **Fonte de títulos (display)** | **Sora** (sans geométrica; o wordmark é Sora 620 com E de luz, nunca redigite o logo; **caixa alta nos títulos curtos**, até ~6 palavras; títulos longos em caixa alta e baixa) | 600 / 700 | Century Gothic Bold | Sora (nativa no Google Fonts) |
 | **Texto** | IBM Plex Sans | 400, 500, 600 (itálico 400) | Arial | IBM Plex Sans (nativa) |
 | **Dados** | IBM Plex Mono | 400, 500, números tabulares | Consolas | IBM Plex Mono (nativa) |
 
@@ -97,25 +97,7 @@ Padrão de arquivo: `fireflies_{versao}_{cor}.svg`. Os PNGs têm 2000 px no lado
 
 Nunca cruze as letras com a órbita, nunca mude a inclinação ou a direção do voo, nunca tire o vagalume de cima do E e nunca use gradiente na versão chapada.
 
----|---|---|
-| **Positivo** | Símbolo e lettering em Anil, Lanterna âmbar **com contorno Anil colado** | Branco, Cal Virgem, foto clara limpa |
-| **Negativo** | Símbolo e lettering em Cal Virgem, Lanterna âmbar pura | Anil de Junho, Anil Profundo, foto escura com véu |
-| **Mono Anil** | Tudo em Anil; a Lanterna é a maior estrela | Âmbar, P&B, carimbo, gravação, fax/cópia |
-| **Mono Cal** | Tudo em Cal Virgem (ou Branco) | Vermelhão, Rubrica, fotos, cores de terceiros escuras |
-| **Transição quente** *(se aprovada no redesenho)* | Arco em âmbar → vermelhão | Só digital e impressão em 4 cores, sobre Anil; nunca em 1–2 cores |
-
-**Área de proteção:** X = diâmetro da Lanterna. Livre de **2X** em volta dos lockups e **1X** em volta do Símbolo em avatares. Se o desenho final indicar outra medida, use a altura da letra "F" do lettering.
-
-**Tamanho mínimo:**
-
-| Versão | Digital | Impresso |
-|---|---|---|
-| Logo principal (horizontal) e lockups Condomínios/Academy | 120 px de largura | 30 mm |
-| Logo vertical | 80 px | 20 mm |
-| Símbolo | 24 px | 7 mm |
-| Símbolo reduzido (favicon, carimbo) | 16 px | 5 mm |
-
-Abaixo do mínimo, troque de versão em vez de reduzir. Linhas do traço de constelação no impresso: no mínimo **0,25 pt**.
+Linhas do fio de constelação no impresso: no mínimo **0,25 pt**. Abaixo do mínimo, troque de versão em vez de reduzir.
 
 ---
 
@@ -257,7 +239,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 |---|---|---|---|
 | Título de capa | Sora Bold, caixa alta, tracking +2% | 54 pt / 72 px | 54 pt |
 | Título de divisor | Sora Bold, caixa alta | 44 pt / 58 px | 44 pt |
-| Título de slide | Sora SemiBold, caixa alta | 28 pt / 38 px | 32 pt |
+| Título de slide | Sora SemiBold; caixa alta até ~6 palavras, caixa alta e baixa se mais longo | 28 pt / 38 px | 32 pt |
 | Eyebrow / rótulo | IBM Plex Mono Medium, caixa alta, tracking +12% | 11 pt / 15 px | 14 pt |
 | Corpo | IBM Plex Sans Regular, entrelinha 1,35 | 18 pt / 24 px | **24 pt** |
 | Destaque no corpo | IBM Plex Sans SemiBold, em Rubrica (claro) ou Âmbar/Vermelhão (escuro) | — | — |
@@ -270,10 +252,10 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 | Layout | Fundo | Composição | Grafismo |
 |---|---|---|---|
-| **Capa** | Anil de Junho | Eyebrow (linha + tipo de documento) no topo; título nas colunas 1–8, terço inferior; cliente, data e "Luz medida." abaixo; logo no canto inferior esquerdo | 1 padrão (campo de estrelas ou retícula, Céu de Anil 30–50%) **ou** 1 emblema de constelação do serviço nas colunas 9–12. Lanterna do logo = a luz |
+| **Capa** | Anil de Junho | Eyebrow (linha + tipo de documento) no topo; título nas colunas 1–8, terço inferior; cliente, data e "Luz medida." abaixo; logo no canto inferior esquerdo | 1 padrão (campo de estrelas ou retícula, Céu de Anil 30–50%) **ou** 1 emblema de constelação do serviço nas colunas 9–12 (com a lanterna em `currentColor`). O vagalume do logo é a luz |
 | **Divisor** | Anil de Junho | Número da seção em Plex Mono ("02 / 05") + título de divisor | Emblema da constelação do serviço, 320–480 px, colunas 8–12. Se o emblema tem lanterna âmbar, o F de luz do rodapé vai em `mono-branco` |
 | **Conteúdo** | Branco (projetor/impresso) ou Cal (tela) | Eyebrow + título no topo; corpo nas colunas 1–7; imagem, ícones ou lista nas 8–12 | Até 3 ícones de linha; marcadores-estrela |
-| **Dados** | Branco | Título que **diz a conclusão** ("Inadimplência caiu para 6%"); gráfico em 8–12 colunas; nota de fonte em Mono 9 pt | Matriz de pontos ou retícula na área do gráfico; 1 destaque âmbar com contorno (a Lanterna do gráfico) |
+| **Dados** | Branco | Título que **diz a conclusão** ("Inadimplência caiu para 6%"); gráfico em 8–12 colunas; nota de fonte em Mono 9 pt | Matriz de pontos ou retícula na área do gráfico; 1 destaque âmbar com contorno (a lanterna do gráfico) |
 | **Citação** | Cal Virgem ou Anil | Citação em 1–3 linhas, colunas 2–10; autor em Mono caixa alta | Linha-de-chamada ou nada |
 | **Encerramento** | Anil de Junho | "Luz medida." ou próximo passo; contato (WhatsApp, e-mail, site) em Plex Sans; responsável e CRC em Mono | Trilha do Photinus terminando na lanterna, ou nada (o vagalume do logo já é a luz) |
 
@@ -302,7 +284,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Nível | Fonte | Tamanho / entrelinha | Cor (Branco) |
 |---|---|---|---|
 | Título de capa | Sora Bold, caixa alta | 32 pt / 36 pt | Cal (sobre capa Anil) ou Anil |
-| Título do documento (1ª página interna) | Sora Bold, caixa alta | 20 pt / 24 pt | Anil |
+| Título do documento (1ª página interna) | Sora Bold; caixa alta se curto, caixa alta e baixa se longo | 20 pt / 24 pt | Anil |
 | H1 (seção) | Sora SemiBold, caixa alta, tracking +2% | 14 pt / 18 pt, 18 pt antes | Anil |
 | H2 | IBM Plex Sans SemiBold | 12 pt / 16 pt, 12 pt antes | Anil |
 | H3 | IBM Plex Sans SemiBold | 10,5 pt / 14 pt | Fuligem |
@@ -334,7 +316,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Fundo Branco em tudo que é impresso no escritório | Miolo em Cal Virgem ou Anil |
 | Rodapé com responsável técnico, CRC e "Página X de Y" | Rodapé só com "www" |
 | Números em Plex Mono, alinhados à direita | Números em fonte proporcional centralizados |
-| Uma só fonte de títulos (Sora) em caixa alta | Títulos em caixa alta e baixa ou em negrito da Plex "para variar" |
+| Uma só fonte de títulos (Sora); caixa alta nos títulos curtos | Título longo em caixa alta, ou título em negrito da Plex "para variar" |
 | Contrato e parecer limpos | Padrão, constelação ou marca-d'água em documento jurídico |
 
 ### 5.3 Papel timbrado e envelopes
@@ -620,7 +602,7 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 - [ ] Tom certo: "nós" em proposta, contrato e relatório; "a gente" em redes e WhatsApp.
 
 **Tipografia e dados**
-- [ ] Títulos em Sora caixa alta; texto em Plex Sans; números em Plex Mono à direita.
+- [ ] Títulos em Sora (caixa alta nos curtos, até ~6 palavras); texto em Plex Sans; números em Plex Mono à direita.
 - [ ] Corpo ≥ 10 pt (documento), ≥ 18 pt (slide de tela), ≥ 24 pt (projetor em sala clara).
 - [ ] Todo texto com contraste ≥ 4,5:1 (conferir na seção 2).
 - [ ] Gráfico com ≤ 4 séries, título que afirma, estado com forma + palavra + cor.
@@ -645,7 +627,7 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 6. **Deck inteiro em Anil projetado num salão de festas**: vira cinza lavado.
 7. **Rubrica sobre Anil** (2,55:1) para "dar calor" ao slide escuro. No escuro o quente é o Vermelhão.
 8. **Esquecer a Rubrica** e entregar uma peça só Anil + Âmbar: "banco marinho e dourado".
-9. **Fonte de títulos em caixa alta e baixa** ou trocada por Arial Black quando falta a fonte. Use o fallback do tema.
+9. **Sora trocada por Arial Black** quando falta a fonte (use o fallback do tema, Century Gothic Bold), ou parágrafo inteiro de título em caixa alta.
 10. **Números em fonte proporcional, centralizados**, com casas decimais diferentes na mesma coluna.
 11. **Semáforo só por cor** (verde/amarelo/vermelho sem forma nem palavra).
 12. **Papel de parede de grafismo:** padrão + emblema + rosa de pontos + moldura na mesma página.
