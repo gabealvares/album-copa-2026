@@ -1,0 +1,49 @@
+[
+ {
+  "rel": "ambientacao/placa-fachada_600x300mm",
+  "w": 606,
+  "h": 306,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "ambientacao/selo-contas-auditadas_vinil-100mm",
+  "w": 106,
+  "h": 106,
+  "unit": "mm",
+  "print": false,
+  "bleed": 3,
+  "pdf": true,
+  "png": true
+ },
+ {
+  "rel": "ambientacao/selo-contas-auditadas_digital-1080",
+  "w": 1080,
+  "h": 1080,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "ambientacao/mockup-caneca",
+  "w": 1600,
+  "h": 900,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "ambientacao/mockup-camiseta",
+  "w": 1800,
+  "h": 1060,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ }
+]
