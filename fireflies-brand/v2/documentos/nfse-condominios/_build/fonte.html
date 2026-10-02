@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NFS-e para Condomínios</title>
+<meta name="description" content="Novidades da Receita em 01/10/2026: condomínios ganham código próprio na NFS-e. Fireflies Consultoria.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Fireflies Consultoria · identidade v2 · tokens de ../../cores/tokens.css */
+:root{
+  --ff-anil:#17183A; --ff-anil-profundo:#0F1029; --ff-cal:#EDEEEA; --ff-branco:#FFFFFF;
+  --ff-ambar:#F2B544; --ff-vermelhao:#E65A3E; --ff-rubrica:#A9301F; --ff-ceu:#6E89B4;
+  --ff-fuligem:#2A2F3D; --ff-pedra:#5E6271; --ff-fumaca:#D2D4DA;
+  --ff-sucesso:#2D7550; --ff-alerta:#9A5A06; --ff-erro:#A51C45;
+  --ambar-claro:#FDF5E4;   /* âmbar muito claro: fundo dos callouts de atenção */
+  --ceu-claro:#E9EEF6;     /* Céu de Anil a ~15% sobre Branco */
+  --f-display:"Sora","Century Gothic",Arial,sans-serif;
+  --f-body:"IBM Plex Sans",Calibri,Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;
+  /* ícones: no claro a lanterna fica na cor do traço (a luz âmbar é reservada) */
+  --ff-lit:currentColor; --ff-lit-edge:none;
+  --col:760px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ff-branco);color:var(--ff-fuligem);font:400 17px/1.62 var(--f-body);font-variant-numeric:tabular-nums}
+a{color:var(--ff-rubrica);text-underline-offset:2px}
+strong,b{font-weight:600;color:var(--ff-anil)}
+.wrap{max-width:var(--col);margin:0 auto;padding:0 24px}
+.ico{width:20px;height:20px;flex:none;vertical-align:-4px}
+.ico-sm{width:16px;height:16px}
+.mono{font-family:var(--f-mono)}
+.eyebrow{font:500 12px/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ff-rubrica)}
+p{margin:0 0 1em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- HERO ---------- */
+.hero{background:var(--ff-anil);color:var(--ff-cal);position:relative;overflow:hidden}
+.hero .wrap{padding-top:40px;padding-bottom:44px;position:relative}
+.hero-logo{display:block;width:248px;height:auto;margin-left:-14px}
+.hero-const{position:absolute;right:24px;top:36px;width:84px;height:84px;color:var(--ff-ceu);--ff-line:var(--ff-ceu);opacity:.9}
+.hero .eyebrow{color:var(--ff-cal);margin:30px 0 18px;display:flex;align-items:center;gap:10px}
+.dot-ambar{width:8px;height:8px;border-radius:50%;background:var(--ff-ambar);flex:none}
+.hero h1{font:600 clamp(30px,5.4vw,44px)/1.12 var(--f-display);letter-spacing:-.005em;margin:0 0 20px;color:var(--ff-cal)}
+.hero h1 .hl{font-weight:700;color:var(--ff-branco)}
+.hero .lead{font-size:18px;line-height:1.6;color:var(--ff-fumaca);max-width:640px;margin-bottom:30px}
+.author{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;border-top:1px solid rgba(237,238,234,.16);padding-top:24px}
+.author .who{display:flex;align-items:center;gap:14px;margin-right:auto}
+.avatar{width:58px;height:58px;flex:none}
+.author .name{font:600 16px/1.3 var(--f-body);color:var(--ff-branco)}
+.author .role{font-size:13.5px;color:var(--ff-fumaca);line-height:1.4}
+.meta{display:flex;align-items:center;gap:8px;font:400 13.5px/1 var(--f-mono);color:var(--ff-fumaca)}
+.meta .ico{color:var(--ff-cal)}
+
+/* ---------- CORPO ---------- */
+main{padding:40px 0 0}
+.intro p{font-size:18px}
+section.sec{padding-top:36px}
+.sec-num{font:500 13px/1 var(--f-mono);letter-spacing:.14em;color:var(--ff-rubrica);display:flex;align-items:center;gap:12px;margin:22px 0 14px}
+.sec-num::after{content:"";height:0;flex:1;border-top:1.5px dotted var(--ff-fumaca)}
+h2{font:600 30px/1.18 var(--f-display);color:var(--ff-anil);margin:0 0 20px;letter-spacing:.005em}
+h2.caps{text-transform:uppercase;letter-spacing:.04em;font-size:27px}
+h3{font:600 20px/1.3 var(--f-body);color:var(--ff-anil);margin:32px 0 10px}
+.note{font-size:14px;line-height:1.5;color:var(--ff-pedra);margin:12px 0 0}
+.note b{color:var(--ff-fuligem)}
+
+/* cards de destaque */
+.keycards{display:grid;grid-template-columns:1fr 1fr;background:var(--ff-anil);color:var(--ff-cal);border-radius:6px;overflow:hidden;margin:6px 0 28px}
+.keycards>div{padding:26px 28px 28px}
+.keycards>div+div{border-left:1px solid rgba(110,137,180,.45)}
+.kc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;min-height:34px}
+.keycards .eyebrow{color:var(--ff-fumaca)}
+.badge-novo{display:inline-block;font:500 11px/1 var(--f-mono);letter-spacing:.12em;padding:5px 9px 4px;border-radius:99px;background:var(--ff-anil);color:var(--ff-ambar);border:1px solid var(--ff-ambar);white-space:nowrap}
+.kc-big{font:700 clamp(40px,7vw,58px)/1 var(--f-display);color:var(--ff-branco);letter-spacing:-.01em;margin:10px 0 10px}
+.kc-big.date{font-size:clamp(34px,5.6vw,46px)}
+.kc-name{font:600 17px/1.3 var(--f-body);color:var(--ff-branco);margin-bottom:6px}
+.kc-desc{font-size:14.5px;line-height:1.5;color:var(--ff-fumaca)}
+.kc-days{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.kc-days .n{font:700 44px/1 var(--f-display);color:var(--ff-vermelhao)}
+
+/* citação legal curta */
+.legalq{border-top:2px solid var(--ff-anil);padding-top:16px;margin:0 0 18px}
+.lab{display:flex;align-items:center;gap:10px;font:500 12px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ff-anil)}
+.legalq blockquote{margin:10px 0 0;font:italic 400 18px/1.55 var(--f-body);color:var(--ff-fuligem)}
+.disclaimer{display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--ff-pedra)}
+.disclaimer .ico{color:var(--ff-pedra);margin-top:1px}
+
+/* sumário */
+.toc{margin:36px 0 8px}
+.toc ol{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:32px}
+.toc li{border-top:1px solid var(--ff-fumaca)}
+.toc a{display:flex;gap:14px;padding:12px 0;color:var(--ff-fuligem);text-decoration:none;font-size:16px;line-height:1.4}
+.toc a:hover span+span{color:var(--ff-rubrica);text-decoration:underline}
+.toc a span:first-child{font:500 14px/1.6 var(--f-mono);color:var(--ff-rubrica);min-width:22px}
+
+/* tabelas */
+.tbl{width:100%;border-collapse:collapse;font-size:15px;line-height:1.45;margin:6px 0 0}
+.tbl th{background:var(--ff-anil);color:var(--ff-cal);font:500 12px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:12px 14px}
+.tbl td{padding:12px 14px;vertical-align:top;border-bottom:1px solid var(--ff-fumaca)}
+.tbl tbody tr:nth-child(odd) td{background:var(--ff-branco)}
+.tbl tbody tr:nth-child(even) td{background:var(--ff-cal)}
+.tbl td.code{font:500 15px/1.45 var(--f-mono);color:var(--ff-anil);white-space:nowrap;width:1%}
+.tbl td.field{font-weight:600;color:var(--ff-anil)}
+.tbl td .sub{display:block;font:400 13.5px/1.4 var(--f-body);color:var(--ff-pedra)}
+.tbl tr.novo td{background:var(--ceu-claro)!important;box-shadow:inset 0 0 0 0 transparent}
+.tbl tr.novo td:first-child{border-left:3px solid var(--ff-anil)}
+.tbl .badge-novo{margin-left:8px;vertical-align:1px}
+.tbl-box{border:1px solid var(--ff-fumaca);border-radius:6px;overflow:hidden}
+.tbl-box .tbl tr:last-child td{border-bottom:0}
+
+/* grade de códigos */
+.codes{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0 0}
+.codes.c3{grid-template-columns:repeat(3,1fr)}
+.code-card{display:flex;align-items:center;gap:14px;border:1px solid var(--ff-fumaca);border-radius:6px;padding:12px 16px;font-size:15.5px;line-height:1.35;background:var(--ff-branco)}
+.code-card .c{font:500 18px/1 var(--f-mono);color:var(--ff-anil);min-width:26px}
+.sublabel{font:500 12px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ff-anil);margin:22px 0 10px}
+
+/* exemplo NFS-e */
+.nfse{border:1px solid var(--ff-fumaca);border-radius:6px;overflow:hidden;margin:18px 0 0;background:var(--ff-branco)}
+.nfse-head{background:var(--ff-anil);color:var(--ff-cal);padding:18px 22px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.nfse-head .t1{font:500 13px/1.3 var(--f-mono);letter-spacing:.14em;color:var(--ff-branco)}
+.nfse-head .t2{font-size:15px;color:var(--ff-fumaca)}
+.tag-outline{font:500 11px/1 var(--f-mono);letter-spacing:.14em;border:1px solid var(--ff-cal);padding:8px 10px;border-radius:3px;color:var(--ff-cal)}
+.acc{border-top:1px solid var(--ff-fumaca);position:relative}
+.acc:first-of-type{border-top:0}
+.acc.open{background:#FAFAF8}
+.acc.open::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--ff-rubrica)}
+.acc-btn{all:unset;box-sizing:border-box;display:flex;width:100%;align-items:center;gap:10px;padding:16px 22px 6px;cursor:pointer;flex-wrap:wrap}
+.acc-btn:focus-visible{outline:2px solid var(--ff-rubrica);outline-offset:-2px}
+.acc-name{font:500 12.5px/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ff-anil)}
+.pill{font:500 11px/1 var(--f-mono);letter-spacing:.06em;text-transform:uppercase;background:var(--ceu-claro);color:#2E4A78;padding:5px 8px 4px;border-radius:99px}
+.acc-btn .pm{margin-left:auto;color:var(--ff-anil)}
+.acc-btn .pm .ico-menos{display:none}
+.acc.open .acc-btn .pm .ico-mais{display:none}
+.acc.open .acc-btn .pm .ico-menos{display:inline}
+.acc-rows{padding:2px 22px 14px}
+.row{display:flex;justify-content:space-between;gap:16px;padding:5px 0;font-size:16px}
+.row.in{padding-left:20px;color:var(--ff-pedra)}
+.row .v{font:500 16px/1.4 var(--f-mono);color:var(--ff-anil);white-space:nowrap;text-align:right}
+.row .v.neg{color:var(--ff-rubrica)}
+.acc-panel{display:none;padding:0 22px 18px 22px}
+.acc.open .acc-panel{display:flex}
+.acc-panel{gap:10px;font-size:15px;line-height:1.5;color:var(--ff-fuligem)}
+.acc-panel .ico{color:var(--ff-anil);margin-top:1px}
+.nfse-total{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:2px solid var(--ff-anil);padding:18px 22px;flex-wrap:wrap}
+.nfse-total .lab{font-size:12.5px}
+.nfse-total .v{font:500 28px/1 var(--f-mono);color:var(--ff-anil)}
+
+/* busca tpDetCobranca */
+.search{position:relative;margin:14px 0 6px}
+.search input{width:100%;font:400 16px/1.4 var(--f-body);color:var(--ff-fuligem);padding:12px 14px 12px 44px;border:1px solid var(--ff-pedra);border-radius:6px;background:var(--ff-branco)}
+.search input:focus{outline:2px solid var(--ff-anil);outline-offset:1px}
+.search .ico{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--ff-anil)}
+.search-count{font:400 13px/1.4 var(--f-mono);color:var(--ff-pedra);margin:6px 0 4px}
+.det{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+.det li{display:flex;align-items:center;gap:14px;padding:10px 0;border-top:1px solid var(--ff-fumaca);font-size:15.5px}
+.det li[hidden]{display:none}
+.det .c{font:500 15px/1 var(--f-mono);color:var(--ff-anil);min-width:34px}
+.det .q{margin-left:auto;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;border:1.5px dashed var(--ff-alerta);color:var(--ff-alerta);font:600 12px/1 var(--f-mono);text-decoration:none}
+.empty{display:none;padding:14px 0;color:var(--ff-pedra);font-size:15px}
+
+/* callouts */
+.callout{display:flex;gap:14px;border-radius:6px;padding:20px 22px;margin:24px 0}
+.callout .ico{width:22px;height:22px;margin-top:1px}
+.callout p:last-child{margin-bottom:0}
+.callout .lab{margin-bottom:6px}
+.c-info{background:var(--ceu-claro);border-left:3px solid var(--ff-ceu)}
+.c-info .ico,.c-info .lab{color:var(--ff-anil)}
+.c-warn{background:var(--ambar-claro);border-left:3px solid var(--ff-alerta)}
+.c-warn .ico,.c-warn .lab{color:var(--ff-alerta)}
+.c-ask{border:2px dashed var(--ff-ambar);background:var(--ff-branco)}
+.c-ask .qm{flex:none;width:44px;height:44px;border-radius:50%;background:var(--ff-anil);color:var(--ff-cal);display:grid;place-items:center;font:700 22px/1 var(--f-display)}
+.c-ask .lab{color:var(--ff-alerta)}
+.c-ask h4{font:600 22px/1.25 var(--f-display);color:var(--ff-anil);margin:4px 0 8px}
+.c-dark{background:var(--ff-anil);color:var(--ff-cal);--ff-lit:var(--ff-ambar)}
+.c-dark strong{color:var(--ff-branco)}
+.c-dark .lab{color:var(--ff-ambar)}
+.c-dark .ico{color:var(--ff-cal)}
+.c-dark .big{font:400 20px/1.45 var(--f-body);color:var(--ff-cal);margin-bottom:10px}
+.c-dark .small{font-size:15px;color:var(--ff-fumaca)}
+.c-legal{background:var(--ff-cal);display:block}
+.c-legal .lab{padding-bottom:12px;border-bottom:1px solid var(--ff-fumaca);margin-bottom:12px}
+.c-legal .ico{color:var(--ff-anil)}
+.c-legal .src{font:500 12px/1.3 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ff-pedra);margin:12px 0 4px}
+.c-legal .src:first-of-type{margin-top:0}
+.c-legal q,.c-legal .qt{font-size:15.5px;line-height:1.55}
+
+/* CIB */
+.cib{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:10px 0 20px}
+.cib div{border:1px solid var(--ff-fumaca);border-radius:6px;text-align:center;padding:18px 8px}
+.cib b{display:block;font:700 26px/1.1 var(--f-display);color:var(--ff-pedra);letter-spacing:.02em}
+.cib span{font-size:14px;color:var(--ff-pedra)}
+.cib .on{background:var(--ff-anil);border-color:var(--ff-anil)}
+.cib .on b{color:var(--ff-branco)}
+.cib .on span{color:var(--ff-fumaca)}
+ul.stars{list-style:none;padding:0;margin:0 0 10px}
+ul.stars li{position:relative;padding-left:24px;margin-bottom:12px}
+ul.stars li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;height:7px;border-radius:50%;background:var(--ff-anil)}
+
+/* citação NT */
+.ntq{background:var(--ff-anil);color:var(--ff-cal);border-radius:6px;padding:30px 34px 28px;margin:28px 0}
+.ntq .mark{font:700 64px/0.6 var(--f-display);color:var(--ff-ambar);display:block;height:30px}
+.ntq blockquote{margin:0;font-size:17px;line-height:1.7}
+.ntq blockquote b{color:var(--ff-branco);font-weight:700}
+.ntq cite{display:block;margin-top:16px;font:500 12px/1.4 var(--f-mono);letter-spacing:.1em;font-style:normal;color:var(--ff-fumaca)}
+
+/* três sinais */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 22px}
+.trio div{border-top:3px solid var(--ff-anil);padding-top:12px;font-size:15px;line-height:1.5}
+.trio .eyebrow{display:block;margin-bottom:6px}
+
+/* em aberto */
+.open-card{border:1px solid var(--ff-fumaca);border-left:3px solid var(--ff-alerta);border-radius:6px;padding:18px 22px;margin:12px 0}
+.open-card .hd{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.open-card .hd .ico{color:var(--ff-anil)}
+.open-card h4{font:600 17px/1.35 var(--f-body);color:var(--ff-anil);margin:0;flex:1}
+.open-card p{font-size:15.5px;margin:0;padding-left:32px}
+.tag-aberto{display:inline-flex;align-items:center;gap:5px;font:500 11px/1 var(--f-mono);letter-spacing:.1em;background:var(--ambar-claro);color:var(--ff-alerta);padding:5px 8px 4px;border-radius:99px;white-space:nowrap;border:1px solid #EBD3A0}
+.tag-aberto .ico{width:13px;height:13px;color:var(--ff-alerta)}
+
+/* linha do tempo */
+.timeline{list-style:none;margin:20px 0 22px;padding:0;position:relative}
+.timeline li{position:relative;padding:0 0 22px 62px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:19px;top:42px;bottom:2px;border-left:2px dotted var(--ff-ceu)}
+.timeline li:last-child::before{display:none}
+.timeline .n{position:absolute;left:0;top:0;width:40px;height:40px;border-radius:50%;background:var(--ff-anil);color:var(--ff-cal);display:grid;place-items:center;font:600 16px/1 var(--f-mono)}
+.timeline h4{font:600 17px/1.35 var(--f-body);color:var(--ff-anil);margin:7px 0 4px}
+.timeline p{font-size:15.5px;margin:0}
+
+/* emitir ≠ pagar */
+.neq{display:grid;grid-template-columns:1fr auto 1fr;border:1px solid var(--ff-fumaca);border-radius:6px;overflow:hidden;margin:22px 0 10px}
+.neq>div{padding:20px 22px}
+.neq .a{background:var(--ff-cal)}
+.neq .b{background:var(--ff-branco)}
+.neq .sym{display:grid;place-items:center;font:700 34px/1 var(--f-display);color:var(--ff-rubrica);padding:0 14px;background:var(--ff-branco);border-left:1px solid var(--ff-fumaca);border-right:1px solid var(--ff-fumaca)}
+.neq h4{font:600 20px/1.3 var(--f-display);color:var(--ff-anil);margin:8px 0 4px}
+.neq p{font-size:14.5px;margin:0;line-height:1.5}
+.neq .ico{width:26px;height:26px;color:var(--ff-anil)}
+
+/* situação */
+.sit{border:1px solid var(--ff-anil);border-radius:6px;overflow:hidden;margin:14px 0}
+.sit-hd{background:var(--ff-anil);color:var(--ff-cal);padding:14px 20px}
+.sit-hd h4{font:600 17px/1.3 var(--f-body);color:var(--ff-branco);margin:0}
+.sit-hd span{font:400 13px/1.4 var(--f-mono);color:var(--ff-fumaca)}
+.sit-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.sit-grid>div{padding:14px 18px 16px;border-left:1px solid var(--ff-fumaca)}
+.sit-grid>div:first-child{border-left:0}
+.sit-grid .k{font:500 11px/1.35 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ff-pedra);min-height:30px;margin-bottom:8px}
+.st{display:flex;align-items:flex-start;gap:7px;font:600 16px/1.3 var(--f-body)}
+.st svg{width:18px;height:18px;flex:none;margin-top:1px}
+.st.yes{color:var(--ff-sucesso)}
+.st.no{color:var(--ff-pedra)}
+.st.trend{color:var(--ff-alerta)}
+.sit-grid .d{font-size:13.5px;line-height:1.4;color:var(--ff-pedra);margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px;color:var(--ff-pedra);margin:6px 0 0}
+.legend .st{font-weight:500;font-size:13.5px}
+
+/* em aberto formal */
+.undef{background:var(--ambar-claro);border:1px solid #EBD3A0;border-radius:6px;margin:16px 0 0}
+.undef>div{display:flex;gap:14px;padding:18px 22px;border-top:1px solid #EBD3A0}
+.undef>div:first-child{border-top:0}
+.undef .ico{color:var(--ff-alerta);margin-top:2px}
+.undef h4{font:600 16.5px/1.35 var(--f-body);color:var(--ff-anil);margin:0 0 4px}
+.undef p{font-size:15.5px;margin:0}
+
+/* checklist */
+.progress{display:flex;align-items:center;gap:14px;margin:18px 0 6px;font:500 13px/1 var(--f-mono);color:var(--ff-anil);letter-spacing:.06em}
+.progress .bar{flex:1;height:4px;background:var(--ff-cal);border-radius:9px;overflow:hidden}
+.progress .bar i{display:block;height:100%;width:0;background:var(--ff-anil);transition:width .25s}
+.steps{list-style:none;margin:0;padding:0}
+.step{border-top:1px solid var(--ff-fumaca)}
+.step label{display:flex;gap:18px;padding:20px 4px;cursor:pointer}
+.step input{position:absolute;opacity:0;width:1px;height:1px}
+.box{flex:none;width:26px;height:26px;border:2px solid var(--ff-pedra);border-radius:4px;display:grid;place-items:center;margin-top:2px;background:var(--ff-branco)}
+.box svg{width:18px;height:18px;color:var(--ff-branco);opacity:0}
+.step input:checked+.box{background:var(--ff-sucesso);border-color:var(--ff-sucesso)}
+.step input:checked+.box svg{opacity:1}
+.step input:focus-visible+.box{outline:2px solid var(--ff-rubrica);outline-offset:2px}
+.step .eyebrow{color:var(--ff-pedra)}
+.step h4{font:600 18px/1.35 var(--f-body);color:var(--ff-anil);margin:4px 0 6px}
+.step p{font-size:15.5px;margin:0}
+.step input:checked~div h4{text-decoration:line-through;text-decoration-color:var(--ff-sucesso);text-decoration-thickness:1.5px}
+.closing{color:var(--ff-pedra);font-size:16px;border-top:1px solid var(--ff-fumaca);padding-top:18px}
+
+/* fontes */
+.sources{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:28px}
+.sources li{display:flex;gap:10px;padding:12px 0;border-top:1px solid var(--ff-fumaca);font-size:15px;line-height:1.45}
+.sources .ico{color:var(--ff-anil);margin-top:1px}
+
+/* CTA */
+.cta{background:var(--ff-anil);color:var(--ff-cal);border-radius:6px;padding:34px 34px 36px;margin:44px 0 0;--ff-lit:currentColor}
+.cta .eyebrow{color:var(--ff-cal);display:flex;align-items:center;gap:10px}
+.cta h2{color:var(--ff-cal);font:600 clamp(22px,3.6vw,28px)/1.3 var(--f-display);margin:16px 0 24px}
+.cta h2 b{color:var(--ff-branco);font-weight:700}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--f-body);text-decoration:none;padding:15px 22px;border-radius:4px}
+.btn-p{background:var(--ff-ambar);color:var(--ff-anil)}
+.btn-p:hover{background:#F5C468}
+.btn-s{border:1.5px solid var(--ff-cal);color:var(--ff-cal)}
+.btn-s:hover{background:rgba(237,238,234,.08)}
+.btn:focus-visible{outline:2px solid var(--ff-branco);outline-offset:3px}
+
+footer.site{margin-top:56px;background:var(--ff-anil-profundo);color:var(--ff-fumaca)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font:400 13px/1.4 var(--f-mono)}
+footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-vermelhao);vertical-align:middle;margin-right:10px}
+
+.anchor{scroll-margin-top:16px}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .hero-const{display:none}
+  .hero-logo{width:210px}
+  .keycards{grid-template-columns:1fr}
+  .keycards>div+div{border-left:0;border-top:1px solid rgba(110,137,180,.45)}
+  .toc ol,.det,.sources,.codes{grid-template-columns:1fr}
+  .codes.c3{grid-template-columns:1fr 1fr}
+  .trio{grid-template-columns:1fr}
+  .sit-grid{grid-template-columns:1fr 1fr}
+  .sit-grid>div:nth-child(3){border-left:0}
+  .sit-grid>div:nth-child(n+3){border-top:1px solid var(--ff-fumaca)}
+  .neq{grid-template-columns:1fr}
+  .neq .sym{padding:8px;border:0;border-top:1px solid var(--ff-fumaca);border-bottom:1px solid var(--ff-fumaca)}
+  .cib b{font-size:21px}
+  h2{font-size:25px} h2.caps{font-size:22px}
+  .tbl{font-size:14px}
+  .tbl th,.tbl td{padding:10px 10px}
+  .tbl.resp thead{display:none}
+  .tbl.resp tr{display:block;border-bottom:1px solid var(--ff-fumaca)}
+  .tbl.resp td{display:block;border:0;padding:4px 12px}
+  .tbl.resp td:first-child{padding-top:12px}
+  .tbl.resp td:last-child{padding-bottom:12px}
+  .tbl.resp td[data-k]::before{content:attr(data-k);display:block;font:500 11px/1.4 var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ff-pedra)}
+  .tbl.resp tbody tr:nth-child(even) td{background:var(--ff-cal)}
+  .tbl.stack td.code{display:block;width:auto;padding-bottom:0}
+  .tbl.stack td{display:block;border:0}
+  .tbl.stack tr{display:block;border-bottom:1px solid var(--ff-fumaca)}
+  .ntq{padding:24px 20px}
+  .cta{padding:28px 20px}
+  .open-card p{padding-left:0}
+  .acc-btn,.acc-rows,.acc-panel,.nfse-total,.nfse-head{padding-left:16px;padding-right:16px}
+}
+@media (max-width:420px){
+  .codes.c3{grid-template-columns:1fr}
+  .sit-grid{grid-template-columns:1fr}
+  .sit-grid>div{border-left:0!important;border-top:1px solid var(--ff-fumaca)}
+  .sit-grid>div:first-child{border-top:0}
+  .row{font-size:15px}
+  .nfse-total .v{font-size:24px}
+}
+
+/* ---------- IMPRESSÃO A4 ---------- */
+@page{size:A4;margin:25mm 20mm 22mm 25mm;
+  @bottom-left{content:"Fireflies Consultoria · Precisão que ilumina decisões.";font:400 7.5pt "IBM Plex Mono",Consolas,monospace;color:#5E6271;vertical-align:top;padding-top:4mm;border-top:.75pt solid #A9301F;width:auto}
+  @bottom-right{content:"Página " counter(page) " de " counter(pages);font:400 7.5pt "IBM Plex Mono",Consolas,monospace;color:#5E6271;vertical-align:top;padding-top:4mm}
+}
+@media print{
+  :root{--col:100%}
+  html,body{font-size:10.5pt;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{padding:0;max-width:none}
+  .hero{border-radius:6px}
+  .hero .wrap{padding:9mm 9mm 9mm}
+  .hero-const{right:9mm;top:8mm;width:20mm;height:20mm}
+  .hero-logo{width:58mm;margin-left:-3mm}
+  .hero h1{font-size:25pt}
+  .hero .lead{font-size:11pt;margin-bottom:6mm}
+  .hero .eyebrow{margin:6mm 0 4mm}
+  main{padding-top:8mm}
+  .intro p{font-size:11pt}
+  h2{font-size:18pt;margin-bottom:4mm} h2.caps{font-size:16pt}
+  h3{font-size:12.5pt;margin:7mm 0 2.5mm}
+  section.sec{padding-top:4mm}
+  .sec-num{margin:5mm 0 3mm}
+  h2,h3,h4,.sec-num,.lab,.sublabel{break-after:avoid;page-break-after:avoid}
+  p{orphans:3;widows:3}
+  .keycards,.legalq,.callout,.code-card,.ntq,.trio>div,.open-card,.timeline li,.neq,.sit,.undef>div,.step,.cib,.cta,.nfse-head,.acc,.nfse-total,.tbl tr,.sources li,.det li,.disclaimer,.toc{break-inside:avoid;page-break-inside:avoid}
+  .search,.search-count,.progress,.empty,footer.site,.no-print{display:none!important}
+  .det li[hidden]{display:flex!important}
+  .acc .acc-panel{display:flex!important}
+  .acc .pm{display:none!important}
+  .acc.open{background:transparent}
+  .acc.open::before{display:none}
+  .acc-btn{cursor:default}
+  .tbl{font-size:9.5pt}
+  .row,.row .v{font-size:10pt}
+  .nfse-total .v{font-size:18pt}
+  .kc-big{font-size:34pt} .kc-big.date{font-size:27pt} .kc-days .n{font-size:27pt}
+  .step label{padding:4mm 0}
+  .step input:checked+.box{background:var(--ff-branco);border-color:var(--ff-pedra)}
+  .step input:checked+.box svg{opacity:1;color:var(--ff-sucesso)}
+  .step input:checked~div h4{text-decoration:none}
+  a{text-decoration:none;color:inherit}
+  .cta .btn-p{color:var(--ff-anil)}
+  .cta .btn-s{color:var(--ff-cal)}
+  .btn-print-url{display:inline}
+  .print-only{display:block!important}
+}
+.print-only{display:none}
+</style>
+</head>
+<body>
+<!--SPRITE-->
+
+<header class="hero">
+  <div class="wrap">
+    <!-- Logo L1 · Órbita, versão digital-negativo (arquivo provisório; ver README) -->
+    <!--LOGO-->
+    <!--CONST-->
+    <p class="eyebrow"><span class="dot-ambar" aria-hidden="true"></span>Reforma Tributária · Atualização de 01/10/2026</p>
+    <h1>Novidades da Receita em 01/10/2026: <span class="hl">condomínios ganham código próprio na NFS-e</span></h1>
+    <p class="lead">O novo leiaute da nota traz um código exclusivo para as taxas condominiais, um grupo só para as cobranças do condomínio e campos para o imóvel e o pagamento. Veja o que muda, o que ainda está em aberto e o que fazer até 01/12/2026.</p>
+    <div class="author">
+      <div class="who">
+        <!-- PLACEHOLDER: foto do autor indisponível. Avatar com as iniciais GA dentro da órbita da marca. Trocar pela foto quando houver. -->
+        <svg class="avatar" viewBox="0 0 64 64" role="img" aria-label="Avatar provisório de Gabriel Alvares" data-placeholder="foto-do-autor">
+          <circle cx="32" cy="32" r="31" fill="#0F1029" stroke="#6E89B4" stroke-width="1"/>
+          <g transform="rotate(-14 32 32)" fill="none" stroke-linecap="round">
+            <path d="M12 34 A21 10 0 0 1 52 30" stroke="#6E89B4" stroke-width="1" stroke-dasharray="0 2.6"/>
+            <path d="M52 30 A21 10 0 0 1 14 38" stroke="#EDEEEA" stroke-width="1.6"/>
+          </g>
+          <circle cx="14.4" cy="40.9" r="2.1" fill="#EDEEEA"/>
+          <text x="32" y="38.5" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-weight="700" font-size="17" fill="#FFFFFF" letter-spacing=".5">GA</text>
+        </svg>
+        <div>
+          <div class="name">Gabriel Alvares</div>
+          <div class="role">Fundador &amp; Contador Responsável · Fireflies Consultoria</div>
+        </div>
+      </div>
+      <span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-calendario"/></svg>02/10/2026</span>
+      <span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg>Leitura de 12 minutos</span>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="intro">
+    <p>Em <strong>01/10/2026</strong>, a Receita Federal e o Comitê Gestor do IBS publicaram, em edição extra do Diário Oficial da União, o <strong>Ato Técnico Conjunto nº 7</strong>. O ato aprova a nova versão da Nota Técnica SE/CGNFS-e nº 009 (versão 1.01), que atualiza o leiaute da NFS-e de padrão nacional para a Reforma Tributária.</p>
+    <p>Para os condomínios, é a publicação mais importante desde o Ato Conjunto nº 4. Pela primeira vez, a NFS-e passa a ter um <strong>código de serviço próprio para as taxas condominiais</strong> e um <strong>grupo de informações exclusivo</strong> para as cobranças do condomínio. A data de 01/10 já constava do cronograma oficial da Receita como data de publicação desse leiaute.</p>
+  </div>
+
+  <div class="keycards">
+    <div>
+      <div class="kc-top"><span class="eyebrow">Novo código de serviço</span><span class="badge-novo">NOVO</span></div>
+      <div class="kc-big mono" style="font-family:var(--f-display)">99.05.01</div>
+      <div class="kc-name">Operações Condominiais</div>
+      <div class="kc-desc">Taxas e demais valores cobrados pelo condomínio edilício.</div>
+    </div>
+    <div>
+      <div class="kc-top"><span class="eyebrow">Obrigatoriedade mantida</span></div>
+      <div class="kc-big date">01/12/2026</div>
+      <div class="kc-days"><span class="n">60</span><span class="kc-desc">dias, ou 9 semanas, a partir de hoje</span></div>
+    </div>
+  </div>
+
+  <div class="legalq">
+    <div class="lab"><svg class="ico" aria-hidden="true"><use href="#ff-fiscal"/></svg>Ato Conjunto RFB/CGIBS nº 4/2026, art. 1º, III, f</div>
+    <blockquote>"f) na cobrança de taxas e demais valores condominiais pelo condomínio edilício, bem como outras receitas do condomínio: 1º de dezembro de 2026;"</blockquote>
+  </div>
+  <p class="disclaimer"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>Conteúdo informativo, baseado nas normas publicadas até 02/10/2026. Não substitui a análise do contador ou do advogado de cada condomínio.</span></p>
+
+  <nav class="toc" aria-labelledby="toc-t">
+    <div class="eyebrow" id="toc-t">Neste artigo</div>
+    <ol>
+      <li><a href="#s01"><span>01</span><span>O que muda na NFS-e para condomínios</span></a></li>
+      <li><a href="#s02"><span>02</span><span>O imóvel na nota e o código CIB</span></a></li>
+      <li><a href="#s03"><span>03</span><span>Emissão e vinculação ao pagamento</span></a></li>
+      <li><a href="#s04"><span>04</span><span>Em nome de quem a nota será emitida</span></a></li>
+      <li><a href="#s05"><span>05</span><span>O que isso indica</span></a></li>
+      <li><a href="#s06"><span>06</span><span>O que a administradora deve fazer agora</span></a></li>
+      <li><a href="#s07"><span>07</span><span>Fontes oficiais</span></a></li>
+    </ol>
+  </nav>
+
+  <!-- ===================== 01 ===================== -->
+  <section class="sec anchor" id="s01">
+    <div class="sec-num">01</div>
+    <h2>O que muda na NFS-e para condomínios</h2>
+    <h3 style="margin-top:0">Novo código de serviço</h3>
+    <p>O <strong>99.05.01 – Operações Condominiais</strong> se soma aos códigos já criados para receitas sem ISS. Com isso, cotas e receitas de terceiros passam a ser identificadas separadamente na nota:</p>
+    <div class="tbl-box">
+      <table class="tbl stack">
+        <tbody>
+          <tr class="novo"><td class="code">99.05.01</td><td>Taxas e demais valores cobrados pelo condomínio dos condôminos <span class="badge-novo">NOVO</span></td></tr>
+          <tr><td class="code">99.03.01</td><td>Locação de imóvel a terceiros (salão, casa do zelador, vaga)</td></tr>
+          <tr><td class="code">99.03.02</td><td>Cessão onerosa de imóvel</td></tr>
+          <tr><td class="code">99.03.04</td><td>Cessão de uso ou de espaço (antena, fachada, mercadinho)</td></tr>
+          <tr><td class="code">99.04.01</td><td>Locação de bens móveis</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Um grupo "condomínios" dentro da nota</h3>
+    <p>Cada NFS-e de operação condominial passa a ter um bloco próprio. Toque em cada parte do exemplo abaixo para ver o que ela exige.</p>
+
+    <div class="nfse" id="nfse">
+      <div class="nfse-head">
+        <div><div class="t1">NFS-e · 99.05.01</div><div class="t2">Tomador: condômino (proprietário)</div></div>
+        <span class="tag-outline">EXEMPLO ILUSTRATIVO</span>
+      </div>
+
+      <div class="acc open">
+        <button class="acc-btn" aria-expanded="true" aria-controls="p1"><span class="acc-name">Vencimento</span><span class="pill">Obrigatório</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows"><div class="row"><span>Vencimento original</span><span class="v">10/12/2026</span></div></div>
+        <div class="acc-panel" id="p1"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>A data de vencimento original da cobrança feita ao condômino. É obrigatória.</span></div>
+      </div>
+
+      <div class="acc">
+        <button class="acc-btn" aria-expanded="false" aria-controls="p2"><span class="acc-name">Cobranças</span><span class="pill">1 a 20 por nota</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows">
+          <div class="row"><span>01 · Condomínio Ordinário</span><span class="v">R$&nbsp;850,00</span></div>
+          <div class="row"><span>05 · Fundo de Reserva</span><span class="v">R$&nbsp;85,00</span></div>
+        </div>
+        <div class="acc-panel" id="p2"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>De 1 a 20 cobranças por nota, cada uma com tipo (tabela tpCobranca) e valor. Há um campo opcional de descrição.</span></div>
+      </div>
+
+      <div class="acc">
+        <button class="acc-btn" aria-expanded="false" aria-controls="p3"><span class="acc-name">Detalhamento da cobrança 01</span><span class="pill">Opcional · até 20 itens</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows">
+          <div class="row in"><span>004 · Cond. Comum Fração</span><span class="v">R$&nbsp;720,00</span></div>
+          <div class="row in"><span>008 · Água</span><span class="v">R$&nbsp;130,00</span></div>
+        </div>
+        <div class="acc-panel" id="p3"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>Opcional, com até 20 itens por cobrança, cada um com tipo (tabela tpDetCobranca) e valor. A soma dos itens compõe o valor da cobrança. Há um campo opcional de descrição.</span></div>
+      </div>
+
+      <div class="acc">
+        <button class="acc-btn" aria-expanded="false" aria-controls="p4"><span class="acc-name">Descontos</span><span class="pill">Até 10 por nota</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows"><div class="row"><span>Condicionado · Pontualidade</span><span class="v neg">−&nbsp;R$&nbsp;42,50</span></div></div>
+        <div class="acc-panel" id="p4"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>Até 10 por nota, condicionados ou incondicionados, com descrição obrigatória.</span></div>
+      </div>
+
+      <div class="acc">
+        <button class="acc-btn" aria-expanded="false" aria-controls="p5"><span class="acc-name">Imóvel</span><span class="pill">Obrigatório</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows">
+          <div class="row"><span>Município (IBGE)</span><span class="v">3550308</span></div>
+          <div class="row in"><span>Unidade · Bloco A, 101</span><span class="v">CIB&nbsp;••••••••</span></div>
+        </div>
+        <div class="acc-panel" id="p5"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>O município é obrigatório. As unidades (de 0 a 99) levam inscrição imobiliária, código CIB e endereço. Detalhes na seção 02.</span></div>
+      </div>
+
+      <div class="acc">
+        <button class="acc-btn" aria-expanded="false" aria-controls="p6"><span class="acc-name">Pagamento vinculado</span><span class="pill">Até 99</span><span class="pm" aria-hidden="true"><svg class="ico ico-mais"><use href="#ff-mais"/></svg><svg class="ico ico-menos"><use href="#ff-menos"/></svg></span></button>
+        <div class="acc-rows"><div class="row"><span>15 · Boleto</span><span class="v" style="font-family:var(--f-body);font-weight:600">CNPJ do recebedor</span></div></div>
+        <div class="acc-panel" id="p6"><svg class="ico ico-sm" aria-hidden="true"><use href="#ff-info"/></svg><span>Vincula a nota a até 99 transações de pagamento, inclusive recebidas em conta da administradora. Detalhes na seção 03.</span></div>
+      </div>
+
+      <div class="nfse-total">
+        <span class="lab">Valor da nota (soma das cobranças)</span>
+        <span class="v">R$&nbsp;935,00</span>
+      </div>
+    </div>
+    <p class="note">O valor da nota é a soma das cobranças, e os descontos são somados conforme o tipo.</p>
+
+    <h3>Tipos de cobrança (tpCobranca)</h3>
+    <div class="codes">
+      <div class="code-card"><span class="c">01</span>Condomínio Ordinário</div>
+      <div class="code-card"><span class="c">02</span>Condomínio Privativo</div>
+      <div class="code-card"><span class="c">03</span>Fundo de Promoção e Propaganda (FPP)</div>
+      <div class="code-card"><span class="c">04</span>Impostos e Taxas</div>
+      <div class="code-card"><span class="c">05</span>Fundo de Reserva</div>
+      <div class="code-card"><span class="c">99</span>Outra Cobrança</div>
+    </div>
+    <p class="note"><b>Consulte na íntegra:</b> Nota Técnica SE/CGNFS-e nº 009, v1.01, item 2.15 · Anexo VI – Leiaute e regras de negócio, v1.04.01 (campo tpCobranca).</p>
+
+    <h3>Tipos de detalhamento (tpDetCobranca)</h3>
+    <p>São 37 tipos. Busque pelo código ou pelo nome.</p>
+    <div class="search">
+      <label for="q" class="sr">Buscar tipo de detalhamento</label>
+      <svg class="ico" aria-hidden="true"><use href="#ff-busca"/></svg>
+      <input id="q" type="search" placeholder="Busque pelo código ou pelo nome" autocomplete="off">
+    </div>
+    <div class="search-count" id="qcount" aria-live="polite">37 de 37 tipos</div>
+    <ul class="det" id="det">
+      <li><span class="c">001</span>Cond. Comum CRD</li>
+      <li><span class="c">002</span>Cond. Comum M2</li>
+      <li><span class="c">003</span>Cond. Comum Fixo</li>
+      <li><span class="c">004</span>Cond. Comum Fração</li>
+      <li><span class="c">005</span>Cond. Comum Percentual</li>
+      <li><span class="c">006</span>Condomínio CMM<a class="q" href="#cmm" aria-label="O que significa CMM?" title="Você sabe o que significa?">?</a></li>
+      <li><span class="c">007</span>Energia Elétrica</li>
+      <li><span class="c">008</span>Água</li>
+      <li><span class="c">009</span>Ar Condicionado</li>
+      <li><span class="c">010</span>Telefone</li>
+      <li><span class="c">011</span>Internet</li>
+      <li><span class="c">012</span>Controle de Pragas</li>
+      <li><span class="c">013</span>Exaustão</li>
+      <li><span class="c">014</span>Gás</li>
+      <li><span class="c">015</span>IPTU</li>
+      <li><span class="c">016</span>Taxa Área</li>
+      <li><span class="c">017</span>Manutenção</li>
+      <li><span class="c">018</span>Multa</li>
+      <li><span class="c">019</span>Seguro</li>
+      <li><span class="c">020</span>Taxa Bombeiro</li>
+      <li><span class="c">021</span>Taxa Administração</li>
+      <li><span class="c">022</span>Taxa Foro</li>
+      <li><span class="c">023</span>Limpeza</li>
+      <li><span class="c">024</span>Taxa de Lixo</li>
+      <li><span class="c">025</span>Tapume</li>
+      <li><span class="c">026</span>Instalação Alarme</li>
+      <li><span class="c">027</span>Segurança</li>
+      <li><span class="c">028</span>Fundo de Promoção e Propaganda</li>
+      <li><span class="c">029</span>Análise de Projeto</li>
+      <li><span class="c">030</span>Fundo de Reserva</li>
+      <li><span class="c">031</span>Laudos e Vistorias</li>
+      <li><span class="c">032</span>Detecção de Fumaça</li>
+      <li><span class="c">033</span>Reanálise de Projeto</li>
+      <li><span class="c">034</span>Taxa Extra</li>
+      <li><span class="c">035</span>Área Vaga</li>
+      <li><span class="c">036</span>Condomínio Irrecuperável</li>
+      <li><span class="c">999</span>Outro</li>
+    </ul>
+    <p class="empty" id="qempty">Nenhum tipo encontrado para essa busca.</p>
+    <p class="note"><b>Consulte na íntegra:</b> Nota Técnica SE/CGNFS-e nº 009, v1.01, item 2.15 · Anexo VI – Leiaute e regras de negócio, v1.04.01 (campo tpDetCobranca).</p>
+
+    <h3>O que significam as siglas</h3>
+    <p>A NT não define as siglas usadas em alguns códigos. Pela nossa leitura e apuração até o momento, acreditamos que signifiquem:</p>
+    <div class="tbl-box">
+      <table class="tbl stack">
+        <tbody>
+          <tr><td class="code" style="width:30%">001<span class="sub">Cond. Comum CRD</span></td><td>Condomínio comum calculado pelo Coeficiente de Rateio de Despesas, termo usado em shopping centers para definir quanto cada loja paga das despesas comuns. Equivale, no shopping, à fração ideal do condomínio residencial (código 004).</td></tr>
+          <tr><td class="code">002<span class="sub">Cond. Comum M2</span></td><td>Condomínio comum calculado por metro quadrado da unidade.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Vários códigos da tabela, como Fundo de Promoção e Propaganda, Tapume e Análise de Projeto, vêm da prática dos shopping centers, o que reforça essa leitura.</p>
+
+    <div class="callout c-ask anchor" id="cmm">
+      <span class="qm" aria-hidden="true">?</span>
+      <div>
+        <div class="lab">Você sabe o que significa este código?</div>
+        <h4>006 – Condomínio CMM</h4>
+        <p>Ainda não encontramos definição oficial nem uso consolidado no setor para a sigla <strong>CMM</strong>. Se você conhece o significado, envie para a nossa equipe: vamos atualizar este conteúdo com a informação e o crédito a quem contribuiu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 02 ===================== -->
+  <section class="sec anchor" id="s02">
+    <div class="sec-num">02</div>
+    <h2>O imóvel na nota e o código CIB</h2>
+    <p>Em toda nota de operação condominial, a NT torna obrigatório o grupo <strong>"imovel"</strong>:</p>
+    <div class="tbl-box">
+      <table class="tbl resp">
+        <thead><tr><th>Campo</th><th>Obrigatoriedade</th><th>O que é</th></tr></thead>
+        <tbody>
+          <tr><td class="field">Município do imóvel (cMun)</td><td data-k="Obrigatoriedade">Obrigatório</td><td data-k="O que é">Código IBGE do município</td></tr>
+          <tr><td class="field">Unidades imobiliárias (gUnidImob)</td><td data-k="Obrigatoriedade">0 a 99 ocorrências</td><td data-k="O que é">Dados de cada unidade envolvida</td></tr>
+          <tr><td class="field">Inscrição imobiliária (inscImobFisc)</td><td data-k="Obrigatoriedade">Opcional</td><td data-k="O que é">Inscrição da unidade na prefeitura, a mesma do IPTU</td></tr>
+          <tr><td class="field">Código CIB (cCIB)</td><td data-k="Obrigatoriedade">Obrigatório se houver unidade</td><td data-k="O que é">Código do Cadastro Imobiliário Brasileiro, com 8 caracteres</td></tr>
+          <tr><td class="field">Endereço (end)</td><td data-k="Obrigatoriedade">Obrigatório se houver unidade</td><td data-k="O que é">CEP, logradouro e número; complemento e bairro são opcionais</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>Consulte na íntegra:</b> Nota Técnica SE/CGNFS-e nº 009, v1.01, itens 2.6 e 2.15 · Anexo VI, v1.04.01 (grupo imovel).</p>
+
+    <div class="callout c-warn">
+      <svg class="ico" aria-hidden="true"><use href="#ff-alerta"/></svg>
+      <div>
+        <div class="lab">Em aberto</div>
+        <p>A NT não esclarece se o grupo de unidades é obrigatório nas notas de condomínio. Se for, cada nota precisará do código CIB da unidade, que muitas unidades ainda podem não ter. Esse ponto deve ser confirmado nas regras de negócio do Anexo VI.</p>
+      </div>
+    </div>
+
+    <h3>O que é o CIB</h3>
+    <div class="cib">
+      <div><b>CPF</b><span>pessoas</span></div>
+      <div><b>CNPJ</b><span>empresas e entidades</span></div>
+      <div class="on"><b>CIB</b><span>imóveis</span></div>
+    </div>
+    <p>O Cadastro Imobiliário Brasileiro é o código único nacional de cada imóvel, urbano ou rural: uma espécie de <strong>"CPF do imóvel"</strong>. Foi instituído pela LC 214/2025 como parte do Sinter (Sistema Nacional de Gestão de Informações Territoriais), é administrado pela Receita Federal e foi regulamentado pela Instrução Normativa RFB nº 2.275/2025 e pela Portaria RFB nº 561/2025. Ao lado do CPF e do CNPJ, é um dos três cadastros únicos da reforma.</p>
+    <ul class="stars">
+      <li><strong>O proprietário não precisa pedir o código.</strong> Ele é gerado a partir dos cadastros de origem, após convênio com a Receita: as prefeituras, para imóveis urbanos (com base no cadastro do IPTU), e o Cadastro Nacional de Imóveis Rurais, para imóveis rurais.</li>
+      <li><strong>A adoção é escalonada.</strong> Começa pelas capitais e pelo Distrito Federal, por isso nem toda prefeitura já atribui CIB às unidades.</li>
+      <li><strong>No condomínio,</strong> cada unidade (apartamento, sala ou loja) tende a ter o próprio CIB, vinculado à sua inscrição de IPTU. Verifique, município a município, se a prefeitura já atribui o código e reúna as inscrições de IPTU das unidades, que são a base para localizá-lo.</li>
+    </ul>
+
+    <div class="callout c-legal">
+      <div class="lab"><svg class="ico" aria-hidden="true"><use href="#ff-fiscal"/></svg>Base legal · LC nº 214/2025, art. 265</div>
+      <p class="qt"><strong>Art. 265, caput (trecho):</strong> "Art. 265. Os bens imóveis urbanos e rurais de que trata esta Seção deverão ser inscritos no CIB, integrante do Sinter (...)."</p>
+    </div>
+  </section>
+
+  <!-- ===================== 03 ===================== -->
+  <section class="sec anchor" id="s03">
+    <div class="sec-num">03</div>
+    <h2 class="caps">Emissão e vinculação ao pagamento</h2>
+    <div class="callout c-info">
+      <svg class="ico" aria-hidden="true"><use href="#ff-painel-mensal"/></svg>
+      <div>
+        <div class="lab">Só pelos emissores nacionais</div>
+        <p>A NT determina que essas operações sigam as regras da NT 007: emissão exclusiva pelos emissores públicos nacionais, ou seja, o <strong>Emissor Nacional</strong> ou a <strong>integração via API com o Ambiente Nacional da NFS-e</strong>. Emissores municipais próprios não servem.</p>
+      </div>
+    </div>
+    <p>A NT também criou um grupo para vincular a NFS-e a <strong>até 99 transações de pagamento</strong>. Ele é preenchido quando a informação já está disponível na emissão. Para pagamentos identificados depois, será implementado um evento com a mesma estrutura.</p>
+    <div class="tbl-box">
+      <table class="tbl stack">
+        <tbody>
+          <tr><td class="code">nPag</td><td>Numerador único de cada pagamento</td></tr>
+          <tr><td class="code">idTransacao</td><td>Identificador da transação financeira, de acordo com o meio de pagamento</td></tr>
+          <tr><td class="code">tpMeioPgto</td><td>Meio de pagamento (tabela abaixo)</td></tr>
+          <tr><td class="code">CNPJReceb</td><td>CNPJ de quem recebe o pagamento: o fornecedor ou outra entidade que receba do adquirente</td></tr>
+          <tr><td class="code">CNPJBasePSP</td><td>CNPJ base (8 dígitos) do banco ou instituição de pagamento usada pelo recebedor</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="sublabel">Meios de pagamento (tpMeioPgto)</div>
+    <div class="codes c3">
+      <div class="code-card"><span class="c">15</span>Boleto</div>
+      <div class="code-card"><span class="c">17</span>Pix QR Code dinâmico</div>
+      <div class="code-card"><span class="c">18</span>TED</div>
+      <div class="code-card"><span class="c">20</span>Pix chave ou QR Code estático</div>
+      <div class="code-card"><span class="c">23</span>Pix automático</div>
+      <div class="code-card"><span class="c">24</span>TEF / book transfer</div>
+    </div>
+    <p class="note"><b>Consulte na íntegra:</b> Nota Técnica SE/CGNFS-e nº 009, v1.01, item 2.8 · Anexo VI, v1.04.01 (grupo gPgtoVinc).</p>
+    <p style="margin-top:20px">Como o CNPJ do recebedor pode ser de outra entidade, o leiaute <strong>comporta recebimentos em conta da administradora (conta pool)</strong>. A NT não especifica o que vai no identificador da transação no caso do boleto; esse ponto deve ser conferido no Anexo VI.</p>
+
+    <figure class="ntq" style="margin-left:0;margin-right:0">
+      <span class="mark" aria-hidden="true">“</span>
+      <blockquote>"Considerando a previsão contida no art. 26, § 2º, inciso I, da Lei Complementar nº 214/2025, foram incorporadas ao layout da NFS-e de padrão nacional evoluções que possibilitarão emissão do documento fiscal para formalização das operações de condomínios relacionadas aos respectivos rateios de despesas. (...) Dessa forma, para identificação específica dessas operações, será incluído o código <b>'99.05.01 – Operações Condominiais</b> (taxas e demais valores cobrados pelo condomínio edilício, desde que não caracterizem operações enquadradas em outros códigos de tributação nacional da NFS-e)' na tabela de classificação de operações da NFS-e (...). A utilização desse código permitirá o adequado tratamento das informações decorrentes dos rateios condominiais previstos na legislação tributária vigente."</blockquote>
+      <cite>NOTA TÉCNICA SE/CGNFS-e Nº 009, VERSÃO 1.01, ITEM 2.15 (TRECHO)</cite>
+    </figure>
+  </section>
+
+  <!-- ===================== 04 ===================== -->
+  <section class="sec anchor" id="s04">
+    <div class="sec-num">04</div>
+    <h2>Em nome de quem a nota será emitida</h2>
+    <p>Nenhum documento oficial diz isso com todas as letras, mas os sinais apontam para o <strong>condômino (proprietário)</strong>:</p>
+    <div class="trio">
+      <div><span class="eyebrow">NT 009</span>Descreve as cobranças como valores "cobrados do condômino" e não menciona inquilino.</div>
+      <div><span class="eyebrow">LC 214</span>Considera adquirente quem está obrigado ao pagamento.</div>
+      <div><span class="eyebrow">Código Civil</span>Atribui ao condômino o dever de contribuir e equipara ao proprietário o promitente comprador e o cessionário.</div>
+    </div>
+    <p>A divisão entre despesas ordinárias (do inquilino) e extraordinárias (do proprietário), prevista na Lei do Inquilinato, é uma relação entre proprietário e inquilino. Ela não muda quem deve ao condomínio.</p>
+
+    <div class="callout c-dark" style="display:block">
+      <div class="lab">Nossa leitura</div>
+      <p class="big"><strong>Uma NFS-e por condômino e por vencimento</strong>, emitida contra o proprietário, mesmo quando a unidade estiver alugada.</p>
+      <p class="small">Como a nota permite várias cobranças separadas por tipo, ordinárias e extraordinárias aparecem discriminadas no mesmo documento, o que facilita o repasse ao inquilino.</p>
+    </div>
+
+    <h3>O que ainda não está definido sobre o tomador</h3>
+    <div class="open-card">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#ff-credencial"/></svg><h4>Inquilinos</h4><span class="tag-aberto"><svg class="ico" aria-hidden="true"><use href="#ff-alerta"/></svg>EM ABERTO</span></div>
+      <p>A emissão contra o proprietário é a nossa leitura das normas, não uma definição oficial. A NT tem um campo de "destinatário", que pode ser diferente do tomador e, em tese, poderia identificar o inquilino como ocupante. Nada, porém, liga esse campo às operações de condomínio. Ainda não se sabe se o inquilino aparecerá na nota nem de que forma.</p>
+    </div>
+    <div class="open-card">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#ff-equipe"/></svg><h4>Copropriedade (mais de um proprietário na matrícula)</h4><span class="tag-aberto"><svg class="ico" aria-hidden="true"><use href="#ff-alerta"/></svg>EM ABERTO</span></div>
+      <p>É o caso de cônjuges, herdeiros ou sócios donos da mesma unidade. A nota tem um único tomador, e o grupo de condomínios não tem campo de percentual de copropriedade, que existe apenas nas notas de locação. Não se sabe se a nota sairá em nome de um dos coproprietários ou se haverá uma nota para cada um.</p>
+    </div>
+    <div class="open-card">
+      <div class="hd"><svg class="ico" aria-hidden="true"><use href="#ff-calendario"/></svg><h4>Multipropriedade (frações de tempo)</h4><span class="tag-aberto"><svg class="ico" aria-hidden="true"><use href="#ff-alerta"/></svg>EM ABERTO</span></div>
+      <p>A mesma unidade pertence a vários titulares, cada um com uma fração de tempo. A dúvida é a mesma da copropriedade, com um agravante: a divisão das despesas costuma seguir a fração de tempo de cada titular, e o leiaute não prevê nada semelhante.</p>
+    </div>
+
+    <div class="callout c-dark">
+      <svg class="ico" aria-hidden="true"><use href="#ff-endereco"/></svg>
+      <p><strong>Nossa recomendação até a manifestação oficial:</strong> mantenha o cadastro completo de todos os titulares de cada unidade, com nome, CPF ou CNPJ e participação de cada um, além dos dados do inquilino, quando houver. Assim, a administradora consegue se adaptar a qualquer solução que a Receita e o Comitê Gestor adotarem.</p>
+    </div>
+
+    <div class="callout c-legal">
+      <div class="lab"><svg class="ico" aria-hidden="true"><use href="#ff-fiscal"/></svg>Base legal · 3 trechos</div>
+      <div class="src">Código Civil, art. 1.336, I</div>
+      <p class="qt">"Art. 1.336. São deveres do condômino: I - contribuir para as despesas do condomínio na proporção das suas frações ideais, salvo disposição em contrário na convenção;"</p>
+      <div class="src">Código Civil, art. 1.334, § 2º</div>
+      <p class="qt">"§ 2º São equiparados aos proprietários, para os fins deste artigo, salvo disposição em contrário, os promitentes compradores e os cessionários de direitos relativos às unidades autônomas."</p>
+      <div class="src">Lei nº 8.245/1991, arts. 22, X, e 23, XII</div>
+      <p class="qt">"Art. 22. O locador é obrigado a: (...) X - pagar as despesas extraordinárias de condomínio. (...) Art. 23. O locatário é obrigado a: (...) XII - pagar as despesas ordinárias de condomínio."</p>
+    </div>
+  </section>
+
+  <!-- ===================== 05 ===================== -->
+  <section class="sec anchor" id="s05">
+    <div class="sec-num">05</div>
+    <h2 class="caps">O que isso indica</h2>
+    <p>O caminho que a Receita e o Comitê Gestor vêm trilhando aponta para a <strong>emissão de NFS-e em todas as cobranças do condomínio, inclusive as cotas</strong>. Quatro sinais vão na mesma direção:</p>
+    <ol class="timeline">
+      <li><span class="n">1</span><h4>Ato Conjunto nº 4</h4><p>Fixou 01/12/2026 para a NFS-e "na cobrança de taxas e demais valores condominiais", sem distinguir condomínio contribuinte de não contribuinte.</p></li>
+      <li><span class="n">2</span><h4>Regulamentos do IBS e da CBS</h4><p>Segundo análises especializadas, incluem o condomínio edilício entre os não contribuintes que também devem emitir documento fiscal. O nanoempreendedor, que está na mesma lista, recebeu dispensa expressa (Ato Conjunto nº 6/2026). O condomínio, não.</p></li>
+      <li><span class="n">3</span><h4>Classificação tributária</h4><p>A tabela oficial já tem um código próprio para o "fornecimento de condomínio edilício não optante pelo regime regular" (cClassTrib 410012), sem tributo destacado.</p></li>
+      <li><span class="n">4</span><h4>Leiaute da NFS-e</h4><p>Agora há código de serviço exclusivo (99.05.01) e um grupo que detalha cada parcela da cota, como fração ideal, fundo de reserva, rateio extra e multa. Esse nível de detalhe só faz sentido se as cotas forem documentadas.</p></li>
+    </ol>
+    <p>Somados, esses pontos permitem que o fisco identifique separadamente cotas e receitas de terceiros, que é exatamente o que o teste dos 80% exige.</p>
+
+    <div class="neq">
+      <div class="a"><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg><h4>Emitir nota</h4><p>Obrigação que vem do Ato Conjunto nº 4 e dos regulamentos.</p></div>
+      <div class="sym" aria-label="diferente de">≠</div>
+      <div class="b"><svg class="ico" aria-hidden="true"><use href="#ff-guia-imposto"/></svg><h4>Pagar tributo</h4><p>Definido pelo art. 26 da LC 214: quem paga e sobre o quê.</p></div>
+    </div>
+
+    <h3>Qual é a situação do seu condomínio?</h3>
+    <div class="sit">
+      <div class="sit-hd"><h4>Optou pelo regime regular</h4><span>LC 214, art. 26, § 2º, I</span></div>
+      <div class="sit-grid">
+        <div><div class="k">Emite NFS-e da cota?</div><div class="st yes"><!--YES-->Sim</div></div>
+        <div><div class="k">IBS/CBS sobre a cota</div><div class="st yes"><!--YES-->Sim</div><div class="d">Sobre todas as cobranças</div></div>
+        <div><div class="k">IBS/CBS sobre terceiros</div><div class="st yes"><!--YES-->Sim</div></div>
+        <div><div class="k">Cota na nota</div><div class="st yes"><!--YES-->Tributada</div><div class="d">IBS e CBS destacados</div></div>
+      </div>
+    </div>
+    <div class="sit">
+      <div class="sit-hd"><h4>Não optou · cotas abaixo de 80%</h4><span>LC 214, art. 26, § 2º, II</span></div>
+      <div class="sit-grid">
+        <div><div class="k">Emite NFS-e da cota?</div><div class="st trend"><!--TREND-->Sim (tendência)</div></div>
+        <div><div class="k">IBS/CBS sobre a cota</div><div class="st no"><!--NO-->Não</div></div>
+        <div><div class="k">IBS/CBS sobre terceiros</div><div class="st yes"><!--YES-->Sim</div><div class="d">Com crédito proporcional</div></div>
+        <div><div class="k">Cota na nota</div><div class="st no"><!--NO-->Sem tributo</div><div class="d mono">CST 410 / 410012</div></div>
+      </div>
+    </div>
+    <div class="sit">
+      <div class="sit-hd"><h4>Não optou · cotas de 80% ou mais</h4><span>LC 214, art. 26, I</span></div>
+      <div class="sit-grid">
+        <div><div class="k">Emite NFS-e da cota?</div><div class="st trend"><!--TREND-->Sim (tendência)</div></div>
+        <div><div class="k">IBS/CBS sobre a cota</div><div class="st no"><!--NO-->Não</div></div>
+        <div><div class="k">IBS/CBS sobre terceiros</div><div class="st no"><!--NO-->Não</div></div>
+        <div><div class="k">Cota na nota</div><div class="st no"><!--NO-->Sem tributo</div><div class="d mono">CST 410 / 410012</div></div>
+      </div>
+    </div>
+    <p class="note">"Sim (tendência)" indica o caminho apontado pelo Ato Conjunto nº 4 e pelo novo leiaute, ainda sem ato que o declare expressamente.</p>
+
+    <h3>O que ainda não está formalmente definido</h3>
+    <div class="undef">
+      <div><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg><div><h4>Fundamento citado na NT</h4><p>A NT cita o art. 26, § 2º, I, da LC 214. Esse dispositivo trata de imposto, não de emissão de nota: diz que, quando o condomínio opta pelo regime regular, o IBS e a CBS incidem sobre todas as taxas e valores cobrados. É o único caso em que a cota é tributada. A obrigação de emitir vem de outras normas (Ato Conjunto nº 4 e regulamentos), e ainda não há ato que a declare expressamente para o condomínio não optante.</p></div></div>
+      <div><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg><div><h4>Data de implantação</h4><p>A própria NT informa que o cronograma de implantação dessas funcionalidades no ambiente nacional ainda será publicado.</p></div></div>
+      <div><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg><div><h4>Tomador e formato</h4><p>Os sinais indicam uma NFS-e por condômino (proprietário) e por vencimento, mas isso não está escrito de forma expressa. Também não há regra para copropriedade e multipropriedade.</p></div></div>
+      <div><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg><div><h4>Unidades e código CIB</h4><p>Não está claro se o grupo de unidades imobiliárias, que exige o código CIB, é obrigatório nas notas de condomínio.</p></div></div>
+      <div><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg><div><h4>Período de aferição dos 80%</h4><p>Continua sem definição.</p></div></div>
+    </div>
+
+    <div class="callout c-dark">
+      <svg class="ico" aria-hidden="true"><use href="#ff-endereco"/></svg>
+      <p><strong>Nossa orientação:</strong> enquanto não sair ato expresso, trate a emissão para todas as cobranças como o cenário mais provável e prepare a operação para ele.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 06 ===================== -->
+  <section class="sec anchor" id="s06">
+    <div class="sec-num">06</div>
+    <h2>O que a administradora deve fazer agora</h2>
+    <p>Faltam <strong>menos de nove semanas</strong> para 01/12/2026. Marque os passos concluídos: o progresso fica salvo neste navegador.</p>
+    <div class="progress" aria-live="polite"><span id="prog-t">0 de 10 concluídos</span><span class="bar"><i id="prog-b"></i></span></div>
+    <ol class="steps" id="steps">
+      <li class="step"><label><input type="checkbox" data-step="1"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 1</span><h4>Prepare a emissão em volume</h4><p>Se a nota for por condômino e por vencimento, cada condomínio passa a emitir, todo mês, uma NFS-e por unidade. Dimensione desde já o volume da carteira.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="2"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 2</span><h4>Organize a composição das cotas</h4><p>O novo leiaute pede cada cobrança separada por tipo, como ordinária, fundo de reserva, extras, multa e rateio por fração. O plano de contas e a previsão orçamentária precisam refletir essa separação e usar os códigos das tabelas da seção 01.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="3"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 3</span><h4>Garanta o acesso ao Emissor Nacional</h4><p>Cada condomínio precisa estar com CNPJ regular e com acesso ao Emissor Nacional ou integração via API com o Ambiente Nacional da NFS-e. Essa operação não será emitida por emissores municipais próprios.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="4"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 4</span><h4>Organize os dados dos imóveis e das unidades</h4><p>No mínimo: município e endereço completo de cada condomínio; identificação de cada unidade (número, bloco, torre); inscrição de IPTU de cada unidade, quando houver. Verifique também se as unidades já têm código CIB e como obtê-lo, caso o grupo de unidades venha a ser exigido.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="5"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 5</span><h4>Atualize o cadastro de condôminos</h4><p>A nota deverá ser emitida em nome do condômino. Como ainda não está definido se o inquilino também será identificado, mantenha completos os dados de proprietários, promitentes compradores, coproprietários e inquilinos.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="6"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 6</span><h4>Separe as receitas de terceiros</h4><p>Locação, cessão de espaço e antenas usam outros códigos (99.03 e 99.04). Esses valores, somados às cotas, compõem o teste dos 80%.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="7"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 7</span><h4>Revise a forma de recebimento</h4><p>A nota pode vincular o pagamento, inclusive quando o valor é recebido em conta da administradora. Mapeie quais condomínios recebem em conta própria e quais em conta pool, e como identificar cada boleto ou Pix.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="8"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 8</span><h4>Consulte seus prestadores de serviços financeiros</h4><p>Se o condomínio trabalha com garantidora, instituição de pagamento, antecipação de cotas ou outra intermediação de crédito, pergunte a essas empresas como ficarão os recebimentos e a vinculação dos pagamentos às notas pelas novas regras.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="9"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 9</span><h4>Comunique síndicos e conselhos</h4><p>Explique que a nota sobre a cota não significa, por si só, cobrança de IBS ou CBS. O condomínio que não optou pelo regime regular e respeita o limite dos 80% continua sem tributo a pagar.</p></div></label></li>
+      <li class="step"><label><input type="checkbox" data-step="10"><span class="box"><!--CHK--></span><div><span class="eyebrow">Passo 10</span><h4>Acompanhe o cronograma de implantação</h4><p>A Receita e o Comitê Gestor ainda vão publicar a data em que o código 99.05.01 estará disponível no ambiente nacional. É ela que definirá quando os testes poderão começar.</p></div></label></li>
+    </ol>
+    <p class="closing">Voltaremos com uma atualização assim que o cronograma de implantação e eventuais orientações formais forem publicados.</p>
+  </section>
+
+  <!-- ===================== 07 ===================== -->
+  <section class="sec anchor" id="s07">
+    <div class="sec-num">07</div>
+    <h2 class="caps">Fontes oficiais</h2>
+    <ul class="sources">
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Nota Técnica SE/CGNFS-e nº 009, versão 1.01 (PDF)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Anexo VI – Leiaute e regras de negócio, v1.04.01 (planilha)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Anexo VII – Indicadores da operação (cIndOp), v1.03.00 (planilha)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Anexo VIII – Correlação entre item, NBS, cClassTrib e cIndOp, v1.01.00 (planilha)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Portal da NFS-e – documentação técnica da Reforma Tributária</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Nota Técnica SE/CGNFS-e nº 007 (regras de emissão pelos emissores nacionais)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Nota Técnica SE/CGNFS-e nº 005 (códigos 99.xx)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Ato Conjunto RFB/CGIBS nº 4/2026</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Receita Federal – cronograma de obrigatoriedade e de publicação dos leiautes</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Ato Conjunto RFB/CGIBS nº 6/2026</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Tabela de Classificação Tributária (cClassTrib) – Portal da Conformidade Fácil</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Ato Técnico Conjunto RFB/CGIBS nº 7/2026 – DOU de 01/10/2026, edição extra</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Lei Complementar nº 214/2025 – texto compilado (art. 265, CIB)</li>
+      <li><svg class="ico" aria-hidden="true"><use href="#ff-nota-fiscal"/></svg>Instrução Normativa RFB nº 2.275/2025 e Portaria RFB nº 561/2025 – regulamentação do CIB (Sijut)</li>
+    </ul>
+
+    <div class="cta">
+      <div class="eyebrow"><span class="dot-ambar" aria-hidden="true" style="background:var(--ff-vermelhao)"></span>Precisa de ajuda com a carteira?</div>
+      <h2>Converse com nossos especialistas sobre como preparar a emissão dos seus condomínios até <b>01/12/2026</b>.</h2>
+      <div class="btns">
+        <a class="btn btn-p" href="https://wa.me/5511982450527" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ff-conversa"/></svg>Fale com nossos especialistas</a>
+        <!-- TODO: link da live -->
+        <a class="btn btn-s" href="#"><svg class="ico" aria-hidden="true"><use href="#ff-video-aula"/></svg>Assistir à live completa</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span><span class="rub" aria-hidden="true"></span>Fireflies Consultoria · Precisão que ilumina decisões.</span>
+    <span>São Paulo/SP</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* acordeão do exemplo da NFS-e */
+  document.querySelectorAll('#nfse .acc-btn').forEach(function(b){
+    b.addEventListener('click',function(){
+      var acc=b.closest('.acc'), open=!acc.classList.contains('open');
+      acc.classList.toggle('open',open); b.setAttribute('aria-expanded',open);
+    });
+  });
+
+  /* busca em tpDetCobranca */
+  var q=document.getElementById('q'), items=[].slice.call(document.querySelectorAll('#det li')),
+      cnt=document.getElementById('qcount'), empty=document.getElementById('qempty');
+  function norm(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().trim();}
+  q.addEventListener('input',function(){
+    var t=norm(q.value), n=0;
+    items.forEach(function(li){var ok=!t||norm(li.textContent).indexOf(t)>-1; li.hidden=!ok; if(ok)n++;});
+    cnt.textContent=n+' de '+items.length+' tipos';
+    empty.style.display=n?'none':'block';
+  });
+
+  /* checklist com progresso salvo neste navegador */
+  var KEY='fireflies-nfse-condominios-passos', boxes=[].slice.call(document.querySelectorAll('#steps input')), saved={};
+  try{saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){saved={};}
+  function upd(){
+    var d=boxes.filter(function(b){return b.checked;}).length;
+    document.getElementById('prog-t').textContent=d+' de 10 concluídos';
+    document.getElementById('prog-b').style.width=(d*10)+'%';
+  }
+  boxes.forEach(function(b){
+    b.checked=!!saved[b.dataset.step];
+    b.addEventListener('change',function(){
+      saved[b.dataset.step]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(saved));}catch(e){}
+      upd();
+    });
+  });
+  upd();
+
+  /* impressão: tudo aberto e lista completa */
+  window.addEventListener('beforeprint',function(){
+    document.querySelectorAll('#nfse .acc-btn').forEach(function(b){b.setAttribute('aria-expanded','true');});
+  });
+})();
+</script>
+</body>
+</html>

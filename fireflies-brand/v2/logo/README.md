@@ -1,87 +1,109 @@
-# Fireflies: sistema de logo v2, "Rastro que acende"
+# Fireflies: sistema de logo final, "Órbita do vagalume"
 
-O símbolo é a opção **A · Lua-constelação**, escolhida pelo cliente e refinada em 4 rodadas (R4).
-- A meia-lua deixou de ser uma lúnula e virou o **rastro de luz do vagalume**.
-- O voo começa com 6 piscadas, que viram um traço contínuo que engrossa até a cabeça, onde está o vagalume aceso.
-- A constelação no alto à esquerda se liga à luz por uma linha pontilhada: o vagalume "acende a rede".
+Uma **órbita constelada** envolve o nome.
+- A metade de trás da órbita é **constelação**: um fio finíssimo, frio (anil ou cal), com 8 estrelas de 3 magnitudes enfiadas nele.
+- Sem quebra, o mesmo fio engrossa e esquenta (anil → rubrica → vermelhão → âmbar) até o **vagalume aceso** na ponta: a luz com brilho e duas asas em fio.
+- O vagalume fica logo acima do **E de luz** do wordmark, então as duas luzes da marca conversam.
 
-O wordmark é o aprovado: **Sora 620, caixa alta, "E de luz"**. O descritor é **Sora 300**, com versal de 0,30 da versal do nome e tracking de 0,97 em.
+A versão curta é o **F de luz** na **mesma órbita**, com escala 0,1 e a mesma inclinação, excentricidade, direção de voo, trechos e vagalume.
+
+O wordmark é o aprovado, sem alteração:
+- nome: Sora 620, caixa alta, "E de luz";
+- descritor: Sora 300, versal de 0,30 X e tracking de 0,97 em.
 
 ## Versões (`svg/` e `png/`)
-Arquivos no formato `fireflies_{versao}_{cor}.svg|png`. Os PNGs têm 2000 px no lado maior e fundo transparente.
+Os arquivos seguem o padrão `fireflies_{versao}_{cor}.svg|png`. Os PNGs têm 2000 px no lado maior e fundo transparente.
 
 | versão | uso |
 |---|---|
-| `horizontal` | **principal**: site, documentos, assinatura de e-mail, propostas |
-| `vertical` | capas, fachada, redes, peças quadradas |
-| `simbolo` | de 40 px para cima: avatar, selo, aplicações sem nome |
-| `simbolo-pequeno` | de 24 a 39 px: a rede vira filete contínuo, sem pontilhado, e o halo é 1 anel grosso |
-| `favicon` | 16 px: só o rastro + a luz |
-| `wordmark` | quando o símbolo já aparece na mesma peça |
+| `horizontal` | **principal**: site, documentos, propostas, assinatura de e-mail, fachada |
+| `vertical` | órbita curta com o vagalume sobre o nome: capas, redes, peças quadradas e verticais |
+| `simbolo` | F de luz em órbita, a partir de 40 px: avatar, app, selo, carimbo |
+| `simbolo-pequeno` | de 24 a 39 px: mesma composição, com fio grosso e constante, sem estrelas e sem asas |
+| `favicon` | 16 px (também usado no .ico até 48 px): só o F de luz e o vagalume aceso, no mesmo lugar em relação ao braço de luz |
+| `wordmark` | quando a órbita já aparece na peça, ou em espaços muito baixos |
 | `condominios-horizontal` | linha de auditoria de condomínios (descritor CONDOMÍNIOS) |
 | `academy-horizontal` | Fireflies Academy (descritor ACADEMY) |
 
 | cor | composição | fundo |
 |---|---|---|
-| `gradiente` | **principal no digital.** Rastro âmbar #F2B544 → vermelhão #E65A3E no sentido do voo (mais quente na cabeça), rede e nome em anil #17183A, braço do E em vermelhão, lanterna âmbar com contorno anil | Branco, Cal |
-| `gradiente-negativo` | rastro em gradiente, rede e nome em Cal #EDEEEA, braço do E e lanterna em âmbar | Anil #17183A |
-| `chapado` | 2 cores: tudo em anil e o âmbar só na lanterna (o braço do E fica em anil e o respiro preserva o acento) | Branco, Cal |
-| `negativo` | Cal + âmbar (lanterna, anel e braço do E) | Anil |
-| `mono-anil` / `mono-preto` / `mono-branco` | 1 cor; a lanterna é a maior estrela, com 1 anel | claro / claro / escuro ou foto |
+| `digital` | **principal em tela.** Gradiente no fio (anil → rubrica → vermelhão → âmbar), estrelas e nome em Anil, braço do E em Vermelhão, vagalume com brilho radial | Branco, Cal |
+| `digital-negativo` | igual ao digital, com o frio em Cal/Céu de Anil, o nome em Cal e o braço do E e a luz em Âmbar | Anil |
+| `chapado` | **2 cores:** Anil (nome, estrelas, asas) + Vermelhão (órbita, braço do E, luz). Sem gradiente e sem brilho | Branco, Cal |
+| `chapado-negativo` | 2 cores: Cal + Âmbar | Anil |
+| `mono-anil`, `mono-preto` | 1 cor. O E de luz e o braço do F continuam se lendo pelo respiro | claro |
+| `mono-branco` | 1 cor branca | escuro ou foto com véu |
 
 Outros arquivos:
-- `favicon.ico` (16/32/48)
-- `apple-touch-icon-180.png`
-- `android-192.png` e `android-512.png` (símbolo dentro da zona segura de 62 %)
-- `avatar-1080.png` (símbolo sobre Anil)
-- `og-base-1200x630.png`
-- `construcao.svg`
-- `prancha-sistema.png`
+- `favicon.ico` (16/32/48, sobre um quadrado Anil arredondado);
+- `apple-touch-icon-180.png`;
+- `android-192.png` e `android-512.png` (símbolo dentro da zona segura de 80 %);
+- `avatar-1080.png` (F em órbita sobre Anil, dentro do círculo);
+- `og-base-1200x630.png`;
+- `construcao.svg`;
+- `prancha-sistema.png`.
 
-## Gradiente ou chapado?
-- **Gradiente:** versão principal em tudo que é tela, como site, redes, apresentações, PDF digital, vídeo e impressão em 4 cores de boa qualidade.
-- **Chapado (anil + âmbar):** impressão em 2 cores (Pantone), papelaria barata, brindes em serigrafia e sinalização em vinil.
-- **1 cor:** carimbo, gravação a laser, bordado, fax, jornal, documentos em preto e branco e marca-d'água.
-- No bordado, use `simbolo-pequeno` ou `horizontal` em mono, com no mínimo 25 mm de largura, para que as piscadas e os pontos não fechem.
-- Nunca aplique o gradiente sobre foto sem véu anil (60–80 %). Nunca use o gradiente no wordmark.
+## Digital, chapado ou mono?
+- **Digital:** tudo que é tela, como site, redes, apresentação, PDF, vídeo, e também impressão em 4 cores de boa qualidade. É a única versão com gradiente e brilho.
+- **Chapado:** impressão em 2 cores (Pantone), serigrafia, vinil, sinalização e papelaria econômica.
+- **Mono:** carimbo, gravação a laser, hot stamping, bordado, documentos P&B, jornal e marca-d'água.
+- Bordado: use `simbolo-pequeno` ou `horizontal` em mono. O horizontal precisa de no mínimo 60 mm de largura, para que o fio e as estrelas não fechem.
+- Sobre foto, use `digital-negativo` ou `mono-branco`, sempre com véu Anil de 60–80 %.
+
+## Construção (ver `construcao.svg`)
+**X** é a altura da versal de FIREFLIES.
+
+**Órbita:**
+- elipse com a = 5,6 X e b = 1,85 X (b/a = 0,33);
+- inclinação de −5°;
+- centro no centro do bloco nome + descritor;
+- voo no sentido horário: começa no alto à direita (−40°) e termina no alto, sobre o E de luz (−96°).
+
+**Trechos:**
+- de 0 a 40 % do voo, constelação: fio de 0,013 X com 8 estrelas, em ritmo que acelera 0,86;
+- de 40 a 100 %, luz: o fio vai de 0,013 X a 0,085 X.
+
+**Vagalume:**
+- núcleo de 0,07 X;
+- halo de 0,46 X;
+- asas de 0,4 X, em fio de 0,023 X, abertas ±26° para trás do voo.
+
+**Símbolo:**
+- a mesma órbita × 0,1;
+- F de luz com altura de 0,2 × a largura da órbita;
+- F posicionado sob a luz, um pouco à esquerda do centro, como o E de luz no nome.
 
 ## Área de proteção
-- **X = altura da versal de FIREFLIES.**
-- Nos lockups (horizontal, vertical, condomínios, academy), a área de proteção é **½ X** em todos os lados.
-- No símbolo isolado, a área de proteção é **¼ da altura do símbolo**.
-- Construção do lockup horizontal: símbolo = **2,1 X** de altura, centrado no bloco nome + descritor; respiro entre símbolo e nome = **0,55 X**.
+- Nos lockups (`horizontal`, `vertical`, `condominios`, `academy`): **X/2** em volta da caixa da órbita, incluindo o vagalume.
+- No símbolo: **¼ da largura da órbita**.
+- O nome nunca encosta na órbita. A folga mínima entre órbita e letra é 0,25 X.
 
 ## Tamanhos mínimos
 | peça | digital | impresso |
 |---|---|---|
-| horizontal com descritor | 240 px de largura | 40 mm |
-| horizontal abaixo disso | use `wordmark` sem descritor + `simbolo-pequeno` | 25 mm |
-| vertical | 120 px de largura | 22 mm |
+| horizontal (com descritor e asas) | 240 px de largura; as asas se leem a partir de 360 px | 45 mm |
+| horizontal abaixo disso | use o `wordmark` | 30 mm |
+| vertical | 160 px de largura | 30 mm |
 | simbolo | 40 px | 12 mm |
 | simbolo-pequeno | 24 a 39 px | 7 a 12 mm |
-| favicon | 16 px | — |
+| favicon | 16 a 48 px | — |
 
 ## Cores
 | nome | HEX | papel |
 |---|---|---|
-| Anil de Junho | #17183A | tinta principal, fundo escuro |
+| Anil | #17183A | nome, estrelas, fundo escuro |
 | Cal Virgem | #EDEEEA | fundo claro, tinta no negativo |
 | Branco | #FFFFFF | papel |
-| Âmbar de Vagalume | #F2B544 | a luz (lanterna), início do rastro |
-| Vermelhão | #E65A3E | fim do rastro (cabeça), braço do E no claro |
-
-Regras de cor:
-- O âmbar nunca é texto sobre fundo claro.
-- No claro, a lanterna leva sempre o contorno anil, para garantir 3:1.
+| Âmbar | #F2B544 | a luz (vagalume), E de luz no escuro |
+| Vermelhão | #E65A3E | E de luz no claro, órbita no chapado |
+| Rubrica | #A9301F | transição do gradiente |
+| Céu de Anil | #6E89B4 | transição fria no negativo |
 
 ## Não fazer
-- Redesenhar o rastro como meia-lua simétrica, com as duas pontas finas.
-- Aplicar sombra, brilho com blur ou estrela de 4 pontas na lanterna.
-- Trocar a fonte, mudar a ordem nome/símbolo ou girar o símbolo.
-- Usar o `simbolo` (pontilhado) abaixo de 40 px: use o `simbolo-pequeno`.
+- Cruzar letras com a órbita, mudar a inclinação ou fechar a órbita.
+- Trocar a direção do voo, ou tirar o vagalume da ponta ou de cima do E.
+- Engrossar o fio da constelação, ou usar gradiente na versão chapada.
+- Usar o âmbar como texto sobre fundo claro.
+- Aplicar sombra, glow extra ou estrela de 4 pontas.
 
-## Técnica
-- Todos os SVGs usam formas cheias (círculos e paths) e nenhuma `<mask>`.
-- O gradiente é um `linearGradient` com id único por arquivo.
-- O texto está convertido em curvas.
-- Os geradores estão no scratchpad: `v2/logo-A/_build/` (`system.js`, `syspng.js`, `syscons.js` e `sysboard.js`). As rodadas estão em `v2/logo-A/r4-rodada1..4.png`.
+As versões anteriores ("Rastro que acende", R4) estão em `../_arquivo/logo-rastro-r4/`.
