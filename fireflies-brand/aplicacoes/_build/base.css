@@ -1,0 +1,74 @@
+/* Fireflies Consultoria · base comum das aplicações
+   Tokens de cor vêm de ../../cores/tokens.css (fonte única).
+   Fontes: arquivos variáveis do Google Fonts em ./fonts (OFL). */
+@import url('../../cores/tokens.css');
+
+@font-face { font-family: "Bricolage Grotesque"; src: url('fonts/BricolageGrotesque.ttf') format('truetype'); font-weight: 200 800; font-stretch: 75% 100%; }
+@font-face { font-family: "Instrument Sans"; src: url('fonts/InstrumentSans.ttf') format('truetype'); font-weight: 400 700; font-stretch: 75% 100%; }
+@font-face { font-family: "JetBrains Mono"; src: url('fonts/JetBrainsMono.ttf') format('truetype'); font-weight: 100 800; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #888; }
+body { -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; font-optical-sizing: auto; }
+
+/* ---------- prancha (uma peça) ---------- */
+.peca { position: relative; overflow: hidden; font-family: var(--ff-font-body); }
+
+/* temas: as variáveis locais alimentam elementos.js */
+.noite {
+  background: var(--ff-noite); color: var(--ff-papel);
+  --lit: var(--ff-vagalume); --fg: var(--ff-papel); --muted: var(--ff-nevoa);
+  --rule: rgba(243,245,247,.14);
+  --c-line: rgba(157,185,183,.30); --c-node: rgba(243,245,247,.62); --c-star: rgba(157,185,183,.45);
+  --m-off: rgba(157,185,183,.22); --m-on: var(--ff-vagalume); --m-alert: var(--ff-brasa);
+  --orb: var(--ff-mare); --alert: var(--ff-brasa);
+}
+.papel {
+  background: var(--ff-papel); color: var(--ff-tinta);
+  --lit: var(--ff-oliva); --fg: var(--ff-tinta); --muted: var(--ff-pedra);
+  --rule: var(--ff-linha);
+  --c-line: #C3CCD3; --c-node: #8E9AA4; --c-star: #B4BEC6;
+  --m-off: #D5DBE1; --m-on: var(--ff-oliva); --m-alert: var(--ff-brasa-escura);
+  --orb: var(--ff-noite); --alert: var(--ff-brasa-escura);
+}
+.branco { background: #fff; }
+
+/* ---------- tipografia ---------- */
+.display { font-family: var(--ff-font-display); font-weight: 700; letter-spacing: -0.035em; line-height: .94; font-variation-settings: "wdth" 100; }
+.titulo  { font-family: var(--ff-font-display); font-weight: 700; letter-spacing: -0.025em; line-height: 1.02; }
+.sub     { font-family: var(--ff-font-display); font-weight: 600; letter-spacing: -0.012em; line-height: 1.15; }
+.corpo   { font-family: var(--ff-font-body); font-weight: 400; line-height: 1.45; }
+.mono    { font-family: var(--ff-font-mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+.rotulo  { font-family: var(--ff-font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: .12em; }
+.lit  { color: var(--lit); }
+.muted { color: var(--muted); }
+.alerta { color: var(--alert); }
+
+/* eyebrow com ponto aceso */
+.eyebrow { font-family: var(--ff-font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: .12em; display: inline-flex; align-items: center; gap: .9em; color: var(--muted); line-height: 1.2; }
+.eyebrow::before { content: ""; width: .62em; height: .62em; border-radius: 50%; background: var(--lit); flex: none; }
+
+/* selo "dados de exemplo" (obrigatório quando houver número não real) */
+.exemplo { font-family: var(--ff-font-mono); font-weight: 500; text-transform: uppercase; letter-spacing: .1em; border: 1.5px dashed currentColor; color: var(--muted); padding: .35em .7em; border-radius: 4px; display: inline-block; line-height: 1.2; }
+
+/* logo: sempre arquivo final (img). Nunca redesenhar. */
+img.logo { display: block; height: auto; }
+
+/* elementos gráficos desenhados por elementos.js */
+svg[data-ff] { display: block; overflow: visible; }
+.c-line { stroke: var(--c-line); fill: none; stroke-linecap: round; }
+.c-node { fill: var(--c-node); }
+.c-star { fill: var(--c-star); }
+.c-lit  { fill: var(--lit); }
+.c-halo { fill: none; stroke: var(--lit); opacity: .45; }
+.m-off { fill: var(--m-off); }
+.m-on  { fill: var(--m-on); }
+.m-alert { fill: var(--m-alert); }
+.m-lab { fill: var(--muted); font-family: var(--ff-font-mono); font-weight: 500; letter-spacing: .08em; }
+.orb { fill: none; stroke: var(--orb); stroke-linecap: round; }
+
+/* impressos: página com sangria, área de corte (.corte) e margem de segurança */
+@media print { html, body { background: none; } }
+.folha { position: relative; overflow: hidden; break-after: page; }
+.folha:last-child { break-after: auto; }
+.corte { position: absolute; }
