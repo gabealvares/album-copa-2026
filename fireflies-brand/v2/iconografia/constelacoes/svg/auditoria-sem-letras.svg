@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <title>Auditoria · Lens</title>
+  <polygon points="4,4 44,4 44,36 60,36 60,60 32,60 32,46 4,46" fill="none" stroke="var(--ff-line, currentColor)" stroke-width=".5" stroke-dasharray="2 2" opacity=".55"/>
+  <path d="M26.16 11.6 33.41 14.24" stroke-dasharray="0 2.56"/>
+  <path d="M37.34 18.55 38.74 23.76" stroke-dasharray="0 2.69"/>
+  <path d="M31.03 37.05 25.53 38.78" stroke-dasharray="0 2.87"/>
+  <path d="M19.87 37.65 13.95 32.69" stroke-dasharray="0 2.57"/>
+  <path d="M11.42 26.16 12.28 19.65" stroke-dasharray="0 3.27"/>
+  <path d="M15.49 14.63 19.04 12.37" stroke-dasharray="0 4.19"/>
+  <path d="M39 39 43.18 43.18" stroke-dasharray="0 2.94"/>
+  <path d="M47.83 47.83 51.62 51.62" stroke-dasharray="0 2.67"/>
+  <circle cx="22.4" cy="10.23" r="1.8" fill="currentColor" stroke="none"/>
+  <circle cx="36.49" cy="15.36" r="1.1" fill="currentColor" stroke="none"/>
+  <circle cx="39.77" cy="27.6" r="1.8" fill="currentColor" stroke="none"/>
+  <circle cx="35.61" cy="35.61" r="2.6" fill="currentColor" stroke="none"/>
+  <circle cx="22.4" cy="39.77" r="1.1" fill="currentColor" stroke="none"/>
+  <circle cx="10.9" cy="30.13" r="1.8" fill="currentColor" stroke="none"/>
+  <circle cx="12.71" cy="16.4" r="1.1" fill="currentColor" stroke="none"/>
+  <circle cx="45.5" cy="45.5" r="1.1" fill="currentColor" stroke="none"/>
+  <circle cx="55" cy="55" r="2.6" fill="currentColor" stroke="none"/>
+  <circle class="lit" cx="25" cy="25" r="4.2" style="fill:var(--ff-lit, currentColor);stroke:var(--ff-lit-edge, none)" stroke-width="1"/>
+</svg>
