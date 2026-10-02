@@ -6,7 +6,7 @@ const { chromium } = require('/opt/node22/lib/node_modules/playwright');
 
 const OUT = path.resolve(__dirname, '..');
 const FONTS = path.resolve(__dirname, '../../../iconografia/_build/fonts');
-const TIPO = '/tmp/claude-0/-home-user-album-copa-2026/d4646268-3ddb-517a-9bb4-aa870c740fea/scratchpad/v2/tipo/ttf';
+const TIPO = require('path').resolve(__dirname, '../../../tipografia/fontes');
 const SORA = { 600: `${TIPO}/Sora-600-normal.ttf`, 700: `${TIPO}/Sora-700-normal.ttf` };
 const LOGO = path.resolve(__dirname, '../../../logo/svg');
 

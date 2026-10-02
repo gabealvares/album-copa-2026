@@ -39,3 +39,4 @@ Instale as fontes a partir de fonts.google.com: Sora, IBM Plex Sans e IBM Plex M
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 ```
+- Arquivos TTF (licença SIL OFL 1.1, livre para uso e redistribuição) em `fontes/`.
