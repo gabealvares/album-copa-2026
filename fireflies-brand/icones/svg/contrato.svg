@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ff-icon ff-icon-contrato">
+  <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v3a2 2 0 0 0 2 2h3"/>
+  <path d="M8.5 10h4"/>
+  <path d="M8.5 13h7"/>
+  <path d="M8.5 17c.83-1.67 1.67-1.67 2 0s1.17 1.67 2 0"/>
+  <circle class="lit" cx="15.75" cy="17" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+</svg>

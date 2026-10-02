@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ff-icon ff-icon-inadimplencia">
+  <path d="M16.04 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.04A3.5 3.5 0 0 1 16.04 7"/>
+  <path d="M6.5 10.5v5"/>
+  <path d="M9.5 10.5v5"/>
+  <path d="M12.5 10.5v5"/>
+  <path d="M15.5 12.5v3"/>
+  <circle class="lit" cx="19.5" cy="6.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+</svg>

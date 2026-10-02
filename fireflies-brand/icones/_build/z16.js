@@ -1,0 +1,5 @@
+const fs=require('fs');const {chromium}=require('/opt/node22/lib/node_modules/playwright');
+const names=JSON.parse(fs.readFileSync('icons.json'));const sp=fs.readFileSync('../sprite.svg','utf8');
+const row=(cls)=>`<div class="r ${cls}">${names.map(n=>`<svg width="16" height="16"><use href="#ff-${n}"/></svg>`).join('')}</div>`;
+const html=`<body style="margin:0;width:700px">${sp}<style>.r{display:flex;flex-wrap:wrap;gap:8px;padding:10px;width:700px}.p{background:#F3F5F7;color:#0E1726;--ff-lit:#5E6E00}.n{background:#06262B;color:#F3F5F7;--ff-lit:#D9F24A}.s2{--ff-stroke:2}</style>${row('p')}${row('p s2')}${row('n')}${row('n s2')}</body>`;
+(async()=>{const b=await chromium.launch();const p=await b.newPage({deviceScaleFactor:1});await p.setContent(html);const buf=await p.screenshot({fullPage:true});const q=await b.newPage();await q.setContent('<body style=margin:0><img style="width:2100px;image-rendering:pixelated" src="data:image/png;base64,'+buf.toString('base64')+'">');await q.setViewportSize({width:2100,height:800});await q.screenshot({path:'z16.png',fullPage:true});await b.close()})();

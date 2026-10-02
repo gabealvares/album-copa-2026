@@ -1,0 +1,246 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- Fireflies Consultoria · set de ícones v1 · 36 ícones -->
+  <symbol id="ff-auditoria" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M11 21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v4"/>
+    <path d="M7.5 7.5h6"/>
+    <path d="M7.5 11h2.5"/>
+    <circle cx="15.5" cy="15" r="4"/>
+    <path d="M18.5 18l2.5 2.5"/>
+    <circle class="lit" cx="15.5" cy="15" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-contabil" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="5" y="3" width="14" height="18" rx="2"/>
+    <rect x="8" y="6" width="8" height="3.5" rx="1"/>
+    <path d="M9 13h0"/>
+    <path d="M15 13h0"/>
+    <path d="M9 17h0"/>
+    <circle class="lit" cx="15" cy="17" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-fiscal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5z"/>
+    <path d="M9 8h6"/>
+    <path d="M9 11.5h6"/>
+    <path d="M9 15h2"/>
+    <circle class="lit" cx="14.5" cy="15" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-financeiro" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="6" width="18" height="14" rx="2"/>
+    <path d="M6 6l9.5-3 1 3"/>
+    <path d="M21 9.5h-4.5a3.5 3.5 0 0 0 0 7H21"/>
+    <circle class="lit" cx="16.5" cy="13" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-gestao-processos" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="6" cy="6" r="3"/>
+    <path d="M6 9v6.5a2 2 0 0 0 2 2h3"/>
+    <path d="M9.73 19.27L11.5 17.5L9.73 15.73"/>
+    <path d="M9 6h6.5a2 2 0 0 1 2 2v3"/>
+    <path d="M15.73 9.73L17.5 11.5L19.27 9.73"/>
+    <rect x="14" y="14" width="7" height="7" rx="2"/>
+    <circle class="lit" cx="17.5" cy="17.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-sindicancia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M2.75 12C5 7.75 8.25 5.5 12 5.5s7 2.25 9.25 6.5C19 16.25 15.75 18.5 12 18.5S5 16.25 2.75 12z"/>
+    <circle cx="12" cy="12" r="3.5"/>
+    <circle class="lit" cx="12" cy="12" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-academy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M12 4L3 8.5 12 13l9-4.5z"/>
+    <path d="M7.5 10.75V15c0 1.52 2.01 2.75 4.5 2.75s4.5-1.23 4.5-2.75v-4.25"/>
+    <path d="M20 9v2.75"/>
+    <circle class="lit" cx="20" cy="14.75" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-condominio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M3 21h18"/>
+    <path d="M5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/>
+    <path d="M15 9h4a2 2 0 0 1 2 2v10"/>
+    <path d="M8.5 7h0"/>
+    <path d="M11.5 7h0"/>
+    <path d="M8.5 11h0"/>
+    <path d="M11.5 11h0"/>
+    <path d="M8.5 15h0"/>
+    <path d="M11.5 15h0"/>
+    <circle class="lit" cx="18" cy="14" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-diagnostico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="10.5" cy="10.5" r="7"/>
+    <path d="M15.5 15.5L21 21"/>
+    <path d="M5 11h2.5l1.5 2.5 3-6 1.5 3.5h2.5"/>
+  </symbol>
+  <symbol id="ff-organizacao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="3" width="7.5" height="7.5" rx="2"/>
+    <rect x="13.5" y="3" width="7.5" height="7.5" rx="2"/>
+    <rect x="3" y="13.5" width="7.5" height="7.5" rx="2"/>
+    <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2"/>
+    <circle class="lit" cx="17.25" cy="17.25" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-fechamento" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="5" y="3" width="14" height="18" rx="2"/>
+    <path d="M8.5 7h3"/>
+    <path d="M14.5 7h1"/>
+    <path d="M8.5 10.5h3"/>
+    <path d="M14.5 10.5h1"/>
+    <path d="M8.5 16.5h3"/>
+    <circle class="lit" cx="15" cy="16.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-rotina" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M4.95 9.43A7.5 7.5 0 0 1 19.05 9.43"/>
+    <path d="M16.56 8.27L19.05 9.43L20.21 6.94"/>
+    <path d="M19.05 14.57A7.5 7.5 0 0 1 4.95 14.57"/>
+    <path d="M7.44 15.73L4.95 14.57L3.79 17.06"/>
+    <circle class="lit" cx="12" cy="12" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-painel-mensal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="2.5" y="4" width="19" height="13" rx="2"/>
+    <path d="M12 17v4"/>
+    <path d="M8.5 21h7"/>
+    <path d="M8 13.5h0"/>
+    <path d="M12 13.5h0"/>
+    <path d="M12 10.5h0"/>
+    <path d="M16 13.5h0"/>
+    <path d="M16 10.5h0"/>
+    <circle class="lit" cx="16" cy="7.25" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-conciliacao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="9" cy="12" r="6"/>
+    <circle cx="15" cy="12" r="6"/>
+    <circle class="lit" cx="12" cy="12" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-relatorio" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v3a2 2 0 0 0 2 2h3"/>
+    <circle class="lit" cx="9.5" cy="12.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+    <path d="M13 12.5h3"/>
+    <path d="M8.5 16.5h7"/>
+  </symbol>
+  <symbol id="ff-indicador" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M3 3v16a2 2 0 0 0 2 2h16"/>
+    <path d="M7 16l3.5-4.5 3 2.5 3.5-4.5"/>
+    <circle class="lit" cx="19" cy="7" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-fluxo-de-caixa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M8 20V5"/>
+    <path d="M10.83 7.33L8 4.5L5.17 7.33"/>
+    <path d="M16 4v15"/>
+    <path d="M13.17 16.67L16 19.5L18.83 16.67"/>
+  </symbol>
+  <symbol id="ff-imposto" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="12" cy="12" r="9"/>
+    <path d="M15.5 8.5l-7 7"/>
+    <circle cx="9" cy="9" r="1.25"/>
+    <circle class="lit" cx="15" cy="15" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-folha-pagamento" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <circle cx="8.5" cy="10" r="2"/>
+    <path d="M5.5 16a3 3 0 0 1 6 0"/>
+    <path d="M14 10h4"/>
+    <circle class="lit" cx="15" cy="14" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-inadimplencia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M16.04 7H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.04A3.5 3.5 0 0 1 16.04 7"/>
+    <path d="M6.5 10.5v5"/>
+    <path d="M9.5 10.5v5"/>
+    <path d="M12.5 10.5v5"/>
+    <path d="M15.5 12.5v3"/>
+    <circle class="lit" cx="19.5" cy="6.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-fundo-reserva" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="4" width="18" height="15" rx="2"/>
+    <circle cx="12" cy="11.5" r="4"/>
+    <path d="M6.5 19v2"/>
+    <path d="M17.5 19v2"/>
+    <circle class="lit" cx="12" cy="11.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-planejamento-tributario" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="5" cy="19" r="1.5"/>
+    <path d="M6.5 19H13a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h4"/>
+    <circle cx="18" cy="7" r="3.25"/>
+    <circle class="lit" cx="18" cy="7" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-erp-tecnologia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="6" y="6" width="12" height="12" rx="2"/>
+    <path d="M9.5 3v3"/>
+    <path d="M14.5 3v3"/>
+    <path d="M9.5 18v3"/>
+    <path d="M14.5 18v3"/>
+    <path d="M3 9.5h3"/>
+    <path d="M3 14.5h3"/>
+    <path d="M18 9.5h3"/>
+    <path d="M18 14.5h3"/>
+    <circle class="lit" cx="12" cy="12" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-compliance" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M12 3l7 2.5V11c0 4.5-3 8-7 10-4-2-7-5.5-7-10V5.5z"/>
+    <path d="M8.75 12l2.25 2.25 4.25-4.5"/>
+  </symbol>
+  <symbol id="ff-contrato" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v3a2 2 0 0 0 2 2h3"/>
+    <path d="M8.5 10h4"/>
+    <path d="M8.5 13h7"/>
+    <path d="M8.5 17c.83-1.67 1.67-1.67 2 0s1.17 1.67 2 0"/>
+    <circle class="lit" cx="15.75" cy="17" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-calendario-prazo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="5" width="18" height="16" rx="2"/>
+    <path d="M8 3v4"/>
+    <path d="M16 3v4"/>
+    <path d="M3 10h18"/>
+    <path d="M7.5 14h0"/>
+    <path d="M12 14h0"/>
+    <path d="M16.5 14h0"/>
+    <path d="M7.5 17.5h0"/>
+    <path d="M12 17.5h0"/>
+    <circle class="lit" cx="16.5" cy="17.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-responsavel" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="12" cy="7.5" r="3.5"/>
+    <path d="M5 20.5c0-3.6 3.1-6.5 7-6.5s7 2.9 7 6.5"/>
+    <circle class="lit" cx="12" cy="18" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-equipe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="9" cy="8" r="3.5"/>
+    <path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/>
+    <path d="M16 4.75a3.5 3.5 0 0 1 0 6.5"/>
+    <path d="M18 14c2 .9 3.5 3 3.5 6"/>
+  </symbol>
+  <symbol id="ff-reuniao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <circle cx="6" cy="7.5" r="2.5"/>
+    <circle cx="18" cy="7.5" r="2.5"/>
+    <path d="M3 13a3 3 0 0 1 6 0"/>
+    <path d="M15 13a3 3 0 0 1 6 0"/>
+    <path d="M2.5 15.5h19"/>
+    <path d="M6 15.5v5"/>
+    <path d="M18 15.5v5"/>
+    <circle class="lit" cx="12" cy="10" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-whatsapp-conversa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M8.41 19.2A8.5 8.5 0 1 0 4.64 15.75L3.5 20.5z"/>
+    <path d="M8.5 11.5h0"/>
+    <path d="M12 11.5h0"/>
+    <circle class="lit" cx="15.75" cy="11.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-email" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="3" y="5" width="18" height="14" rx="2"/>
+    <path d="M3.5 7l8.5 6 8.5-6"/>
+  </symbol>
+  <symbol id="ff-telefone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <rect x="6" y="2.5" width="12" height="19" rx="2"/>
+    <path d="M10.5 5.5h3"/>
+    <circle class="lit" cx="12" cy="17.5" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-localizacao" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M12 21c-4-4.2-7-7.4-7-11a7 7 0 0 1 14 0c0 3.6-3 6.8-7 11z"/>
+    <circle class="lit" cx="12" cy="10" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+  <symbol id="ff-seta-direita" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M4 12h15"/>
+    <path d="M13.5 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="ff-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M4.5 12.5l5 5L19.5 7"/>
+  </symbol>
+  <symbol id="ff-alerta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="stroke-width:var(--ff-stroke, 1.5)">
+    <path d="M12 3.5L21.5 20h-19z"/>
+    <path d="M12 9v4.5"/>
+    <circle class="lit" cx="12" cy="17" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+  </symbol>
+</svg>

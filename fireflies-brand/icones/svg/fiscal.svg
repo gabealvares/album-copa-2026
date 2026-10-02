@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ff-icon ff-icon-fiscal">
+  <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5z"/>
+  <path d="M9 8h6"/>
+  <path d="M9 11.5h6"/>
+  <path d="M9 15h2"/>
+  <circle class="lit" cx="14.5" cy="15" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+</svg>

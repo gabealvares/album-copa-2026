@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ff-icon ff-icon-painel-mensal">
+  <rect x="2.5" y="4" width="19" height="13" rx="2"/>
+  <path d="M12 17v4"/>
+  <path d="M8.5 21h7"/>
+  <path d="M8 13.5h0"/>
+  <path d="M12 13.5h0"/>
+  <path d="M12 10.5h0"/>
+  <path d="M16 13.5h0"/>
+  <path d="M16 10.5h0"/>
+  <circle class="lit" cx="16" cy="7.25" r="1.75" fill="var(--ff-lit, currentColor)" stroke="none"/>
+</svg>
