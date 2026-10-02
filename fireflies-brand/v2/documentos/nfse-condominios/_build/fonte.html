@@ -7,8 +7,16 @@
 <meta name="description" content="Novidades da Receita em 01/10/2026: condomínios ganham código próprio na NFS-e. Fireflies Consultoria.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* cópias locais (OFL) para funcionar offline e no PDF; o Google Fonts acima é o mesmo arquivo */
+@font-face{font-family:"Sora";font-weight:600;font-display:swap;src:url(assets/fonts/Sora-600-normal.ttf) format("truetype")}
+@font-face{font-family:"Sora";font-weight:700;font-display:swap;src:url(assets/fonts/Sora-700-normal.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexSans-400-normal.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Sans";font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexSans-500-normal.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Sans";font-weight:600;font-display:swap;src:url(assets/fonts/IBMPlexSans-600-normal.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Mono";font-weight:400;font-display:swap;src:url(assets/fonts/IBMPlexMono-400-normal.ttf) format("truetype")}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;font-display:swap;src:url(assets/fonts/IBMPlexMono-500-normal.ttf) format("truetype")}
 /* Fireflies Consultoria · identidade v2 · tokens de ../../cores/tokens.css */
 :root{
   --ff-anil:#17183A; --ff-anil-profundo:#0F1029; --ff-cal:#EDEEEA; --ff-branco:#FFFFFF;
@@ -35,12 +43,13 @@ strong,b{font-weight:600;color:var(--ff-anil)}
 .mono{font-family:var(--f-mono)}
 .eyebrow{font:500 12px/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--ff-rubrica)}
 p{margin:0 0 1em}
+.nw{white-space:nowrap}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* ---------- HERO ---------- */
 .hero{background:var(--ff-anil);color:var(--ff-cal);position:relative;overflow:hidden}
 .hero .wrap{padding-top:40px;padding-bottom:44px;position:relative}
-.hero-logo{display:block;width:248px;height:auto;margin-left:-14px}
+.hero-logo{display:block;width:320px;max-width:100%;height:auto;margin-left:-12px}
 .hero-const{position:absolute;right:24px;top:36px;width:84px;height:84px;color:var(--ff-ceu);--ff-line:var(--ff-ceu);opacity:.9}
 .hero .eyebrow{color:var(--ff-cal);margin:30px 0 18px;display:flex;align-items:center;gap:10px}
 .dot-ambar{width:8px;height:8px;border-radius:50%;background:var(--ff-ambar);flex:none}
@@ -49,9 +58,11 @@ p{margin:0 0 1em}
 .hero .lead{font-size:18px;line-height:1.6;color:var(--ff-fumaca);max-width:640px;margin-bottom:30px}
 .author{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;border-top:1px solid rgba(237,238,234,.16);padding-top:24px}
 .author .who{display:flex;align-items:center;gap:14px;margin-right:auto}
-.avatar{width:58px;height:58px;flex:none}
+.avatar{width:58px;height:58px;flex:none;border-radius:50%;background:var(--ff-anil-profundo);border:1px solid rgba(110,137,180,.6);display:grid;place-items:center;overflow:hidden}
+.avatar svg{width:54px;height:54px}
 .author .name{font:600 16px/1.3 var(--f-body);color:var(--ff-branco)}
 .author .role{font-size:13.5px;color:var(--ff-fumaca);line-height:1.4}
+.metas{display:flex;flex-wrap:wrap;gap:12px 24px}
 .meta{display:flex;align-items:center;gap:8px;font:400 13.5px/1 var(--f-mono);color:var(--ff-fumaca)}
 .meta .ico{color:var(--ff-cal)}
 
@@ -84,7 +95,7 @@ h3{font:600 20px/1.3 var(--f-body);color:var(--ff-anil);margin:32px 0 10px}
 /* citação legal curta */
 .legalq{border-top:2px solid var(--ff-anil);padding-top:16px;margin:0 0 18px}
 .lab{display:flex;align-items:center;gap:10px;font:500 12px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ff-anil)}
-.legalq blockquote{margin:10px 0 0;font:italic 400 18px/1.55 var(--f-body);color:var(--ff-fuligem)}
+.legalq blockquote{margin:10px 0 0;font:400 18px/1.55 var(--f-body);color:var(--ff-anil);border-left:3px solid var(--ff-fumaca);padding-left:16px}
 .disclaimer{display:flex;gap:10px;font-size:14px;line-height:1.5;color:var(--ff-pedra)}
 .disclaimer .ico{color:var(--ff-pedra);margin-top:1px}
 
@@ -109,6 +120,7 @@ h3{font:600 20px/1.3 var(--f-body);color:var(--ff-anil);margin:32px 0 10px}
 .tbl tr.novo td:first-child{border-left:3px solid var(--ff-anil)}
 .tbl .badge-novo{margin-left:8px;vertical-align:1px}
 .tbl-box{border:1px solid var(--ff-fumaca);border-radius:6px;overflow:hidden}
+.tbl-box:has(thead){border-color:var(--ff-anil)}
 .tbl-box .tbl tr:last-child td{border-bottom:0}
 
 /* grade de códigos */
@@ -304,9 +316,11 @@ ul.stars li::before{content:"";position:absolute;left:4px;top:.62em;width:7px;he
 .btn-s:hover{background:rgba(237,238,234,.08)}
 .btn:focus-visible{outline:2px solid var(--ff-branco);outline-offset:3px}
 
-footer.site{margin-top:56px;background:var(--ff-anil-profundo);color:var(--ff-fumaca)}
-footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;font:400 13px/1.4 var(--f-mono)}
-footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-vermelhao);vertical-align:middle;margin-right:10px}
+footer.site{margin-top:56px;border-top:1px solid var(--ff-fumaca);background:var(--ff-branco);--ff-lit:currentColor}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px 28px;flex-wrap:wrap;padding-top:26px;padding-bottom:30px}
+footer.site .logo-pos{width:260px;height:auto;display:block;margin-left:-10px}
+footer.site .sig{margin:0;font:400 13px/1.4 var(--f-mono);color:var(--ff-pedra)}
+footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-rubrica);vertical-align:middle;margin-right:10px}
 
 .anchor{scroll-margin-top:16px}
 
@@ -315,7 +329,7 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
   body{font-size:16px}
   .wrap{padding:0 16px}
   .hero-const{display:none}
-  .hero-logo{width:210px}
+  .hero-logo{width:250px}
   .keycards{grid-template-columns:1fr}
   .keycards>div+div{border-left:0;border-top:1px solid rgba(110,137,180,.45)}
   .toc ol,.det,.sources,.codes{grid-template-columns:1fr}
@@ -356,7 +370,7 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
 
 /* ---------- IMPRESSÃO A4 ---------- */
 @page{size:A4;margin:25mm 20mm 22mm 25mm;
-  @bottom-left{content:"Fireflies Consultoria · Precisão que ilumina decisões.";font:400 7.5pt "IBM Plex Mono",Consolas,monospace;color:#5E6271;vertical-align:top;padding-top:4mm;border-top:.75pt solid #A9301F;width:auto}
+  @bottom-left{content:"Fireflies Consultoria · Precisão que ilumina decisões.";font:400 7.5pt "IBM Plex Mono",Consolas,monospace;color:#5E6271;vertical-align:top;padding-top:4mm;background:linear-gradient(#A9301F,#A9301F) no-repeat 0 0/12mm .75pt}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:400 7.5pt "IBM Plex Mono",Consolas,monospace;color:#5E6271;vertical-align:top;padding-top:4mm}
 }
 @media print{
@@ -366,7 +380,7 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
   .hero{border-radius:6px}
   .hero .wrap{padding:9mm 9mm 9mm}
   .hero-const{right:9mm;top:8mm;width:20mm;height:20mm}
-  .hero-logo{width:58mm;margin-left:-3mm}
+  .hero-logo{width:66mm;margin-left:-3mm}
   .hero h1{font-size:25pt}
   .hero .lead{font-size:11pt;margin-bottom:6mm}
   .hero .eyebrow{margin:6mm 0 4mm}
@@ -379,7 +393,7 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
   h2,h3,h4,.sec-num,.lab,.sublabel{break-after:avoid;page-break-after:avoid}
   p{orphans:3;widows:3}
   .keycards,.legalq,.callout,.code-card,.ntq,.trio>div,.open-card,.timeline li,.neq,.sit,.undef>div,.step,.cib,.cta,.nfse-head,.acc,.nfse-total,.tbl tr,.sources li,.det li,.disclaimer,.toc{break-inside:avoid;page-break-inside:avoid}
-  .search,.search-count,.progress,.empty,footer.site,.no-print{display:none!important}
+  .search,.search-count,.progress,.empty,footer.site .sig,.no-print{display:none!important}
   .det li[hidden]{display:flex!important}
   .acc .acc-panel{display:flex!important}
   .acc .pm{display:none!important}
@@ -387,6 +401,13 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
   .acc.open::before{display:none}
   .acc-btn{cursor:default}
   .tbl{font-size:9.5pt}
+  .tbl td.code{font-size:9.5pt} .tbl td .sub{font-size:8.5pt}
+  .acc-panel,.code-card,.det li,.sources li,.trio div,.open-card p,.timeline p,.undef p,.step p,.c-legal .qt,.neq p,.callout p,.legalq blockquote,.ntq blockquote,ul.stars li{font-size:10pt}
+  .note,.disclaimer,.sit-grid .d{font-size:8.5pt}
+  .c-dark .big{font-size:12pt} .c-dark .small{font-size:9.5pt}
+  .open-card h4,.timeline h4,.undef h4,.step h4{font-size:11pt}
+  .code-card .c,.det .c{font-size:10pt}
+  .toc a{font-size:10pt}
   .row,.row .v{font-size:10pt}
   .nfse-total .v{font-size:18pt}
   .kc-big{font-size:34pt} .kc-big.date{font-size:27pt} .kc-days .n{font-size:27pt}
@@ -399,6 +420,9 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
   .cta .btn-s{color:var(--ff-cal)}
   .btn-print-url{display:inline}
   .print-only{display:block!important}
+  footer.site{margin-top:10mm;break-inside:avoid}
+  footer.site .wrap{padding:6mm 0 0}
+  footer.site .logo-pos{width:50mm}
 }
 .print-only{display:none}
 </style>
@@ -408,31 +432,23 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
 
 <header class="hero">
   <div class="wrap">
-    <!-- Logo L1 · Órbita, versão digital-negativo (arquivo provisório; ver README) -->
+    <!-- Logo final: fireflies_horizontal_digital-negativo.svg (logo/svg/) -->
     <!--LOGO-->
     <!--CONST-->
     <p class="eyebrow"><span class="dot-ambar" aria-hidden="true"></span>Reforma Tributária · Atualização de 01/10/2026</p>
-    <h1>Novidades da Receita em 01/10/2026: <span class="hl">condomínios ganham código próprio na NFS-e</span></h1>
+    <h1>Novidades da Receita em 01/10/2026: <span class="hl">condomínios ganham código próprio na <span class="nw">NFS-e</span></span></h1>
     <p class="lead">O novo leiaute da nota traz um código exclusivo para as taxas condominiais, um grupo só para as cobranças do condomínio e campos para o imóvel e o pagamento. Veja o que muda, o que ainda está em aberto e o que fazer até 01/12/2026.</p>
     <div class="author">
       <div class="who">
-        <!-- PLACEHOLDER: foto do autor indisponível. Avatar com as iniciais GA dentro da órbita da marca. Trocar pela foto quando houver. -->
-        <svg class="avatar" viewBox="0 0 64 64" role="img" aria-label="Avatar provisório de Gabriel Alvares" data-placeholder="foto-do-autor">
-          <circle cx="32" cy="32" r="31" fill="#0F1029" stroke="#6E89B4" stroke-width="1"/>
-          <g transform="rotate(-14 32 32)" fill="none" stroke-linecap="round">
-            <path d="M12 34 A21 10 0 0 1 52 30" stroke="#6E89B4" stroke-width="1" stroke-dasharray="0 2.6"/>
-            <path d="M52 30 A21 10 0 0 1 14 38" stroke="#EDEEEA" stroke-width="1.6"/>
-          </g>
-          <circle cx="14.4" cy="40.9" r="2.1" fill="#EDEEEA"/>
-          <text x="32" y="38.5" text-anchor="middle" font-family="Sora, Arial, sans-serif" font-weight="700" font-size="17" fill="#FFFFFF" letter-spacing=".5">GA</text>
-        </svg>
+        <!-- PLACEHOLDER: foto do autor indisponível. Usa o símbolo final (F de luz em órbita, digital-negativo) dentro de um círculo. Trocar pela foto quando houver. -->
+        <span class="avatar" data-placeholder="foto-do-autor" role="img" aria-label="Avatar provisório de Gabriel Alvares (símbolo Fireflies)"><!--SIMBOLO--></span>
         <div>
           <div class="name">Gabriel Alvares</div>
           <div class="role">Fundador &amp; Contador Responsável · Fireflies Consultoria</div>
         </div>
       </div>
-      <span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-calendario"/></svg>02/10/2026</span>
-      <span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg>Leitura de 12 minutos</span>
+      <div class="metas"><span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-calendario"/></svg>02/10/2026</span>
+      <span class="meta"><svg class="ico" aria-hidden="true"><use href="#ff-prazo"/></svg>Leitura de 12 minutos</span></div>
     </div>
   </div>
 </header>
@@ -898,8 +914,9 @@ footer.site .rub{display:inline-block;width:28px;border-top:2px solid var(--ff-v
 
 <footer class="site">
   <div class="wrap">
-    <span><span class="rub" aria-hidden="true"></span>Fireflies Consultoria · Precisão que ilumina decisões.</span>
-    <span>São Paulo/SP</span>
+    <!-- Logo final: fireflies_horizontal_digital.svg (fundo claro) -->
+    <!--LOGO_POS-->
+    <p class="sig"><span class="rub" aria-hidden="true"></span>Fireflies Consultoria · Precisão que ilumina decisões.</p>
   </div>
 </footer>
 
