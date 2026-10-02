@@ -2,11 +2,11 @@
 
 > **Para que serve:** dizer **onde** e **como** aplicar a identidade: que fundo usar, que cor vai em cada elemento e como montar cada material (apresentações, documentos, papel timbrado, e-mail, redes, papelaria, Academy, sinalização e brindes).
 >
-> **Base:** paleta "Noite de São João" (`../cores/tokens.json`, contrastes em `../cores/_matriz.md`), plataforma de marca v2 (`../estrategia/plataforma-de-marca-v2.md`), sistema iconográfico "Carta do Lume" (`../iconografia/README.md`) e as medidas técnicas que continuam válidas do guia v1 (`../../estrategia/guia-de-aplicacoes-e-rollout.md`).
+> **Base:** sistema de logo final "Órbita do vagalume" (`../logo/README.md`, `../logo/prancha-sistema.png`), paleta "Noite de São João" (`../cores/tokens.json`, contrastes em `../cores/_matriz.md`), plataforma de marca v2 (`../estrategia/plataforma-de-marca-v2.md`), sistema iconográfico "Carta do Lume" (`../iconografia/README.md`) e as medidas técnicas que continuam válidas do guia v1 (`../../estrategia/guia-de-aplicacoes-e-rollout.md`).
 >
-> **Em aberto:** o logo e a fonte de títulos estão em redesenho. Este manual se refere a eles **pelo papel**: *Logo principal (horizontal)*, *Logo vertical*, *Símbolo*, *Símbolo reduzido* e *Fonte de títulos (display)*. A fonte de títulos será uma **sans geométrica em caixa alta**. O nome dela entra onde está marcado **Sora**. Texto corrido em **IBM Plex Sans** e dados em **IBM Plex Mono** já estão decididos.
+> **Logo e tipografia: finais.** O logo é a **Órbita do vagalume**. Uma órbita fina envolve FIREFLIES/CONSULTORIA. A metade de trás é constelação, e a frente é luz que esquenta até o **vagalume aceso**, logo acima do **E de luz**. A versão curta é o **F de luz** na mesma órbita. Os arquivos ficam em `../logo/svg/fireflies_{versao}_{cor}.svg` (e `png/`, com 2000 px). Títulos em **Sora**, texto corrido em **IBM Plex Sans** e dados em **IBM Plex Mono**.
 >
-> **Pranchas:** `pranchas/matriz-de-fundos.png`, `pranchas/distribuicao-de-cor.png` e `pranchas/arvore-claro-escuro.png`. O símbolo das pranchas é **provisório** (arco pontilhado com nós e lanterna âmbar) e só serve para mostrar cor e posição.
+> **Pranchas:** `pranchas/versoes-do-logo-por-fundo.png`, `pranchas/matriz-de-fundos.png`, `pranchas/distribuicao-de-cor.png` e `pranchas/arvore-claro-escuro.png`, geradas com os SVGs finais (`pranchas/_build/pranchas.js`).
 
 ---
 
@@ -33,14 +33,71 @@
 
 | Papel | Fonte | Pesos | Fallback Office | Fallback Google |
 |---|---|---|---|---|
-| **Fonte de títulos (display)** | Sora (sans geométrica, **sempre caixa alta**) | Bold / SemiBold | Century Gothic Bold | Sora (disponível no Google Fonts) |
+| **Fonte de títulos (display)** | **Sora** (sans geométrica; **caixa alta nos títulos curtos**, até ~6 palavras; títulos longos em caixa alta e baixa) | 600 / 700 | Century Gothic Bold | Sora (nativa no Google Fonts) |
 | **Texto** | IBM Plex Sans | 400, 500, 600 (itálico 400) | Arial | IBM Plex Sans (nativa) |
 | **Dados** | IBM Plex Mono | 400, 500, números tabulares | Consolas | IBM Plex Mono (nativa) |
 
-### Versões do logo citadas neste manual
+### Versões do logo (arquivos finais)
 
-| Versão | Cores | Quando |
+Padrão de arquivo: `fireflies_{versao}_{cor}.svg`. Os PNGs têm 2000 px no lado maior e fundo transparente.
+
+| Versão (`versao`) | O que é | Onde usar |
 |---|---|---|
+| `horizontal` | **Principal.** Órbita em volta de FIREFLIES / CONSULTORIA | Site, documentos, propostas, timbrado, assinatura de e-mail, fachada, capas |
+| `vertical` | Órbita curta com o vagalume sobre o nome | Capas, redes, peças quadradas e verticais, frente de cartão, crachá |
+| `simbolo` | **F de luz** na mesma órbita (versão curta), a partir de 40 px | Avatar, app, selo, carimbo, rodapé de slide |
+| `simbolo-pequeno` | F de luz de 24 a 39 px, com fio grosso e constante, sem estrelas e sem asas | Ícones pequenos, cabeçalho de documento, bordado |
+| `favicon` | **Só o F de luz e o vagalume aceso** | Favicon a 16 px e `.ico` até 48 px. Nunca em peça impressa |
+| `wordmark` | Nome + descritor, sem órbita | Quando a órbita já aparece na peça, em espaços muito baixos ou quando o horizontal ficaria abaixo de 240 px / 45 mm |
+| `condominios-horizontal` | Lockup com descritor CONDOMÍNIOS | Auditoria de condomínios: relatório, assembleia, anúncios para síndicos |
+| `academy-horizontal` | Lockup com descritor ACADEMY | Certificados, slides de aula, capas de turma |
+
+| Cor (`cor`) | Composição | Fundo | Meio |
+|---|---|---|---|
+| `digital` | Fio em gradiente (anil → rubrica → vermelhão → âmbar), nome e estrelas em Anil, braço do E em Vermelhão, vagalume com brilho | Branco, Cal Virgem, foto clara | **Tela e projetor** (site, redes, slides, PDF, vídeo) |
+| `digital-negativo` | Frio em Cal/Céu de Anil, nome em Cal, braço do E e luz em Âmbar | Anil de Junho, Anil Profundo, foto escura com véu | **Tela e projetor** |
+| `chapado` | 2 cores: Anil (nome, estrelas, asas) + Vermelhão (órbita, braço do E, luz). Sem gradiente e sem brilho | Branco, Cal Virgem | **Impressão** de escritório e de gráfica, Pantone, serigrafia, vinil, sinalização |
+| `chapado-negativo` | 2 cores: Cal + Âmbar | Anil | **Impressão** sobre Anil: cartão, pasta, placa, capa sangrada |
+| `mono-anil` | 1 cor Anil | Âmbar, claros, P&B | **Carimbo, gravação, hot stamping, bordado**, cópia P&B |
+| `mono-preto` | 1 cor preta | Branco | Jornal, fax, carimbo de tinta preta, documento 100% P&B |
+| `mono-branco` | 1 cor branca | Rubrica, Vermelhão, foto com véu, cor de terceiros escura | Gravação em objeto escuro, bordado em tecido escuro, vinil branco |
+
+**Digital, chapado ou mono: regra por meio**
+
+| Meio | Versão de cor |
+|---|---|
+| Tela, projetor, PDF, vídeo, redes, e-mail | `digital` / `digital-negativo` |
+| Impressão de escritório (laser/jato, cor) | `chapado` (o gradiente vira mancha em impressora de escritório) |
+| Impressão em P&B | `mono-preto` (ou `mono-anil` se o arquivo também for usado em cor) |
+| Gráfica (offset, digital, Pantone, serigrafia, vinil, sinalização) | `chapado` / `chapado-negativo` |
+| Gráfica em 4 cores de alta qualidade (capa de relatório, pasta) | `chapado` como padrão; `digital` só depois de aprovar a prova de cor |
+| Carimbo, gravação a laser, hot stamping, bordado, marca-d'água | `mono-anil`, `mono-preto` ou `mono-branco` |
+
+**Área de proteção** (X = altura da versal de FIREFLIES):
+- Lockups (`horizontal`, `vertical`, `condominios-horizontal`, `academy-horizontal`): **X/2** em volta da caixa da órbita, **incluindo o vagalume**.
+- `simbolo` e `simbolo-pequeno`: **¼ da largura da órbita** em volta.
+- `wordmark`: X/2.
+- Co-branding: 1 X entre o logo e o fio separador.
+
+**Tamanho mínimo:**
+
+| Versão | Digital | Impresso |
+|---|---|---|
+| `horizontal` e lockups Condomínios/Academy | **240 px** de largura (as asas do vagalume se leem a partir de 360 px) | **45 mm** |
+| Abaixo disso | use o `wordmark` (até 160 px) | `wordmark` até 30 mm |
+| `vertical` | 160 px | 30 mm |
+| `simbolo` | 40 px | 12 mm |
+| `simbolo-pequeno` | 24 a 39 px | 7 a 12 mm |
+| `favicon` | 16 a 48 px | não se aplica |
+| Bordado (`horizontal` mono) | — | 60 mm |
+
+**Versão curta, F de luz:** é a assinatura sem nome. Serve para **avatar** (redes, WhatsApp, Google), **ícone de app**, **selo**, **carimbo** e **rodapé de slide**. Ela só aparece sozinha quando o nome Fireflies Consultoria já está na peça ou no contexto (perfil, aba do navegador, handle). Escolha pelo tamanho de exibição: `simbolo` a partir de 40 px, `simbolo-pequeno` entre 24 e 39 px e `favicon` abaixo de 24 px.
+
+**Regra do favicon de 16 px:** use só o `favicon`, com o F de luz e o vagalume aceso, sem órbita, sem estrelas e sem asas. No `.ico` (16/32/48) e nos ícones de app, ele vai sobre um quadrado Anil arredondado. Já existem `favicon.ico`, `apple-touch-icon-180.png`, `android-192/512.png` e `avatar-1080.png` em `../logo/`. Não reduza o `simbolo` para 16 px, e não use o `favicon` acima de 48 px.
+
+Nunca cruze as letras com a órbita, nunca mude a inclinação ou a direção do voo, nunca tire o vagalume de cima do E e nunca use gradiente na versão chapada.
+
+---|---|---|
 | **Positivo** | Símbolo e lettering em Anil, Lanterna âmbar **com contorno Anil colado** | Branco, Cal Virgem, foto clara limpa |
 | **Negativo** | Símbolo e lettering em Cal Virgem, Lanterna âmbar pura | Anil de Junho, Anil Profundo, foto escura com véu |
 | **Mono Anil** | Tudo em Anil; a Lanterna é a maior estrela | Âmbar, P&B, carimbo, gravação, fax/cópia |
@@ -64,7 +121,7 @@ Abaixo do mínimo, troque de versão em vez de reduzir. Linhas do traço de cons
 
 ## 1. Princípios de aplicação: 5 regras de ouro
 
-1. **Uma luz por peça.** O âmbar aparece **uma vez** por composição (página, slide, post): na Lanterna do logo **ou** num único ponto de destaque. Se o logo já está na peça, o âmbar dele é a luz. Âmbar nunca é texto sobre fundo claro (1,83:1 no Branco, 1,57:1 na Cal).
+1. **Uma luz por peça.** A luz aparece **uma vez** por composição (página, slide, post): no **vagalume aceso** do logo (com o E de luz que conversa com ele) **ou** num único ponto de destaque âmbar. Se o logo está visível, ele já é a luz, e o destaque do texto vai em Rubrica (claro) ou Vermelhão (escuro). Âmbar nunca é texto sobre fundo claro (1,83:1 no Branco, 1,57:1 na Cal).
 2. **Anil manda, Branco trabalha.** Anil de Junho é o fundo de **impacto** (capas, divisores, redes, cartão, sinalização). Branco é o fundo de **trabalho** (tudo que é lido por muito tempo, impresso no escritório ou assinado). Cal Virgem é o claro **institucional** (peças de marca que não vão para a impressora do escritório).
 3. **A rubrica está sempre lá.** Toda peça institucional tem um toque de **Vermelhão de Rubrica** (no claro) ou **Vermelhão** (no escuro): um link, um número-chave, o fio de rodapé, o eyebrow. É isso que impede a marca de virar "azul-marinho e dourado de banco".
 4. **Contraste antes de gosto.** Texto corrido só com razão **≥ 4,5:1**; títulos grandes (≥ 24 px ou 18,5 px em negrito) e formas com **≥ 3:1**. Se a combinação não está marcada com ✔ na matriz da seção 2, ela não existe.
@@ -78,25 +135,25 @@ Razões de contraste WCAG 2.2, calculadas sobre os HEX oficiais. ✔ = texto (�
 
 ### 2.1 Fundos oficiais
 
-| Fundo | Versão do logo | Símbolo / Lanterna | Título | Texto | Destaque | Linhas e ícones | Proibido |
+| Fundo | Versão do logo (tela · impresso) | Órbita · vagalume · E de luz | Título | Texto | Destaque | Linhas e ícones | Proibido |
 |---|---|---|---|---|---|---|---|
-| **Branco** #FFFFFF | Positivo | Anil / Âmbar **+ contorno Anil** (Anil 17,10 ✔) | Anil de Junho (17,10 ✔) | Fuligem (13,36 ✔); secundário Pedra-Sabão (6,07 ✔) | Rubrica (6,71 ✔) em texto, link e número-chave; âmbar só como forma com contorno | Ícones Anil; linhas Fumaça (divisória) ou Anil 20–45%; retícula Pedra-Sabão | Âmbar em texto (1,83 ✖); Vermelhão em texto pequeno (3,56 ◐); Céu de Anil em texto (3,56 ◐); Cal sobre Branco (1,17 ✖) |
-| **Cal Virgem** #EDEEEA | Positivo | Anil / Âmbar + contorno Anil (Anil 14,67 ✔) | Anil (14,67 ✔) | Fuligem (11,46 ✔); secundário Pedra-Sabão (5,21 ✔) | Rubrica (5,76 ✔); âmbar só como forma com contorno | Ícones Anil; linhas Pedra-Sabão ou Anil 20–45% | Âmbar em texto (1,57 ✖); Vermelhão e Céu em texto (3,06 / 3,05 ◐); Fumaça (1,27 ✖); usar Cal em documento que vai para impressora de escritório |
-| **Anil de Junho** #17183A | Negativo (ou Transição quente) | Cal / Âmbar puro (Âmbar 9,34 ✔) | Cal Virgem (14,67 ✔) ou Branco (17,10 ✔) | Cal (14,67 ✔); secundário Fumaça (11,54 ✔) | Âmbar (9,34 ✔) **uma vez**; Vermelhão (4,80 ✔) para realce e alerta | Ícones Cal; linhas e retícula Céu de Anil (4,80 ✔) | Rubrica (2,55 ✖); Fuligem (1,28 ✖); Pedra-Sabão em texto (2,82 ✖); Carmim (2,32 ✖); logo Positivo |
-| **Anil Profundo** #0F1029 | Negativo | Cal / Âmbar puro (10,18 ✔) | Cal (16,00 ✔) ou Branco (18,64 ✔) | Cal (16,00 ✔); secundário Fumaça (12,58 ✔) | Âmbar (10,18 ✔); Vermelhão (5,23 ✔) | Ícones Cal; linhas Céu de Anil (5,24 ✔) | Rubrica (2,78 ✖); Fuligem (1,40 ✖); Anil sobre Anil Profundo (1,09: não separa áreas; use fio Céu); usar como fundo de capa (é fundo de rodapé, faixa e véu) |
-| **Âmbar de Vagalume** #F2B544 *(raro)* | Mono Anil | Tudo Anil; Lanterna = a maior estrela | Anil (9,34 ✔) | Anil ou Fuligem (7,29 ✔) | **Nenhum** outro acento | Anil; linhas Anil 40% | Branco/Cal (1,83 / 1,57 ✖); Rubrica em texto pequeno (3,66 ◐); Vermelhão (1,94 ✖); Lanterna âmbar; mais de 1 bloco âmbar por peça; âmbar como fundo de página inteira de documento |
-| **Vermelhão de Rubrica** #A9301F *(campanha, pontual)* | Mono Cal | Tudo Cal; Lanterna = a maior estrela | Cal (5,76 ✔) ou Branco (6,71 ✔) | Cal ou Branco; secundário Fumaça (4,53 ✔) | **Nenhum** | Cal; linhas Cal 50% | Anil em texto (2,55 ✖); Âmbar (3,66 ◐, e briga com a Lanterna); Vermelhão sobre Rubrica (1,88 ✖); usar em documento oficial, relatório ou contrato |
-| **Vermelhão** #E65A3E *(só formas e faixas)* | Mono Anil (Anil 4,80 ✔) | Tudo Anil | Anil (4,80 ✔, só título ≥ 24 px) | **Não** é fundo de texto corrido | Nenhum | Anil | Cal/Branco em texto (3,06 / 3,56 ◐); usar como fundo de página |
+| **Branco** #FFFFFF | `digital` · `chapado` | Nome Anil (17,10 ✔); órbita em gradiente (chapado: Vermelhão); E de luz Vermelhão | Anil de Junho (17,10 ✔) | Fuligem (13,36 ✔); secundário Pedra-Sabão (6,07 ✔) | Rubrica (6,71 ✔) em texto, link e número-chave; âmbar só como forma com contorno | Ícones Anil; linhas Fumaça (divisória) ou Anil 20–45%; retícula Pedra-Sabão | Âmbar em texto (1,83 ✖); Vermelhão em texto pequeno (3,56 ◐); Céu de Anil em texto (3,56 ◐); Cal sobre Branco (1,17 ✖) |
+| **Cal Virgem** #EDEEEA | `digital` · `chapado` | Nome Anil (14,67 ✔); órbita em gradiente (chapado: Vermelhão); E de luz Vermelhão | Anil (14,67 ✔) | Fuligem (11,46 ✔); secundário Pedra-Sabão (5,21 ✔) | Rubrica (5,76 ✔); âmbar só como forma com contorno | Ícones Anil; linhas Pedra-Sabão ou Anil 20–45% | Âmbar em texto (1,57 ✖); Vermelhão e Céu em texto (3,06 / 3,05 ◐); Fumaça (1,27 ✖); usar Cal em documento que vai para impressora de escritório |
+| **Anil de Junho** #17183A | `digital-negativo` · `chapado-negativo` | Nome Cal (14,67 ✔); constelação Cal/Céu; luz e E de luz Âmbar (9,34 ✔) | Cal Virgem (14,67 ✔) ou Branco (17,10 ✔) | Cal (14,67 ✔); secundário Fumaça (11,54 ✔) | Âmbar (9,34 ✔) **uma vez**; Vermelhão (4,80 ✔) para realce e alerta | Ícones Cal; linhas e retícula Céu de Anil (4,80 ✔) | Rubrica (2,55 ✖); Fuligem (1,28 ✖); Pedra-Sabão em texto (2,82 ✖); Carmim (2,32 ✖); logo `digital`/`chapado` (de fundo claro) |
+| **Anil Profundo** #0F1029 | `digital-negativo` · `chapado-negativo` | Nome Cal (16,00 ✔); luz e E de luz Âmbar (10,18 ✔) | Cal (16,00 ✔) ou Branco (18,64 ✔) | Cal (16,00 ✔); secundário Fumaça (12,58 ✔) | Âmbar (10,18 ✔); Vermelhão (5,23 ✔) | Ícones Cal; linhas Céu de Anil (5,24 ✔) | Rubrica (2,78 ✖); Fuligem (1,40 ✖); Anil sobre Anil Profundo (1,09: não separa áreas; use fio Céu); usar como fundo de capa (é fundo de rodapé, faixa e véu) |
+| **Âmbar de Vagalume** #F2B544 *(raro)* | `mono-anil` (tela e impresso) | Tudo Anil; o vagalume e o E de luz se leem pela forma e pelo respiro | Anil (9,34 ✔) | Anil ou Fuligem (7,29 ✔) | **Nenhum** outro acento | Anil; linhas Anil 40% | Branco/Cal (1,83 / 1,57 ✖); Rubrica em texto pequeno (3,66 ◐); Vermelhão (1,94 ✖); logo `digital` (o vagalume âmbar some); mais de 1 bloco âmbar por peça; âmbar como fundo de página inteira de documento |
+| **Vermelhão de Rubrica** #A9301F *(campanha, pontual)* | `mono-branco` (tela e impresso) | Tudo branco | Cal (5,76 ✔) ou Branco (6,71 ✔) | Cal ou Branco; secundário Fumaça (4,53 ✔) | **Nenhum** | Cal; linhas Cal 50% | Anil em texto (2,55 ✖); Âmbar (3,66 ◐, e briga com a luz do logo); logo `digital` ou `chapado` (o Vermelhão da órbita some); Vermelhão sobre Rubrica (1,88 ✖); usar em documento oficial, relatório ou contrato |
+| **Vermelhão** #E65A3E *(só formas e faixas)* | `mono-anil` (Anil 4,80 ✔) | Tudo Anil | Anil (4,80 ✔, só título ≥ 24 px) | **Não** é fundo de texto corrido | Nenhum | Anil | Cal/Branco em texto (3,06 / 3,56 ◐); usar como fundo de página |
 
 ### 2.2 Fundos variáveis
 
-| Fundo | Versão do logo | Símbolo / Lanterna | Título | Texto | Destaque | Linhas e ícones | Proibido |
+| Fundo | Versão do logo (tela · impresso) | Órbita · vagalume · E de luz | Título | Texto | Destaque | Linhas e ícones | Proibido |
 |---|---|---|---|---|---|---|---|
-| **Foto clara** (parede, céu claro, papel) | Positivo, sobre área lisa e clara; ou Mono Anil se a área tiver textura | Anil / Âmbar + contorno Anil | Anil | Fuligem, só sobre área lisa ou sobre **véu Cal Virgem 80–90%** | Rubrica | Anil | Texto sobre detalhe da foto; logo Negativo; véu branco "lavado" abaixo de 80% (o contraste cai) |
-| **Foto escura** (noite, interior, retrato em contraluz) | Negativo sobre **véu Anil de Junho 60–80%** no terço do logo/texto; Anil Profundo 80% se a foto for movimentada | Cal / Âmbar puro | Cal | Cal / Fumaça, sempre sobre véu | Âmbar (uma vez) ou Vermelhão | Cal; linhas Céu de Anil | Logo sem véu; véu preto, cinza ou com blur; foto com muito verde-limão ou amarelo (compete com a Lanterna: use Mono Cal) |
-| **Cor de terceiros / parceiros** (administradora, evento, cliente) | **Nunca recolorir.** Claro → Positivo; escuro → Negativo; saturado ou médio → Mono Anil ou Mono Cal, o que der ≥ 4,5:1; se nenhum der, aplicar o logo dentro de uma **placa Branco ou Anil** com margem 2X | Conforme a versão | Cor do parceiro | Cor do parceiro | Nenhum acento Fireflies | Do parceiro | Mudar a cor do logo para a do parceiro; colocar o logo sobre roxo (confusão com Fireflies.ai); co-branding sem fio separador; logo Fireflies maior que o do anfitrião em material do anfitrião |
+| **Foto clara** (parede, céu claro, papel) | `digital` sobre área lisa e clara; `mono-anil` se a área tiver textura | Como no Branco | Anil | Fuligem, só sobre área lisa ou sobre **véu Cal Virgem 80–90%** | Rubrica | Anil | Texto sobre detalhe da foto; logo negativo; véu branco "lavado" abaixo de 80% (o contraste cai) |
+| **Foto escura** (noite, interior, retrato em contraluz) | `digital-negativo` ou `mono-branco`, sempre sobre **véu Anil de Junho 60–80%** no terço do logo/texto; Anil Profundo 80% se a foto for movimentada | Como no Anil | Cal | Cal / Fumaça, sempre sobre véu | Âmbar (uma vez) ou Vermelhão | Cal; linhas Céu de Anil | Logo sem véu; véu preto, cinza ou com blur; foto com muito verde-limão ou amarelo (compete com a luz do logo: use `mono-branco`) |
+| **Cor de terceiros / parceiros** (administradora, evento, cliente) | **Nunca recolorir.** Claro → `digital`/`chapado`; escuro → `digital-negativo`/`chapado-negativo`; saturado ou médio → `mono-anil` ou `mono-branco`, o que der ≥ 4,5:1; se nenhum der, aplicar o logo dentro de uma **placa Branco ou Anil** com margem X/2 | Conforme a versão | Cor do parceiro | Cor do parceiro | Nenhum acento Fireflies | Do parceiro | Mudar a cor do logo para a do parceiro; colocar o logo sobre roxo (confusão com Fireflies.ai); co-branding sem fio separador; logo Fireflies maior que o do anfitrião em material do anfitrião |
 
-**Co-branding:** fio vertical de 0,5 pt (Fumaça no claro, Céu de Anil no escuro), distância de 3X de cada lado e alturas **ópticas** iguais (o lettering das duas marcas com a mesma altura de caixa alta).
+**Co-branding:** fio vertical de 0,5 pt (Fumaça no claro, Céu de Anil no escuro), distância de 1 X de cada lado, medida da caixa da órbita, e alturas **ópticas** iguais (a versal de FIREFLIES com a mesma altura da caixa alta do parceiro).
 
 Prancha: `pranchas/matriz-de-fundos.png`.
 
@@ -117,7 +174,7 @@ A peça vai ser IMPRESSA em impressora de escritório, assinada ou arquivada?
           └── NÃO → É TELA?
                     ├── Painel/relatório lido por muito tempo, tabelas densas → CLARO (Branco ou Cal).
                     ├── Rede social, capa, OG image, vídeo, avatar → ESCURO (Anil). Alternar 1 em cada 3 posts em Cal.
-                    ├── Assinatura de e-mail → TRANSPARENTE/Branco, logo Positivo (testar dark mode).
+                    ├── Assinatura de e-mail → TRANSPARENTE/Branco, logo `horizontal_digital` (testar dark mode).
                     └── Peça de CAMPANHA (lançamento, convite, Academy, evento)?
                               → ESCURO (Anil) como padrão; Âmbar ou Rubrica só como peça de exceção, ≤ 1 em cada 10.
             Impresso de marca em gráfica (cartão, pasta, capa de relatório, certificado, envelope)?
@@ -153,7 +210,7 @@ Percentual **aproximado da área** da peça. "Texto" = Fuligem e Pedra-Sabão no
 | Proposta comercial (capa + miolo) | 65 | 5 | 15 | 10 | 2 | 2 | 1 |
 | Relatório de auditoria | 70 | 5 | 10 | 10 | 2 | 2 | 1 |
 | Papel timbrado / carta | 90 | — | 2 | 6 | 1 | 0,5 | 0,5 |
-| Contrato | 92 | — | 1 | 6 | 0,5 | 0,5 | (só na Lanterna do logo) |
+| Contrato | 92 | — | 1 | 6 | 0,5 | 0,5 | (só no vagalume do logo) |
 | Nota técnica / parecer | 90 | — | 2 | 6 | 1 | 0,5 | 0,5 |
 | E-mail (assinatura) | 90 | — | 4 | 4 | 1 | 0,5 | 0,5 |
 | Post (feed) | — | 25 | 60 | 8 | 3 | 3 | 1 |
@@ -167,8 +224,8 @@ Percentual **aproximado da área** da peça. "Texto" = Fuligem e Pedra-Sabão no
 | Brindes | (cor do objeto) | | 1 cor de marca | — | — | — | 0 em 1 cor; ≤ 5 em 2 cores |
 
 Regras:
-- **Brindes:** objeto Anil, Branco, Cal ou natural (algodão cru, kraft, madeira). Gravação em **1 cor** (Mono Cal sobre objeto escuro, Mono Anil sobre claro) ou **2 cores** chapadas (Anil + Âmbar na Lanterna).
-- **Âmbar** só passa de 1% na pasta e na placa, porque nelas a Lanterna é grande e é o único ponto de luz da superfície.
+- **Brindes:** objeto Anil, Branco, Cal ou natural (algodão cru, kraft, madeira). Gravação em **1 cor** (`mono-branco` sobre objeto escuro, `mono-anil` sobre claro) ou **2 cores** (`chapado`: Anil + Vermelhão; `chapado-negativo`: Cal + Âmbar).
+- **Âmbar** só passa de 1% na pasta e na placa, porque nelas o vagalume e a órbita de luz são grandes e são o único ponto de luz da superfície.
 - Se uma peça claro fica sem Rubrica, falta a assinatura quente: acrescente o fio de rodapé ou o eyebrow em Rubrica.
 
 Prancha: `pranchas/distribuicao-de-cor.png`.
@@ -190,8 +247,9 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 **Grid:** 12 colunas · margens laterais **96 px** (1,7 cm) · topo **80 px** · base **72 px** · gutter **24 px**. Linha de base de 8 px. Zona do rodapé: os 48 px de baixo.
 
 **Logo:**
-- Capa e encerramento: Logo principal (horizontal), Negativo, **360 px** de largura (≈ 6,4 cm), canto inferior esquerdo, alinhado à margem.
-- Slides internos: **Símbolo** com 32 px de altura no canto inferior direito, ou nada. Nunca o lockup completo em todos os slides.
+- Capa e encerramento: `horizontal_digital-negativo` com **480 px** de largura (≈ 8,5 cm; as asas se leem a partir de 360 px), canto inferior esquerdo, alinhado à margem com X/2 de respiro.
+- Slides internos: **F de luz** (`simbolo`) com **48 px** de largura no canto inferior direito, ou nada. Nunca o lockup completo em todos os slides.
+- Slide impresso: troque para `chapado` (fundo claro) ou `mono-preto` (P&B).
 
 **Hierarquia tipográfica (pt no PowerPoint/Google; px a 1920):**
 
@@ -213,11 +271,11 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Layout | Fundo | Composição | Grafismo |
 |---|---|---|---|
 | **Capa** | Anil de Junho | Eyebrow (linha + tipo de documento) no topo; título nas colunas 1–8, terço inferior; cliente, data e "Luz medida." abaixo; logo no canto inferior esquerdo | 1 padrão (campo de estrelas ou retícula, Céu de Anil 30–50%) **ou** 1 emblema de constelação do serviço nas colunas 9–12. Lanterna do logo = a luz |
-| **Divisor** | Anil de Junho | Número da seção em Plex Mono ("02 / 05") + título de divisor | Emblema da constelação do serviço, 320–480 px, colunas 8–12. Se o emblema tem Lanterna âmbar, o Símbolo do rodapé fica Mono Cal |
+| **Divisor** | Anil de Junho | Número da seção em Plex Mono ("02 / 05") + título de divisor | Emblema da constelação do serviço, 320–480 px, colunas 8–12. Se o emblema tem lanterna âmbar, o F de luz do rodapé vai em `mono-branco` |
 | **Conteúdo** | Branco (projetor/impresso) ou Cal (tela) | Eyebrow + título no topo; corpo nas colunas 1–7; imagem, ícones ou lista nas 8–12 | Até 3 ícones de linha; marcadores-estrela |
 | **Dados** | Branco | Título que **diz a conclusão** ("Inadimplência caiu para 6%"); gráfico em 8–12 colunas; nota de fonte em Mono 9 pt | Matriz de pontos ou retícula na área do gráfico; 1 destaque âmbar com contorno (a Lanterna do gráfico) |
 | **Citação** | Cal Virgem ou Anil | Citação em 1–3 linhas, colunas 2–10; autor em Mono caixa alta | Linha-de-chamada ou nada |
-| **Encerramento** | Anil de Junho | "Luz medida." ou próximo passo; contato (WhatsApp, e-mail, site) em Plex Sans; responsável e CRC em Mono | Trilha do Photinus terminando na Lanterna, ou nada |
+| **Encerramento** | Anil de Junho | "Luz medida." ou próximo passo; contato (WhatsApp, e-mail, site) em Plex Sans; responsável e CRC em Mono | Trilha do Photinus terminando na lanterna, ou nada (o vagalume do logo já é a luz) |
 
 **Rodapé e numeração:** em todos os slides, exceto capa e divisor: à esquerda, "FIREFLIES CONSULTORIA · [TÍTULO CURTO]" em Plex Mono 9 pt, Pedra-Sabão (claro) ou Fumaça (escuro); à direita, "07 / 24".
 
@@ -229,7 +287,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 |---|---|
 | Título que afirma a conclusão do slide | Título genérico ("Resultados") |
 | Capa, divisor e encerramento em Anil; conteúdo em Branco | Todo o deck em Anil num salão de festas iluminado |
-| 1 Lanterna/destaque âmbar por slide | Âmbar em texto, marcadores e linhas |
+| 1 luz por slide: o vagalume do logo **ou** 1 destaque âmbar | Âmbar em texto, marcadores e linhas |
 | Rubrica para o número que importa no claro | Vermelho-padrão do PowerPoint para alerta |
 | Ícones da biblioteca Carta do Lume | Ícones do Office, Lucide ou clip-art |
 
@@ -255,7 +313,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Nota, fonte, legenda | IBM Plex Sans Regular | 8 pt / 11 pt | Pedra-Sabão |
 | Cabeçalho e rodapé | IBM Plex Mono Regular | 7,5 pt | Pedra-Sabão |
 
-**Cabeçalho (páginas internas):** à esquerda, Símbolo com 8 mm de altura + tipo do documento em Mono 7,5 pt caixa alta ("RELATÓRIO DE AUDITORIA"); à direita, cliente e referência. Fio Fumaça de 0,5 pt a 4 mm abaixo. A 1ª página interna leva o Logo principal (horizontal) Positivo com **40 mm** de largura no lugar do Símbolo.
+**Cabeçalho (páginas internas):** à esquerda, F de luz (`simbolo-pequeno_chapado`) com **10 mm** de largura + tipo do documento em Mono 7,5 pt caixa alta ("RELATÓRIO DE AUDITORIA"); à direita, cliente e referência. Fio Fumaça de 0,5 pt a 4 mm abaixo. A 1ª página interna leva o `horizontal_chapado` com **45 mm** de largura (o mínimo impresso) no lugar do F de luz. No PDF enviado por e-mail, pode-se usar `digital`.
 
 **Rodapé:** fio **Rubrica de 0,75 pt** com 12 mm de largura alinhado à margem esquerda (a assinatura quente). Linha 1: "Fireflies Consultoria · CNPJ [a confirmar] · São Paulo/SP · fireflies.com.br". Linha 2: "Responsável técnico: Gabriel Alvares, CRC-SP [nº a confirmar] · [referência] · Confidencial". À direita: **"Página X de Y"** em Mono.
 
@@ -265,10 +323,10 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 | Documento | Capa | Miolo | Particularidades |
 |---|---|---|---|
-| **Proposta comercial** | Anil de Junho, sangrada, com logo Negativo 60 mm, título, cliente, número "PRO-2026-000", data e validade. Emblema da constelação do serviço. | Branco | Seções: diagnóstico · escopo · "30 dias até a primeira luz" (Trilha do Photinus com 4 etapas) · entregáveis · investimento (Mono, tabela) · responsável. Frase de apoio "Precisão que ilumina decisões." na 1ª página interna. Tom "nós". |
-| **Relatório de auditoria** | Anil de Junho, lockup **Fireflies Condomínios** Negativo, eyebrow "RELATÓRIO DE AUDITORIA", condomínio, período, emissão, responsável técnico. Selo de Carta opcional. | Branco | Pág. 1 = "Resumo para o conselho": 3 a 5 achados com marcador + rótulo de estado (ver 6.2). Achados numerados "A-01". Anexos em Mono. Versão para impressão em escritório: capa Branco com faixa Anil de 60 mm. |
-| **Parecer / nota técnica** | **Sem capa.** 1ª página com logo Positivo 40 mm, eyebrow "PARECER TÉCNICO Nº 000/2026", título, destinatário, data | Branco | Ementa em caixa com fundo Cal Virgem e fio Anil à esquerda (3 pt). Conclusão destacada com fio Rubrica. Assinatura, nome, CRC e data no fim. Nenhum grafismo. |
-| **Contrato** | **Sem capa.** Logo Positivo 35 mm no topo da 1ª página | Branco | Corpo 10,5 pt; cláusulas numeradas "CLÁUSULA 1ª" em Plex Sans SemiBold; parágrafos "§ 1º". Campo de rubrica (12×12 mm, fio Fumaça) no canto inferior direito de cada página. Sem cores além de Anil, Fuligem e o fio Rubrica do rodapé. Nenhum grafismo. |
+| **Proposta comercial** | Anil de Junho, sangrada, com `horizontal_chapado-negativo` (gráfica) ou `digital-negativo` (PDF) de 60 mm, título, cliente, número "PRO-2026-000", data e validade. Emblema da constelação do serviço. | Branco | Seções: diagnóstico · escopo · "30 dias até a primeira luz" (Trilha do Photinus com 4 etapas) · entregáveis · investimento (Mono, tabela) · responsável. Frase de apoio "Precisão que ilumina decisões." na 1ª página interna. Tom "nós". |
+| **Relatório de auditoria** | Anil de Junho, lockup `condominios-horizontal_chapado-negativo` (ou `digital-negativo` no PDF), eyebrow "RELATÓRIO DE AUDITORIA", condomínio, período, emissão, responsável técnico. Selo de Carta opcional. | Branco | Pág. 1 = "Resumo para o conselho": 3 a 5 achados com marcador + rótulo de estado (ver 6.2). Achados numerados "A-01". Anexos em Mono. Versão para impressão em escritório: capa Branco com faixa Anil de 60 mm. |
+| **Parecer / nota técnica** | **Sem capa.** 1ª página com `horizontal_chapado` de 45 mm, eyebrow "PARECER TÉCNICO Nº 000/2026", título, destinatário, data | Branco | Ementa em caixa com fundo Cal Virgem e fio Anil à esquerda (3 pt). Conclusão destacada com fio Rubrica. Assinatura, nome, CRC e data no fim. Nenhum grafismo. |
+| **Contrato** | **Sem capa.** `horizontal_chapado` de 45 mm no topo da 1ª página (`mono-preto` se for impresso em P&B) | Branco | Corpo 10,5 pt; cláusulas numeradas "CLÁUSULA 1ª" em Plex Sans SemiBold; parágrafos "§ 1º". Campo de rubrica (12×12 mm, fio Fumaça) no canto inferior direito de cada página. Sem cores além de Anil, Fuligem e o fio Rubrica do rodapé. Nenhum grafismo. |
 | **Ata** | Sem capa | Branco | Cabeçalho com tabela-resumo (data, local, participantes, pauta) em Mono 9 pt. Deliberações numeradas. Encaminhamentos em tabela: item · responsável · prazo. Assinaturas ao fim. |
 
 | Faça | Não faça |
@@ -286,7 +344,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | **Formato** | A4, 210×297 mm | 220×110 mm, aba no verso | 240×340 mm (cabe A4 sem dobrar e a pasta) |
 | **Impressão** | Digital (.docx/.dotx e Google Docs) e gráfica (offset 2 cores: Anil + Âmbar, ou 4 cores) em offset 90 g | Offset 2 cores, papel 90 g | Offset 1–2 cores, kraft ou branco 120 g |
 | **Margens** | Iguais aos documentos (25/22/25/20 mm) | 12 mm | 20 mm |
-| **Logo** | Logo principal (horizontal) Positivo, **45 mm** de largura, a 15 mm do topo e alinhado à margem esquerda | Logo principal Positivo, **40 mm**, canto superior esquerdo a 12 mm das bordas | Logo principal Positivo (branco) ou Mono Anil (kraft), **70 mm**, canto superior esquerdo a 20 mm |
+| **Logo** | `horizontal_chapado` (Word e gráfica), **50 mm** de largura, a 15 mm do topo e alinhado à margem esquerda | `horizontal_chapado`, **45 mm**, canto superior esquerdo a 12 mm das bordas | `horizontal_chapado` (branco) ou Mono Anil (kraft), **70 mm**, canto superior esquerdo a 20 mm |
 | **Dados** | Rodapé em Plex Mono 7,5 pt Pedra-Sabão: razão social, CNPJ, endereço, telefone/WhatsApp, e-mail, site, responsável técnico + CRC | Abaixo do logo, Plex Mono 7 pt: endereço de remetente | Na aba: endereço em Plex Mono 8 pt |
 | **Cor** | Fio Rubrica 0,75 pt × 12 mm no rodapé | Fio Rubrica 0,75 pt × 10 mm acima do remetente | Faixa Anil de 15 mm na base (opcional) |
 | **Grafismo** | Nenhum no corpo. Opcional: retícula Fumaça a 8% só na margem esquerda (25 mm), versão gráfica | Interno da aba: padrão constelação contínua Anil (versão gráfica) | Nenhum na frente; padrão no verso opcional |
@@ -295,27 +353,27 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 | Faça | Não faça |
 |---|---|
-| Timbrado com área útil totalmente branca | Marca-d'água do Símbolo atrás do texto |
+| Timbrado com área útil totalmente branca | Marca-d'água do F de luz atrás do texto |
 | Template Word com cabeçalho/rodapé **travados** | Colar o logo como imagem solta em cada carta |
 | Logo vetorial (EMF/SVG) no Word | PNG de 300 px esticado |
 
 ### 5.4 Cartão de visita
 
 - **Formato:** 90×50 mm, arquivo de **96×56 mm** (sangria 3 mm). Segurança de **5 mm**.
-- **Papel:** couché ou supremo 350 g com laminação fosca; ou Pantone 2768 C + 7409 C; acabamento opcional de hot stamping âmbar **só na Lanterna**.
+- **Papel:** couché ou supremo 350 g com laminação fosca; ou Pantone 2768 C + 7409 C; acabamento opcional de hot stamping âmbar **só no vagalume e no E de luz** (versão `chapado-negativo`).
 
 | Lado | Fundo | Conteúdo |
 |---|---|---|
-| **Frente** | Anil de Junho, sangrado | Logo vertical Negativo centralizado, **28 mm** de largura (ou Logo principal Negativo com 50 mm). Opcional: campo de estrelas Céu de Anil a 25% no terço inferior. |
-| **Verso** | Branco | Nome em Plex Sans SemiBold **9 pt** Anil; cargo em Plex Sans Regular 7 pt Pedra-Sabão ("Contador responsável · CRC-SP [nº]"); dados em Plex Mono **7 pt** Fuligem (WhatsApp, e-mail, site); QR para o WhatsApp, **mínimo 15×15 mm**, Anil; fio Rubrica 0,75 pt × 8 mm sobre o nome. Símbolo Positivo 7 mm no canto. |
+| **Frente** | Anil de Junho, sangrado | `vertical_chapado-negativo` centralizado, **34 mm** de largura (mínimo 30 mm), ou `horizontal_chapado-negativo` com 50 mm. Opcional: campo de estrelas Céu de Anil a 25% no terço inferior. |
+| **Verso** | Branco | Nome em Plex Sans SemiBold **9 pt** Anil; cargo em Plex Sans Regular 7 pt Pedra-Sabão ("Contador responsável · CRC-SP [nº]"); dados em Plex Mono **7 pt** Fuligem (WhatsApp, e-mail, site); QR para o WhatsApp, **mínimo 15×15 mm**, Anil; fio Rubrica 0,75 pt × 8 mm sobre o nome. F de luz `simbolo-pequeno_chapado` com 10 mm no canto. |
 
 - **Corpo mínimo:** 6,5 pt (Mono) e 7 pt (Sans).
-- **Não faça:** texto a menos de 5 mm do corte; Âmbar na frente além da Lanterna; verso em Cal (some na luz quente) ou em Anil (sem espaço para anotar).
+- **Não faça:** texto a menos de 5 mm do corte; Âmbar na frente além do vagalume e do E de luz; logo `digital` com gradiente em cartão de gráfica; verso em Cal (some na luz quente) ou em Anil (sem espaço para anotar).
 
 ### 5.5 Assinatura de e-mail
 
 - **Largura:** até **600 px**; conteúdo de 400–500 px. HTML com tabelas e estilos inline, < 50 KB.
-- **Logo:** Logo principal (horizontal) **Positivo**, PNG 2× (360×80) exibido a **180×40 px**, hospedado em HTTPS, **com fundo transparente**. Se o dark mode do Gmail/Outlook apagar o Anil, use a versão PNG com borda de 2 px Branco (contorno de segurança) ou o Símbolo em placa Branco arredondada.
+- **Logo:** `horizontal_digital`, PNG 2× (**480 px**) exibido a **240 px** de largura (o mínimo digital), hospedado em HTTPS, **com fundo transparente**. Se o dark mode do Gmail/Outlook apagar o Anil, use o PNG com placa Branca arredondada (X/2 de respiro).
 - **Fontes:** `'IBM Plex Sans', Arial, Helvetica, sans-serif` (a maioria dos clientes de e-mail mostra Arial). Nunca a fonte de títulos em texto vivo.
 
 ```
@@ -325,25 +383,25 @@ Fireflies Consultoria                            ← 12 px, Fuligem #2A2F3D
 WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br
                                                  ← 12 px, links em Rubrica #A9301F, sem sublinhado
 Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sabão
-[Logo principal Positivo 180×40]
+[horizontal_digital · 240 px]
 ```
 
-- Rubrica nos links é a única cor quente. Âmbar só na Lanterna do logo.
+- Rubrica nos links é a única cor quente. Âmbar só no vagalume do logo.
 - **Não faça:** banner fixo, logo com fundo branco chapado, frase em Âmbar, ícones de redes coloridos (use texto).
 
 ### 5.6 Redes sociais
 
 | Peça | Medida | Área segura | Fundo | Logo | Tipografia |
 |---|---|---|---|---|---|
-| **Post (feed)** | 1080×1350 px (4:5) | Conteúdo dentro de 1080×1350; texto a 80 px das bordas; para o grid 3:4, manter o essencial nos 1012 px centrais de altura | Anil (2 de 3) · Cal (1 de 3) | Símbolo 48 px canto inferior direito, ou handle em Mono | Título Sora Bold caixa alta **64–80 px**; corpo Plex Sans 32–36 px; eyebrow Mono 22 px |
-| **Carrossel** | 1080×1350 px, 6 a 10 cards (LinkedIn: PDF 1080×1350, 6 a 12 páginas) | Igual ao post | Capa Anil; miolo alterna Cal/Anil por bloco, nunca card a card | Capa: Logo principal Negativo 280 px; cards: numeração "03 / 08" em Mono | Capa 80–96 px; miolo 56 px título, 34 px corpo |
-| **Story / Reels** | 1080×1920 px | Livre: **250 px no topo e 340 px na base**; laterais 64 px | Anil | Símbolo 56 px no topo da área segura | Título 72–88 px; corpo 40 px |
+| **Post (feed)** | 1080×1350 px (4:5) | Conteúdo dentro de 1080×1350; texto a 80 px das bordas; para o grid 3:4, manter o essencial nos 1012 px centrais de altura | Anil (2 de 3) · Cal (1 de 3) | F de luz (`simbolo_digital-negativo`) 64 px no canto inferior direito, ou handle em Mono | Título Sora Bold caixa alta **64–80 px**; corpo Plex Sans 32–36 px; eyebrow Mono 22 px |
+| **Carrossel** | 1080×1350 px, 6 a 10 cards (LinkedIn: PDF 1080×1350, 6 a 12 páginas) | Igual ao post | Capa Anil; miolo alterna Cal/Anil por bloco, nunca card a card | Capa: `horizontal_digital-negativo` 400 px ou `vertical` 280 px; cards: numeração "03 / 08" em Mono | Capa 80–96 px; miolo 56 px título, 34 px corpo |
+| **Story / Reels** | 1080×1920 px | Livre: **250 px no topo e 340 px na base**; laterais 64 px | Anil | F de luz 72 px no topo da área segura | Título 72–88 px; corpo 40 px |
 | **Capa do LinkedIn (página)** | 4200×700 px (mín. 1128×191) | Centro de 3000×500; canto inferior esquerdo livre (o avatar cobre ~ 22% da largura no desktop) | Anil + retícula Céu 30% | Não repetir o logo (o avatar já é o logo) | "Luz medida." Sora 160 px, à direita do centro |
-| **Capa do LinkedIn (perfil)** | 1584×396 px | Terço esquerdo livre (foto) | Anil | Logo principal Negativo 320 px, à direita | Frase de apoio em Plex Sans 36 px + "CRC-SP [nº]" em Mono 24 px |
-| **Avatar** | 1080×1080 px (exibido em círculo) | Símbolo dentro do **círculo de 70%** | Anil de Junho | Símbolo Negativo (Símbolo reduzido abaixo de 64 px de exibição) | — |
-| **OG image / link** | 1200×630 px | Margem 60 px | Anil | Logo principal Negativo 320 px | Título 64 px |
+| **Capa do LinkedIn (perfil)** | 1584×396 px | Terço esquerdo livre (foto) | Anil | `horizontal_digital-negativo` 400 px, à direita | Frase de apoio em Plex Sans 36 px + "CRC-SP [nº]" em Mono 24 px |
+| **Avatar** | 1080×1080 px (exibido em círculo) | F de luz dentro do **círculo de 70%** | Anil de Junho | `simbolo_digital-negativo` (pronto: `../logo/avatar-1080.png`) | — |
+| **OG image / link** | 1200×630 px | Margem 60 px | Anil | 1200×630 px | Margem 60 px | Anil | `horizontal_digital-negativo` 400 px (base: `../logo/og-base-1200x630.png`) | Título 64 px |
 
-**Grafismos nas redes:** 1 padrão **ou** 1 emblema por card. Constelação contínua para capas de série; emblema do serviço no card-título. **Uma luz por card**: se o card tem o Símbolo, o destaque do texto é Vermelhão, não âmbar.
+**Grafismos nas redes:** 1 padrão **ou** 1 emblema por card. Constelação contínua para capas de série; emblema do serviço no card-título. **Uma luz por card**: se o card tem o logo ou o F de luz, o destaque do texto é Vermelhão, não âmbar.
 
 | Faça | Não faça |
 |---|---|
@@ -357,7 +415,7 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 - **Formato:** A4 paisagem, 297×210 mm. PDF preenchível (sRGB) e impressão CMYK com +3 mm de sangria em papel 180–240 g (offset ou couché fosco).
 - **Fundo:** **Cal Virgem** (impressão de gráfica) ou Branco (impressão em escritório).
 - **Margens:** 15 mm até a **moldura-carta** (neatline alternado, Anil, 3 mm de espessura); conteúdo a 30 mm das bordas.
-- **Logo:** lockup **Fireflies Academy** Positivo, **60 mm**, centralizado no topo, a 32 mm da borda.
+- **Logo:** `academy-horizontal_chapado` (gráfica) ou `digital` (PDF), **60 mm**, centralizado no topo, a 32 mm da borda.
 - **Hierarquia:**
 
 | Elemento | Fonte | Tamanho | Cor |
@@ -369,18 +427,18 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 | Instrutor e responsável técnico | Plex Sans SemiBold 10 pt + Mono 8 pt (CRC) | | Anil / Pedra-Sabão |
 | Código e verificação | IBM Plex Mono | 8 pt | Pedra-Sabão; QR 18 mm |
 
-- **Grafismo:** Selo de Carta (selo-graduado-texto) **40 mm**, Anil, com a Lanterna âmbar + contorno no centro, ao lado das assinaturas. Constelação *Liber* (Academy) opcional, sem letras, 30 mm, no canto superior direito, Anil 40%. Nada mais.
+- **Grafismo:** Selo de Carta (selo-graduado-texto) **40 mm**, Anil, com o F de luz (`simbolo_chapado`, 18 mm) no centro, ao lado das assinaturas. Constelação *Liber* (Academy) opcional, sem letras, 30 mm, no canto superior direito, Anil 40%. Nada mais.
 - **Não faça:** fundo Anil (difícil de assinar e de emoldurar), bordas douradas, fitas e louros, escrita cursiva no nome.
 
 ### 5.8 Placa, fachada e brindes
 
 **Placa de porta / recepção**
-- 400×150 mm (sala comercial) ou 600×200 mm (recepção). ACM ou acrílico 5 mm **Anil de Junho**, com Logo principal **Negativo** em adesivo de recorte Cal + Lanterna em âmbar (adesivo ou impressão UV). Logo com 70% da largura da placa, centrado; margem mínima 2X.
-- Alternativa sóbria: aço escovado ou vidro com Logo **Mono Anil** em recorte, sem âmbar.
+- 400×150 mm (sala comercial) ou 600×200 mm (recepção). ACM ou acrílico 5 mm **Anil de Junho**, com `horizontal_chapado-negativo` em adesivo de recorte Cal + Âmbar (órbita de luz, E de luz e vagalume) ou impressão UV. Logo com 70% da largura da placa, centrado; margem mínima 2X.
+- Alternativa sóbria: aço escovado ou vidro com `mono-anil` em recorte, sem âmbar.
 - Altura de instalação: centro a 1,60 m do piso.
 
 **Fachada / totem (se houver)**
-- Fundo Anil; letra-caixa Cal com Lanterna âmbar iluminada **por trás** (backlight), nunca luz colorida ou néon. Legibilidade: 25 mm de altura de letra para cada 10 m de distância.
+- Fundo Anil; letra-caixa Cal com o vagalume e o E de luz em âmbar iluminados **por trás** (backlight); a órbita em recorte ou filete metálico, nunca luz colorida ou néon. Legibilidade: 25 mm de altura de letra para cada 10 m de distância.
 
 **Sinalização interna:** Plex Sans SemiBold, Cal sobre Anil ou Anil sobre Cal; ícones de linha Carta do Lume; pictogramas de segurança seguem a NBR, não a marca.
 
@@ -390,14 +448,14 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 
 | Item | Objeto | Aplicação | Versão |
 |---|---|---|---|
-| Caderno / bloco | Capa Anil ou kraft | Hot stamping ou serigrafia 1 cor | Mono Cal (Anil) / Mono Anil (kraft) |
-| Caneta | Anil ou metal | Laser ou tampografia, Símbolo ou wordmark, 1 cor | Mono |
-| Caneca | Branca ou Anil fosco | Serigrafia 2 cores | Positivo / Negativo |
-| Ecobag / camiseta | Algodão cru ou Anil | Serigrafia 1–2 cores, logo no peito com 80–90 mm | Mono Anil / Negativo |
-| Crachá | PVC 86×54 mm, vertical | Topo Anil 40% com Símbolo Negativo; base Branca com nome Plex Sans SemiBold 14 pt e função Mono 9 pt | Negativo + Positivo |
-| Pasta A4 com bolso | 220×310 mm fechada (faca da gráfica), supremo 300 g, laminação fosca | Capa Anil com Logo principal Negativo 70 mm e campo de estrelas; interno Branco; bolso com corte para cartão | Negativo |
+| Caderno / bloco | Capa Anil ou kraft | Hot stamping ou serigrafia 1 cor | `mono-branco` (Anil) / `mono-anil` (kraft) |
+| Caneta | Anil ou metal | Laser ou tampografia, F de luz (`simbolo-pequeno`) ou `wordmark`, 1 cor | `mono-*` |
+| Caneca | Branca ou Anil fosco | Serigrafia 2 cores | `chapado` / `chapado-negativo` |
+| Ecobag / camiseta | Algodão cru ou Anil | Serigrafia 1–2 cores ou bordado, logo no peito com 80–90 mm (bordado: mínimo 60 mm) | `mono-anil` / `chapado-negativo` / bordado `mono-*` |
+| Crachá | PVC 86×54 mm, vertical | Topo Anil 40% com `vertical_chapado-negativo` 34 mm; base Branca com nome Plex Sans SemiBold 14 pt e função Mono 9 pt | `chapado-negativo` |
+| Pasta A4 com bolso | 220×310 mm fechada (faca da gráfica), supremo 300 g, laminação fosca | Capa Anil com `horizontal_chapado-negativo` 70 mm (ou `digital-negativo` em 4 cores aprovado em prova) e campo de estrelas; interno Branco; bolso com corte para cartão | `chapado-negativo` |
 
-- Gravação: traço mínimo de **0,3 mm**; abaixo de 25 mm de largura use o Símbolo reduzido.
+- Gravação: traço mínimo de **0,3 mm**. Abaixo de 45 mm, troque o `horizontal` pelo `wordmark` (até 30 mm) ou pelo F de luz (`simbolo` ≥ 12 mm; `simbolo-pequeno` de 7 a 12 mm). Bordado: `simbolo-pequeno` ou `horizontal` mono com no mínimo 60 mm.
 - **Não faça:** degradê em brinde, Âmbar como cor do objeto, logo em cor do fornecedor, gravação a laser do campo de estrelas (vira sujeira).
 
 ---
@@ -417,7 +475,7 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 
 Regras:
 - **Máximo de 4 séries.** Mais que isso vira tabela ou small multiples.
-- O **destaque âmbar** é a Lanterna do gráfico: 1 barra, 1 ponto ou 1 fatia, aquilo que o título afirma. O resto fica nas cores da tabela.
+- O **destaque âmbar** é a lanterna do gráfico: 1 barra, 1 ponto ou 1 fatia, aquilo que o título afirma. O resto fica nas cores da tabela.
 - Rótulos direto na série, sem legenda separada quando possível. Toda série distinguível também por **forma, posição ou rótulo** (daltonismo: Vermelhão e Âmbar têm 1,94:1 entre si).
 - Gráficos em **matriz de pontos** (estrelas) para quantidades pequenas; barras chapadas e finas (60% da largura da categoria) para o resto. Sem 3D, sem sombra, sem degradê.
 - Eixos e grade em Fumaça (claro) ou Céu de Anil 40% (escuro), 0,5 pt; sem borda de gráfico.
@@ -459,7 +517,7 @@ Semáforo nunca só por cor: a ordem **forma → palavra → cor**.
 
 **Onde não usar grafismo nenhum:** contrato, parecer, ata, timbrado (área útil), assinatura de e-mail, tabelas.
 
-**Regra da luz com grafismo:** padrões e emblemas trazem uma Lanterna âmbar. Se o logo com Lanterna está **na mesma composição e visível**, use o padrão/emblema com a Lanterna em `currentColor` (sem âmbar) ou esconda a Lanterna do padrão fora do corte.
+**Regra da luz com grafismo:** padrões e emblemas trazem uma lanterna âmbar. Se o logo (com o vagalume aceso) está **na mesma composição e visível**, use o padrão/emblema com a lanterna em `currentColor` (sem âmbar) ou esconda a Lanterna do padrão fora do corte.
 
 ---
 
@@ -480,7 +538,7 @@ Semáforo nunca só por cor: a ordem **forma → palavra → cor**.
 - Foto muito movimentada: **Anil Profundo a 80%**.
 - Degradê de véu (Anil 80% → 0%) é o **único degradê permitido** fora do arco do logo, e só na direção do texto para a imagem.
 - Texto sobre véu: Cal/Branco, contraste ≥ 4,5:1 medido no ponto mais claro da foto.
-- Foto clara sem véu: logo Positivo somente em área lisa; se houver textura, véu Cal Virgem 80–90%.
+- Foto clara sem véu: logo `digital` somente em área lisa; se houver textura, véu Cal Virgem 80–90%.
 
 ---
 
@@ -548,8 +606,8 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 
 **Marca**
 - [ ] O fundo segue a árvore da seção 3 (impresso no escritório = Branco).
-- [ ] A versão do logo é a da matriz da seção 2 para esse fundo; arquivo vetorial ou PNG ≥ 2×.
-- [ ] Área de proteção de 2X e tamanho acima do mínimo.
+- [ ] A versão do logo é a da matriz da seção 2 para esse fundo, e a cor é a do meio: `digital` na tela, `chapado` na impressão, `mono` em carimbo e bordado. Arquivo vetorial ou PNG ≥ 2×.
+- [ ] Área de proteção de X/2 (lockups) ou ¼ da órbita (F de luz), e tamanho acima do mínimo (horizontal ≥ 240 px / 45 mm).
 - [ ] **Uma** luz âmbar na composição, e ela não está em texto.
 - [ ] Tem Rubrica (ou Vermelhão no escuro) em algum ponto da peça institucional.
 - [ ] Nada de cor fora da paleta, nem roxo.
@@ -580,9 +638,9 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 ## 11. Erros comuns
 
 1. **Âmbar em texto** sobre Branco ou Cal (1,83 e 1,57:1): título, link ou número "dourado" ilegível.
-2. **Duas luzes:** Lanterna do logo + ícone âmbar + número âmbar na mesma composição.
-3. **Logo Positivo sobre Anil** ou Negativo sobre Branco por preguiça de trocar o arquivo.
-4. **Lanterna âmbar sem o contorno Anil** sobre fundo claro, sumindo no papel.
+2. **Duas luzes:** vagalume do logo + ícone âmbar + número âmbar na mesma composição.
+3. **Logo de fundo claro sobre Anil** (ou `-negativo` sobre Branco), ou **`digital` com gradiente** mandado para a gráfica ou para a impressora do escritório em vez do `chapado`.
+4. **Logo abaixo do mínimo:** `horizontal` com menos de 240 px / 45 mm (as estrelas e o descritor somem), ou `simbolo` reduzido a 16 px em vez do `favicon`.
 5. **Relatório ou contrato com miolo em Cal ou Anil**: mancha na impressora do síndico e some na cópia.
 6. **Deck inteiro em Anil projetado num salão de festas**: vira cinza lavado.
 7. **Rubrica sobre Anil** (2,55:1) para "dar calor" ao slide escuro. No escuro o quente é o Vermelhão.
@@ -597,4 +655,4 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 
 ---
 
-*Versão 1.0 · outubro de 2026 · Pendências: nome da Sora e do fallback, arquivos finais do Logo principal, Logo vertical, Símbolo e Símbolo reduzido, definição da versão "Transição quente", CRC e CNPJ.*
+*Versão 1.1 · outubro de 2026 · Logo "Órbita do vagalume" e Sora finais. Pendências: CRC e CNPJ.*
