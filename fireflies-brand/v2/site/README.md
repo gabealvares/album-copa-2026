@@ -36,9 +36,9 @@ Identidade v2 "Carta do Lume": Anil de Junho, Cal Virgem, um único Âmbar de lu
 1. **Plugin primeiro:** Plugins › Adicionar › Enviar plugin › `fireflies-core.zip` › Ativar. Ele registra o tipo `curso`, a taxonomia `trilha`, os blocos e os estilos editoriais; sem ele o WXR importa cursos sem destino.
 2. **Tema:** Aparência › Temas › Adicionar › Enviar tema › `fireflies-tema.zip` › Ativar.
 3. **Contact Form 7** (recomendado, antes da importação, para o formulário vir junto): instale e ative.
-4. **Links permanentes:** Configurações › Links permanentes › Estrutura personalizada `/blog/%postname%/`, base de categoria `blog/categoria`, base de tag `blog/tag` › Salvar. (O autor fica em `/blog/autor/` pelo plugin; páginas e cursos não levam `/blog/`.)
+4. **Links permanentes:** a partir da versão 1.0.3, o plugin configura sozinho na primeira visita ao painel depois da importação: estrutura personalizada `/blog/%postname%/`, base de categoria `blog/categoria` e base de tag `blog/tag`. Não use "Nome do post", porque o conteúdo liga os posts em `/blog/{slug}/`. (O autor fica em `/blog/autor/` pelo plugin. Páginas e cursos não levam `/blog/`.)
 5. **Importar o conteúdo:** Ferramentas › Importar › WordPress (instale o importador) › `fireflies-conteudo.xml`. Atribua os posts ao usuário `gabriel-alvares` (ou crie-o). Marque "Baixar e importar anexos" só se o domínio antigo estiver no ar; caso contrário suba `midia/og-fireflies-consultoria.png` à mão e defina-a como imagem destacada do post NFS-e.
-6. **Configurações › Leitura:** página inicial = **Início**, página de posts = **Blog**, 9 posts por página.
+6. **Configurações › Leitura:** o plugin 1.0.3 define sozinho a página inicial (**Início**) e a página de posts (**Blog**) quando você abre o painel depois da importação. Se a home aparecer vazia, confira aqui: "Uma página estática", Início / Blog, 9 posts por página.
 7. **Configurações › Privacidade:** página = **Política de Privacidade**.
 8. **Configurações › Geral › Fireflies Consultoria:** WhatsApp (`5511982450527`), e-mail, horário, shortcode do formulário (`[contact-form-7 id="…" title="Diagnóstico gratuito"]`) e, se houver, da newsletter. Sem formulário configurado, o slot mostra WhatsApp + e-mail.
 9. Salve os links permanentes mais uma vez (garante `/academy/cursos/…`).
