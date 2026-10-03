@@ -516,3 +516,7 @@ h1.is-style-versal, .wp-block-post-title.is-style-versal { letter-spacing: .02em
 .wpcf7 .wpcf7-acceptance input { margin-top: .3rem; width: 18px; height: 18px; accent-color: var(--wp--preset--color--anil); }
 .ff-404 .wp-block-search__button { background: transparent; color: var(--wp--preset--color--cal); border: 1.5px solid rgba(237, 238, 234, .7); }
 .ff-404 .wp-block-search__button:hover { background: var(--wp--preset--color--cal); color: var(--wp--preset--color--anil); }
+@media (max-width: 781px) {
+	.ff-hero__lado .wp-block-image img { max-width: 120px !important; }
+	.ff-hero__lado .wp-block-image { margin-bottom: 0; }
+}

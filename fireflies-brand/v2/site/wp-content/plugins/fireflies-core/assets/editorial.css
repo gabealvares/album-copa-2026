@@ -72,7 +72,7 @@ ol.is-style-fontes { list-style: none; padding: 0; counter-reset: fonte; margin:
 	counter-increment: fonte;
 	break-inside: avoid;
 	position: relative;
-	padding: .7rem 0 .7rem 2.4rem; border-top: 1px solid var(--ff-line);
+	padding: .7rem 0 .7rem 2.4rem !important; border-top: 1px solid var(--ff-line);
 	font-size: .9375rem; line-height: 1.45;
 }
 .is-style-fontes > li::before { position: absolute; left: 0; top: .78rem; content: counter(fonte, decimal-leading-zero); font: 500 .8125rem/1.7 var(--ff-mono); color: var(--ff-warm); }
@@ -261,7 +261,7 @@ ol.is-style-linha-tempo > li > strong:first-child { display: block; padding-top:
 /* Lista de códigos em colunas */
 ul.is-style-codigos { list-style: none; padding: 0; columns: 2 220px; column-gap: 2rem; margin: 1rem 0 1.5rem; }
 ul.is-style-codigos.ff-3col { columns: 3 160px; }
-ul.is-style-codigos > li { break-inside: avoid; position: relative; padding: .55rem 0 .55rem 3.5rem; border-top: 1px solid var(--ff-line); font-size: .9375rem; }
+ul.is-style-codigos > li { break-inside: avoid; position: relative; padding: .55rem 0 .55rem 3.5rem !important; border-top: 1px solid var(--ff-line); font-size: .9375rem; }
 ul.is-style-codigos > li > code:first-child, ul.is-style-codigos > li > strong:first-child { position: absolute; left: 0; font-family: var(--ff-mono); font-weight: 500; color: var(--ff-strong); background: none; padding: 0; font-size: .9375rem; }
 ul.is-style-codigos > li[hidden] { display: none; }
 .ff-busca { margin: 1rem 0 .4rem; }
@@ -322,3 +322,4 @@ ol.is-style-fontes.ff-programa > li { font-size: 1rem; padding: .9rem 0; }
 .ff-rx__alerta strong { color: #fff; }
 @media (max-width: 781px) { .ff-rx { grid-template-columns: 1fr; } }
 .is-style-cal .is-style-base-legal { background: var(--wp--preset--color--branco, #fff); }
+ol.is-style-fontes, ul.is-style-codigos { padding-left: 0 !important; }
