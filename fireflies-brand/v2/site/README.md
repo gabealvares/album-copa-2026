@@ -1,5 +1,13 @@
 # Site Fireflies Consultoria · WordPress
 
+> **Atenção na instalação:** no WordPress, envie só os arquivos de `dist/`, cada um no seu lugar:
+> - `dist/fireflies-core.zip` em **Plugins → Adicionar novo → Enviar plugin**
+> - `dist/fireflies-tema.zip` em **Aparência → Temas → Adicionar novo → Enviar tema**
+> - `fireflies-conteudo.xml` em **Ferramentas → Importar → WordPress**
+>
+> O pacote geral (com README, previews e conteúdo) **não é um tema**. Enviado como tema, o WordPress responde "o tema não possui uma folha de estilos style.css".
+
+
 Tema de blocos **Fireflies** + plugin **Fireflies Core** + conteúdo pronto para importar (WXR).
 Identidade v2 "Carta do Lume": Anil de Junho, Cal Virgem, um único Âmbar de luz, Vermelhão de Rubrica; Sora, IBM Plex Sans e IBM Plex Mono locais.
 
