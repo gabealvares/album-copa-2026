@@ -4,7 +4,8 @@
 > - `dist/fireflies-core.zip` em **Plugins → Adicionar novo → Enviar plugin**
 > - `dist/fireflies-tema.zip` em **Aparência → Temas → Adicionar novo → Enviar tema**
 > - `fireflies-conteudo.xml` em **Ferramentas → Importar → WordPress**
-> - **Formulário de contato:** instale e ative o **Contact Form 7** e depois importe `fireflies-formulario-cf7.xml` pelo mesmo importador. O plugin Fireflies Core encontra o formulário "Diagnóstico gratuito" sozinho. Sem ele, a página de contato mostra WhatsApp e e-mail.
+> - **Formulário de contato:** instale e ative o **Contact Form 7** (Plugins → Adicionar novo). Ao abrir o painel, o Fireflies Core (1.0.2+) cria sozinho o formulário "Diagnóstico gratuito" e a página de contato passa a exibi-lo. Não é preciso importar nada. Sem o CF7, a página mostra WhatsApp e e-mail.
+> - **Na importação do XML**, em "Atribuir autores", escolha **atribuir os posts a um usuário existente** (o seu). Se escolher "criar novo usuário" com um login que já existe, o WordPress mostra "Falha ao criar novo usuário", o que é inofensivo: os posts ficam com o seu usuário.
 > - **Imagem de compartilhamento:** já vem dentro do plugin, e não é preciso importar mídia. Para usá-la como imagem de destaque de um post, envie `midia/og-fireflies-consultoria.png` em Mídia.
 >
 > O pacote geral (com README, previews e conteúdo) **não é um tema**. Enviado como tema, o WordPress responde "o tema não possui uma folha de estilos style.css".
