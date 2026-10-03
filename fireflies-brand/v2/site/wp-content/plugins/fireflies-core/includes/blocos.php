@@ -13,7 +13,7 @@ add_action(
 		wp_register_script(
 			'fireflies-core-blocos',
 			FIREFLIES_CORE_URL . 'blocks/editor.js',
-			array( 'wp-blocks', 'wp-element', 'wp-server-side-render', 'wp-block-editor', 'wp-components', 'wp-i18n' ),
+			array( 'wp-blocks', 'wp-element', 'wp-server-side-render', 'wp-block-editor', 'wp-components', 'wp-i18n', 'wp-plugins', 'wp-data', 'wp-core-data', 'wp-editor' ),
 			FIREFLIES_CORE_VERSION,
 			true
 		);
@@ -50,6 +50,18 @@ add_action(
 					),
 					'render_callback' => static fn( array $a ) => fireflies_core_whatsapp( $a ),
 				)
+			)
+		);
+
+		register_block_type(
+			'fireflies/eyebrow',
+			$comum + array(
+				'title'           => 'Eyebrow do post',
+				'render_callback' => static function ( array $a, string $c, WP_Block $b ): string {
+					$id  = (int) ( $b->context['postId'] ?? get_the_ID() );
+					$txt = $id ? fireflies_core_eyebrow( $id ) : '';
+					return $txt ? '<p ' . get_block_wrapper_attributes( array( 'class' => 'is-style-rotulo ff-eyebrow' ) ) . '>' . esc_html( $txt ) . '</p>' : '';
+				},
 			)
 		);
 

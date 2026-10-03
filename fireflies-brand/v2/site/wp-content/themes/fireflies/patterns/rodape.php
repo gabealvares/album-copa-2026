@@ -91,8 +91,20 @@
 <p>© 2026 Fireflies Consultoria. CNPJ [a confirmar]<br>Responsável técnico: Gabriel Alvares, CRC-SP [a confirmar]</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Tratamos dados pessoais conforme a LGPD (Lei 13.709/2018).<br><a href="<?php echo fireflies_url( '/politica-de-privacidade/' ); ?>">Política de privacidade</a>   <a href="<?php echo fireflies_url( '/termos-de-uso/' ); ?>">Termos de uso</a></p>
+<p>Tratamos dados pessoais conforme a LGPD (Lei 13.709/2018).<br><a href="<?php echo fireflies_url( '/politica-de-privacidade/' ); ?>">Política de privacidade</a>   <a href="<?php echo fireflies_url( '/termos-de-uso/' ); ?>">Termos de uso</a>   <a href="#preferencias-cookies">Preferências de cookies</a></p>
 <!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"ff-barra-mobile","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group ff-barra-mobile">
+<!-- wp:shortcode -->
+[fireflies_whatsapp texto="WhatsApp"]
+<!-- /wp:shortcode -->
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="<?php echo fireflies_url( '/contato/' ); ?>">Diagnóstico gratuito</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->
 </footer>

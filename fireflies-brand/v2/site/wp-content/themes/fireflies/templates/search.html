@@ -1,0 +1,56 @@
+<!-- wp:template-part {"slug":"header","area":"header","tagName":"div"} /-->
+<!-- wp:group {"tagName":"main","anchor":"conteudo","style":{"spacing":{"margin":{"top":"0"}}},"layout":{"type":"default"}} -->
+<main class="wp-block-group" id="conteudo" style="margin-top:0">
+<!-- wp:group {"tagName":"header","className":"is-style-cal","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|50"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<header class="wp-block-group alignfull is-style-cal" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
+<!-- wp:group {"layout":{"type":"constrained","contentSize":"820px","justifyContent":"left"}} -->
+<div class="wp-block-group">
+<!-- wp:query-title {"type":"search","level":1} /-->
+<!-- wp:separator {"className":"is-style-fio-rubrica"} -->
+<hr class="wp-block-separator has-alpha-channel-opacity is-style-fio-rubrica"/>
+<!-- /wp:separator -->
+<!-- wp:search {"label":"Buscar no site","showLabel":false,"placeholder":"Buscar artigos, serviços e cursos","buttonText":"Buscar"} /-->
+</div>
+<!-- /wp:group -->
+</header>
+<!-- /wp:group -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|70"}}},"layout":{"type":"constrained","contentSize":"1240px"}} -->
+<div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--70)">
+<!-- wp:query {"queryId":1,"query":{"inherit":true,"perPage":10},"className":"ff-lista-posts"} -->
+<div class="wp-block-query ff-lista-posts">
+<!-- wp:post-template -->
+<!-- wp:columns {"style":{"spacing":{"blockGap":{"left":"var:preset|spacing|40","top":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-columns">
+<!-- wp:column {"width":"22%"} -->
+<div class="wp-block-column" style="flex-basis:22%">
+<!-- wp:post-date {"format":"d/m/Y"} /-->
+<!-- wp:post-terms {"term":"category"} /-->
+</div>
+<!-- /wp:column -->
+<!-- wp:column {"width":"78%"} -->
+<div class="wp-block-column" style="flex-basis:78%">
+<!-- wp:post-title {"isLink":true} /-->
+<!-- wp:post-excerpt {"excerptLength":30} /-->
+<!-- wp:fireflies/tempo-leitura {"className":"ff-meta"} /-->
+</div>
+<!-- /wp:column -->
+</div>
+<!-- /wp:columns -->
+<!-- /wp:post-template -->
+<!-- wp:query-pagination {"paginationArrow":"none","layout":{"type":"flex","justifyContent":"space-between"}} -->
+<!-- wp:query-pagination-previous {"label":"Anteriores"} /-->
+<!-- wp:query-pagination-numbers /-->
+<!-- wp:query-pagination-next {"label":"Próximos"} /-->
+<!-- /wp:query-pagination -->
+<!-- wp:query-no-results -->
+<!-- wp:paragraph -->
+<p>Nada encontrado para essa busca. Tente outro termo ou pergunte direto pelo <a href="https://wa.me/5511982450527">WhatsApp</a>.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results -->
+</div>
+<!-- /wp:query -->
+</div>
+<!-- /wp:group -->
+</main>
+<!-- /wp:group -->
+<!-- wp:template-part {"slug":"footer","area":"footer","tagName":"div"} /-->

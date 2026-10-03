@@ -72,13 +72,18 @@ function fireflies_core_indice( array $atts = array() ): string {
 add_shortcode( 'fireflies_indice', 'fireflies_core_indice' );
 
 /**
+ * Consultas: "ffCategoria": "slug" filtra por categoria (portável entre instalações);
  * Relacionados: um bloco Consulta com "ffRelacionados": true dentro de query
  * mostra posts da mesma categoria, sem o atual.
  */
 add_filter(
 	'query_loop_block_query_vars',
 	static function ( array $query, WP_Block $block ): array {
-		if ( empty( $block->context['query']['ffRelacionados'] ) || ! is_singular() ) {
+		$q = $block->context['query'] ?? array();
+		if ( ! empty( $q['ffCategoria'] ) ) {
+			$query['category_name'] = sanitize_title( $q['ffCategoria'] );
+		}
+		if ( empty( $q['ffRelacionados'] ) || ! is_singular() ) {
 			return $query;
 		}
 		$atual                  = get_queried_object_id();
@@ -129,3 +134,33 @@ function fireflies_core_newsletter(): string {
 	);
 }
 add_shortcode( 'fireflies_newsletter', 'fireflies_core_newsletter' );
+
+/**
+ * Blog sem comentários (decisão de arquitetura) e autor em /blog/autor/.
+ */
+add_filter( 'comments_open', '__return_false', 20 );
+add_filter( 'pings_open', '__return_false', 20 );
+add_filter( 'comments_array', '__return_empty_array', 20 );
+add_action(
+	'init',
+	static function (): void {
+		global $wp_rewrite;
+		$wp_rewrite->author_base = 'blog/autor';
+	}
+);
+
+/**
+ * Eyebrow do post: meta _ff_eyebrow ou, na falta, a categoria principal.
+ */
+function fireflies_core_eyebrow( int $post_id ): string {
+	$txt = (string) get_post_meta( $post_id, '_ff_eyebrow', true );
+	if ( '' === $txt ) {
+		$cats = get_the_category( $post_id );
+		$txt  = $cats ? $cats[0]->name : '';
+	}
+	if ( 'curso' === get_post_type( $post_id ) ) {
+		$t   = get_the_terms( $post_id, 'trilha' );
+		$txt = 'Fireflies Academy' . ( $t && ! is_wp_error( $t ) ? ' · Trilha ' . $t[0]->name : '' );
+	}
+	return $txt;
+}

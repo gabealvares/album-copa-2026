@@ -22,8 +22,8 @@
 <!-- /wp:heading -->
 <!-- wp:group {"className":"ff-indice ff-triagem","style":{"spacing":{"blockGap":"0"}}} -->
 <div class="wp-block-group ff-indice ff-triagem">
-<!-- wp:columns {"className":"is-style-linha-indice","isStackedOnMobile":false} -->
-<div class="wp-block-columns is-style-linha-indice is-not-stacked-on-mobile">
+<!-- wp:columns {"className":"is-style-linha-indice"} -->
+<div class="wp-block-columns is-style-linha-indice">
 <!-- wp:column {"width":"8%"} -->
 <div class="wp-block-column" style="flex-basis:8%">
 <!-- wp:paragraph {"className":"ff-letra"} -->
@@ -50,8 +50,8 @@
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
-<!-- wp:columns {"className":"is-style-linha-indice","isStackedOnMobile":false} -->
-<div class="wp-block-columns is-style-linha-indice is-not-stacked-on-mobile">
+<!-- wp:columns {"className":"is-style-linha-indice"} -->
+<div class="wp-block-columns is-style-linha-indice">
 <!-- wp:column {"width":"8%"} -->
 <div class="wp-block-column" style="flex-basis:8%">
 <!-- wp:paragraph {"className":"ff-letra"} -->

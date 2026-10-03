@@ -390,4 +390,85 @@ pattern( 'nota-margem', 'Nota de margem', 'Nota curta em mono que vai para a mar
 
 pattern( 'indice-post', 'Índice do post', 'Lista os H2 do post (bloco do plugin Fireflies Core).', $E, ff_v( 'fireflies/indice' ) );
 
+
+// ---------------------------------------------------------------- templates (Inserter: no)
+
+$curso_cab = secao(
+	colunas(
+		array(
+			array(
+				'html' => nota( '<a href="{{U}}/academy/">Fireflies Academy</a> / <a href="{{U}}/academy/cursos/">Cursos</a>', array( 'class' => 'ff-trilha', 'text' => 'fumaca' ) )
+					. ff_v( 'fireflies/eyebrow' )
+					. ff_v( 'post-title', array( 'level' => 1, 'fontSize' => 'titulo-1' ) )
+					. ff_v( 'post-excerpt', array( 'className' => 'is-style-abertura' ) )
+					. ff_v( 'fireflies/curso-ficha' ),
+				'w'    => '66%',
+			),
+			array( 'html' => constelacao( 'academy', 'escuro', array( 'w' => '240px', 'class' => 'is-style-emblema aligncenter' ) ), 'va' => 'center', 'class' => 'ff-hero__lado' ),
+		),
+		array( 'va' => 'center', 'gap' => sp( '60' ) )
+	),
+	'noite',
+	array( 'tag' => 'header', 'class' => 'ff-hero ff-cabecalho-curso', 'pad' => array( 'top' => sp( '60' ), 'bottom' => sp( '60' ) ) )
+);
+pattern( 'curso-cabecalho', 'Cabeçalho do curso', 'Trilha, título, resumo e ficha do curso sobre Anil, com o emblema Liber.', $P, $curso_cab, array( 'Inserter' => 'no' ) );
+
+pattern(
+	'cta-academy',
+	'Chamada: Academy',
+	'Fechamento da Academy: montar um treinamento.',
+	$P,
+	s_cta(
+		array(
+			'h2'     => 'Monte o treinamento da sua equipe.',
+			'texto'  => 'Conte o tema, o tamanho da turma e o formato. A gente responde com programa e proposta.',
+			'botoes' => array( array( 'Montar um treinamento', u( '/contato/?assunto=academy' ) ), array( 'Conversar no WhatsApp', wa( 'Quero montar um treinamento da Fireflies Academy.' ), 'outline' ) ),
+		)
+	),
+	array( 'Inserter' => 'no' )
+);
+
+$arq = secao(
+	estreito(
+		nota( '<a href="{{U}}/academy/">Fireflies Academy</a>', array( 'class' => 'ff-trilha', 'text' => 'fumaca' ) )
+		. ff_v( 'query-title', array( 'type' => 'archive', 'showPrefix' => false, 'level' => 1, 'className' => 'is-style-versal' ) )
+		. ff_v( 'term-description', array( 'className' => 'is-style-abertura' ) )
+		. shortcode( '[fireflies_trilhas]' ),
+		'860px'
+	),
+	'noite',
+	array( 'tag' => 'header', 'class' => 'ff-hero ff-padrao', 'pad' => array( 'top' => sp( '60' ), 'bottom' => sp( '60' ) ) )
+)
+. secao(
+	ff_b(
+		'query',
+		array( 'queryId' => 2, 'query' => array( 'inherit' => true ), 'className' => 'ff-indice ff-cursos' ),
+		'<div class="wp-block-query ff-indice ff-cursos">' . "\n" . post_template(
+			colunas(
+				array(
+					array( 'html' => ff_v( 'post-terms', array( 'term' => 'trilha', 'className' => 'is-style-rotulo' ) ), 'w' => '20%' ),
+					array( 'html' => ff_v( 'post-title', array( 'level' => 2, 'isLink' => true, 'fontSize' => 'titulo-3' ) ) . ff_v( 'post-excerpt', array( 'excerptLength' => 30 ) ), 'w' => '52%' ),
+					array( 'html' => ff_v( 'fireflies/curso-ficha', array( 'compacta' => true ) ), 'w' => '28%' ),
+				),
+				array( 'class' => 'is-style-linha-indice ff-linha-curso' )
+			)
+		) . '</div>'
+	)
+);
+pattern( 'academy-arquivo', 'Arquivo de cursos', 'Cabeçalho Anil com as trilhas e a lista dos cursos (arquivo e trilha).', $P, $arq, array( 'Inserter' => 'no' ) );
+
+$p404 = secao(
+	estreito(
+		p( '404', array( 'class' => 'ff-404-num' ) )
+		. h( 1, 'Esta página saiu de órbita.', array( 'size' => 'titulo-1' ) )
+		. p( 'O endereço pode ter mudado. Tente a busca ou volte para o início.', array( 'size' => 'lead' ) )
+		. ff_v( 'search', array( 'label' => 'Buscar no site', 'showLabel' => false, 'placeholder' => 'Buscar artigos, serviços e cursos', 'buttonText' => 'Buscar', 'className' => 'ff-busca-404' ) )
+		. botoes( array( array( 'Ir para o início', u( '/' ) ), array( 'Ver serviços', u( '/servicos/' ), 'outline' ) ), array( 'mar' => array( 'top' => sp( '50' ) ) ) ),
+		'760px'
+	),
+	'noite',
+	array( 'class' => 'ff-404 ff-padrao ff-padrao--constelacao', 'pad' => array( 'top' => sp( '80' ), 'bottom' => sp( '80' ) ) )
+);
+pattern( 'pagina-404', 'Página 404', 'Página não encontrada, com busca e atalhos.', $P, $p404, array( 'Inserter' => 'no' ) );
+
 echo "ok\n";

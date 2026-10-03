@@ -524,7 +524,7 @@ function s_triagem( array $d, string $v = '' ): string {
 				array( 'html' => h( 3, $quem ) . p( $caminho, array( 'text' => 'pedra', 'size' => 'pequeno' ) ), 'w' => '56%' ),
 				array( 'html' => p( '<a href="' . $url . '">Ver o caminho</a>   <a href="' . wa( $msg ) . '">Enviar no WhatsApp</a>', array( 'class' => 'ff-ir' ) ), 'w' => '36%' ),
 			),
-			array( 'class' => 'is-style-linha-indice', 'stack' => false )
+			array( 'class' => 'is-style-linha-indice' )
 		);
 	}
 	$in = cab( $d['h2'], $d['texto'], array( 'rotulo' => $d['rotulo'] ) ) . h( 3, $d['pergunta'], array( 'class' => 'ff-pergunta' ) ) . grupo( $rows, array( 'class' => 'ff-indice ff-triagem', 'gap' => '0' ) );

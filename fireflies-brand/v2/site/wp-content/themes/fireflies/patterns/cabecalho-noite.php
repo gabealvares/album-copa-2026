@@ -18,13 +18,20 @@
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
 <div class="wp-block-group">
 <!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0"}},"ariaLabel":"Principal"} -->
-<!-- wp:navigation-link {"label":"Serviços","url":"<?php echo fireflies_url( '/servicos/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-submenu {"label":"Serviços","url":"<?php echo fireflies_url( '/servicos/' ); ?>","kind":"custom"} -->
+<!-- wp:navigation-link {"label":"Auditoria de condomínios","url":"<?php echo fireflies_url( '/servicos/auditoria-de-condominios/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Consultoria contábil","url":"<?php echo fireflies_url( '/servicos/consultoria-contabil/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Consultoria fiscal","url":"<?php echo fireflies_url( '/servicos/consultoria-fiscal/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Consultoria financeira","url":"<?php echo fireflies_url( '/servicos/consultoria-financeira/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Gestão de projetos e processos","url":"<?php echo fireflies_url( '/servicos/gestao-de-projetos-e-processos/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Sindicância","url":"<?php echo fireflies_url( '/servicos/sindicancia/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Todos os serviços","url":"<?php echo fireflies_url( '/servicos/' ); ?>","kind":"custom"} /-->
+<!-- /wp:navigation-submenu -->
 <!-- wp:navigation-link {"label":"Condomínios","url":"<?php echo fireflies_url( '/condominios/' ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Como trabalhamos","url":"<?php echo fireflies_url( '/como-trabalhamos/' ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Academy","url":"<?php echo fireflies_url( '/academy/' ); ?>","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Sobre","url":"<?php echo fireflies_url( '/sobre/' ); ?>","kind":"custom"} /-->
 <!-- wp:navigation-link {"label":"Blog","url":"<?php echo fireflies_url( '/blog/' ); ?>","kind":"custom"} /-->
-<!-- wp:navigation-link {"label":"Contato","url":"<?php echo fireflies_url( '/contato/' ); ?>","kind":"custom"} /-->
+<!-- wp:navigation-link {"label":"Sobre","url":"<?php echo fireflies_url( '/sobre/' ); ?>","kind":"custom"} /-->
 <!-- /wp:navigation -->
 <!-- wp:buttons {"className":"ff-header__cta"} -->
 <div class="wp-block-buttons ff-header__cta"><!-- wp:button {"className":"is-style-outline"} -->

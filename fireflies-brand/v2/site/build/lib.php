@@ -415,7 +415,7 @@ function svg_painel(): string {
 	$s .= '<title id="ffp-t">Painel mensal, dados de exemplo</title><desc id="ffp-d">Saldo de caixa dos últimos 12 meses em matriz de pontos, subindo de 61 para 96 mil reais; receita do mês de 46,2 mil reais, margem líquida de 19,5% e 38 dias de caixa.</desc>';
 	$s .= '<rect width="560" height="380" fill="#FFFFFF"/>';
 	$s .= '<text x="0" y="14" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.4" fill="#5E6271">RELATÓRIO MENSAL · AGOSTO</text>';
-	$s .= '<g font-family="IBM Plex Mono, monospace"><rect x="440" y="0" width="120" height="20" fill="none" stroke="#5E6271" stroke-width="1"/><text x="500" y="14" text-anchor="middle" font-size="10" letter-spacing="1.2" fill="#5E6271">DADOS DE EXEMPLO</text></g>';
+	$s .= '<g font-family="IBM Plex Mono, monospace"><rect x="428" y="0" width="132" height="20" fill="none" stroke="#5E6271" stroke-width="1"/><text x="494" y="14" text-anchor="middle" font-size="10" letter-spacing="1.2" fill="#5E6271">DADOS DE EXEMPLO</text></g>';
 	$k = array( array( 'R$ 46,2 mil', 'RECEITA DO MÊS', '+8,2% vs. julho' ), array( '19,5%', 'MARGEM LÍQUIDA', '+1,4 p.p.' ), array( '38', 'DIAS DE CAIXA', '−3 dias' ) );
 	foreach ( $k as $i => [ $v, $r, $d ] ) {
 		$x  = $i * 190;
@@ -443,7 +443,7 @@ function svg_painel(): string {
 		}
 		$s .= '<text x="' . $x . '" y="364" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="' . ( 11 === $i ? '#17183A' : '#5E6271' ) . '">' . $meses[ $i ] . '</text>';
 	}
-	$s .= '<text x="540" y="198" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#17183A">R$ 96,4 mil</text>';
+	$s .= '<text x="498" y="205" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="500" fill="#17183A">R$ 96,4 mil</text>';
 	$s .= '<line x1="0" y1="345" x2="560" y2="345" stroke="#D2D4DA" stroke-width="1"/>';
 	$s .= '</svg>';
 	return $s;

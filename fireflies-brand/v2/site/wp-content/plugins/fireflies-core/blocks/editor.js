@@ -62,3 +62,46 @@
 		}
 	} ) );
 } )( window.wp );
+
+/* Eyebrow + painéis de metadados (post e curso) */
+( function ( wp ) {
+	const el = wp.element.createElement;
+	const { useBlockProps } = wp.blockEditor;
+	wp.blocks.registerBlockType( 'fireflies/eyebrow', {
+		apiVersion: 3, title: 'Eyebrow do post', icon: 'editor-textcolor', category: 'widgets',
+		usesContext: [ 'postId', 'postType' ], save: function () { return null; },
+		description: 'Linha em mono acima do título (campo "Eyebrow" do post ou a categoria principal).',
+		edit: function () { return el( 'p', Object.assign( useBlockProps(), { className: 'is-style-rotulo' } ), 'Categoria · Atualização' ); }
+	} );
+
+	const Painel = ( wp.editor && wp.editor.PluginDocumentSettingPanel ) || ( wp.editPost && wp.editPost.PluginDocumentSettingPanel );
+	if ( ! Painel || ! wp.plugins ) { return; }
+	const { TextControl, ToggleControl } = wp.components;
+	const { useSelect } = wp.data;
+	const { useEntityProp } = wp.coreData;
+
+	function Campos() {
+		const tipo = useSelect( function ( s ) { return s( 'core/editor' ).getCurrentPostType(); }, [] );
+		const [ meta, setMeta ] = useEntityProp( 'postType', tipo, 'meta' );
+		if ( ! meta || ( tipo !== 'post' && tipo !== 'curso' ) ) { return null; }
+		const set = function ( k ) { return function ( v ) { const o = {}; o[ k ] = v; setMeta( Object.assign( {}, meta, o ) ); }; };
+		const campo = function ( k, label, help ) { return el( TextControl, { key: k, label: label, help: help, value: meta[ k ] || '', onChange: set( k ), __nextHasNoMarginBottom: true } ); };
+		const campos = tipo === 'post'
+			? [
+				campo( '_ff_eyebrow', 'Eyebrow (linha acima do título)', 'Vazio: usa a categoria principal.' ),
+				el( TextControl, { key: 't', type: 'number', label: 'Tempo de leitura (min)', help: 'Calculado ao salvar. Se você mudar, o seu valor prevalece.', value: meta._ff_tempo_leitura || '', onChange: function ( v ) { set( '_ff_tempo_leitura' )( parseInt( v, 10 ) || 0 ); } } ),
+				campo( '_ff_atualizado_em', 'Atualizado em (AAAA-MM-DD)' )
+			]
+			: [
+				campo( '_ff_carga_horaria', 'Carga horária' ),
+				campo( '_ff_formato', 'Formato', 'Ex.: In company ou online' ),
+				campo( '_ff_nivel', 'Nível' ),
+				campo( '_ff_publico', 'Para quem' ),
+				campo( '_ff_pre_requisito', 'Pré-requisito' ),
+				el( ToggleControl, { key: 'c', label: 'Emite certificado', checked: !! meta._ff_certificado, onChange: set( '_ff_certificado' ) } ),
+				campo( '_ff_observacao', 'Observação' )
+			];
+		return el( Painel, { name: 'fireflies-meta', title: tipo === 'post' ? 'Fireflies: cabeçalho do post' : 'Fireflies: ficha do curso' }, el( 'div', { style: { display: 'grid', gap: '12px' } }, campos ) );
+	}
+	wp.plugins.registerPlugin( 'fireflies-meta', { render: Campos } );
+} )( window.wp );

@@ -219,6 +219,11 @@
 	],
 	"customTemplates": [
 		{ "name": "page-servico", "title": "Página de serviço", "postTypes": [ "page" ] },
-		{ "name": "page-landing", "title": "Página composta (sem título automático)", "postTypes": [ "page" ] }
+		{ "name": "page-servicos", "title": "Serviços (índice)", "postTypes": [ "page" ] },
+		{ "name": "page-landing", "title": "Página composta, abertura em Anil", "postTypes": [ "page" ] },
+		{ "name": "page-clara", "title": "Página composta, abertura clara", "postTypes": [ "page" ] },
+		{ "name": "page-academy", "title": "Academy", "postTypes": [ "page" ] },
+		{ "name": "page-contato", "title": "Contato", "postTypes": [ "page" ] },
+		{ "name": "page-legal", "title": "Texto legal", "postTypes": [ "page" ] }
 	]
 }

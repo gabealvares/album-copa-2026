@@ -72,11 +72,7 @@ function fireflies_register_blocks(): void {
 		'core/paragraph' => array(
 			'rotulo'      => __( 'Rótulo (mono)', 'fireflies' ),
 			'abertura'    => __( 'Abertura', 'fireflies' ),
-			'nota-margem' => __( 'Nota de margem', 'fireflies' ),
 			'numero'      => __( 'Número de destaque', 'fireflies' ),
-			'estado-ok'      => __( 'Estado: em dia', 'fireflies' ),
-			'estado-atencao' => __( 'Estado: atenção', 'fireflies' ),
-			'estado-critico' => __( 'Estado: crítico', 'fireflies' ),
 		),
 		'core/heading'   => array(
 			'versal' => __( 'Caixa alta (títulos curtos)', 'fireflies' ),
@@ -86,19 +82,8 @@ function fireflies_register_blocks(): void {
 			'fio-rubrica' => __( 'Fio de rubrica', 'fireflies' ),
 			'pontilhado'  => __( 'Pontilhado', 'fireflies' ),
 		),
-		'core/list'      => array(
-			'estrelas'  => __( 'Estrelas', 'fireflies' ),
-			'checklist' => __( 'Passos com checklist', 'fireflies' ),
-			'fontes'    => __( 'Fontes numeradas', 'fireflies' ),
-		),
 		'core/table'     => array(
 			'numeros' => __( 'Números à direita', 'fireflies' ),
-		),
-		'core/group'     => array(
-			'nossa-leitura' => __( 'Nossa leitura', 'fireflies' ),
-			'em-aberto'     => __( 'Em aberto', 'fireflies' ),
-			'base-legal'    => __( 'Base legal', 'fireflies' ),
-			'voce-sabe'     => __( 'Você sabe?', 'fireflies' ),
 		),
 		'core/columns'   => array(
 			'livro-razao' => __( 'Livro-razão (colunas com fios)', 'fireflies' ),
@@ -110,6 +95,8 @@ function fireflies_register_blocks(): void {
 		),
 	);
 
+	// Os estilos editoriais (Nossa leitura, Em aberto, Base legal, listas, estados…)
+	// são registrados pelo plugin Fireflies Core, para sobreviverem à troca de tema.
 	foreach ( $styles as $block => $variations ) {
 		foreach ( $variations as $name => $label ) {
 			register_block_style( $block, array( 'name' => $name, 'label' => $label ) );
