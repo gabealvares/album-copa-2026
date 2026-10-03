@@ -297,7 +297,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 **Cabeçalho (páginas internas):** à esquerda, F de luz (`simbolo-pequeno_chapado`) com **10 mm** de largura + tipo do documento em Mono 7,5 pt caixa alta ("RELATÓRIO DE AUDITORIA"); à direita, cliente e referência. Fio Fumaça de 0,5 pt a 4 mm abaixo. A 1ª página interna leva o `horizontal_chapado` com **45 mm** de largura (o mínimo impresso) no lugar do F de luz. No PDF enviado por e-mail, pode-se usar `digital`.
 
-**Rodapé:** fio **Rubrica de 0,75 pt** com 12 mm de largura alinhado à margem esquerda (a assinatura quente). Linha 1: "Fireflies Consultoria · CNPJ [a confirmar] · São Paulo/SP · fireflies.com.br". Linha 2: "Responsável técnico: Gabriel Alvares, CRC-SP [nº a confirmar] · [referência] · Confidencial". À direita: **"Página X de Y"** em Mono.
+**Rodapé:** fio **Rubrica de 0,75 pt** com 12 mm de largura alinhado à margem esquerda (a assinatura quente). Linha 1: "Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95 · São Paulo/SP · fireflies.com.br". Linha 2: "CRC-SP 2SP053069 · Responsável técnico: Gabriel Alvares · [referência] · Confidencial". À direita: **"Página X de Y"** em Mono.
 
 **Tabelas:** cabeçalho em Plex Mono Medium 8 pt caixa alta, Anil, com fio Anil de 0,75 pt abaixo; linhas separadas por fio Fumaça 0,5 pt (sem grade vertical); zebra opcional em Cal Virgem; linha de total com fio Anil de 0,75 pt acima e valor em Mono Medium. Números à direita, texto à esquerda. Unidade no cabeçalho ("VALOR (R$)"), não em cada célula.
 
@@ -327,7 +327,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | **Impressão** | Digital (.docx/.dotx e Google Docs) e gráfica (offset 2 cores: Anil + Âmbar, ou 4 cores) em offset 90 g | Offset 2 cores, papel 90 g | Offset 1–2 cores, kraft ou branco 120 g |
 | **Margens** | Iguais aos documentos (25/22/25/20 mm) | 12 mm | 20 mm |
 | **Logo** | `horizontal_chapado` (Word e gráfica), **50 mm** de largura, a 15 mm do topo e alinhado à margem esquerda | `horizontal_chapado`, **45 mm**, canto superior esquerdo a 12 mm das bordas | `horizontal_chapado` (branco) ou Mono Anil (kraft), **70 mm**, canto superior esquerdo a 20 mm |
-| **Dados** | Rodapé em Plex Mono 7,5 pt Pedra-Sabão: razão social, CNPJ, endereço, telefone/WhatsApp, e-mail, site, responsável técnico + CRC | Abaixo do logo, Plex Mono 7 pt: endereço de remetente | Na aba: endereço em Plex Mono 8 pt |
+| **Dados** | Rodapé em Plex Mono 7,5 pt Pedra-Sabão: razão social, CNPJ, CRC do escritório, telefone/WhatsApp (sem endereço físico), e-mail, site, responsável técnico + CRC | Abaixo do logo, Plex Mono 7 pt: endereço de remetente | Na aba: endereço em Plex Mono 8 pt |
 | **Cor** | Fio Rubrica 0,75 pt × 12 mm no rodapé | Fio Rubrica 0,75 pt × 10 mm acima do remetente | Faixa Anil de 15 mm na base (opcional) |
 | **Grafismo** | Nenhum no corpo. Opcional: retícula Fumaça a 8% só na margem esquerda (25 mm), versão gráfica | Interno da aba: padrão constelação contínua Anil (versão gráfica) | Nenhum na frente; padrão no verso opcional |
 
@@ -347,7 +347,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 | Lado | Fundo | Conteúdo |
 |---|---|---|
 | **Frente** | Anil de Junho, sangrado | `vertical_chapado-negativo` centralizado, **34 mm** de largura (mínimo 30 mm), ou `horizontal_chapado-negativo` com 50 mm. Opcional: campo de estrelas Céu de Anil a 25% no terço inferior. |
-| **Verso** | Branco | Nome em Plex Sans SemiBold **9 pt** Anil; cargo em Plex Sans Regular 7 pt Pedra-Sabão ("Contador responsável · CRC-SP [nº]"); dados em Plex Mono **7 pt** Fuligem (WhatsApp, e-mail, site); QR para o WhatsApp, **mínimo 15×15 mm**, Anil; fio Rubrica 0,75 pt × 8 mm sobre o nome. F de luz `simbolo-pequeno_chapado` com 10 mm no canto. |
+| **Verso** | Branco | Nome em Plex Sans SemiBold **9 pt** Anil; cargo em Plex Sans Regular 7 pt Pedra-Sabão ("Contador responsável"); dados em Plex Mono **7 pt** Fuligem (WhatsApp, e-mail, site); QR para o WhatsApp, **mínimo 15×15 mm**, Anil; fio Rubrica 0,75 pt × 8 mm sobre o nome. F de luz `simbolo-pequeno_chapado` com 10 mm no canto. |
 
 - **Corpo mínimo:** 6,5 pt (Mono) e 7 pt (Sans).
 - **Não faça:** texto a menos de 5 mm do corte; Âmbar na frente além do vagalume e do E de luz; logo `digital` com gradiente em cartão de gráfica; verso em Cal (some na luz quente) ou em Anil (sem espaço para anotar).
@@ -360,7 +360,7 @@ Prancha: `pranchas/distribuicao-de-cor.png`.
 
 ```
 Gabriel Alvares                                  ← Plex Sans/Arial Bold 14 px, Anil #17183A
-Contador responsável · CRC-SP [nº a confirmar]   ← 12 px, Pedra-Sabão #5E6271
+Contador responsável   ← 12 px, Pedra-Sabão #5E6271
 Fireflies Consultoria                            ← 12 px, Fuligem #2A2F3D
 WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br
                                                  ← 12 px, links em Rubrica #A9301F, sem sublinhado
@@ -637,4 +637,9 @@ No Google Docs, os slots são "Título", "Subtítulo", "Título 1–6" e "Texto 
 
 ---
 
-*Versão 1.1 · outubro de 2026 · Logo "Órbita do vagalume" e Sora finais. Pendências: CRC e CNPJ.*
+*Versão 1.1 · outubro de 2026 · Logo "Órbita do vagalume" e Sora finais. Dados da empresa: Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, CRC-SP 2SP053069 (registro do escritório).*
+
+## Dados da empresa (regra)
+- **Razão social:** Fireflies Consultoria LTDA · **CNPJ:** 66.630.305/0001-95 · **CRC-SP:** 2SP053069.
+- O CRC é **do escritório**. Não aparece ao lado do nome do Gabriel (cartão, assinatura de e-mail, crachá, assinaturas de documento). Vai no rodapé, junto da razão social ou do "Responsável técnico".
+- **Sem endereço físico** em nenhuma peça: use "São Paulo/SP".

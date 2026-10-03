@@ -44,7 +44,7 @@ Este pacote reúne todas as aplicações da identidade "Órbita do vagalume". O 
 - **No claro:** logo digital ou chapado, texto em Fuligem, destaque em Rubrica, âmbar só em formas (com contorno Anil). **No escuro:** logo digital-negativo, texto em Cal e Fumaça, destaque em Vermelhão.
 - **Tipografia:** títulos em Sora 600/700, caixa alta nos curtos; texto em IBM Plex Sans; dados em IBM Plex Mono, com números alinhados à direita.
 - **Documentos:** margens de 25/22/25/20 mm, cabeçalho a 12 mm e rodapé a 10 mm, com fio Rubrica de 12 mm, responsável técnico e "Página X de Y".
-- **Números fictícios** levam o selo "DADOS DE EXEMPLO". Antes de publicar, substitua **CRC-SP [nº a confirmar]** e **CNPJ [a confirmar]**.
+- **Números fictícios** levam o selo "DADOS DE EXEMPLO". Razão social, CNPJ e CRC-SP do escritório já aplicados (`_build/documentos.js`, `papelaria.js`, `html.js`).
 
 ## Regenerar (`_build/`)
 ```bash
