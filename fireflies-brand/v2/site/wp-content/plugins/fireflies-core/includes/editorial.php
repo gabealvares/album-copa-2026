@@ -116,6 +116,9 @@ add_filter(
  */
 function fireflies_core_formulario( array $atts = array() ): string {
 	$sc = fireflies_core_opcao( 'form' );
+	if ( '' === $sc ) {
+		$sc = fireflies_core_cf7_padrao();
+	}
 	if ( $sc && preg_match( '/^\[([a-z0-9_\-]+)/i', $sc, $m ) && shortcode_exists( $m[1] ) ) {
 		return '<div class="ff-form">' . do_shortcode( $sc ) . '</div>';
 	}
@@ -127,6 +130,24 @@ function fireflies_core_formulario( array $atts = array() ): string {
 		. '</div>';
 }
 add_shortcode( 'fireflies_formulario', 'fireflies_core_formulario' );
+
+/**
+ * Sem shortcode configurado, usa o formulário "Diagnóstico gratuito" do Contact Form 7, se existir.
+ */
+function fireflies_core_cf7_padrao(): string {
+	if ( ! post_type_exists( 'wpcf7_contact_form' ) ) {
+		return '';
+	}
+	$form = get_posts(
+		array(
+			'post_type'      => 'wpcf7_contact_form',
+			'title'          => 'Diagnóstico gratuito',
+			'posts_per_page' => 1,
+			'fields'         => 'ids',
+		)
+	);
+	return $form ? sprintf( '[contact-form-7 id="%d"]', (int) $form[0] ) : '';
+}
 
 function fireflies_core_newsletter(): string {
 	$sc = fireflies_core_opcao( 'newsletter' );
