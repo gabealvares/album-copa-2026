@@ -22,6 +22,9 @@ function log_( string $s ): void {
 }
 
 // ---------------------------------------------------------------- limpeza
+foreach ( get_posts( array( 'post_type' => 'attachment', 'post_status' => 'any', 'numberposts' => -1 ) ) as $a ) {
+	wp_delete_attachment( $a->ID, true );
+}
 foreach ( get_posts( array( 'post_type' => array( 'post', 'page', 'curso', 'wp_navigation' ), 'post_status' => 'any', 'numberposts' => -1 ) ) as $p ) {
 	wp_delete_post( $p->ID, true );
 }
