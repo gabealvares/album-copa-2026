@@ -15,10 +15,10 @@ const ASA2 = 'M-1,0C-5,-5.5 -14,-8 -16,-4.5C-17,-1.5 -9,0.5 -1,0';
 
 // paletas: fio(t) em paradas [t, cor, opacidade]
 const PAL = {
-  digital: { fio: [[0, C.anil, .75], [.3, C.rub, .78], [.5, C.verm, .95], [.82, C.laranja1, 1], [1, C.laranja2, 1]],
+  digital: { fundo: C.branco, fio: [[0, C.anil, .75], [.3, C.rub, .78], [.5, C.verm, .95], [.82, C.laranja1, 1], [1, C.laranja2, 1]],
     estrela: C.anil, estrelaOp: true, f: C.anil, braco: C.verm, asa: C.anil, asaOp: .85,
     halo: [C.ambar, .5, .15], nucleo: ['#FBD58A', C.ambar, '#EFA23F'] },
-  'digital-negativo': { fio: [[0, C.cal, .75], [.25, C.ceu, .78], [.5, C.verm, .9], [.8, C.verm, .97], [1, C.ambar, 1]],
+  'digital-negativo': { fundo: C.anil, fio: [[0, C.cal, .75], [.25, C.ceu, .78], [.5, C.verm, .9], [.8, C.verm, .97], [1, C.ambar, 1]],
     estrela: C.cal, estrelaOp: true, f: C.cal, braco: C.ambar, asa: C.cal, asaOp: .85,
     halo: [C.ambar, .55, .16], nucleo: ['#FFF6DF', C.ambar, C.ambar] },
   chapado: { fio: [[0, C.verm, 1], [1, C.verm, 1]], estrela: C.anil, f: C.anil, braco: C.verm, asa: C.anil, nucleoChapado: C.verm },
@@ -81,10 +81,10 @@ function trecho(g, t0, t1, n, capIni, capFim) {
   const f = q => `${r2(q[0])},${r2(q[1])}`;
   let s = 'M' + f(E[0]) + 'L' + E.slice(1).map(f).join(' ');
   const wf = g.larg(t1) / 2;
-  s += capFim ? `A${r2(wf)},${r2(wf)} 0 0 1 ${f(D[n])}` : 'L' + f(D[n]);
+  s += capFim ? `A${r2(wf)},${r2(wf)} 0 0 0 ${f(D[n])}` : 'L' + f(D[n]);
   s += 'L' + D.slice(0, n).reverse().map(f).join(' ');
   const wi = g.larg(t0) / 2;
-  s += capIni ? `A${r2(wi)},${r2(wi)} 0 0 1 ${f(E[0])}` : '';
+  s += capIni ? `A${r2(wi)},${r2(wi)} 0 0 0 ${f(E[0])}` : '';
   return s + 'Z';
 }
 
@@ -105,8 +105,9 @@ function simbolo(o, cor, { pequeno = false, id = 'x' } = {}) {
     for (let j = 0; j <= 6; j++) {
       const t = t0 + (t1 - t0) * j / 6, p = g.at(t).p;
       const off = Math.min(1, Math.max(0, ((p[0] - a[0]) * v[0] + (p[1] - a[1]) * v[1]) / vv));
-      const [c, op] = corEm(pal.fio, t);
-      st += `<stop offset="${r2(off)}" stop-color="${c}"${op < 1 ? ` stop-opacity="${r2(op)}"` : ''}/>`;
+      // cor já misturada ao fundo de uso (opaca): os trechos se sobrepõem sem costura
+      const [c0, op] = corEm(pal.fio, t), c = pal.fundo && op < 1 ? mix(pal.fundo, c0, op) : c0;
+      st += `<stop offset="${r2(off)}" stop-color="${c}"${!pal.fundo && op < 1 ? ` stop-opacity="${r2(op)}"` : ''}/>`;
     }
     defs += `<linearGradient id="${gid}" gradientUnits="userSpaceOnUse" x1="${r2(a[0])}" y1="${r2(a[1])}" x2="${r2(b[0])}" y2="${r2(b[1])}">${st}</linearGradient>`;
     const e = k ? .004 : 0; // leve sobreposição para não abrir costura

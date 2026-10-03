@@ -1,0 +1,102 @@
+[
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil_400",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil_1080",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2.7
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_branco_400",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_branco_1080",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2.7
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_cal_400",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_cal_1080",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2.7
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil-chapado_400",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil-chapado_1080",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2.7
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil-pequeno_400",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 1
+ },
+ {
+  "rel": "digital/linkedin-logo/fireflies_linkedin-logo_anil-pequeno_1080",
+  "w": 400,
+  "h": 400,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2.7
+ }
+]
