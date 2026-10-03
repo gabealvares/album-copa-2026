@@ -1,0 +1,1133 @@
+{
+  "versao": "1.0",
+  "gerado_em": "2026-10-03",
+  "fonte_conteudo": "v2/site/conteudo/ (paginas/, cursos/, posts/). O corpo de cada item está no arquivo indicado em 'fonte'.",
+  "site": {
+    "blogname": "Fireflies Consultoria",
+    "blogdescription": "Precisão que ilumina decisões.",
+    "url": "https://fireflies.com.br",
+    "idioma": "pt_BR",
+    "timezone": "America/Sao_Paulo",
+    "date_format": "d/m/Y",
+    "time_format": "H:i",
+    "show_on_front": "page",
+    "page_on_front": "inicio",
+    "page_for_posts": "blog",
+    "wp_page_for_privacy_policy": "politica-de-privacidade",
+    "posts_per_page": 9,
+    "default_category": "condominios",
+    "permalink_structure": "/blog/%postname%/",
+    "category_base": "blog/categoria",
+    "tag_base": "blog/tag",
+    "author_base": "blog/autor",
+    "author_base_obs": "alterar via fireflies-core ($wp_rewrite->author_base)",
+    "comments": "desativados em posts e páginas",
+    "contato": {
+      "whatsapp": "+55 11 98245-0527",
+      "whatsapp_url": "https://wa.me/5511982450527",
+      "email": "contato@fireflies.com.br",
+      "horario": "Mo-Fr 08:00-18:00",
+      "cidade": "São Paulo",
+      "uf": "SP",
+      "endereco": "[a confirmar]",
+      "cnpj": "[a confirmar]",
+      "crc_responsavel": "CRC-SP [a confirmar]"
+    }
+  },
+  "autores": [
+    {
+      "login": "gabriel-alvares",
+      "display_name": "Gabriel Alvares",
+      "nicename": "gabriel-alvares",
+      "email": "[a confirmar]",
+      "descricao": "Fundador e contador responsável da Fireflies Consultoria, CRC-SP [a confirmar]. Mais de 8 anos em contabilidade, auditoria e gestão financeira, com foco em condomínios.",
+      "role": "author",
+      "jobTitle": "Contador responsável"
+    }
+  ],
+  "post_types": {
+    "curso": {
+      "registrado_por": "fireflies-core",
+      "rotulo": "Cursos",
+      "rewrite": {
+        "slug": "academy/cursos",
+        "with_front": false
+      },
+      "has_archive": "academy/cursos",
+      "public": true,
+      "show_in_rest": true,
+      "hierarchical": false,
+      "supports": [
+        "title",
+        "editor",
+        "excerpt",
+        "thumbnail",
+        "page-attributes",
+        "custom-fields"
+      ],
+      "menu_icon": "dashicons-welcome-learn-more",
+      "meta": [
+        "_ff_carga_horaria",
+        "_ff_formato",
+        "_ff_nivel",
+        "_ff_publico",
+        "_ff_pre_requisito",
+        "_ff_certificado",
+        "_ff_observacao"
+      ],
+      "templates": {
+        "single": "single-curso",
+        "archive": "archive-curso (redireciona 301 para /academy/ ou lista os cursos)"
+      }
+    }
+  },
+  "taxonomias": {
+    "category": {
+      "termos": [
+        {
+          "slug": "reforma-tributaria",
+          "nome": "Reforma Tributária",
+          "ordem": 1,
+          "descricao": "IBS, CBS, Imposto Seletivo, NFS-e e os novos cadastros: cada norma publicada, o que muda e o que fazer, separando o que já está definido do que ainda está em aberto."
+        },
+        {
+          "slug": "condominios",
+          "nome": "Condomínios",
+          "ordem": 2,
+          "descricao": "Para síndicos, conselhos e administradoras: prestação de contas, orçamento, fundo de reserva, inadimplência e auditoria, sempre com a base legal citada."
+        },
+        {
+          "slug": "fiscal",
+          "nome": "Fiscal",
+          "ordem": 3,
+          "descricao": "Regimes tributários, apuração, obrigações acessórias e planejamento tributário dentro da lei, explicados para quem decide."
+        },
+        {
+          "slug": "contabil",
+          "nome": "Contábil",
+          "ordem": 4,
+          "descricao": "Fechamento mensal, conciliação, demonstrações e contabilidade gerencial em linguagem de dono: o que cada número quer dizer."
+        },
+        {
+          "slug": "gestao-financeira",
+          "nome": "Gestão Financeira",
+          "ordem": 5,
+          "descricao": "Caixa, orçamento, indicadores e painel mensal: como decidir com o número do mês, em empresas e condomínios."
+        },
+        {
+          "slug": "academy",
+          "nome": "Academy",
+          "ordem": 6,
+          "descricao": "Conteúdo da Fireflies Academy: conceitos explicados, materiais de apoio e novidades das turmas in company e online."
+        }
+      ]
+    },
+    "post_tag": {
+      "termos": [
+        {
+          "slug": "administradoras",
+          "nome": "Administradoras"
+        },
+        {
+          "slug": "auditoria",
+          "nome": "Auditoria"
+        },
+        {
+          "slug": "cib",
+          "nome": "CIB"
+        },
+        {
+          "slug": "codigo-civil",
+          "nome": "Código Civil"
+        },
+        {
+          "slug": "conciliacao-bancaria",
+          "nome": "Conciliacao bancaria"
+        },
+        {
+          "slug": "conselho-fiscal",
+          "nome": "Conselho fiscal"
+        },
+        {
+          "slug": "dre",
+          "nome": "DRE"
+        },
+        {
+          "slug": "emissor-nacional",
+          "nome": "Emissor Nacional"
+        },
+        {
+          "slug": "fluxo-de-caixa",
+          "nome": "Fluxo de caixa"
+        },
+        {
+          "slug": "fundo-de-reserva",
+          "nome": "Fundo de reserva"
+        },
+        {
+          "slug": "ibs-cbs",
+          "nome": "IBS e CBS"
+        },
+        {
+          "slug": "inadimplencia",
+          "nome": "Inadimplencia"
+        },
+        {
+          "slug": "lc-214-2025",
+          "nome": "LC 214/2025"
+        },
+        {
+          "slug": "lei-do-inquilinato",
+          "nome": "Lei do Inquilinato"
+        },
+        {
+          "slug": "nfs-e",
+          "nome": "NFS-e"
+        },
+        {
+          "slug": "prestacao-de-contas",
+          "nome": "Prestacao de contas"
+        },
+        {
+          "slug": "previsao-orcamentaria",
+          "nome": "Previsao orcamentaria"
+        },
+        {
+          "slug": "regime-tributario",
+          "nome": "Regime tributario"
+        },
+        {
+          "slug": "simples-nacional",
+          "nome": "Simples nacional"
+        },
+        {
+          "slug": "sindico",
+          "nome": "Sindico"
+        },
+        {
+          "slug": "treinamento",
+          "nome": "Treinamento"
+        }
+      ]
+    },
+    "trilha": {
+      "registrado_por": "fireflies-core",
+      "object_type": [
+        "curso"
+      ],
+      "hierarchical": true,
+      "rewrite": {
+        "slug": "academy/trilha",
+        "with_front": false
+      },
+      "show_in_rest": true,
+      "termos": [
+        {
+          "slug": "contabil",
+          "nome": "Contábil",
+          "ordem": 1,
+          "descricao": "Ler e usar a contabilidade para decidir: balanço, DRE, fluxo de caixa e fechamento."
+        },
+        {
+          "slug": "fiscal",
+          "nome": "Fiscal",
+          "ordem": 2,
+          "descricao": "Regimes, apuração e planejamento tributário dentro da lei, com a transição da Reforma Tributária."
+        },
+        {
+          "slug": "financeiro",
+          "nome": "Financeiro",
+          "ordem": 3,
+          "descricao": "Análise de demonstrações, indicadores, caixa e capital de giro."
+        },
+        {
+          "slug": "auditoria",
+          "nome": "Auditoria",
+          "ordem": 4,
+          "descricao": "Riscos, controles, testes e relatórios que a diretoria e o conselho usam."
+        },
+        {
+          "slug": "condominios",
+          "nome": "Condomínios",
+          "ordem": 5,
+          "descricao": "Gestão financeira, prestação de contas e conferência para síndicos, conselheiros e administradoras."
+        },
+        {
+          "slug": "tecnologia",
+          "nome": "Tecnologia",
+          "ordem": 6,
+          "descricao": "ERP e automação a serviço do controle: cadastros, rotinas e fechamento dentro do sistema."
+        }
+      ]
+    }
+  },
+  "paginas": [
+    {
+      "titulo": "Início",
+      "slug": "inicio",
+      "url": "/",
+      "parent": null,
+      "template": "front-page",
+      "menu_order": 0,
+      "fonte": "paginas/inicio.md",
+      "seo": {
+        "focus_keyword": "consultoria contábil SP",
+        "title": "Fireflies Consultoria · Consultoria contábil e fiscal em SP",
+        "description": "Consultoria financeira, contábil e fiscal em São Paulo, especialista em auditoria de condomínios. Painel mensal explicado e um contador que assina.",
+        "schema": "[Organization, AccountingService, WebSite (SearchAction)]"
+      }
+    },
+    {
+      "titulo": "Serviços",
+      "slug": "servicos",
+      "url": "/servicos/",
+      "parent": null,
+      "template": "page-servicos",
+      "menu_order": 1,
+      "fonte": "paginas/servicos.md",
+      "seo": {
+        "focus_keyword": "consultoria contábil e fiscal para empresas",
+        "title": "Serviços de consultoria contábil e fiscal | Fireflies Consultoria",
+        "description": "Auditoria de condomínios, consultoria contábil, fiscal e financeira, processos e sindicância em São Paulo, com um contador responsável do início ao fim.",
+        "schema": "[CollectionPage, ItemList (Service × 6), BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Auditoria de Condomínios",
+      "slug": "auditoria-de-condominios",
+      "url": "/servicos/auditoria-de-condominios/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 2,
+      "fonte": "paginas/servicos-auditoria-de-condominios.md",
+      "seo": {
+        "focus_keyword": "auditoria de condomínio São Paulo",
+        "title": "Auditoria de condomínio em São Paulo | Fireflies Consultoria",
+        "description": "Auditoria da prestação de contas do condomínio em SP: receitas, despesas, contratos e fundo de reserva, com relatório executivo para o conselho.",
+        "schema": "[Service (serviceType \"Auditoria de condomínio\", provider AccountingService, areaServed São Paulo), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Consultoria Contábil",
+      "slug": "consultoria-contabil",
+      "url": "/servicos/consultoria-contabil/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 3,
+      "fonte": "paginas/servicos-consultoria-contabil.md",
+      "seo": {
+        "focus_keyword": "consultoria contábil SP",
+        "title": "Consultoria contábil em São Paulo | Fireflies Consultoria",
+        "description": "Consultoria contábil em SP: fechamento mensal no prazo, plano de contas revisado, DRE explicada em reunião e troca de contabilidade sem ruptura.",
+        "schema": "[Service (serviceType \"Consultoria contábil\"), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Consultoria Fiscal",
+      "slug": "consultoria-fiscal",
+      "url": "/servicos/consultoria-fiscal/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 4,
+      "fonte": "paginas/servicos-consultoria-fiscal.md",
+      "seo": {
+        "focus_keyword": "consultoria fiscal e tributária SP",
+        "title": "Consultoria fiscal e tributária em SP | Fireflies Consultoria",
+        "description": "Consultoria fiscal em São Paulo: revisão de regime, conferência de guias, planejamento tributário dentro da lei e preparação para a Reforma Tributária.",
+        "schema": "[Service (serviceType \"Consultoria fiscal\"), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Consultoria Financeira",
+      "slug": "consultoria-financeira",
+      "url": "/servicos/consultoria-financeira/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 5,
+      "fonte": "paginas/servicos-consultoria-financeira.md",
+      "seo": {
+        "focus_keyword": "consultoria financeira para empresas SP",
+        "title": "Consultoria financeira para empresas | Fireflies Consultoria",
+        "description": "Consultoria financeira em São Paulo: fluxo de caixa, orçamento, indicadores e painel mensal explicado em reunião por um contador responsável.",
+        "schema": "[Service (serviceType \"Consultoria financeira\"), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Gestão de Projetos e Processos",
+      "slug": "gestao-de-projetos-e-processos",
+      "url": "/servicos/gestao-de-projetos-e-processos/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 6,
+      "fonte": "paginas/servicos-gestao-de-projetos-e-processos.md",
+      "seo": {
+        "focus_keyword": "mapeamento de processos financeiros",
+        "title": "Gestão de projetos e processos financeiros | Fireflies Consultoria",
+        "description": "Mapeamento de processos financeiros, implantação e revisão de ERP e automação de rotinas, para que o controle continue depois do projeto.",
+        "schema": "[Service (serviceType \"Consultoria em processos e ERP\"), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Sindicância",
+      "slug": "sindicancia",
+      "url": "/servicos/sindicancia/",
+      "parent": "servicos",
+      "template": "page-servico",
+      "menu_order": 7,
+      "fonte": "paginas/servicos-sindicancia.md",
+      "seo": {
+        "focus_keyword": "sindicância em condomínio",
+        "title": "Sindicância em condomínios e empresas | Fireflies Consultoria",
+        "description": "Sindicância em condomínios e empresas em SP: apuração independente de fatos com análise documental, cronologia e relatório técnico assinado.",
+        "schema": "[Service (serviceType \"Sindicância\"), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Condomínios",
+      "slug": "condominios",
+      "url": "/condominios/",
+      "parent": null,
+      "template": "page-landing",
+      "menu_order": 8,
+      "fonte": "paginas/condominios.md",
+      "seo": {
+        "focus_keyword": "consultoria para condomínios em São Paulo",
+        "title": "Consultoria para condomínios em São Paulo | Fireflies Consultoria",
+        "description": "Fireflies Condomínios: auditoria, conferência de contas e relatório para o conselho em São Paulo. Para síndicos, conselhos e administradoras.",
+        "schema": "[WebPage, Service (audience: síndicos), FAQPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Como trabalhamos",
+      "slug": "como-trabalhamos",
+      "url": "/como-trabalhamos/",
+      "parent": null,
+      "template": "page",
+      "menu_order": 9,
+      "fonte": "paginas/como-trabalhamos.md",
+      "seo": {
+        "focus_keyword": "diagnóstico financeiro gratuito",
+        "title": "Como trabalhamos: 30 dias até a primeira luz | Fireflies Consultoria",
+        "description": "Diagnóstico gratuito, organização, primeiro fechamento em 30 dias e painel mensal explicado em reunião, com o mesmo contador responsável.",
+        "schema": "[WebPage, HowTo (4 etapas), BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Fireflies Academy",
+      "slug": "academy",
+      "url": "/academy/",
+      "parent": null,
+      "template": "page-academy",
+      "menu_order": 10,
+      "fonte": "paginas/academy.md",
+      "seo": {
+        "focus_keyword": "treinamento in company contabilidade",
+        "title": "Fireflies Academy · Treinamentos in company e online",
+        "description": "Treinamentos in company e online em contabilidade, fiscal, finanças, auditoria, ERP e condomínios, com certificado da Fireflies Academy.",
+        "schema": "[CollectionPage, ItemList (Course × 6), BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Sobre",
+      "slug": "sobre",
+      "url": "/sobre/",
+      "parent": null,
+      "template": "page",
+      "menu_order": 11,
+      "fonte": "paginas/sobre.md",
+      "seo": {
+        "focus_keyword": "Gabriel Alvares contador",
+        "title": "Sobre a Fireflies Consultoria e Gabriel Alvares",
+        "description": "A Fireflies Consultoria é conduzida por Gabriel Alvares, contador responsável com mais de 8 anos em contabilidade, auditoria e gestão financeira.",
+        "schema": "[AboutPage, Person (Gabriel Alvares, jobTitle, worksFor), Organization, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Blog",
+      "slug": "blog",
+      "url": "/blog/",
+      "parent": null,
+      "template": "home",
+      "menu_order": 12,
+      "fonte": "paginas/blog.md",
+      "seo": {
+        "focus_keyword": "blog contabilidade condomínio e reforma tributária",
+        "title": "Blog: condomínios, fiscal e Reforma Tributária | Fireflies Consultoria",
+        "description": "O que mudou na lei e o que fazer: artigos sobre condomínios, Reforma Tributária, fiscal, contabilidade e gestão financeira, com base legal citada.",
+        "schema": "[Blog, CollectionPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Contato",
+      "slug": "contato",
+      "url": "/contato/",
+      "parent": null,
+      "template": "page-contato",
+      "menu_order": 13,
+      "fonte": "paginas/contato.md",
+      "seo": {
+        "focus_keyword": "diagnóstico gratuito consultoria contábil",
+        "title": "Contato e diagnóstico gratuito | Fireflies Consultoria",
+        "description": "Agende o diagnóstico gratuito com a Fireflies Consultoria: WhatsApp +55 11 98245-0527, contato@fireflies.com.br, de segunda a sexta, das 8h às 18h.",
+        "schema": "[ContactPage, AccountingService (contactPoint, openingHoursSpecification Mo-Fr 08:00-18:00), BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Política de Privacidade",
+      "slug": "politica-de-privacidade",
+      "url": "/politica-de-privacidade/",
+      "parent": null,
+      "template": "page-legal",
+      "menu_order": 14,
+      "fonte": "paginas/politica-de-privacidade.md",
+      "seo": {
+        "focus_keyword": "política de privacidade Fireflies Consultoria",
+        "title": "Política de Privacidade | Fireflies Consultoria",
+        "description": "Como a Fireflies Consultoria trata dados pessoais no site, no atendimento, nos serviços contábeis e na Academy, conforme a LGPD (Lei 13.709/2018).",
+        "schema": "[WebPage, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Termos de Uso",
+      "slug": "termos-de-uso",
+      "url": "/termos-de-uso/",
+      "parent": null,
+      "template": "page-legal",
+      "menu_order": 15,
+      "fonte": "paginas/termos-de-uso.md",
+      "seo": {
+        "focus_keyword": "termos de uso Fireflies Consultoria",
+        "title": "Termos de Uso | Fireflies Consultoria",
+        "description": "Regras de uso do site da Fireflies Consultoria: conteúdo informativo, ferramentas ilustrativas, propriedade intelectual e responsabilidade.",
+        "schema": "[WebPage, BreadcrumbList]"
+      }
+    }
+  ],
+  "menus": {
+    "principal": {
+      "local": "header",
+      "itens": [
+        {
+          "titulo": "Serviços",
+          "url": "/servicos/",
+          "filhos": [
+            {
+              "titulo": "Auditoria de Condomínios",
+              "url": "/servicos/auditoria-de-condominios/"
+            },
+            {
+              "titulo": "Consultoria Contábil",
+              "url": "/servicos/consultoria-contabil/"
+            },
+            {
+              "titulo": "Consultoria Fiscal",
+              "url": "/servicos/consultoria-fiscal/"
+            },
+            {
+              "titulo": "Consultoria Financeira",
+              "url": "/servicos/consultoria-financeira/"
+            },
+            {
+              "titulo": "Gestão de Projetos e Processos",
+              "url": "/servicos/gestao-de-projetos-e-processos/"
+            },
+            {
+              "titulo": "Sindicância",
+              "url": "/servicos/sindicancia/"
+            },
+            {
+              "titulo": "Todos os serviços",
+              "url": "/servicos/"
+            }
+          ]
+        },
+        {
+          "titulo": "Condomínios",
+          "url": "/condominios/"
+        },
+        {
+          "titulo": "Como trabalhamos",
+          "url": "/como-trabalhamos/"
+        },
+        {
+          "titulo": "Academy",
+          "url": "/academy/"
+        },
+        {
+          "titulo": "Blog",
+          "url": "/blog/"
+        },
+        {
+          "titulo": "Sobre",
+          "url": "/sobre/"
+        }
+      ]
+    },
+    "cta_header": {
+      "local": "header (botão à direita do menu)",
+      "itens": [
+        {
+          "titulo": "Agendar diagnóstico",
+          "url": "/contato/",
+          "classe": "is-style-cta"
+        }
+      ]
+    },
+    "cta_fixo_mobile": {
+      "local": "barra fixa inferior < 782px (bloco WhatsApp do fireflies-core)",
+      "itens": [
+        {
+          "titulo": "WhatsApp",
+          "url": "https://wa.me/5511982450527",
+          "rotulo_aria": "Conversar no WhatsApp"
+        },
+        {
+          "titulo": "Diagnóstico gratuito",
+          "url": "/contato/"
+        }
+      ]
+    },
+    "rodape_servicos": {
+      "local": "footer coluna 1 · SERVIÇOS",
+      "itens": [
+        {
+          "titulo": "Auditoria de Condomínios",
+          "url": "/servicos/auditoria-de-condominios/"
+        },
+        {
+          "titulo": "Consultoria Contábil",
+          "url": "/servicos/consultoria-contabil/"
+        },
+        {
+          "titulo": "Consultoria Fiscal",
+          "url": "/servicos/consultoria-fiscal/"
+        },
+        {
+          "titulo": "Consultoria Financeira",
+          "url": "/servicos/consultoria-financeira/"
+        },
+        {
+          "titulo": "Gestão de Projetos e Processos",
+          "url": "/servicos/gestao-de-projetos-e-processos/"
+        },
+        {
+          "titulo": "Sindicância",
+          "url": "/servicos/sindicancia/"
+        }
+      ]
+    },
+    "rodape_fireflies": {
+      "local": "footer coluna 2 · FIREFLIES",
+      "itens": [
+        {
+          "titulo": "Condomínios",
+          "url": "/condominios/"
+        },
+        {
+          "titulo": "Como trabalhamos",
+          "url": "/como-trabalhamos/"
+        },
+        {
+          "titulo": "Academy",
+          "url": "/academy/"
+        },
+        {
+          "titulo": "Blog",
+          "url": "/blog/"
+        },
+        {
+          "titulo": "Sobre",
+          "url": "/sobre/"
+        },
+        {
+          "titulo": "Contato",
+          "url": "/contato/"
+        }
+      ]
+    },
+    "rodape_legal": {
+      "local": "footer linha final",
+      "itens": [
+        {
+          "titulo": "Política de Privacidade",
+          "url": "/politica-de-privacidade/"
+        },
+        {
+          "titulo": "Termos de Uso",
+          "url": "/termos-de-uso/"
+        },
+        {
+          "titulo": "Preferências de cookies",
+          "url": "#preferencias-cookies",
+          "obs": "abre o painel do plugin LGPD"
+        }
+      ]
+    }
+  },
+  "cursos": [
+    {
+      "titulo": "Contabilidade para Gestores",
+      "slug": "contabilidade-para-gestores",
+      "url": "/academy/cursos/contabilidade-para-gestores/",
+      "trilha": "contabil",
+      "menu_order": 1,
+      "fonte": "cursos/contabilidade-para-gestores.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Introdutório",
+        "_ff_publico": "Gestores, donos e líderes de área sem formação contábil",
+        "_ff_pre_requisito": "Nenhum",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "curso contabilidade para gestores",
+        "title": "Contabilidade para Gestores · in company | Fireflies Academy",
+        "description": "Curso in company ou online para gestores sem formação contábil: balanço, DRE, fluxo de caixa e indicadores, com exemplos da sua empresa.",
+        "schema": "Course, BreadcrumbList"
+      }
+    },
+    {
+      "titulo": "Planejamento Tributário na Prática",
+      "slug": "planejamento-tributario-na-pratica",
+      "url": "/academy/cursos/planejamento-tributario-na-pratica/",
+      "trilha": "fiscal",
+      "menu_order": 2,
+      "fonte": "cursos/planejamento-tributario-na-pratica.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Intermediário",
+        "_ff_publico": "Equipes financeiras e fiscais, controllers, donos de empresa",
+        "_ff_pre_requisito": "Noções de contabilidade (recomendado Contabilidade para Gestores)",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "curso planejamento tributário",
+        "title": "Planejamento Tributário na Prática | Fireflies Academy",
+        "description": "Curso de planejamento tributário dentro da lei: regimes, comparação com números reais, documentação, riscos e a transição para IBS e CBS.",
+        "schema": "Course, BreadcrumbList"
+      }
+    },
+    {
+      "titulo": "ERP: do Básico ao Avançado",
+      "slug": "erp-do-basico-ao-avancado",
+      "url": "/academy/cursos/erp-do-basico-ao-avancado/",
+      "trilha": "tecnologia",
+      "menu_order": 3,
+      "fonte": "cursos/erp-do-basico-ao-avancado.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Do introdutório ao avançado (módulos)",
+        "_ff_publico": "Equipes que usam ou vão implantar um ERP",
+        "_ff_pre_requisito": "Nenhum para o módulo básico",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "treinamento ERP financeiro",
+        "title": "ERP: do Básico ao Avançado · treinamento | Fireflies Academy",
+        "description": "Treinamento de ERP para equipes financeiras: cadastros, compras, contas a pagar e a receber, fechamento, relatórios e integração com a contabilidade.",
+        "schema": "Course, BreadcrumbList"
+      }
+    },
+    {
+      "titulo": "Gestão Financeira de Condomínios",
+      "slug": "gestao-financeira-de-condominios",
+      "url": "/academy/cursos/gestao-financeira-de-condominios/",
+      "trilha": "condominios",
+      "menu_order": 4,
+      "fonte": "cursos/gestao-financeira-de-condominios.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Introdutório",
+        "_ff_publico": "Síndicos, subsíndicos, conselheiros e equipes de administradoras",
+        "_ff_pre_requisito": "Nenhum",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "curso gestão financeira de condomínios",
+        "title": "Curso de Gestão Financeira de Condomínios | Fireflies Academy",
+        "description": "Curso para síndicos e conselheiros: previsão orçamentária, prestação de contas, fundo de reserva, inadimplência e leitura do balancete.",
+        "schema": "Course, BreadcrumbList"
+      }
+    },
+    {
+      "titulo": "Auditoria Interna: Fundamentos",
+      "slug": "auditoria-interna-fundamentos",
+      "url": "/academy/cursos/auditoria-interna-fundamentos/",
+      "trilha": "auditoria",
+      "menu_order": 5,
+      "fonte": "cursos/auditoria-interna-fundamentos.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Introdutório",
+        "_ff_publico": "Equipes de controle, financeiro, compliance e conselhos",
+        "_ff_pre_requisito": "Noções de contabilidade",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "curso de auditoria interna",
+        "title": "Auditoria Interna: Fundamentos · curso | Fireflies Academy",
+        "description": "Curso de fundamentos de auditoria interna: riscos, controles, amostragem, papéis de trabalho e relatório, com exercícios práticos.",
+        "schema": "Course, BreadcrumbList"
+      }
+    },
+    {
+      "titulo": "Análise de Demonstrações Financeiras",
+      "slug": "analise-de-demonstracoes-financeiras",
+      "url": "/academy/cursos/analise-de-demonstracoes-financeiras/",
+      "trilha": "financeiro",
+      "menu_order": 6,
+      "fonte": "cursos/analise-de-demonstracoes-financeiras.md",
+      "meta": {
+        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_formato": [
+          "in-company",
+          "online"
+        ],
+        "_ff_nivel": "Intermediário",
+        "_ff_publico": "Gestores, analistas financeiros e conselheiros",
+        "_ff_pre_requisito": "Contabilidade para Gestores ou conhecimento equivalente",
+        "_ff_certificado": true
+      },
+      "seo": {
+        "focus_keyword": "curso análise de demonstrações financeiras",
+        "title": "Análise de Demonstrações Financeiras · curso | Fireflies Academy",
+        "description": "Curso de análise de balanço, DRE e fluxo de caixa: análise vertical e horizontal, indicadores de liquidez, rentabilidade e endividamento.",
+        "schema": "Course, BreadcrumbList"
+      }
+    }
+  ],
+  "posts": [
+    {
+      "titulo": "Novidades da Receita em 01/10/2026: condomínios ganham código próprio na NFS-e",
+      "slug": "nfse-condominios-codigo-99-05-01",
+      "url": "/blog/nfse-condominios-codigo-99-05-01/",
+      "data": "2026-10-02",
+      "status": "publish",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "reforma-tributaria",
+      "categorias": [
+        "reforma-tributaria",
+        "condominios"
+      ],
+      "tags": [
+        "nfs-e",
+        "ibs-cbs",
+        "lc-214-2025",
+        "codigo-civil",
+        "administradoras",
+        "cib"
+      ],
+      "sticky": true,
+      "excerpt": "O novo leiaute da nota traz um código exclusivo para as taxas condominiais, um grupo só para as cobranças do condomínio e campos para o imóvel e o pagamento. Veja o que muda, o que ainda está em aberto e o que fazer até 01/12/2026.",
+      "meta": {
+        "_ff_tempo_leitura": 12,
+        "_ff_eyebrow": "Reforma Tributária · Atualização de 01/10/2026"
+      },
+      "fonte": "posts/post-01-nfse-condominios.md",
+      "seo": {
+        "focus_keyword": "NFS-e condomínio",
+        "title": "NFS-e para condomínios: o código 99.05.01 | Fireflies Consultoria",
+        "description": "Ato Técnico Conjunto nº 7: condomínios ganham o código 99.05.01 na NFS-e. O que muda, o que está em aberto e 10 passos até 01/12/2026.",
+        "schema": "[BlogPosting (author Person Gabriel Alvares, publisher Organization, datePublished 2026-10-02, dateModified), BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "Fundo de reserva não é caixa do mês",
+      "slug": "fundo-de-reserva-nao-e-caixa-do-mes",
+      "url": "/blog/fundo-de-reserva-nao-e-caixa-do-mes/",
+      "data": "2026-10-09",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "condominios",
+      "categorias": [
+        "condominios",
+        "gestao-financeira"
+      ],
+      "tags": [
+        "fundo-de-reserva",
+        "previsao-orcamentaria",
+        "codigo-civil",
+        "lei-do-inquilinato",
+        "sindico",
+        "conselho-fiscal"
+      ],
+      "sticky": false,
+      "excerpt": "Quando o fundo de reserva paga a conta de luz, o problema não é o fundo: é o orçamento. Veja o que a lei diz, quem paga a reposição e como separar as duas coisas.",
+      "meta": {
+        "_ff_tempo_leitura": 6,
+        "_ff_eyebrow": "Condomínios · Gestão financeira"
+      },
+      "fonte": "posts/post-02-fundo-de-reserva.md",
+      "seo": {
+        "focus_keyword": "fundo de reserva condomínio",
+        "title": "Fundo de reserva do condomínio não é caixa do mês | Fireflies",
+        "description": "Fundo de reserva não é caixa do mês: o que dizem a convenção, o Código Civil e a Lei do Inquilinato, quem paga a reposição e 5 passos para o síndico.",
+        "schema": "[BlogPosting, BreadcrumbList]"
+      }
+    },
+    {
+      "titulo": "5 sinais de que as contas do condomínio pedem auditoria",
+      "slug": "sinais-auditoria-condominio",
+      "url": "/blog/sinais-auditoria-condominio/",
+      "data": "2026-10-16",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "condominios",
+      "categorias": [
+        "condominios"
+      ],
+      "tags": [
+        "auditoria",
+        "prestacao-de-contas",
+        "conselho-fiscal",
+        "sindico",
+        "inadimplencia",
+        "codigo-civil"
+      ],
+      "sticky": false,
+      "excerpt": "Auditoria não é acusação: é conferência. Cinco sinais, todos ligados ao que a lei pede do síndico e do conselho, indicam que chegou a hora de conferir as contas.",
+      "meta": {
+        "_ff_tempo_leitura": 7,
+        "_ff_eyebrow": "Condomínios · Auditoria"
+      },
+      "fonte": "posts/post-03-sinais-auditoria-condominio.md",
+      "seo": {
+        "focus_keyword": "quando fazer auditoria no condomínio",
+        "title": "5 sinais de que o condomínio precisa de auditoria | Fireflies",
+        "description": "Prestação de contas sem documento, saldo que não bate, fundo de reserva pagando o mês: 5 sinais de que é hora de auditar, com a base legal.",
+        "schema": "[BlogPosting, ItemList (5 sinais), BreadcrumbList]"
+      }
+    }
+  ],
+  "rascunhos_pauta": [
+    {
+      "titulo": "DRE em linguagem de dono: como ler o resultado do mês em dois minutos",
+      "slug": "como-ler-dre",
+      "status": "draft",
+      "data_prevista": "2026-10-23",
+      "categoria_principal": "contabil",
+      "palavra_chave": "como ler DRE",
+      "excerpt": "As cinco linhas que importam na DRE, a diferença entre margem bruta e líquida e as três perguntas para fazer ao contador todo mês.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Prestação de contas do síndico: o que a lei exige e o que o conselho deve conferir",
+      "slug": "prestacao-de-contas-do-sindico",
+      "status": "draft",
+      "data_prevista": "2026-10-30",
+      "categoria_principal": "condominios",
+      "palavra_chave": "prestação de contas condomínio",
+      "excerpt": "O que dizem os arts. 1.348, 1.350 e 1.356 do Código Civil, o que deve vir na pasta de prestação de contas e um roteiro de conferência para o conselho.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Reforma Tributária: o que já vale em 2026 e o que muda em 2027 para a sua empresa",
+      "slug": "reforma-tributaria-2027-empresas",
+      "status": "draft",
+      "data_prevista": "2026-11-06",
+      "categoria_principal": "reforma-tributaria",
+      "palavra_chave": "reforma tributária 2027 CBS empresas",
+      "excerpt": "O calendário de transição da EC 132/2023 e da LC 214/2025 em linguagem prática: notas, cadastros, preço e caixa. Conferir cada data na norma antes de publicar.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Conciliação bancária: por que o saldo do extrato não bate com o contábil",
+      "slug": "conciliacao-bancaria",
+      "status": "draft",
+      "data_prevista": "2026-11-13",
+      "categoria_principal": "contabil",
+      "palavra_chave": "conciliação bancária",
+      "excerpt": "As causas mais comuns de diferença (lançamento duplicado, tarifa sem registro, recebimento em trânsito) e uma rotina mensal de conciliação.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Previsão orçamentária do condomínio: como montar para a assembleia",
+      "slug": "previsao-orcamentaria-condominio",
+      "status": "draft",
+      "data_prevista": "2026-11-20",
+      "categoria_principal": "condominios",
+      "palavra_chave": "previsão orçamentária condomínio",
+      "excerpt": "Do realizado ao orçado: como projetar despesas, inadimplência e fundo de reserva e apresentar o orçamento para aprovação (CC, arts. 1.348, VI, e 1.350).",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Lucro não é caixa: por que a empresa lucra e o dinheiro falta",
+      "slug": "lucro-nao-e-caixa",
+      "status": "draft",
+      "data_prevista": "2026-11-27",
+      "categoria_principal": "gestao-financeira",
+      "palavra_chave": "lucro x fluxo de caixa",
+      "excerpt": "Competência x caixa, prazos de recebimento e pagamento, estoque e investimentos: onde o lucro fica preso e como o fluxo de caixa projetado mostra isso antes.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Atraso na taxa de condomínio: multa, juros e correção depois da Lei 14.905/2024",
+      "slug": "juros-multa-atraso-condominio",
+      "status": "draft",
+      "data_prevista": "2026-12-04",
+      "categoria_principal": "condominios",
+      "palavra_chave": "juros condomínio atraso",
+      "excerpt": "O que mudou no art. 1.336, § 1º, do Código Civil: multa de até 2%, juros convencionados ou os do art. 406 e correção monetária. Como conferir o cálculo no boleto.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Simples, Presumido ou Real: revise o regime antes de janeiro",
+      "slug": "revisao-regime-tributario-janeiro",
+      "status": "draft",
+      "data_prevista": "2026-12-11",
+      "categoria_principal": "fiscal",
+      "palavra_chave": "qual regime tributário escolher",
+      "excerpt": "Por que a revisão precisa acontecer antes do prazo de opção no início do ano, quais números levar e como comparar regimes com dados reais, dentro da lei.",
+      "autor": "gabriel-alvares"
+    },
+    {
+      "titulo": "Contabilidade para quem não é contador: 10 termos que todo gestor precisa conhecer",
+      "slug": "termos-contabeis-para-gestores",
+      "status": "draft",
+      "data_prevista": "2026-12-18",
+      "categoria_principal": "academy",
+      "palavra_chave": "termos contábeis para gestores",
+      "excerpt": "Competência, provisão, depreciação, EBITDA, capital de giro e outros termos explicados em uma frase cada, com link para o curso Contabilidade para Gestores.",
+      "autor": "gabriel-alvares"
+    }
+  ],
+  "patterns": {
+    "hero-anil": "Abertura em Anil sangrado: eyebrow mono, H1 Sora, lead, até 2 botões, constelação com um ponto âmbar.",
+    "hero-claro": "Abertura de página interna em Cal/Branco com breadcrumb, eyebrow, H1, lead e botão opcional.",
+    "faixa-provas": "4 colunas com fio: número/palavra grande em Sora e rótulo mono (CRC, 8+ anos, 30 dias, São Paulo).",
+    "servicos-lista": "Lista editorial em linhas com fio: nº mono, nome, frase, entregáveis em mono e seta. Sem cards.",
+    "constelacao-servicos": "Diagrama interativo dos 6 serviços como estrelas ligadas; foco destaca as ligações. Texto alternativo obrigatório.",
+    "texto-manifesto": "Frase grande em Sora (palavra a palavra) + parágrafo + nota mono.",
+    "painel-mensal": "Demonstração do painel mensal com KPIs, gráfico em pontos e alertas. Rótulo DADOS DE EXEMPLO obrigatório.",
+    "raio-x-condominio": "Simulador com 3 controles e distribuição da receita. Nota de simulação ilustrativa obrigatória.",
+    "passos-30-dias": "Etapas numeradas ligadas pela Trilha do Photinus; colunas: nº, quando, etapa, texto, entregável mono. Variantes: 4 etapas, compacta (3), tabela de N etapas.",
+    "diferenciais-grid": "Grade 2×2 com fios; título em negrito e texto. Sem ícones em círculo.",
+    "triagem-3-perguntas": "Quiz de 3 perguntas (teclas A–D) que monta mensagem para WhatsApp/formulário; nada é gravado antes do envio.",
+    "responsavel": "Retrato real + nome, cargo/CRC em mono, texto e link.",
+    "academy-cursos": "Lista de cursos (query do CPT curso) com trilha em mono; filtro por trilha opcional.",
+    "posts-recentes": "Query loop de 3 posts: categoria mono, título, data, tempo de leitura.",
+    "posts-relacionados": "Query loop filtrado por categoria, 3 itens.",
+    "posts-lista": "Lista de posts em linhas com fio (arquivos e /blog/).",
+    "post-destaque": "Post fixo em destaque na /blog/.",
+    "filtro-categorias": "Links de categorias em mono separados por fio (sem pílulas).",
+    "faq": "Acordeão <details> com perguntas e respostas; gera FAQPage quando o plugin de SEO não gerar.",
+    "cta-diagnostico": "Fecho em Anil com H2, texto e 2 botões (WhatsApp e formulário) + linha mono de contato.",
+    "cta-whatsapp": "Fecho curto com botão WhatsApp (bloco do fireflies-core).",
+    "lista-sinais": "Lista de sintomas com marcador de ponto e fio.",
+    "escopo-lista": "Tabela de 2 colunas (frente / o que fazemos) com cabeçalho Anil.",
+    "entregaveis-lista": "Lista de entregáveis em negrito + descrição.",
+    "servicos-relacionados": "3 links para serviços ligados (constelação reduzida).",
+    "nota-destaque": "Parágrafo em faixa Cal com fio Vermelhão à esquerda.",
+    "publicos-colunas": "3 colunas por público com link.",
+    "comparativo-duas-colunas": "Tabela comparativa de 2 colunas.",
+    "linha-do-tempo": "Marcos do ano em linha pontilhada.",
+    "destaque-artigo": "Chamada para um post específico.",
+    "valores-lista": "5 valores em lista numerada com fio.",
+    "dados-institucionais": "Lista mono de dados legais (razão social, CNPJ, CRC).",
+    "contato-form": "2 colunas: canais (mono) e slot de shortcode do formulário; fallback WhatsApp.",
+    "texto-legal": "Coluna de leitura com sumário lateral fixo e títulos numerados.",
+    "curso-cabecalho": "Cabeçalho de curso: eyebrow da trilha, H1, resumo, ficha mono (carga, formato, nível, certificado).",
+    "texto-curso": "Corpo do curso: descrição, público, formato.",
+    "programa-modulos": "Programa numerado em módulos, com fio entre itens."
+  },
+  "blocos_editoriais_fireflies_core": {
+    "nossa-leitura": "Callout Anil com rótulo 'Nossa leitura' (variantes: recomendação, orientação) e fio Vermelhão.",
+    "em-aberto": "Callout Rapadura sobre âmbar muito claro, rótulo EM ABERTO em mono (variantes: cartão com título, lista).",
+    "base-legal": "Faixa Cal com ícone balança, rótulo 'Base legal · N trechos', fonte em mono e citação literal.",
+    "consulte-na-integra": "Nota mono com fio Anil: 'Consulte na íntegra:' + referência normativa.",
+    "passos": "Checklist numerado (eyebrow 'Passo N'), progresso 'x de N' salvo em localStorage com try/catch; na impressão, caixas vazias.",
+    "citacao-norma": "Citação literal de norma com rótulo da fonte.",
+    "citacao-destaque": "Citação longa em bloco Anil com aspas âmbar e cite em mono.",
+    "aviso-informativo": "Aviso 'Conteúdo informativo…' com ícone info.",
+    "destaque-numeros": "Números-chave em Sora (código, data, prazo) com rótulo NOVO/OBRIGATÓRIO em mono.",
+    "sumario": "Sumário 'Neste artigo' com âncoras numeradas.",
+    "nfse-exemplo": "Acordeão acessível do exemplo de NFS-e com total.",
+    "lista-codigos": "Lista de códigos em 2 ou 3 colunas (código mono + nome).",
+    "lista-codigos-busca": "Lista de códigos com busca que ignora acentos e contador aria-live.",
+    "voce-sabe": "Callout de pergunta à comunidade, borda tracejada âmbar.",
+    "info": "Callout informativo Céu claro.",
+    "trio-cadastros": "3 colunas tipográficas (ex.: CPF / CNPJ / CIB).",
+    "trio-sinais": "3 colunas com eyebrow da fonte e texto.",
+    "lista-estrelas": "Lista com marcador de estrela-círculo da marca.",
+    "linha-do-tempo": "Sinais numerados em círculos Anil ligados por pontilhado.",
+    "comparacao-neq": "Duas colunas com sinal ≠ (aria-label 'diferente de').",
+    "matriz-situacao": "Matriz de situação com status por forma + palavra + cor (● ◐ ○).",
+    "fontes": "Lista numerada de fontes oficiais.",
+    "cta-post": "Fecho do post em Anil com eyebrow, H2 e 2 botões.",
+    "tabela": "Tabela da marca: cabeçalho Anil, Mono caixa alta, zebra Branco/Cal; no celular vira cartões.",
+    "nota": "Nota curta em Pedra-Sabão abaixo de tabela ou bloco.",
+    "cabecalho-post": "Cabeçalho do single: eyebrow (meta _ff_eyebrow), H1, excerpt, autor, data, tempo de leitura."
+  },
+  "midia_necessaria": [
+    {
+      "arquivo": "og-default.png",
+      "dim": "1200×630",
+      "uso": "OG padrão"
+    },
+    {
+      "arquivo": "og-condominios.png",
+      "dim": "1200×630",
+      "uso": "OG /condominios/ e serviços de condomínio"
+    },
+    {
+      "arquivo": "og-academy.png",
+      "dim": "1200×630",
+      "uso": "OG /academy/ e cursos"
+    },
+    {
+      "arquivo": "og-nfse-condominios.png",
+      "dim": "1200×675",
+      "uso": "imagem destacada do post 01"
+    },
+    {
+      "arquivo": "gabriel-alvares.jpg",
+      "dim": "retrato real ≥ 800 px",
+      "uso": "sobre, responsável, avatar do autor",
+      "status": "[a confirmar]"
+    },
+    {
+      "arquivo": "nfse-condominios.pdf",
+      "origem": "v2/documentos/nfse-condominios/",
+      "uso": "anexo do post 01"
+    }
+  ],
+  "redirecionamentos_301": [
+    {
+      "de": "[URLs do site antigo a confirmar]",
+      "para": "/"
+    }
+  ],
+  "pendencias": [
+    "CRC-SP do responsável",
+    "CNPJ e razão social",
+    "endereço",
+    "foto do Gabriel",
+    "link da live do post 01",
+    "carga horária dos cursos",
+    "percentuais do raio-X",
+    "encarregado LGPD",
+    "ferramentas (hospedagem, formulário, analytics)",
+    "revisão jurídica de privacidade e termos",
+    "escopo de sindicância"
+  ]
+}

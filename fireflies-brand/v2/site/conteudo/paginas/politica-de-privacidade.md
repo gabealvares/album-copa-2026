@@ -66,8 +66,8 @@ Nome, e-mail, empresa, cargo, presença e dados do certificado (curso, carga hor
 
 | Finalidade | Dados | Base legal (LGPD) |
 |---|---|---|
-| Responder ao seu contato e fazer o diagnóstico gratuito | Formulário, WhatsApp, e-mail | Procedimentos preliminares relacionados a contrato, a pedido do titular (art. 7º, V) |
-| Prestar os serviços contratados | Dados do cliente e dados que ele nos entrega | Execução de contrato (art. 7º, V) e, como operadores, conforme as instruções do controlador |
+| Responder ao seu contato e fazer o diagnóstico gratuito | Formulário, WhatsApp, e-mail | Procedimentos preliminares relacionados a contrato, a pedido do titular (art. 7º, V), ou legítimo interesse (art. 7º, IX) quando você fala em nome de uma empresa ou condomínio |
+| Prestar os serviços contratados | Dados do cliente e dados que ele nos entrega | Execução de contrato (art. 7º, V); para dados de representantes e funcionários de clientes pessoa jurídica, legítimo interesse (art. 7º, IX); como operadores, conforme as instruções do controlador |
 | Cumprir obrigações legais e regulatórias (contábeis, fiscais, profissionais) | Documentos e registros dos serviços | Cumprimento de obrigação legal ou regulatória (art. 7º, II) |
 | Guardar registros de acesso ao site | IP, data e hora | Cumprimento de obrigação legal (art. 7º, II, c/c art. 15 da Lei 12.965/2014) |
 | Defender direitos em processo judicial, administrativo ou arbitral | Registros e documentos pertinentes | Exercício regular de direitos (art. 7º, VI) |
@@ -106,7 +106,7 @@ Usamos cookies **necessários** (para o site funcionar e guardar as suas prefer�
 
 | Categoria | Para que serve | Exemplo | Base legal |
 |---|---|---|---|
-| Necessários | Funcionamento, segurança e registro do consentimento | [nome do cookie do plugin LGPD a confirmar] | Legítimo interesse / necessidade técnica |
+| Necessários | Funcionamento, segurança e registro do consentimento | [nome do cookie do plugin LGPD a confirmar] | Legítimo interesse (art. 7º, IX) |
 | Analíticos | Contar visitas e entender quais páginas são úteis | [a confirmar] | Consentimento |
 
 ### 10. Seus direitos
