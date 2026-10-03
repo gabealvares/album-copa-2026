@@ -52,7 +52,18 @@
   "unit": "px",
   "print": false,
   "bleed": 0,
-  "png": true
+  "png": true,
+  "scale": 2
+ },
+ {
+  "rel": "digital/linkedin-capa-perfil_1584x396",
+  "w": 1584,
+  "h": 396,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true,
+  "scale": 2
  },
  {
   "rel": "digital/avatar_1080",

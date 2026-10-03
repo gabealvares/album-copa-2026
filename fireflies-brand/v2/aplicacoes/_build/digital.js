@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const L = require('./lib');
-const { C, t, para, logo, padrao, rect, line, circle, measure } = L;
+const { C, t, para, logo, emb, padrao, rect, line, circle, measure } = L;
 const DIR = 'digital/';
 
 // 1 · ASSINATURA DE E-MAIL ------------------------------------------------
@@ -61,20 +61,47 @@ const DIR = 'digital/';
   L.save(DIR + 'og-image_1200x630', { w: W, h: H, bg: C.anil, body: b, defs: p.def, title: 'Fireflies Consultoria · imagem de compartilhamento (OG)' });
 }
 
-// 3 · CAPA DO LINKEDIN 4200×700 e 1128×191 ----------------------------------
-function capaLinkedin() {
-  const p = padrao('reticula-celeste-escuro', { lit: C.ceu, k: 1.6 });
-  let b = rect(0, 0, 4200, 700, p.fill, ' opacity=".3"');
-  b += line(2250, 215, 2330, 215, C.vermelhao, 6);
-  b += t('LUZ MEDIDA.', { f: 'sora7', s: 160, x: 2240, y: 400, fill: C.cal, tr: 0.03 });
-  b += t('CONSULTORIA FINANCEIRA, CONTÁBIL E FISCAL · SÃO PAULO', { f: 'mono5', s: 34, x: 2250, y: 490, fill: C.fumaca, tr: 0.1 });
+// 3 · CAPAS DO LINKEDIN (sem logo) ------------------------------------------
+// Empresa: 4200×700 (envio) e 1128×191 (mínimo). Perfil pessoal: 1584×396.
+// "Nada trabalha sozinho": as 8 constelações dos serviços num fio que esquenta até um único ponto de luz,
+// e a assinatura LUZ MEDIDA. à direita. O canto inferior esquerdo fica livre (logo da página ou foto do perfil).
+function capaLinkedin(W, H) {
+  const u = H / 700;
+  const p = padrao('reticula-celeste-escuro', { lit: C.ceu, k: 1.6 * u });
+  let b = rect(0, 0, W, H, p.fill, ' opacity=".3"');
+  const tx = W * 0.56;                               // início do texto
+  const cy = H * 0.40;                               // linha do fio
+  const servs = [['contabil', 'CONTÁBIL'], ['fiscal', 'FISCAL'], ['financeira', 'FINANCEIRA'], ['auditoria', 'AUDITORIA'],
+    ['processos', 'PROCESSOS'], ['sindicancia', 'SINDICÂNCIA'], ['condominios', 'CONDOMÍNIOS'], ['academy', 'ACADEMY']];
+  const x0 = W * 0.16, x1 = tx - 150 * u, passo = (x1 - x0) / servs.length;
+  const s = Math.min(136 * u, passo * 0.72);
+  const rotulos = passo / u > 150;                   // nomes dos serviços só quando cabem (na capa do perfil, não)
+  // fio: frio à esquerda, esquenta até o ponto de luz antes do texto
+  const gid = 'capa-fio-' + W;
+  b += `<defs><linearGradient id="${gid}" x1="0" x2="${x1 + 60 * u}" y1="0" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${C.ceu}" stop-opacity="0"/><stop offset="0.55" stop-color="${C.ceu}" stop-opacity=".7"/><stop offset="0.85" stop-color="${C.vermelhao}"/><stop offset="1" stop-color="${C.ambar}"/></linearGradient></defs>`;
+  b += `<path d="M0 ${cy} L${x1 + 60 * u} ${cy}" stroke="url(#${gid})" stroke-width="${2.2 * u}" fill="none"/>`;
+  servs.forEach(([f, nome], i) => {
+    const cx = x0 + passo * (i + 0.5);
+    b += rect(cx - s / 2 - 8 * u, cy - s / 2 - 8 * u, s + 16 * u, s + 16 * u, C.anil);
+    b += emb(f + '-sem-letras', { x: cx - s / 2, y: cy - s / 2, s, c: C.cal, lit: C.cal, line: C.ceu });
+    if (rotulos) b += t(nome, { f: 'mono5', s: 20 * u, x: cx, y: cy + s / 2 + 48 * u, fill: C.fumaca, a: 'middle', tr: 0.12 });
+  });
+  // a luz: um único ponto âmbar, com halo
+  const lx = x1 + 60 * u;
+  b += `<defs><radialGradient id="${gid}-h"><stop offset="0" stop-color="${C.ambar}" stop-opacity=".5"/><stop offset=".4" stop-color="${C.ambar}" stop-opacity=".15"/><stop offset="1" stop-color="${C.ambar}" stop-opacity="0"/></radialGradient></defs>`;
+  b += `<circle cx="${lx}" cy="${cy}" r="${70 * u}" fill="url(#${gid}-h)"/>` + circle(lx, cy, 11 * u, C.ambar);
+  // assinatura
+  b += line(tx + 6 * u, H * 0.27, tx + 86 * u, H * 0.27, C.vermelhao, 6 * u);
+  b += t('LUZ MEDIDA.', { f: 'sora7', s: 160 * u, x: tx, y: H * 0.27 + 175 * u, fill: C.cal, tr: 0.03 });
+  b += t('Precisão que ilumina decisões.', { f: 'sans4', s: 46 * u, x: tx + 6 * u, y: H * 0.27 + 260 * u, fill: C.cal });
+  b += t('WWW.FIREFLIES.COM.BR  ·  SÃO PAULO', { f: 'mono5', s: 28 * u, x: tx + 6 * u, y: H * 0.27 + 330 * u, fill: C.fumaca, tr: 0.12 });
   return { b, def: p.def };
 }
-{
-  const c = capaLinkedin();
-  L.save(DIR + 'linkedin-capa_4200x700', { w: 4200, h: 700, bg: C.anil, body: c.b, defs: c.def, scale: 1, title: 'Fireflies Consultoria · capa da página no LinkedIn' });
-  const c2 = capaLinkedin(), k = 1128 / 4200;
-  L.save(DIR + 'linkedin-capa_1128x191', { w: 1128, h: 191, bg: C.anil, body: `<g transform="translate(0 ${(191 - 700 * k) / 2}) scale(${k})">${c2.b}</g>`, defs: c2.def, title: 'Fireflies Consultoria · capa do LinkedIn (tamanho mínimo)' });
+for (const [W, H, nome, tit, sc] of [[4200, 700, 'linkedin-capa_4200x700', 'capa da página da empresa no LinkedIn', 1],
+  [1128, 191, 'linkedin-capa_1128x191', 'capa da página da empresa no LinkedIn (tamanho mínimo)', 2],
+  [1584, 396, 'linkedin-capa-perfil_1584x396', 'capa do perfil pessoal no LinkedIn', 2]]) {
+  const c = capaLinkedin(W, H);
+  L.save(DIR + nome, { w: W, h: H, bg: C.anil, body: c.b, defs: c.def, scale: sc, title: 'Fireflies Consultoria · ' + tit });
 }
 
 // 4 · AVATAR 1080 -----------------------------------------------------------
