@@ -29,7 +29,7 @@ node _build/impresso.js   # nfse-condominios.pdf + previews/impresso-pNN.png + i
 - **Logo:** sai o Winker Pro e entra o sistema final "Órbita do vagalume", copiado de `../../logo/svg/`:
   - `fireflies_horizontal_digital-negativo.svg` no hero (320 px na tela e 66 mm no PDF; o mínimo é 240 px / 45 mm);
   - `fireflies_horizontal_digital.svg` na assinatura do rodapé, sobre Branco;
-  - `fireflies_simbolo_digital-negativo.svg` (F de luz em órbita) no avatar.
+  - `fireflies_simbolo_digital-negativo.svg` (F em órbita) no avatar.
   - Os provisórios L1 · Órbita do scratchpad foram usados só no primeiro rascunho e já foram substituídos.
 - **Autor:** "Gabriel Alvares · Fundador & Contador Responsável · Fireflies Consultoria" (no original: "Product Owner & Contador · Winker").
 - **CTA:**
@@ -92,7 +92,7 @@ Regras aplicadas:
 - Cards, linhas de tabela, callouts e passos com `break-inside: avoid`. A seção 06 começa em página nova.
 
 ## Placeholders e pendências
-- **Foto do autor:** não estava disponível. O avatar usa o símbolo final (F de luz em órbita) dentro de um círculo Anil Profundo, marcado com `data-placeholder="foto-do-autor"` e com um comentário no HTML. Troque o `<span class="avatar">` por `<img>` quando houver foto.
+- **Foto do autor:** não estava disponível. O avatar usa o símbolo final (F em órbita) dentro de um círculo Anil Profundo, marcado com `data-placeholder="foto-do-autor"` e com um comentário no HTML. Troque o `<span class="avatar">` por `<img>` quando houver foto.
 - **Link da live:** `href="#"` com `<!-- TODO: link da live -->`. O original apontava para um vídeo do YouTube da Winker, que não foi reaproveitado.
 - **Fontes oficiais:** o PDF original não tinha os links dessas referências, então elas aparecem como lista sem link. Acrescente as URLs quando houver.
 - O "60 dias, ou 9 semanas, a partir de hoje" é texto fixo, como no original (referência: 02/10/2026).

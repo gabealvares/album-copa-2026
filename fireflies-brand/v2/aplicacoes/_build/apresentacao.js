@@ -17,8 +17,8 @@ function rodape(n, { escuro = false, simbolo = true, titulo = 'AUDITORIA DAS CON
   let s = t(`FIREFLIES CONSULTORIA · ${titulo}`, { f: 'mono4', s: 12, x: M, y, fill: cor, tr: 0.08 });
   let xr = W - M;
   if (simbolo) {
-    const sb = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 32, x: 0, y: 0 });
-    const sb2 = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 32, x: W - M - sb.w, y: y - 24 });
+    const sb = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 44, x: 0, y: 0 });
+    const sb2 = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 44, x: W - M - sb.w, y: y - 26 });
     s += sb2.svg; xr = W - M - sb.w - 24;
   }
   s += t(`${String(n).padStart(2, '0')} / ${String(TOT).padStart(2, '0')}`, { f: 'mono4', s: 12, x: xr, y, fill: cor, a: 'end', tr: 0.08 });

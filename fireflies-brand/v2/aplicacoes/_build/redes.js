@@ -14,7 +14,7 @@ function base(W, H, escuro, { simbolo = true, num, M = 80 } = {}) {
   let s = t(HANDLE, { f: 'mono4', s: 22, x: M, y: H - M + 6, fill: escuro ? C.fumaca : C.pedra, tr: 0.04 });
   if (simbolo) {
     const sb = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 48 });
-    s += logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 48, x: W - M - sb.w, y: H - M - 34 }).svg;
+    s += logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 48, x: W - M - sb.w, y: H - M - 26 }).svg;
   }
   if (num) s += t(num, { f: 'mono5', s: 22, x: W - M, y: H - M + 6, fill: escuro ? C.fumaca : C.pedra, a: 'end', tr: 0.1 });
   return s;

@@ -30,7 +30,7 @@ const WA = 'https://wa.me/5511982450527';
   });
   v += qr(WA, { x: o + 90 - 5 - 15, y: o + 50 - 5 - 15, s: 15, c: C.anil });
   v += t('WHATSAPP', { f: 'mono5', s: pt(5.5), x: o + 90 - 5 - 7.5, y: o + 50 - 5 - 16.6, fill: C.pedra, a: 'middle', tr: 0.1 });
-  v += logo('simbolo-pequeno', 'digital', { w: 11, x: o + 90 - 5 - 11, y: s }).svg;
+  v += logo('simbolo-pequeno', 'digital', { w: 9, x: o + 90 - 5 - 9, y: s }).svg;
   L.save(DIR + 'cartao-visita_verso', { w: W, h: H, unit: 'mm', bleed: o, body: v, pdf: DIR + 'cartao-visita_90x50mm_sangria3mm', title: 'Fireflies Consultoria · cartão de visita · verso' });
 }
 
@@ -76,8 +76,8 @@ const WA = 'https://wa.me/5511982450527';
   const o = B, W = 54 + 2 * o, H = 86 + 2 * o, topo = 86 * 0.4;
   let b = rect(0, 0, W, H, C.branco) + rect(0, 0, W, o + topo, C.anil);
   b += `<rect x="${o + 27 - 6.5}" y="${o + 4}" width="13" height="3" rx="1.5" fill="none" stroke="${C.ceu}" stroke-width="0.25"/>`; // furo do cordão (faca)
-  const sb = logo('simbolo', 'digital-negativo', { w: 30 });
-  b += logo('simbolo', 'digital-negativo', { w: 30, x: o + 27 - 15, y: o + topo / 2 - sb.h / 2 + 3 }).svg;
+  const sb = logo('simbolo', 'digital-negativo', { h: 20 });
+  b += logo('simbolo', 'digital-negativo', { h: 20, x: o + 27 - sb.w / 2, y: o + topo / 2 - sb.h / 2 + 3 }).svg;
   b += line(o + 6, o + topo + 9, o + 14, o + topo + 9, C.rubrica, pt(0.75));
   b += t('Gabriel', { f: 'sans6', s: pt(14), x: o + 6, y: o + topo + 16, fill: C.anil });
   b += t('Alvares', { f: 'sans6', s: pt(14), x: o + 6, y: o + topo + 22, fill: C.anil });

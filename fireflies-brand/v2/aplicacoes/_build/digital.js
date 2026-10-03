@@ -83,7 +83,7 @@ function capaLinkedin() {
   let b = ""; // símbolo dentro do círculo de 70 % (r 378)
   const sb = logo('simbolo', 'digital-negativo', { w: 690 });
   b += logo('simbolo', 'digital-negativo', { w: 690, x: 540 - 345, y: 540 - sb.h / 2 }).svg;
-  L.save(DIR + 'avatar_1080', { w: W, h: W, bg: C.anil, body: b, title: 'Fireflies Consultoria · avatar (F de luz em órbita)' });
+  L.save(DIR + 'avatar_1080', { w: W, h: W, bg: C.anil, body: b, title: 'Fireflies Consultoria · avatar (F em órbita)' });
 }
 
 // 5 · FUNDO DE ZOOM / MEET 1920×1080 ----------------------------------------

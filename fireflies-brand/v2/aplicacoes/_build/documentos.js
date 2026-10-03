@@ -32,7 +32,7 @@ function cabecalho(o, { tipo, dir1, dir2, primeira = true }) {
   const y = o + 12;
   if (primeira) r += logo('horizontal', 'digital', { w: 40, x: o + ML, y }).svg;
   else {
-    const sb = logo('simbolo', 'digital', { h: 8, x: o + ML, y });
+    const sb = logo('simbolo-pequeno', 'digital', { h: 8, x: o + ML, y });
     r += sb.svg + t(tipo, { f: 'mono4', s: pt(7.5), x: o + ML + sb.w + 3, y: y + 5.5, fill: C.pedra, tr: 0.08 });
   }
   r += t(dir1, { f: 'mono4', s: pt(7.5), x: o + A4W - MR, y: y + 4, fill: C.pedra, a: 'end', tr: 0.04 });

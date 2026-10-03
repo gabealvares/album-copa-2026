@@ -29,8 +29,8 @@ function selo(cx, cy) {
   b += tArc('PRESTAÇÃO DE CONTAS 2026', { f: 'mono5', s: 4.6, cx, cy, r: 41, fill: C.cal, tr: 0.12 });
   b += tArc('AUDITADA POR FIREFLIES CONSULTORIA', { f: 'mono5', s: 4.1, cx, cy, r: 41 + 3.1, fill: C.cal, tr: 0.08, bottom: true });
   b += circle(cx - 42.6, cy, 0.9, C.vermelhao) + circle(cx + 42.6, cy, 0.9, C.vermelhao);
-  const sb = logo('simbolo', 'digital-negativo', { w: 26 });
-  b += logo('simbolo', 'digital-negativo', { w: 26, x: cx - 13, y: cy - 29 }).svg;
+  const sb = logo('simbolo', 'digital-negativo', { h: 12 });
+  b += logo('simbolo', 'digital-negativo', { h: 12, x: cx - sb.w / 2, y: cy - 28.5 }).svg;
   b += `<rect x="${cx - 12.5}" y="${cy - 13}" width="25" height="25" rx="1.6" fill="${C.branco}"/>`;
   b += qr(SELO_URL, { x: cx - 10.5, y: cy - 11, s: 21, c: C.anil });
   b += t('VERIFIQUE PELO QR', { f: 'mono5', s: 2.3, x: cx, y: cy + 17.5, fill: C.cal, a: 'middle', tr: 0.12 });

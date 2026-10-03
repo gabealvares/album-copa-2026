@@ -153,8 +153,9 @@ function para(text, o = {}) {
 const ART = {
   horizontal: [-208, -109, 1120, 396], 'condominios-horizontal': [-208, -109, 1120, 396],
   'academy-horizontal': [-208, -109, 1120, 396], vertical: [0, -262, 708, 454],
-  simbolo: [3, 35, 113, 45], 'simbolo-pequeno': [3, 36, 114, 46], favicon: [28.7, 20.5, 74.7, 93.4],
   wordmark: [0, 0, 708, 192.3],
+  // símbolo, símbolo pequeno e favicon: medidos pelo gerador do logo (v2/logo/_build/gerar.js)
+  ...JSON.parse(fs.readFileSync(path.join(V2, 'logo/_build/arte.json'), 'utf8')),
 };
 const XCAP = 96 / 1120; // X (altura da versal) em fração da largura do horizontal
 let UID = 0;

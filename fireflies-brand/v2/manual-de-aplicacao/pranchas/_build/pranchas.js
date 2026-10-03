@@ -308,7 +308,7 @@ function arvore() {
   ];
   const leaves = [
     R('r4', 820, 580, 300, 'cal', 'CAL OU BRANCO', 'Tela de leitura longa: painel, PDF digital, site (conteúdo).'),
-    R('r5', 1140, 580, 300, 'anil', 'ANIL DE JUNHO', 'Redes, capa, OG, vídeo, avatar (F de luz). Logo digital-negativo.'),
+    R('r5', 1140, 580, 300, 'anil', 'ANIL DE JUNHO', 'Redes, capa, OG, vídeo, avatar (F em órbita). Logo digital-negativo.'),
     R('r6', 1460, 580, 320, 'branco', 'SEM FUNDO', 'Assinatura de e-mail: horizontal digital, PNG transparente, 240 px; testar dark mode.'),
     R('r7', 820, 790, 300, 'anil', 'ANIL (+ EXCEÇÃO)', 'Campanha. Âmbar ou Rubrica só em ≤ 1 de cada 10 peças.'),
     R('r8', 1140, 790, 640, 'split', 'FRENTE ANIL · VERSO BRANCO/CAL', 'Impresso de gráfica: cartão, pasta, capa de relatório, envelope. Logo chapado-negativo / chapado. Exceção: certificado Academy é CAL.'),
@@ -444,16 +444,16 @@ function versoes() {
   .note b{color:${C.anil}}
   `;
   return `<!doctype html><html><head><meta charset="utf-8"><style>${css}</style></head><body>
-  <div class="head"><h1>Versões do logo por fundo<span>A versão certa para tela e para impressão, o F de luz, e o erro mais comum em cada fundo</span></h1>
+  <div class="head"><h1>Versões do logo por fundo<span>A versão certa para tela e para impressão, o F em órbita, e o erro mais comum em cada fundo</span></h1>
   <div class="meta">Fireflies Consultoria · manual de aplicação v2<br>Seção 0 e 2 · arquivos: logo/svg/fireflies_{versao}_{cor}.svg</div></div>
   <div class="grid">
-    <div class="hdr"><div>Fundo</div><div>Tela e projetor</div><div>Impressão (escritório e gráfica)</div><div>F de luz (avatar, selo)</div><div class="bad">Errado</div><div>Por quê</div></div>
+    <div class="hdr"><div>Fundo</div><div>Tela e projetor</div><div>Impressão (escritório e gráfica)</div><div>F em órbita (avatar, selo)</div><div class="bad">Errado</div><div>Por quê</div></div>
     ${rows.map(row).join('')}
   </div>
   <div class="notes">
     <div class="note"><b>Digital</b> (gradiente e brilho) só em tela, projetor e PDF. Na impressora do escritório e na gráfica, use o <b>chapado</b> (Anil + Vermelhão ou Cal + Âmbar).</div>
     <div class="note"><b>Mono</b> (anil, branco ou preto) em carimbo, gravação, hot stamping, bordado (horizontal ≥ 60 mm) e nos fundos Âmbar e Rubrica.</div>
-    <div class="note"><b>Mínimos:</b> horizontal 240 px / 45 mm (abaixo, use o wordmark); F de luz 40 px / 12 mm; simbolo-pequeno de 24 a 39 px; abaixo de 24 px, só o favicon (F + luz).</div>
+    <div class="note"><b>Mínimos:</b> horizontal 240 px / 45 mm (abaixo, use o wordmark); F em órbita 40 px / 12 mm; simbolo-pequeno de 24 a 39 px; abaixo de 24 px, só o favicon (o vagalume com rastro).</div>
   </div>
   <div class="foot">ÁREA DE PROTEÇÃO: X/2 EM VOLTA DA CAIXA DA ÓRBITA, INCLUINDO O VAGALUME (X = ALTURA DA VERSAL DE FIREFLIES). F DE LUZ: ¼ DA LARGURA DA ÓRBITA. FOTOS SIMULADAS.</div>
   </body></html>`;

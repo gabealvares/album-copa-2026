@@ -42,7 +42,7 @@ const E = 'contenteditable';
   const lgH = logo('horizontal', 'digital', { w: 360 }).h;
   const S = [];
   const rod = (n, escuro, simbolo = true) => {
-    const sb = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 32, x: 1824 - 80, y: 1026 });
+    const sb = logo('simbolo', escuro ? 'digital-negativo' : 'digital', { h: 44, x: 1824 - 80, y: 1020 });
     return { g: simbolo ? sb.svg : '', h: `<div class="rod ${escuro ? 'esc' : ''}"><span ${E}>FIREFLIES CONSULTORIA · AUDITORIA DAS CONTAS 2026</span><span style="margin-right:${simbolo ? 104 : 0}px">0${n} / 08</span></div>` };
   };
   // 1 capa escura

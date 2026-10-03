@@ -104,7 +104,8 @@ Use estes nomes em briefings, arquivos e conversas.
 |---|---|
 | **a Órbita** | O símbolo: um único fio elíptico, leve e inclinado, que envolve o nome. A metade de trás é **Constelação** (fio finíssimo com estrelas enfiadas, fria). A metade da frente é **Luz**: o fio engrossa e esquenta (rubrica → vermelhão → âmbar). Nada é colado; é um gesto só. Herda o anel e a meia-lua do logo original. |
 | **o Vagalume** | Fica na ponta da Órbita, acima do E de Luz: a luz acesa com brilho suave e duas asas em fio. Representa o contador responsável que acende os outros. |
-| **o F de Luz** | A versão curta: o F da Sora, com o braço do meio aceso, dentro da mesma Órbita e com o mesmo Vagalume na ponta. Uso em avatar, favicon, app e selo. |
+| **o F em Órbita** | A versão curta: o F da Sora, inteiro e de uma cor só, dentro da mesma Órbita vista de frente (redonda) e com o mesmo Vagalume na ponta, que é a única luz. Uso em avatar, app, selo e rodapé. |
+| **o Rastro** | O favicon: o Vagalume com o fim do voo, sem o F. Principal: Arco. Guardados: Diagonal e Laço. |
 | **Magnitudes** | A escala de pontos: 3 magnitudes mais a luz do Vagalume. Vale para o símbolo, a iconografia e os gráficos. Quanto maior o ponto, maior a importância. |
 | **Traço de Constelação** | O fio finíssimo com estrelas enfiadas: a metade fria da Órbita e a linguagem das 8 Constelações dos Serviços. |
 | **Retícula** | A grade celeste de coordenadas, usada como fundo de capas, slides e painéis. |

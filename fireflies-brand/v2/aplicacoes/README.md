@@ -28,7 +28,7 @@ Este pacote reúne todas as aplicações da identidade "Órbita do vagalume". O 
 | **Assinatura de e-mail** | 600 px máx.; logo exibido a 184 px | `digital/assinatura-email.html` · `digital/img/fireflies-logo-assinatura@2x.png` (e `-placa@2x` para dark mode) · `assinatura-email_preview.svg/.png` | Copie a tabela do HTML para o Gmail/Outlook. Hospede o PNG em HTTPS e troque o `src` |
 | **OG image** | 1200×630 px | `digital/og-image_1200x630.svg/.png` (2×) | `_build/digital.js` |
 | **Capa do LinkedIn** (página) | 4200×700 px e 1128×191 px | `digital/linkedin-capa_4200x700.svg/.png` (1×, já é o tamanho máximo) · `linkedin-capa_1128x191.svg/.png` (2×) | Texto dentro do centro seguro de 3000×500 |
-| **Avatar** (F de luz em órbita) | 1080×1080 px | `digital/avatar_1080.svg/.png` (2160 px) | Símbolo dentro do círculo de 70% |
+| **Avatar** (F em órbita) | 1080×1080 px | `digital/avatar_1080.svg/.png` (2160 px) | Símbolo dentro do círculo de 70% |
 | **Fundo de Zoom / Meet / Teams** | 1920×1080 px | `digital/fundo-videochamada_1920x1080.svg/.png` (1×, o limite das plataformas) | Centro livre para a pessoa e logo no canto superior direito |
 | **Instagram**: manifesto, dado e dica para síndico | 1080×1350 px | `redes/instagram_01-manifesto`, `_02-dado`, `_03-dica-sindico` (`.svg/.png` 2×) | `_build/redes.js` |
 | **Carrossel**: capa + 2 internas | 1080×1350 px | `redes/carrossel_01-capa`, `_02-interna`, `_03-interna` | Numeração "0X / 08". Para as outras 5 internas, use o mesmo molde |
