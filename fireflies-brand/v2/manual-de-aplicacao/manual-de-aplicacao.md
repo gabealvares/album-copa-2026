@@ -380,7 +380,7 @@ Precisão que ilumina decisões.                   ← 12 px itálico, Pedra-Sab
 | **Carrossel** | 1080×1350 px, 6 a 10 cards (LinkedIn: PDF 1080×1350, 6 a 12 páginas) | Igual ao post | Capa Anil; miolo alterna Cal/Anil por bloco, nunca card a card | Capa: `horizontal_digital-negativo` 400 px ou `vertical` 280 px; cards: numeração "03 / 08" em Mono | Capa 80–96 px; miolo 56 px título, 34 px corpo |
 | **Story / Reels** | 1080×1920 px | Livre: **250 px no topo e 340 px na base**; laterais 64 px | Anil | F em órbita 72 px no topo da área segura | Título 72–88 px; corpo 40 px |
 | **Capa do LinkedIn (página)** | 4200×700 px (mín. 1128×191) | Centro de 3000×500; canto inferior esquerdo livre (o avatar cobre ~ 22% da largura no desktop) | Anil + retícula Céu 30% | Não repetir o logo (o avatar já é o logo) | "Luz medida." Sora 160 px, à direita do centro |
-| **Capa do LinkedIn (perfil)** | 1584×396 px | Terço esquerdo livre (foto) | Anil | `horizontal_digital-negativo` 400 px, à direita | Frase de apoio em Plex Sans 36 px + "CRC-SP [nº]" em Mono 24 px |
+| **Capa do LinkedIn (perfil)** | 1584×396 px | Terço esquerdo livre (foto) | Anil | `horizontal_digital-negativo` 400 px, à direita | Frase de apoio em Plex Sans 36 px + "www.fireflies.com.br" em Mono 24 px |
 | **Avatar** | 1080×1080 px (exibido em círculo) | F em órbita dentro do **círculo de 70%** | Anil de Junho | `simbolo_digital-negativo` (pronto: `../logo/avatar-1080.png`) | — |
 | **OG image / link** | 1200×630 px | Margem 60 px | Anil | 1200×630 px | Margem 60 px | Anil | `horizontal_digital-negativo` 400 px (base: `../logo/og-base-1200x630.png`) | Título 64 px |
 
