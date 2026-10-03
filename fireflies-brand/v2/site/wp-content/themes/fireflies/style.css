@@ -1,0 +1,17 @@
+/*
+Theme Name: Fireflies
+Theme URI: https://fireflies.com.br
+Author: Fireflies Consultoria
+Author URI: https://fireflies.com.br
+Description: Tema de blocos (FSE) da Fireflies Consultoria, identidade v2 "Carta do Lume". Paleta Noite de São João, Sora + IBM Plex locais, padrões editoriais para serviços, condomínios, Academy e blog. Sem page builder e sem jQuery.
+Requires at least: 6.6
+Tested up to: 7.1
+Requires PHP: 8.1
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: fireflies
+Tags: full-site-editing, block-patterns, block-styles, editor-style, wide-blocks, translation-ready, accessibility-ready, blog, portfolio
+*/
+
+/* Os estilos ficam em theme.json e em assets/css/editorial.css. */

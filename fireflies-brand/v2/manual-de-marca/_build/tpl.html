@@ -1,0 +1,1012 @@
+<title>Manual de Marca Fireflies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --anil:#17183A; --profundo:#0F1029; --cal:#EDEEEA; --branco:#FFFFFF;
+  --ambar:#F2B544; --vermelhao:#E65A3E; --rubrica:#A9301F; --ceu:#6E89B4;
+  --fuligem:#2A2F3D; --pedra:#5E6271; --fumaca:#D2D4DA;
+  --sora:"Sora","Century Gothic",Arial,sans-serif;
+  --sans:"IBM Plex Sans",Arial,Helvetica,sans-serif;
+  --mono:"IBM Plex Mono",Consolas,ui-monospace,monospace;
+  --side:240px; --pad:clamp(16px,4vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--cal)}
+body{margin:0;background:var(--cal);color:var(--fuligem);font-family:var(--sans);font-size:16px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rubrica);outline-offset:3px}
+.esc :focus-visible,.side :focus-visible,.topbar :focus-visible{outline-color:var(--ambar)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--branco);color:var(--anil);padding:8px 12px;z-index:50;font-family:var(--mono);font-size:13px}
+.skip:focus{left:8px}
+
+/* ---------- navegação ---------- */
+.side{position:fixed;inset:0 auto 0 0;width:var(--side);background:var(--profundo);color:var(--fumaca);padding:28px 24px;display:none;flex-direction:column;z-index:20;border-right:1px solid rgba(237,238,234,.08)}
+.side .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cal);margin-bottom:36px}
+.side .marca svg{width:30px;height:30px;flex:none}
+.side .marca span{font-family:var(--sora);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;line-height:1.3}
+.side ol,.menu ol{list-style:none;margin:0;padding:0}
+.side li a,.menu li a{display:grid;grid-template-columns:30px 1fr;align-items:baseline;text-decoration:none;padding:6px 0;font-size:14px;color:var(--fumaca);border-left:2px solid transparent}
+.side li a .n,.menu li a .n{font-family:var(--mono);font-size:11px;color:var(--ceu)}
+.side li a:hover{color:var(--branco)}
+.side li a[aria-current="true"]{color:var(--branco);font-weight:500}
+.side li a[aria-current="true"] .n{color:var(--vermelhao)}
+.side .pe{margin-top:auto;font-family:var(--mono);font-size:11px;line-height:1.5;color:var(--ceu)}
+.topbar{position:sticky;top:0;z-index:20;background:var(--profundo);color:var(--cal);display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid rgba(237,238,234,.1)}
+.topbar .marca{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--cal);font-family:var(--sora);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+.topbar .marca svg{width:26px;height:26px}
+.topbar button{font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase;background:transparent;color:var(--cal);border:1px solid rgba(237,238,234,.35);padding:8px 12px;cursor:pointer}
+.menu{display:none;position:sticky;top:51px;z-index:19;background:var(--profundo);padding:4px 16px 16px;border-bottom:1px solid rgba(237,238,234,.1);max-height:calc(100vh - 51px);overflow:auto}
+.menu.aberto{display:block}
+.menu li a{padding:9px 0;font-size:15px;border-bottom:1px solid rgba(237,238,234,.07)}
+@media (min-width:1100px){
+  .side{display:flex}
+  .topbar,.menu{display:none!important}
+  main,footer{margin-left:var(--side)}
+}
+
+/* ---------- seções ---------- */
+.s{padding:clamp(56px,8vw,112px) var(--pad);position:relative}
+.cla{background:var(--cal);color:var(--fuligem)}
+.bra{background:var(--branco);color:var(--fuligem)}
+.esc{background:var(--anil);color:var(--cal)}
+.wrap{max-width:1180px;margin:0 auto}
+.g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;row-gap:32px}
+.c12{grid-column:span 12}.c8{grid-column:span 8}.c7{grid-column:span 7}.c6{grid-column:span 6}.c5{grid-column:span 5}.c4{grid-column:span 4}.c3{grid-column:span 3}.c9{grid-column:span 9}
+.o1{grid-column:2 / span 10}
+@media (max-width:860px){.g>*{grid-column:1 / -1!important}.g{row-gap:24px}}
+
+.cab{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;border-top:1px solid currentColor;padding-top:14px;margin-bottom:clamp(36px,5vw,64px)}
+.cab .num{grid-column:span 2;font-family:var(--mono);font-size:13px;line-height:1.3;padding-top:8px}
+.cla .cab .num,.bra .cab .num{color:var(--rubrica)}
+.esc .cab .num{color:var(--vermelhao)}
+.cab h2{grid-column:span 10;margin:0}
+.cab p{grid-column:3 / span 7;margin:16px 0 0;font-size:18px;line-height:1.5;max-width:62ch}
+.cla .cab p{color:var(--pedra)} .esc .cab p{color:var(--fumaca)}
+@media (max-width:860px){.cab .num,.cab h2,.cab p{grid-column:1 / -1}.cab .num{padding:0 0 6px}}
+
+h1,h2,h3{font-family:var(--sora);font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.08}
+h2{font-size:clamp(30px,4.4vw,52px);color:inherit}
+.cla h2,.bra h2{color:var(--anil)}
+.esc h2{color:var(--branco)}
+h3{font-size:15px;letter-spacing:.08em;margin:0 0 14px;font-weight:600}
+.cla h3,.bra h3{color:var(--anil)}
+.esc h3{color:var(--cal)}
+h4{font-family:var(--sans);font-weight:600;font-size:17px;margin:0 0 6px;line-height:1.35}
+p{margin:0 0 14px;max-width:68ch}
+.lead{font-size:clamp(19px,1.9vw,23px);line-height:1.45;font-weight:300;max-width:46ch}
+.cla .lead{color:var(--anil)}
+.nota{font-family:var(--mono);font-size:12px;line-height:1.5}
+.cla .nota,.bra .nota{color:var(--pedra)}
+.esc .nota{color:var(--ceu)}
+.rot{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px;display:block}
+.cla .rot{color:var(--rubrica)}
+.esc .rot{color:var(--fumaca)}
+.sub{margin-top:clamp(56px,7vw,96px);padding-top:16px;border-top:1px solid}
+.cla .sub{border-color:rgba(23,24,58,.22)}
+.esc .sub{border-color:rgba(237,238,234,.18)}
+.sub>h3{margin-bottom:24px}
+.dest{color:var(--rubrica)}
+.esc .dest{color:var(--vermelhao)}
+
+/* tabelas */
+.tb{width:100%;border-collapse:collapse;font-size:15px}
+.tb th{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:0 14px 10px 0;vertical-align:bottom}
+.tb td{padding:12px 14px 12px 0;vertical-align:top;border-top:1px solid}
+.cla .tb th{color:var(--anil)} .cla .tb td{border-color:rgba(23,24,58,.16)}
+.esc .tb th{color:var(--fumaca)} .esc .tb td{border-color:rgba(237,238,234,.14)}
+.tb td.m{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.tb td strong{font-weight:600}
+.cla .tb td strong{color:var(--anil)}
+.esc .tb td strong{color:var(--branco)}
+.tbx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){
+  .tb.pilha thead{display:none}
+  .tb.pilha tr{display:block;border-top:1px solid;padding:12px 0}
+  .cla .tb.pilha tr{border-color:rgba(23,24,58,.16)} .esc .tb.pilha tr{border-color:rgba(237,238,234,.14)}
+  .tb.pilha td{display:block;border:0;padding:2px 0}
+  .tb.pilha td[data-l]::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin-top:6px}
+  .tb.pilha td.m{white-space:normal}
+}
+
+figure{margin:0}
+figcaption{font-family:var(--mono);font-size:12px;line-height:1.5;margin-top:10px}
+.cla figcaption{color:var(--pedra)} .esc figcaption{color:var(--ceu)}
+.moldura{border:1px solid rgba(23,24,58,.14);background:var(--branco)}
+.esc .moldura{border-color:rgba(237,238,234,.12)}
+
+/* ---------- 1 capa ---------- */
+.capa{background:var(--anil);color:var(--cal);min-height:min(100vh,900px);display:flex;flex-direction:column;padding:28px var(--pad) clamp(32px,5vw,56px);position:relative;overflow:hidden}
+.capa::before{content:"";position:absolute;inset:0;background:url(img/capa-reticula.jpg) center/900px repeat;opacity:.55}
+.capa>*{position:relative}
+.capa .topo{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fumaca)}
+.capa .logo{margin:auto 0;padding:48px 0 32px;max-width:1040px;width:100%}
+.capa .logo svg{width:100%;height:auto;display:block;margin-left:-3%}
+.capa .base{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:end;border-top:1px solid rgba(237,238,234,.22);padding-top:20px}
+.capa .base .assin{grid-column:span 7;font-family:var(--sora);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(34px,5.6vw,76px);line-height:1;color:var(--branco);margin:0}
+.capa .base p{grid-column:9 / span 4;margin:0;color:var(--fumaca);font-size:15px}
+@media (max-width:860px){.capa .base .assin,.capa .base p{grid-column:1 / -1}.capa .base p{margin-top:18px}}
+
+/* ---------- 2 marca ---------- */
+.manifesto{font-size:clamp(18px,1.7vw,21px);line-height:1.6;color:var(--anil);font-weight:300;margin:0;padding-left:20px;border-left:2px solid var(--rubrica)}
+.manifesto p{margin:0 0 4px}
+.manifesto p:last-child{font-weight:500;margin-top:12px}
+.dl{margin:0}
+.dl>div{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:14px 0;border-top:1px solid rgba(23,24,58,.16)}
+.dl dt{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--rubrica);padding-top:3px}
+.dl dd{margin:0}
+@media (max-width:520px){.dl>div{grid-template-columns:1fr;gap:4px}}
+.posic{font-family:var(--sans);font-size:clamp(20px,2.3vw,28px);line-height:1.4;color:var(--anil);font-weight:400;margin:0;max-width:40ch}
+.valores{list-style:none;margin:0;padding:0;counter-reset:v}
+.valores li{display:grid;grid-template-columns:44px 1fr;padding:14px 0;border-top:1px solid rgba(23,24,58,.16);counter-increment:v}
+.valores li::before{content:counter(v,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--rubrica);padding-top:4px}
+.valores strong{font-family:var(--sora);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px;color:var(--anil);display:block;margin-bottom:2px}
+.arq{display:grid;grid-template-columns:1fr;gap:0}
+.arq div{padding:16px 0;border-top:1px solid rgba(23,24,58,.16)}
+.arq .fora{opacity:.75}
+.arq .fora h4{text-decoration:line-through;text-decoration-color:var(--rubrica)}
+.enao td:first-child{color:var(--anil);font-weight:500}
+.enao td:last-child{color:var(--pedra)}
+
+/* ---------- 3 símbolo ---------- */
+.frase{font-size:clamp(21px,2.5vw,30px);line-height:1.38;color:var(--branco);margin:0;font-weight:300;max-width:34ch}
+.roteiro{margin:0;padding:0;list-style:none}
+.roteiro li{display:grid;grid-template-columns:64px 1fr;gap:8px;padding:10px 0;border-top:1px solid rgba(237,238,234,.14);color:var(--fumaca)}
+.roteiro li span{font-family:var(--mono);font-size:12px;color:var(--ceu);padding-top:3px}
+.anat{list-style:none;margin:0;padding:0}
+.anat li{padding:14px 0;border-top:1px solid rgba(237,238,234,.14)}
+.anat b{font-family:var(--sora);font-weight:600;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--branco);display:block;margin-bottom:4px}
+.anat span{color:var(--fumaca);font-size:15px}
+.anat .k{font-family:var(--mono);font-size:11px;color:var(--ceu);float:right;margin-left:8px}
+
+/* ---------- 4 logo ---------- */
+.placa{display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vw,48px);background:var(--branco);border:1px solid rgba(23,24,58,.12);min-height:180px}
+.placa.cal{background:var(--cal)} .placa.anil{background:var(--anil);border-color:var(--anil)} .placa.rub{background:var(--rubrica);border-color:var(--rubrica)}
+.placa img{max-height:190px;width:auto;max-width:100%}
+.placa.alto img{max-height:240px}
+.placa.peq img{max-height:110px}
+.versoes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.versoes figure:nth-child(1){grid-column:span 8}
+.versoes figure:nth-child(2){grid-column:span 4}
+.versoes figure:nth-child(3),.versoes figure:nth-child(4){grid-column:span 4}
+.versoes figure:nth-child(5){grid-column:span 4}
+.versoes figure:nth-child(6),.versoes figure:nth-child(7){grid-column:span 6}
+.versoes figure:nth-child(1) .placa,.versoes figure:nth-child(2) .placa{min-height:300px}
+@media (max-width:860px){.versoes figure{grid-column:1 / -1!important}.versoes figure .placa{min-height:160px!important}}
+.versoes figcaption b,.cores figcaption b{font-family:var(--mono);font-weight:500;color:var(--anil)}
+.cores{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.cores .placa{min-height:150px;padding:24px}
+.cores .placa img{max-height:96px}
+.cores figcaption{font-family:var(--sans);font-size:14px;color:var(--fuligem)}
+.cores figcaption b{display:block;margin-bottom:2px;font-size:12px}
+.errados{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.errados figcaption{font-family:var(--sans);font-size:14px;color:var(--fuligem)}
+.errados figcaption b{color:var(--rubrica);font-family:var(--mono);font-size:12px;font-weight:500;display:block}
+.medidas{list-style:none;padding:0;margin:0}
+.medidas li{padding:12px 0;border-top:1px solid rgba(23,24,58,.16)}
+
+/* ---------- 5 cores ---------- */
+.sw-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.sw{grid-column:span 3;display:flex;flex-direction:column;border:1px solid rgba(237,238,234,.14);background:var(--profundo)}
+.sw.big{grid-column:span 4}
+.sw .chip{height:120px;position:relative;box-shadow:inset 0 0 0 1px rgba(237,238,234,.22)}
+.sw.big .chip{height:190px}
+.sw .info{padding:14px 14px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.sw .nome{font-family:var(--sora);font-weight:600;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--branco);margin:0 0 6px}
+.sw dl{margin:0;display:grid;grid-template-columns:62px 1fr;row-gap:2px;font-family:var(--mono);font-size:12px}
+.sw dt{color:var(--ceu)} .sw dd{margin:0;color:var(--fumaca)}
+.sw .papel{font-size:13px;color:var(--fumaca);margin:10px 0 0;line-height:1.45}
+.copiar{align-self:flex-start;margin-top:auto;font:500 12px var(--mono);color:var(--cal);background:transparent;border:1px solid rgba(237,238,234,.35);padding:7px 10px;cursor:pointer;margin-top:12px}
+.copiar:hover{border-color:var(--cal)}
+.copiar[data-ok]{border-color:var(--vermelhao);color:var(--branco)}
+@media (max-width:1180px){.sw{grid-column:span 4}.sw.big{grid-column:span 4}}
+@media (max-width:760px){.sw,.sw.big{grid-column:span 6}.sw.big .chip,.sw .chip{height:96px}}
+@media (max-width:440px){.sw,.sw.big{grid-column:span 12}}
+.prop{display:flex;height:64px;border:1px solid rgba(237,238,234,.2);margin:10px 0 6px}
+.prop span{display:block;height:100%}.prop span+span{box-shadow:inset 1px 0 0 rgba(237,238,234,.45)}
+.prop-leg{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--mono);font-size:12px;color:var(--fumaca);margin:0;padding:0;list-style:none}
+.prop-leg i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;border:1px solid rgba(237,238,234,.3)}
+.ctr{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12.5px;min-width:620px}
+.ctr th{font-weight:500;text-align:left;padding:8px 8px;color:var(--fumaca);font-size:11px;letter-spacing:.04em}
+.ctr th[scope=row]{font-family:var(--sans);font-size:13.5px;letter-spacing:0;white-space:nowrap}
+.ctr td{padding:8px;border-top:1px solid rgba(237,238,234,.12);white-space:nowrap}
+.ctr .ok{color:var(--cal)} .ctr .meio{color:var(--ceu)} .ctr .nao{color:rgba(237,238,234,.38)}
+.ctr td b{font-weight:400;display:inline-block;width:16px;font-family:"Segoe UI Symbol","DejaVu Sans","Apple Symbols",sans-serif}
+.umaluz{display:flex;align-items:center;gap:14px;padding:28px 0}
+.umaluz i{width:9px;height:9px;border-radius:50%;background:var(--fumaca);flex:none}
+.umaluz i.p{width:5px;height:5px;background:var(--ceu)}
+.umaluz i.l{width:16px;height:16px;background:var(--ambar)}
+
+/* ---------- 6 tipografia ---------- */
+.esp{border-top:1px solid rgba(23,24,58,.22);padding:24px 0 32px}
+.esp .meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--pedra);margin-bottom:16px}
+.esp .meta b{color:var(--rubrica);font-weight:500}
+.sora-g{font-family:var(--sora);font-weight:700;text-transform:uppercase;font-size:clamp(40px,7vw,104px);line-height:.98;letter-spacing:.02em;color:var(--anil);margin:0;overflow-wrap:anywhere}
+.alfa{font-size:clamp(17px,2vw,24px);line-height:1.5;color:var(--anil);margin:16px 0 0;overflow-wrap:anywhere;max-width:none}
+.sora-a{font-family:var(--sora);font-weight:600}
+.plex-a{font-family:var(--sans)}
+.mono-a{font-family:var(--mono)}
+.plex-g{font-family:var(--sans);font-weight:300;font-size:clamp(26px,3.6vw,46px);line-height:1.18;color:var(--anil);margin:0;max-width:24ch}
+.pesos{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:16px;color:var(--anil);font-size:20px}
+.mono-t{width:100%;max-width:560px;border-collapse:collapse;font-family:var(--mono);font-size:15px;color:var(--fuligem)}
+.mono-t th{font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-align:left;color:var(--anil);border-bottom:1px solid var(--anil);padding:6px 0}
+.mono-t th:last-child,.mono-t td:last-child{text-align:right}
+.mono-t td{padding:8px 0;border-bottom:1px solid var(--fumaca);font-variant-numeric:tabular-nums}
+.mono-t tr.tot td{border-top:1px solid var(--anil);border-bottom:0;font-weight:500;color:var(--anil)}
+.mono-t .neg{color:var(--rubrica)}
+.escala{width:100%;border-collapse:collapse}
+.escala td{border-top:1px solid rgba(23,24,58,.16);padding:14px 16px 14px 0;vertical-align:baseline}
+.escala td.m{font-family:var(--mono);font-size:12px;color:var(--pedra);white-space:nowrap}
+.escala .amostra{color:var(--anil);overflow-wrap:anywhere}
+@media (max-width:700px){.escala tr{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(23,24,58,.16);padding:10px 0}.escala td{border:0;padding:2px 8px 2px 0}.escala td.amostra-c{grid-column:1 / -1;padding-top:6px}}
+
+/* ---------- 7 iconografia ---------- */
+.ico-cat{margin-bottom:32px}
+.ico-cat h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--fumaca);margin:0 0 12px}
+.ico-cat h4 span{color:var(--ceu)}
+.icos{display:grid;grid-template-columns:repeat(auto-fill,minmax(108px,1fr));border-top:1px solid rgba(237,238,234,.12);border-left:1px solid rgba(237,238,234,.12)}
+.icos div{border-right:1px solid rgba(237,238,234,.12);border-bottom:1px solid rgba(237,238,234,.12);padding:16px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--cal);--ff-lit:currentColor;--ff-lit-edge:none}
+.icos svg{width:32px;height:32px}
+.icos span{font-family:var(--mono);font-size:10.5px;color:var(--ceu);text-align:center;line-height:1.2;overflow-wrap:anywhere}
+.consts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid rgba(237,238,234,.12);border-left:1px solid rgba(237,238,234,.12)}
+.consts figure{border-right:1px solid rgba(237,238,234,.12);border-bottom:1px solid rgba(237,238,234,.12);padding:24px 16px 16px;color:var(--cal);--ff-line:var(--ceu);--ff-lit:currentColor;--ff-lit-edge:none}
+.consts figure.acesa{--ff-lit:var(--ambar)}
+.consts svg{width:100%;max-width:150px;height:auto;display:block;margin:0 auto}
+.consts figcaption{text-align:center;color:var(--fumaca)}
+.consts figcaption i{color:var(--ceu)}
+@media (max-width:760px){.consts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.regras{list-style:none;margin:0;padding:0}
+.regras li{padding:10px 0 10px 22px;border-top:1px solid rgba(237,238,234,.14);position:relative;font-size:15px}
+.regras li::before{content:"";position:absolute;left:2px;top:19px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+.cla .regras li{border-color:rgba(23,24,58,.16)}
+.regras.nao li::before{border-radius:0;height:1.5px;width:9px;top:21px;background:var(--vermelhao);opacity:1}
+.cla .regras.nao li::before{background:var(--rubrica)}
+
+/* ---------- 9 aplicações ---------- */
+.gal{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px;align-items:start}
+.gal figure img{width:100%;border:1px solid rgba(237,238,234,.1)}
+.w3{grid-column:span 3}.w4{grid-column:span 4}.w6{grid-column:span 6}.w8{grid-column:span 8}.w2{grid-column:span 2}.w12{grid-column:span 12}
+@media (max-width:860px){.gal .w2,.gal .w3{grid-column:span 6}.gal .w4,.gal .w6,.gal .w8{grid-column:span 12}}
+.grupo{margin-top:56px}
+.grupo:first-of-type{margin-top:0}
+.grupo>header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(237,238,234,.18);padding-top:12px;margin-bottom:20px}
+.grupo>header h3{margin:0}
+.grupo>header p{margin:0;font-family:var(--mono);font-size:12px;color:var(--ceu)}
+.case{background:var(--cal);color:var(--fuligem);padding:clamp(20px,3vw,40px);margin-top:64px}
+.case h3{color:var(--anil)}
+.case .rot{color:var(--rubrica)}
+.case figcaption{color:var(--pedra)}
+
+/* ---------- 10 voz ---------- */
+.tons td:first-child{font-weight:600;color:var(--anil);white-space:nowrap}
+.tons td.ex{font-style:italic;color:var(--anil)}
+.fn{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
+.fn h3{border-bottom:1px solid var(--anil);padding-bottom:10px}
+.fn ul{list-style:none;margin:0;padding:0}
+.fn li{padding:11px 0;border-bottom:1px solid rgba(23,24,58,.14);font-size:15px}
+.fn .nao li{color:var(--pedra)}
+@media (max-width:700px){.fn{grid-template-columns:1fr;gap:32px}}
+.proibidas{display:flex;flex-wrap:wrap;gap:8px 28px;margin:0;padding:0;list-style:none}
+.proibidas li{font-family:var(--sora);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:clamp(24px,3.4vw,40px);color:var(--anil);text-decoration:line-through;text-decoration-color:var(--rubrica);text-decoration-thickness:3px}
+.proibidas.menor li{font-size:17px;font-family:var(--sans);font-weight:500;text-transform:none;letter-spacing:0;text-decoration-thickness:2px;color:var(--pedra)}
+
+/* ---------- 11 arquivos ---------- */
+.arqs td:first-child{font-family:var(--mono);font-size:13px;color:var(--branco);white-space:nowrap}
+.fmt{font-family:var(--mono);font-size:12px;color:var(--ceu)}
+.pend{list-style:none;margin:0;padding:0;counter-reset:p}
+.pend li{display:grid;grid-template-columns:40px 1fr;padding:14px 0;border-top:1px solid rgba(237,238,234,.14);counter-increment:p}
+.pend li::before{content:counter(p,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--vermelhao);padding-top:3px}
+.pend b{color:var(--branco);font-weight:600}
+.pend span{color:var(--fumaca)}
+
+/* ---------- 12 histórico ---------- */
+.linha{list-style:none;margin:0;padding:0;position:relative}
+.linha>li{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;padding:28px 0;border-top:1px solid rgba(23,24,58,.18)}
+.linha .q{grid-column:span 2;font-family:var(--mono);font-size:12px;color:var(--rubrica);padding-top:4px}
+.linha .t{grid-column:span 4}
+.linha .t p{font-size:15px}
+.linha figure{grid-column:span 6}
+.linha figure img{border:1px solid rgba(23,24,58,.14);background:var(--branco)}
+@media (max-width:860px){.linha .q,.linha .t,.linha figure{grid-column:1 / -1}.linha .q{padding-bottom:6px}}
+
+footer{background:var(--profundo);color:var(--fumaca);padding:40px var(--pad);font-family:var(--mono);font-size:12px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+</style>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<nav class="side" aria-label="Índice do manual">
+  <a class="marca" href="#capa">{{FAVICON}}<span>Manual de marca<br>Fireflies v2</span></a>
+  <ol>{{NAV}}</ol>
+  <p class="pe">Outubro 2026<br>Identidade "Órbita do vagalume"</p>
+</nav>
+<div class="topbar">
+  <a class="marca" href="#capa">{{FAVICON}}Manual de marca</a>
+  <button type="button" id="abreMenu" aria-expanded="false" aria-controls="menu">Índice</button>
+</div>
+<nav class="menu" id="menu" aria-label="Índice do manual (celular)"><ol>{{NAV}}</ol></nav>
+
+<main id="conteudo">
+
+<!-- 1 CAPA -->
+<header class="capa" id="capa">
+  <div class="topo"><span>Manual de marca · v2 · Outubro 2026</span><span>Fireflies Consultoria</span></div>
+  <h1 class="logo" aria-label="Fireflies Consultoria">{{LOGO_CAPA}}</h1>
+  <div class="base">
+    <p class="assin">Luz medida.</p>
+    <p>Consultoria financeira, contábil e fiscal em São Paulo, especializada em auditoria de condomínios. Este manual reúne a identidade completa: estratégia, símbolo, logo, cor, tipo, grafismos, aplicações e voz.</p>
+  </div>
+</header>
+
+<!-- 2 A MARCA -->
+<section class="s cla" id="marca" aria-labelledby="h-marca">
+ <div class="wrap">
+  <div class="cab"><span class="num">02</span><h2 id="h-marca">A marca</h2></div>
+  <div class="g">
+    <div class="c5">
+      <span class="rot">Território: Carta do Lume</span>
+      <p class="lead">O vagalume é o que se desenha. A carta celeste é como se desenha.</p>
+      <p>Estrelas de magnitudes diferentes, traço de constelação, retícula e o rigor da gravura. A astronomia mede com precisão o que parece mágico; a auditoria faz o mesmo com o que parece opaco. O mistério é o ponto de partida. A marca entrega a medição.</p>
+    </div>
+    <div class="c6" style="grid-column-end:13">
+      <blockquote class="manifesto">
+        <p>Antes do mapa, o céu era só assombro.</p>
+        <p>Então alguém mediu: deu nome a cada estrela e grau a cada distância.</p>
+        <p>Na noite brasileira, a primeira luz que se vê é a do vaga-lume. Em tupi, <i>uauá</i>.</p>
+        <p>Sozinho, ele pisca fora de ritmo. Em bando, entra em fase.</p>
+        <p>Os números de um condomínio ou de uma empresa são assim: muitos pontos, cada um piscando sozinho.</p>
+        <p>A gente mede, nomeia e coloca cada ponto no lugar, e uma luz responde por todas.</p>
+        <p>Não é mágica. É carta, régua e assinatura.</p>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c7">
+        <dl class="dl">
+          <div><dt>Essência</dt><dd><strong style="font-family:var(--sora);text-transform:uppercase;letter-spacing:.04em;color:var(--anil)">Luz medida.</strong></dd></div>
+          <div><dt>Propósito</dt><dd>Dar a quem decide (síndico, conselho ou empresário) a capacidade de enxergar os próprios números com a nitidez de um mapa.</dd></div>
+          <div><dt>Missão</dt><dd>Colocar a contabilidade, o fiscal, o financeiro e a auditoria de cada cliente em fase, com um contador responsável, um painel mensal explicado em reunião e a primeira entrega em 30 dias.</dd></div>
+          <div><dt>Visão</dt><dd>Ser, em São Paulo, a referência em auditoria de condomínios e em contabilidade gerencial que o cliente entende.</dd></div>
+          <div><dt>Proposta</dt><dd>"Todo mês, em dois minutos, você sabe o que mudou, o que preocupa e o que já está resolvido, e sabe quem assina e explica."</dd></div>
+        </dl>
+      </div>
+      <div class="c5">
+        <span class="rot">Posicionamento</span>
+        <p class="posic">Para síndicos e empresas que recebem relatórios mas não enxergam o todo, a Fireflies mapeia cada número (origem, posição e responsável) e coloca as áreas em fase.</p>
+        <p style="margin-top:16px;color:var(--pedra)">As contabilidades tradicionais entregam guias e PDFs. A Fireflies entrega um mapa mensal, explicado por um contador que assina.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c6">
+        <h3>Valores</h3>
+        <ol class="valores">
+          <li><div><strong>Precisão</strong>Todo número tem origem, posição e responsável, como uma estrela catalogada.</div></li>
+          <li><div><strong>Clareza</strong>Se o cliente não entende, o trabalho não terminou.</div></li>
+          <li><div><strong>Responsabilidade</strong>Uma pessoa assina e responde pelo projeto, do início ao fim.</div></li>
+          <li><div><strong>Sincronia</strong>Contábil, fiscal, financeiro e auditoria trabalham juntos. Nada trabalha sozinho.</div></li>
+          <li><div><strong>Serenidade</strong>O alerta vem cedo e com a solução, nunca com medo.</div></li>
+        </ol>
+      </div>
+      <div class="c5" style="grid-column-end:13">
+        <h3>Arquétipo</h3>
+        <div class="arq">
+          <div><h4>Sábio, o principal</h4><p>O cliente compra exatidão e discernimento.</p></div>
+          <div><h4>Cuidador, o secundário</h4><p>A Fireflies alerta antes do problema e não deixa o cliente sozinho com o número.</p></div>
+          <div class="fora"><h4>Mago</h4><p>Fica de fora. O mistério mora no céu, não no método. Em auditoria, "transformação" soa como maquiagem.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c5">
+        <h3>Personalidade</h3>
+        <table class="tb enao">
+          <thead><tr><th scope="col">É</th><th scope="col">Não é</th></tr></thead>
+          <tbody>
+            <tr><td>Exata, de ofício</td><td>Fria, burocrática</td></tr>
+            <tr><td>Imponente, serena</td><td>Arrogante, ostentosa</td></tr>
+            <tr><td>Delicada no detalhe</td><td>Frágil, decorativa</td></tr>
+            <tr><td>Encantada com o que mede</td><td>Esotérica</td></tr>
+            <tr><td>Brasileira, noturna</td><td>Folclórica, cartão-postal</td></tr>
+            <tr><td>Próxima ("a gente")</td><td>Íntima, gaiata</td></tr>
+            <tr><td>Contemporânea</td><td>"Startup de IA", modinha</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="c7">
+        <h3>Hierarquia verbal</h3>
+        <table class="tb pilha">
+          <thead><tr><th scope="col">Nível</th><th scope="col">Frase</th><th scope="col">Onde aparece</th></tr></thead>
+          <tbody>
+            <tr><td data-l="Nível" class="m">Assinatura</td><td data-l="Frase"><strong>Luz medida.</strong></td><td data-l="Onde">Lockup de campanha, capas de proposta, relatório e apresentação, fim de vídeo, bio, fachada.</td></tr>
+            <tr><td data-l="Nível" class="m">Apoio</td><td data-l="Frase"><strong>Precisão que ilumina decisões.</strong></td><td data-l="Onde">1ª página de propostas e contratos, rodapés, assinatura de e-mail, LinkedIn.</td></tr>
+            <tr><td data-l="Nível" class="m">Conceito</td><td data-l="Frase"><strong>Nada trabalha sozinho.</strong></td><td data-l="Onde">"Como trabalhamos", abertura de apresentações, manifesto, Academy. Varia: "Seu condomínio não trabalha sozinho."</td></tr>
+            <tr><td data-l="Nível" class="m">Prova</td><td data-l="Frase"><strong>30 dias até a primeira luz.</strong> Painel mensal, explicado em reunião. Um contador responsável, que assina. Diagnóstico gratuito.</td><td data-l="Onde">Ao lado do CTA, no cronograma, no fecho de posts. Sempre perto de um número ou prazo.</td></tr>
+          </tbody>
+        </table>
+        <p class="nota" style="margin-top:14px">Uma frase de luz por peça. "Luz medida." não ganha complemento: "Luz medida para o seu negócio" está errado.</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 3 O SÍMBOLO -->
+<section class="s esc" id="simbolo" aria-labelledby="h-simbolo">
+ <div class="wrap">
+  <div class="cab"><span class="num">03</span><h2 id="h-simbolo">O símbolo</h2><p>Uma órbita constelada envolve o nome. Atrás, os serviços; na frente, a luz que acende no contador responsável.</p></div>
+  <div class="g">
+    <div class="c7">
+      <span class="rot">Em 1 frase, para o site</span>
+      <p class="frase">Nosso símbolo é o voo de um vaga-lume em volta do nome: atrás, uma constelação de estrelas ligadas, os serviços; na frente, o rastro de luz que acende na ponta, onde está o contador responsável.</p>
+    </div>
+    <div class="c5">
+      <span class="rot">Em 1 parágrafo, para apresentação</span>
+      <p style="color:var(--fumaca)">Os primeiros atlas celestes, como a <i>Uranometria</i> de Bayer, de 1603, transformaram o assombro do céu em medida. Nossa marca nasce dessa mesma ideia. Uma órbita leve envolve o nome Fireflies. A metade de trás é uma constelação: um fio fino com estrelas, que são os serviços (contábil, fiscal, financeiro, auditoria e processos). Na metade da frente, o fio esquenta e vira luz, até chegar ao vaga-lume aceso, que é o contador responsável. Sozinhos, os vagalumes piscam fora de ritmo; juntos, entram em fase. Nada trabalha sozinho.</p>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="g">
+      <div class="c4"><h3>Roteiro de 30 segundos</h3><p class="nota">Gabriel, em reunião, com o logo na mesa.</p></div>
+      <ol class="roteiro c8">
+        <li><span>0 s</span>"Deixa eu explicar rapidinho o nosso símbolo, porque ele resume como a gente trabalha."</li>
+        <li><span>5 s</span>"Está vendo essa órbita em volta do nome? Atrás, é uma constelação: cada estrela é uma área do seu condomínio ou da sua empresa (contábil, fiscal, financeiro, auditoria)."</li>
+        <li><span>13 s</span>"Sozinhas, elas piscam cada uma no seu ritmo, e é aí que aparece imposto em dobro, rateio que não fecha, inadimplência que ninguém viu."</li>
+        <li><span>20 s</span>"Na frente, a linha vira luz e acende no vaga-lume. Esse sou eu, o contador responsável: meu trabalho é colocar tudo em fase."</li>
+        <li><span>26 s</span>"Em 30 dias você tem a primeira luz: o primeiro painel, explicado, com a minha assinatura."</li>
+      </ol>
+    </div>
+  </div>
+  <div class="sub">
+    <h3>A construção da órbita</h3>
+    <div class="g">
+      <figure class="c8"><img src="img/logo-construcao.jpg" width="1800" height="1180" alt="Desenho de construção do logo horizontal: elipse inclinada em -5 graus, altura X da versal, área de proteção X/2, início do voo a -40 graus e vagalume a -96 graus sobre o E de luz."><figcaption>X = altura da versal de FIREFLIES. Elipse a = 5,6 X, b = 1,85 X, inclinação de -5°, voo no sentido horário.</figcaption></figure>
+      <ol class="anat c4">
+        <li><span class="k">0 a 40% do voo</span><b>Constelação atrás</b><span>Fio de 0,013 X, frio (anil ou cal), com 8 estrelas de 3 magnitudes em ritmo que acelera. São os serviços.</span></li>
+        <li><span class="k">40 a 100%</span><b>Luz na frente</b><span>Sem quebra, o mesmo fio engrossa até 0,085 X e esquenta: anil, rubrica, vermelhão, âmbar.</span></li>
+        <li><span class="k">-96°</span><b>Vagalume na ponta</b><span>Núcleo de 0,07 X, halo de 0,46 X e duas asas em fio abertas para trás do voo. É o contador responsável.</span></li>
+        <li><b>E de luz</b><span>O braço do meio do primeiro E acende: Vermelhão no claro, Âmbar no escuro. Herança do E laranja do logo original, agora legível.</span></li>
+        <li><b>F de luz</b><span>A versão curta: o F da Sora com o braço do meio aceso, na mesma órbita × 0,1, com o mesmo vagalume.</span></li>
+      </ol>
+    </div>
+  </div>
+  <div class="sub">
+    <div class="g">
+      <div class="c4"><h3>Glossário</h3><p style="color:var(--fumaca)">Use estes nomes em briefings, arquivos e conversas. Eles evitam "a bolinha", "o arco" e "aquele laranja".</p></div>
+      <div class="c8"><table class="tb pilha">
+        <thead><tr><th scope="col">Nome</th><th scope="col">O que é</th></tr></thead>
+        <tbody>
+          <tr><td data-l="Nome"><strong>a Órbita</strong></td><td data-l="">Um único fio elíptico, leve e inclinado, que envolve o nome. Atrás é Constelação, na frente é Luz. Um gesto só, nada colado.</td></tr>
+          <tr><td data-l="Nome"><strong>o Vagalume</strong></td><td data-l="">A luz acesa na ponta da Órbita, com brilho suave e duas asas em fio, acima do E de Luz.</td></tr>
+          <tr><td data-l="Nome"><strong>o F de Luz</strong></td><td data-l="">A versão curta para avatar, favicon, app e selo.</td></tr>
+          <tr><td data-l="Nome"><strong>o E de Luz</strong></td><td data-l="">O braço aceso do primeiro E de FIREFLIES. Pertence só ao wordmark.</td></tr>
+          <tr><td data-l="Nome"><strong>Magnitudes</strong></td><td data-l="">A escala de pontos: 3 magnitudes mais a luz. Quanto maior o ponto, maior a importância.</td></tr>
+          <tr><td data-l="Nome"><strong>Traço de Constelação</strong></td><td data-l="">O fio finíssimo com estrelas enfiadas: a metade fria da Órbita e a linguagem das 8 Constelações dos Serviços.</td></tr>
+          <tr><td data-l="Nome"><strong>Retícula</strong></td><td data-l="">A grade celeste de coordenadas, fundo de capas, slides e painéis.</td></tr>
+          <tr><td data-l="Nome"><strong>Trilha do Photinus</strong></td><td data-l="">A curva em J pontilhada do voo do vaga-lume. Indica percurso, etapas e "30 dias até a primeira luz".</td></tr>
+          <tr><td data-l="Nome"><strong>o Selo de Carta</strong></td><td data-l="">Selo circular graduado para relatórios, certificados da Academy e carimbos.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 4 LOGO -->
+<section class="s cla" id="logo" aria-labelledby="h-logo">
+ <div class="wrap">
+  <div class="cab"><span class="num">04</span><h2 id="h-logo">Logo</h2><p>8 versões em 7 cores: 56 arquivos SVG e 56 PNG. Escolha a versão pelo espaço e a cor pelo meio (tela, gráfica ou carimbo).</p></div>
+  <div class="versoes">
+    <figure><div class="placa"><img src="img/logo-horizontal.png" width="900" height="317" alt="Logo horizontal Fireflies Consultoria, versão digital"></div><figcaption><b>horizontal</b>. Principal: site, documentos, propostas, e-mail, fachada.</figcaption></figure>
+    <figure><div class="placa alto"><img src="img/logo-vertical.png" width="900" height="560" alt="Logo vertical, com a órbita curta sobre o nome"></div><figcaption><b>vertical</b>. Capas, redes, peças quadradas, frente de cartão, crachá.</figcaption></figure>
+    <figure><div class="placa peq"><img src="img/logo-simbolo.png" width="600" height="300" alt="F de luz na órbita"></div><figcaption><b>simbolo</b> (F de luz). Avatar, app, selo, carimbo, a partir de 40 px.</figcaption></figure>
+    <figure><div class="placa peq"><img src="img/logo-wordmark.png" width="900" height="200" alt="Wordmark FIREFLIES CONSULTORIA sem órbita"></div><figcaption><b>wordmark</b>. Quando a órbita já está na peça ou o espaço é baixo.</figcaption></figure>
+    <figure><div class="placa peq"><img src="img/logo-favicon.png" width="240" height="240" alt="Favicon: F de luz com o vagalume aceso" style="max-height:72px"></div><figcaption><b>favicon</b>. 16 a 48 px. Só o F e o vagalume, nunca impresso.</figcaption></figure>
+    <figure><div class="placa"><img src="img/logo-condominios-horizontal.png" width="900" height="317" alt="Lockup Fireflies Condomínios"></div><figcaption><b>condominios-horizontal</b>. Auditoria, relatório para conselho, assembleia, anúncios para síndicos.</figcaption></figure>
+    <figure><div class="placa"><img src="img/logo-academy-horizontal.png" width="900" height="317" alt="Lockup Fireflies Academy"></div><figcaption><b>academy-horizontal</b>. Certificados, slides de aula, capas de turma.</figcaption></figure>
+  </div>
+  <p class="nota" style="margin-top:16px">Arquitetura monolítica: um vagalume, um wordmark. As linhas mudam só o descritor. Serviços não viram sub-marca ("Consultoria Fiscal", nunca "Fireflies Fiscal").</p>
+
+  <div class="sub">
+    <h3>As 7 cores de arquivo</h3>
+    <div class="cores">
+      <figure><div class="placa"><img src="img/cor-digital.png" alt="Logo digital sobre branco"></div><figcaption><b>digital</b>Principal em tela. Fio em gradiente, vagalume com brilho. Branco e Cal.</figcaption></figure>
+      <figure><div class="placa anil"><img src="img/cor-digital-negativo.png" alt="Logo digital-negativo sobre anil"></div><figcaption><b>digital-negativo</b>Tela sobre Anil. Nome em Cal, E de luz e vagalume em Âmbar.</figcaption></figure>
+      <figure><div class="placa cal"><img src="img/cor-chapado.png" alt="Logo chapado sobre cal"></div><figcaption><b>chapado</b>Impressão em 2 cores: Anil + Vermelhão, sem gradiente nem brilho.</figcaption></figure>
+      <figure><div class="placa anil"><img src="img/cor-chapado-negativo.png" alt="Logo chapado-negativo sobre anil"></div><figcaption><b>chapado-negativo</b>Gráfica sobre Anil: Cal + Âmbar. Cartão, pasta, placa.</figcaption></figure>
+      <figure><div class="placa"><img src="img/cor-mono-anil.png" alt="Logo mono anil"></div><figcaption><b>mono-anil</b>1 cor: carimbo, gravação, hot stamping, fundo Âmbar.</figcaption></figure>
+      <figure><div class="placa rub"><img src="img/cor-mono-branco.png" alt="Logo mono branco sobre rubrica"></div><figcaption><b>mono-branco</b>Rubrica, Vermelhão, objeto escuro, foto com véu.</figcaption></figure>
+      <figure><div class="placa"><img src="img/cor-mono-preto.png" alt="Logo mono preto"></div><figcaption><b>mono-preto</b>Documento P&amp;B, jornal, fax, carimbo de tinta preta.</figcaption></figure>
+    </div>
+    <table class="tb pilha" style="margin-top:40px">
+      <thead><tr><th scope="col">Meio</th><th scope="col">Versão de cor</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Meio">Tela, projetor, PDF, vídeo, redes, e-mail</td><td data-l="Versão" class="m">digital / digital-negativo</td></tr>
+        <tr><td data-l="Meio">Impressora de escritório em cor (o gradiente vira mancha)</td><td data-l="Versão" class="m">chapado</td></tr>
+        <tr><td data-l="Meio">Impressão em P&amp;B</td><td data-l="Versão" class="m">mono-preto</td></tr>
+        <tr><td data-l="Meio">Gráfica: offset, Pantone, serigrafia, vinil, sinalização</td><td data-l="Versão" class="m">chapado / chapado-negativo</td></tr>
+        <tr><td data-l="Meio">Carimbo, laser, hot stamping, bordado, marca-d'água</td><td data-l="Versão" class="m">mono-anil / mono-preto / mono-branco</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c5">
+        <h3>Área de proteção</h3>
+        <ul class="medidas">
+          <li><strong>Lockups:</strong> X/2 em volta da caixa da órbita, incluindo o vagalume. X é a altura da versal de FIREFLIES.</li>
+          <li><strong>F de luz:</strong> ¼ da largura da órbita.</li>
+          <li><strong>Folga interna:</strong> o nome nunca encosta na órbita; mínimo de 0,25 X entre órbita e letra.</li>
+          <li><strong>Co-branding:</strong> fio de 0,5 pt com 1 X de cada lado e alturas ópticas iguais.</li>
+        </ul>
+      </div>
+      <div class="c7">
+        <h3>Tamanhos mínimos</h3>
+        <table class="tb">
+          <thead><tr><th scope="col">Versão</th><th scope="col">Digital</th><th scope="col">Impresso</th></tr></thead>
+          <tbody>
+            <tr><td>horizontal e lockups</td><td class="m">240 px</td><td class="m">45 mm</td></tr>
+            <tr><td>abaixo disso: wordmark</td><td class="m">até 160 px</td><td class="m">até 30 mm</td></tr>
+            <tr><td>vertical</td><td class="m">160 px</td><td class="m">30 mm</td></tr>
+            <tr><td>simbolo (F de luz)</td><td class="m">40 px</td><td class="m">12 mm</td></tr>
+            <tr><td>simbolo-pequeno</td><td class="m">24 a 39 px</td><td class="m">7 a 12 mm</td></tr>
+            <tr><td>favicon</td><td class="m">16 a 48 px</td><td class="m">não se aplica</td></tr>
+            <tr><td>bordado (horizontal mono)</td><td class="m">-</td><td class="m">60 mm</td></tr>
+          </tbody>
+        </table>
+        <p class="nota" style="margin-top:12px">As asas do vagalume se leem a partir de 360 px. Fio de constelação impresso: mínimo 0,25 pt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Usos incorretos</h3>
+    <div class="errados">
+      <figure><img class="moldura" src="img/errado-branco.jpg" width="700" height="347" alt="Errado: logo negativo sobre branco, nome some"><figcaption><b>Branco</b>Negativo no claro: o nome em Cal some (1,17:1).</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-cal.jpg" width="700" height="347" alt="Errado: mono-branco sobre cal"><figcaption><b>Cal Virgem</b>Branco sobre Cal: 1,17:1.</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-anil.jpg" width="700" height="347" alt="Errado: logo digital sobre anil, nome anil some"><figcaption><b>Anil de Junho</b>Versão de fundo claro: o nome Anil some.</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-ambar.jpg" width="700" height="347" alt="Errado: logo digital sobre âmbar"><figcaption><b>Âmbar</b>O vagalume âmbar some no âmbar. Use mono-anil.</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-rubrica.jpg" width="700" height="347" alt="Errado: logo chapado sobre rubrica"><figcaption><b>Vermelhão de Rubrica</b>Anil 2,55:1 e órbita Vermelhão some. Use mono-branco.</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-foto-clara.jpg" width="700" height="347" alt="Errado: logo negativo sobre foto clara"><figcaption><b>Foto clara</b>Negativo sobre foto clara.</figcaption></figure>
+      <figure><img class="moldura" src="img/errado-foto-escura.jpg" width="700" height="347" alt="Errado: logo digital sobre foto escura sem véu"><figcaption><b>Foto escura</b>Versão de fundo claro sobre foto escura. Sempre com véu Anil de 60 a 80%.</figcaption></figure>
+      <div>
+        <ul class="regras nao" style="margin-top:0">
+          <li>Cruzar letras com a órbita, fechar a órbita ou mudar a inclinação.</li>
+          <li>Trocar a direção do voo ou tirar o vagalume de cima do E.</li>
+          <li>Gradiente na versão chapada; sombra, glow extra ou estrela de 4 pontas.</li>
+          <li>Recolorir o logo com a cor de um parceiro.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 5 CORES -->
+<section class="s esc" id="cores" aria-labelledby="h-cores">
+ <div class="wrap">
+  <div class="cab"><span class="num">05</span><h2 id="h-cores">Cores</h2><p>Paleta "Noite de São João". Anil manda, Branco trabalha, Âmbar é a única luz e a Rubrica está sempre lá.</p></div>
+  <div class="sw-grid">{{SWATCHES}}</div>
+  <p class="nota" style="margin-top:16px">CMYK em Coated FOGRA39. Pantone é aproximado: peça prova de cor, porque o Anil pode fechar em preto e o Âmbar pode puxar para o laranja. Arquivos: cores/tokens.css, tokens.json, fireflies-v2.ase e .gpl.</p>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c4">
+        <h3>Proporção de uso</h3>
+        <p style="color:var(--fumaca)">Percentual aproximado da área. O Âmbar é sempre a menor fatia; Branco domina tudo o que é lido por muito tempo, Anil domina o que precisa de impacto.</p>
+      </div>
+      <div class="c8">
+        <span class="rot">Apresentação institucional</span>
+        <div class="prop" role="img" aria-label="Branco 40%, Cal 10%, Anil 35%, texto 8%, Rubrica e Vermelhão 3%, apoio 3%, Âmbar 1%">
+          <span style="width:40%;background:#FFFFFF"></span><span style="width:10%;background:#EDEEEA"></span><span style="width:35%;background:#17183A"></span><span style="width:8%;background:#2A2F3D"></span><span style="width:3%;background:#E65A3E"></span><span style="width:3%;background:#6E89B4"></span><span style="width:1%;background:#F2B544"></span>
+        </div>
+        <span class="rot" style="margin-top:20px">Relatório de auditoria</span>
+        <div class="prop" role="img" aria-label="Branco 70%, Cal 5%, Anil 10%, texto 10%, Rubrica 2%, apoio 2%, Âmbar 1%">
+          <span style="width:70%;background:#FFFFFF"></span><span style="width:5%;background:#EDEEEA"></span><span style="width:10%;background:#17183A"></span><span style="width:10%;background:#2A2F3D"></span><span style="width:2%;background:#A9301F"></span><span style="width:2%;background:#6E89B4"></span><span style="width:1%;background:#F2B544"></span>
+        </div>
+        <span class="rot" style="margin-top:20px">Post de feed</span>
+        <div class="prop" role="img" aria-label="Cal 25%, Anil 60%, texto 8%, Vermelhão 3%, apoio 3%, Âmbar 1%">
+          <span style="width:25%;background:#EDEEEA"></span><span style="width:60%;background:#17183A"></span><span style="width:8%;background:#2A2F3D"></span><span style="width:3%;background:#E65A3E"></span><span style="width:3%;background:#6E89B4"></span><span style="width:1%;background:#F2B544"></span>
+        </div>
+        <ul class="prop-leg" style="margin-top:14px">
+          <li><i style="background:#FFFFFF"></i>Branco</li><li><i style="background:#EDEEEA"></i>Cal</li><li><i style="background:#17183A"></i>Anil</li><li><i style="background:#2A2F3D"></i>Texto</li><li><i style="background:#E65A3E"></i>Rubrica / Vermelhão</li><li><i style="background:#6E89B4"></i>Apoio</li><li><i style="background:#F2B544"></i>Âmbar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Matriz de contraste</h3>
+    <p style="color:var(--fumaca)">WCAG 2.2, cor do texto sobre o fundo. ✔ texto corrido (4,5 ou mais) · ◐ só título grande ou forma (3 ou mais) · ✖ não usar.</p>
+    <div class="tbx" tabindex="0" role="region" aria-label="Tabela de contraste com rolagem horizontal">{{CONTRASTE}}</div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c5">
+        <h3>Uma luz por composição</h3>
+        <p style="color:var(--fumaca)">A luz aparece uma vez por página, slide ou post: no vagalume do logo ou num único ponto de destaque âmbar. Se o logo está visível, ele já é a luz, e o destaque do texto vai em Rubrica (no claro) ou Vermelhão (no escuro).</p>
+        <p style="color:var(--fumaca)">Âmbar nunca é texto sobre fundo claro: 1,83:1 no Branco, 1,57:1 na Cal.</p>
+      </div>
+      <div class="c7">
+        <div class="umaluz" aria-hidden="true"><i class="p"></i><i></i><i class="p"></i><i class="p"></i><i></i><i class="p"></i><i class="l"></i><i class="p"></i><i></i><i class="p"></i><i class="p"></i><i></i></div>
+        <ul class="regras nao">
+          <li>Âmbar em texto, marcador, linha ou ícone repetido.</li>
+          <li>Âmbar e Vermelhão na mesma frase.</li>
+          <li>Luz ou vermelhão como única diferença entre dados: some forma ou rótulo.</li>
+          <li>Roxo em qualquer peça (é a cor da Fireflies.ai).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 6 TIPOGRAFIA -->
+<section class="s cla" id="tipografia" aria-labelledby="h-tipo">
+ <div class="wrap">
+  <div class="cab"><span class="num">06</span><h2 id="h-tipo">Tipografia</h2><p>Três famílias gratuitas (SIL OFL), todas no Google Fonts. Funcionam também no Google Slides e no Docs.</p></div>
+
+  <div class="esp">
+    <div class="meta"><span><b>Sora</b> 600 e 700. Nome e títulos, caixa alta</span><span>Fallback Office: Century Gothic Bold</span></div>
+    <p class="sora-g">Nada trabalha sozinho</p>
+    <p class="alfa sora-a">ABCDEFGHIJKLMNOPQRSTUVWXYZ ÁÂÃÇÉÊÍÓÔÕÚ 0123456789</p>
+  </div>
+  <div class="esp">
+    <div class="meta"><span><b>IBM Plex Sans</b> 300, 400, 500, 600. Texto</span><span>Fallback Office: Arial</span></div>
+    <div class="g">
+      <p class="plex-g c7">Todo mês, em dois minutos, você sabe o que mudou, o que preocupa e o que já está resolvido.</p>
+      <div class="c5">
+        <p>Inadimplência em 9%. Três unidades concentram 70% do saldo em aberto. A gente leva o relatório pronto para o conselho, com a origem de cada número e quem assina.</p>
+        <div class="pesos"><span style="font-weight:300">Light</span><span style="font-weight:400">Regular</span><span style="font-weight:500">Medium</span><span style="font-weight:600">SemiBold</span><span style="font-style:italic">Itálico</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="esp">
+    <div class="meta"><span><b>IBM Plex Mono</b> 400 e 500. Dados, valores e rótulos</span><span>Fallback Office: Consolas</span></div>
+    <div class="g">
+      <div class="c7"><table class="mono-t">
+        <thead><tr><th scope="col">Conta</th><th scope="col">Valor (R$)</th></tr></thead>
+        <tbody>
+          <tr><td>Taxa condominial</td><td>48.210,00</td></tr>
+          <tr><td>Fundo de reserva</td><td>4.821,00</td></tr>
+          <tr><td>Inadimplência</td><td class="neg">−6.932,47</td></tr>
+          <tr class="tot"><td>Saldo do mês</td><td>46.098,53</td></tr>
+        </tbody>
+      </table><p class="nota" style="margin-top:10px">Dados de exemplo.</p></div>
+      <div class="c5"><p class="alfa mono-a" style="font-size:18px;margin-top:0">0123456789 R$ % +− ,.<br>A-01 · PRO-2026-000 · 01/10/2026</p></div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>Escala</h3>
+    <table class="escala">
+      <tbody>
+        <tr><td class="m">Display</td><td class="m">Sora 700 · 64 a 96 px · 36 a 48 pt</td><td class="amostra-c"><span class="amostra" style="font:700 clamp(32px,5vw,64px)/1 var(--sora);text-transform:uppercase;letter-spacing:.02em">Luz medida.</span></td></tr>
+        <tr><td class="m">Título 1</td><td class="m">Sora 600 · 40 px · 24 pt</td><td class="amostra-c"><span class="amostra" style="font:600 clamp(26px,3vw,40px)/1.1 var(--sora);text-transform:uppercase;letter-spacing:.04em">Relatório de auditoria</span></td></tr>
+        <tr><td class="m">Título 2</td><td class="m">Sora 600 · 28 px · 16 pt</td><td class="amostra-c"><span class="amostra" style="font:600 clamp(22px,2.2vw,28px)/1.2 var(--sora);letter-spacing:.01em">Três pontos pedem ação</span></td></tr>
+        <tr><td class="m">Título 3</td><td class="m">Plex Sans 600 · 20 px · 12 pt</td><td class="amostra-c"><span class="amostra" style="font:600 20px/1.3 var(--sans)">Conciliação bancária de setembro</span></td></tr>
+        <tr><td class="m">Corpo</td><td class="m">Plex Sans 400 · 16 px · 10 pt</td><td class="amostra-c"><span class="amostra" style="font:400 16px/1.55 var(--sans);color:var(--fuligem)">O fundo de reserva não é caixa do mês.</span></td></tr>
+        <tr><td class="m">Legenda</td><td class="m">Plex Sans 400 · 13 px · 8 pt</td><td class="amostra-c"><span class="amostra" style="font:400 13px/1.4 var(--sans);color:var(--pedra)">Fonte: balancete de setembro de 2026.</span></td></tr>
+        <tr><td class="m">Rótulo</td><td class="m">Plex Mono 500 · 12 px · 7,5 pt</td><td class="amostra-c"><span class="amostra" style="font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.14em;color:var(--rubrica)">Resumo para o conselho</span></td></tr>
+        <tr><td class="m">Dado</td><td class="m">Plex Mono 400 · 14 a 48 px</td><td class="amostra-c"><span class="amostra" style="font:400 clamp(22px,3vw,40px)/1.2 var(--mono)">R$ 48.210,00</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c6">
+        <h3>Regras</h3>
+        <ul class="regras" style="color:var(--fuligem)">
+          <li>Títulos curtos (até 6 palavras) em Sora caixa alta, tracking de +0,04 a +0,08 em. Títulos longos em caixa alta e baixa.</li>
+          <li>Uma palavra de destaque por título, em Rubrica no claro ou Âmbar no escuro.</li>
+          <li>O E de luz pertence só ao wordmark. Nunca reproduza o efeito em títulos.</li>
+          <li>Valores em Plex Mono, alinhados à direita, com números tabulares.</li>
+          <li>No máximo 3 pesos por peça. Sem itálico sintético nem contorno em texto.</li>
+        </ul>
+      </div>
+      <div class="c6">
+        <h3>Fallbacks</h3>
+        <table class="tb">
+          <thead><tr><th scope="col">Papel</th><th scope="col">Office</th><th scope="col">Google</th></tr></thead>
+          <tbody>
+            <tr><td>Títulos (Sora)</td><td style="font-family:'Century Gothic',sans-serif;font-weight:700">Century Gothic Bold</td><td>Sora</td></tr>
+            <tr><td>Texto (Plex Sans)</td><td style="font-family:Arial,sans-serif">Arial</td><td>IBM Plex Sans</td></tr>
+            <tr><td>Dados (Plex Mono)</td><td style="font-family:Consolas,monospace">Consolas</td><td>IBM Plex Mono</td></tr>
+          </tbody>
+        </table>
+        <p class="nota" style="margin-top:12px">TTFs em tipografia/fontes/. Na assinatura de e-mail, a pilha é 'IBM Plex Sans', Arial, Helvetica, sans-serif.</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 7 ICONOGRAFIA -->
+<section class="s esc" id="iconografia" aria-labelledby="h-icon">
+ <div class="wrap">
+  <div class="cab"><span class="num">07</span><h2 id="h-icon">Iconografia e elementos</h2><p>Gramática de carta celeste em quatro camadas: 79 ícones, 8 constelações, 21 ornamentos e 4 padrões. Estrelas são sempre círculos.</p></div>
+  <h3>79 ícones de linha</h3>
+  <p class="nota" style="margin-bottom:24px">Grid 24, traço 1,5, pontas redondas, tudo em currentColor. Aqui a lanterna segue a cor do traço, porque a página já tem a sua luz. Uso: &lt;svg&gt;&lt;use href="sprite.svg#ff-auditoria"/&gt;&lt;/svg&gt;</p>
+  {{ICONES}}
+
+  <div class="sub">
+    <div class="g">
+      <div class="c4">
+        <h3>Constelações dos serviços</h3>
+        <p style="color:var(--fumaca)">Cada serviço vira uma constelação catalogada, grid 64. A letra α é sempre a lanterna. Use 1 emblema por página: com letras de Bayer a partir de 96 px, sem letras de 48 a 96 px; abaixo disso, o ícone de linha.</p>
+        <p class="nota">Nesta prancha, só Domus (Condomínios) acende, para mostrar a regra.</p>
+      </div>
+      <div class="c8">{{CONSTELACOES}}</div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <figure class="c7"><img src="img/icono-ornamentos-escuro.jpg" width="1400" height="1928" loading="lazy" alt="Prancha dos 21 ornamentos sobre Anil: retículas, régua graduada, limbo de astrolábio, rosa de pontos, selos graduados, trilha do Photinus, marcadores, divisores, moldura e cartela."><figcaption>Ornamentos sobre Anil de Junho. SVGs em curvas, sem dependência de fonte.</figcaption></figure>
+      <div class="c5">
+        <h3>Ornamentos</h3>
+        <p style="color:var(--fumaca)">São pontuação, não papel de parede: medir, numerar, separar, marcar. No máximo 3 por composição (marcadores de lista contam como 1).</p>
+        <table class="tb" style="margin-top:12px">
+          <tbody>
+            <tr><td><strong>Retículas</strong></td><td>planisfério, plana</td></tr>
+            <tr><td><strong>Medida</strong></td><td>régua, limbo, escala "dias até a primeira luz"</td></tr>
+            <tr><td><strong>Orientação</strong></td><td>rosa de pontos, marca de posição, coordenada da Praça da Sé</td></tr>
+            <tr><td><strong>Selos</strong></td><td>selo graduado, com e sem texto</td></tr>
+            <tr><td><strong>Vagalume</strong></td><td>trilha do Photinus</td></tr>
+            <tr><td><strong>Listas e divisores</strong></td><td>marcadores, divisores, cantoneira, moldura-carta, cartela</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c4">
+        <h3>Padrões</h3>
+        <p style="color:var(--fumaca)">Campo de estrelas, retícula celeste, constelação contínua e matriz de pontos, cada um em claro e escuro, sem emenda. Uma lanterna por tile mantém a luz rara. Semente 1603, o ano da <i>Uranometria</i>.</p>
+        <ul class="regras nao">
+          <li>Mais de 1 padrão por composição, ou padrão atrás de texto corrido.</li>
+          <li>Rede com ciclos "ligando tudo com tudo": é o visual de IA que a marca recusa.</li>
+          <li>Brilho, halo ou raios na lanterna. Lâmpada nunca.</li>
+          <li>Misturar com Lucide, Heroicons ou Material.</li>
+        </ul>
+      </div>
+      <figure class="c8"><img src="img/icono-padroes.jpg" width="1400" height="1595" loading="lazy" alt="Prancha dos 4 padrões em versão clara e escura: campo de estrelas, retícula celeste, constelação contínua e matriz de pontos."><figcaption>Uso: 25 a 50% em Céu de Anil no escuro, Anil 15 a 25% no claro.</figcaption></figure>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 8 APLICAÇÃO -->
+<section class="s cla" id="aplicacao" aria-labelledby="h-aplic">
+ <div class="wrap">
+  <div class="cab"><span class="num">08</span><h2 id="h-aplic">Aplicação</h2><p>Onde e como aplicar: que fundo usar, que cor vai em cada elemento e como montar cada material.</p></div>
+  <h3>5 regras de ouro</h3>
+  <ol class="valores" style="max-width:860px">
+    <li><div><strong>Uma luz por peça</strong>O vagalume do logo ou um único ponto âmbar. Nunca os dois.</div></li>
+    <li><div><strong>Anil manda, Branco trabalha</strong>Anil é o fundo de impacto. Branco é o de trabalho: tudo o que é lido por muito tempo, impresso ou assinado. Cal é o claro institucional.</div></li>
+    <li><div><strong>A rubrica está sempre lá</strong>Um link, um número-chave, o fio de rodapé. É o que impede a marca de virar "marinho e dourado de banco".</div></li>
+    <li><div><strong>Contraste antes de gosto</strong>Texto corrido com 4,5:1 ou mais; títulos grandes e formas com 3:1.</div></li>
+    <li><div><strong>Grafismo é pontuação</strong>No máximo 1 emblema, 1 padrão e 3 ornamentos por composição.</div></li>
+  </ol>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c4"><h3>Matriz de fundos</h3><p>Para cada fundo oficial: versão do logo, cor de título, texto, destaque, linhas e onde fica a luz. Âmbar, Rubrica e Vermelhão como fundo são raros e pontuais.</p><p class="nota">Fonte: manual-de-aplicacao, seção 2.</p></div>
+      <figure class="c8"><img class="moldura" src="img/prancha-matriz-de-fundos.jpg" width="1800" height="1803" loading="lazy" alt="Matriz de fundos: o mesmo cartão de relatório aplicado sobre Branco, Cal Virgem, Anil de Junho, Anil Profundo, Âmbar, Vermelhão de Rubrica, foto clara, foto escura e cor de terceiros."></figure>
+    </div>
+  </div>
+  <div class="sub">
+    <h3>Claro ou escuro?</h3>
+    <figure><img class="moldura" src="img/prancha-arvore-claro-escuro.jpg" width="1800" height="1187" loading="lazy" alt="Árvore de decisão entre fundo claro e escuro: impresso em escritório vai em Branco; projetado em sala clara vai claro; sala escura, redes e campanha vão em Anil; papelaria de gráfica tem frente Anil e verso claro."><figcaption>Impresso no escritório, assinado ou arquivado: Branco. Projetado em sala clara: conteúdo Branco, Anil só em capa e divisor. Redes, capas e campanha: Anil.</figcaption></figure>
+  </div>
+  <div class="sub">
+    <div class="g">
+      <figure class="c7"><img class="moldura" src="img/prancha-distribuicao-de-cor.jpg" width="1800" height="1532" loading="lazy" alt="Distribuição de cor por peça, em barras de área aproximada para apresentação, proposta, relatório, timbrado, contrato, posts, cartão, pasta, certificado e placa."></figure>
+      <div class="c5"><h3>Distribuição de cor</h3><p>Percentual aproximado da área em cada peça. O âmbar só passa de 1% na pasta e na placa, onde o vagalume e a órbita são grandes e são a única luz da superfície.</p><p>Se uma peça clara fica sem Rubrica, falta a assinatura quente: acrescente o fio de rodapé ou o rótulo em Rubrica.</p></div>
+    </div>
+  </div>
+  <div class="sub">
+    <h3>Versões do logo por fundo</h3>
+    <figure><img class="moldura" src="img/prancha-versoes-do-logo-por-fundo.jpg" width="1800" height="1615" loading="lazy" alt="Versões do logo por fundo: para Branco, Cal, Anil, Âmbar, Rubrica, foto clara e foto escura, a versão certa para tela, impressão e F de luz, e o erro mais comum."></figure>
+  </div>
+  <div class="sub">
+    <h3>Fichas por material</h3>
+    <table class="tb pilha">
+      <thead><tr><th scope="col">Material</th><th scope="col">Formato</th><th scope="col">Fundo</th><th scope="col">Logo</th><th scope="col">Ponto-chave</th></tr></thead>
+      <tbody>
+        <tr><td data-l="Material"><strong>Apresentação</strong></td><td data-l="Formato" class="m">1920×1080 px</td><td data-l="Fundo">Anil em capa, divisor e fim; Branco no conteúdo</td><td data-l="Logo">horizontal 480 px na capa; F de luz 48 px nos internos</td><td data-l="Ponto-chave">Título que afirma a conclusão. Corpo de 24 pt em sala clara.</td></tr>
+        <tr><td data-l="Material"><strong>Documento A4</strong></td><td data-l="Formato" class="m">210×297 mm</td><td data-l="Fundo">Branco; capa Anil sangrada</td><td data-l="Logo">horizontal chapado 45 mm na 1ª página</td><td data-l="Ponto-chave">Margens 25/22/25/20 mm. Rodapé com fio Rubrica, CRC e "Página X de Y".</td></tr>
+        <tr><td data-l="Material"><strong>Timbrado</strong></td><td data-l="Formato" class="m">A4</td><td data-l="Fundo">Branco, área útil limpa</td><td data-l="Logo">horizontal chapado 50 mm</td><td data-l="Ponto-chave">Dados em Mono 7,5 pt. Destinatário a 50/20 mm para a janela do DL.</td></tr>
+        <tr><td data-l="Material"><strong>Cartão</strong></td><td data-l="Formato" class="m">90×50 mm</td><td data-l="Fundo">Frente Anil, verso Branco</td><td data-l="Logo">vertical chapado-negativo 34 mm</td><td data-l="Ponto-chave">Segurança de 5 mm. QR com 15 mm ou mais. Âmbar só no vagalume e no E.</td></tr>
+        <tr><td data-l="Material"><strong>E-mail</strong></td><td data-l="Formato" class="m">até 600 px</td><td data-l="Fundo">Sem fundo</td><td data-l="Logo">horizontal digital, PNG 2× a 240 px</td><td data-l="Ponto-chave">Rubrica nos links é a única cor quente. Testar dark mode.</td></tr>
+        <tr><td data-l="Material"><strong>Redes</strong></td><td data-l="Formato" class="m">1080×1350 · 1080×1920</td><td data-l="Fundo">Anil em 2 de 3 posts, Cal em 1</td><td data-l="Logo">F de luz 64 px no canto</td><td data-l="Ponto-chave">Um conceito por post. 1 padrão ou 1 emblema por card.</td></tr>
+      </tbody>
+    </table>
+  </div>
+ </div>
+</section>
+
+<!-- 9 APLICAÇÕES -->
+<section class="s esc" id="aplicacoes" aria-labelledby="h-apps">
+ <div class="wrap">
+  <div class="cab"><span class="num">09</span><h2 id="h-apps">Aplicações</h2><p>45 peças prontas em 6 grupos, em SVG com texto em curvas, PNG, PDF e HTML editável. Números marcados "dados de exemplo" são fictícios.</p></div>
+  {{GALERIA}}
+  <div class="case">
+    <div class="g">
+      <div class="c4">
+        <span class="rot">Case: documento real</span>
+        <h3>NFS-e para condomínios</h3>
+        <p>O artigo "Condomínios ganham código próprio na NFS-e", recriado no design system v2: versão web interativa e PDF editorial de 17 páginas A4. O conteúdo original foi mantido na íntegra; trocaram-se marca, tipografia, cor, ícones e componentes.</p>
+        <ul class="regras" style="color:var(--fuligem)">
+          <li>Hero Anil com o logo negativo e um único ponto âmbar.</li>
+          <li>Tabelas com cabeçalho Anil, Mono em caixa alta e códigos em Plex Mono.</li>
+          <li>Status por forma, palavra e cor, nunca só por cor.</li>
+          <li>Checklist dos 10 passos com progresso salvo.</li>
+        </ul>
+        <p class="nota" style="margin-top:12px">documentos/nfse-condominios/index.html e nfse-condominios.pdf</p>
+      </div>
+      <figure class="c8"><img src="img/nfse-spread.jpg" width="1800" height="1254" loading="lazy" alt="Prancha com as 17 páginas da versão impressa do artigo NFS-e para condomínios, com capa Anil e miolo branco."><figcaption>As 17 páginas da versão impressa.</figcaption></figure>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 10 VOZ -->
+<section class="s cla" id="voz" aria-labelledby="h-voz">
+ <div class="wrap">
+  <div class="cab"><span class="num">10</span><h2 id="h-voz">Voz</h2><p>A voz é sempre a mesma: exata, serena e próxima. O que muda é o tom.</p></div>
+  <table class="tb pilha tons">
+    <thead><tr><th scope="col">Público</th><th scope="col">Tom</th><th scope="col">Exemplo</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Público">Síndico e conselho</td><td data-l="Tom">Protetor e didático, sem jargão. Fala de taxa, reserva e assembleia.</td><td data-l="Exemplo" class="ex">"Sua taxa paga o que deveria? A gente mostra para onde vai cada real e leva o relatório pronto para o conselho."</td></tr>
+      <tr><td data-l="Público">Empresário, PME</td><td data-l="Tom">Direto e prático, focado em caixa e tempo.</td><td data-l="Exemplo" class="ex">"Todo mês você sabe quanto entrou, quanto sobrou e o que preocupa. Em dois minutos."</td></tr>
+      <tr><td data-l="Público">Grande empresa</td><td data-l="Tom">Técnico e sóbrio, com "nós" ou "a Fireflies". Governança e conformidade.</td><td data-l="Exemplo" class="ex">"A Fireflies estrutura conciliação, fechamento e indicadores com um contador responsável e especialistas dimensionados ao escopo."</td></tr>
+      <tr><td data-l="Público">Redes sociais</td><td data-l="Tom">Leve e curioso, mas exato. Um conceito por post.</td><td data-l="Exemplo" class="ex">"Fundo de reserva não é caixa do mês. Entenda em 3 slides."</td></tr>
+      <tr><td data-l="Público">Proposta comercial</td><td data-l="Tom">Formal-cordial, com escopo, prazo e responsável nomeados.</td><td data-l="Exemplo" class="ex">"Semanas 2 e 3: organização. Entregável: base conciliada. Responsável: Gabriel Alvares, CRC nº ___."</td></tr>
+    </tbody>
+  </table>
+  <p class="nota" style="margin-top:14px">"A gente" no site, nas redes, com síndicos e PMEs. Em proposta, contrato, relatório de auditoria e grandes grupos: "nós" ou "a Fireflies".</p>
+
+  <div class="sub fn">
+    <div><h3>Faça</h3><ul>
+      <li>Dê número e prazo concretos: "30 dias", "dois minutos".</li>
+      <li>Nomeie o responsável.</li>
+      <li>Traduza o termo técnico na primeira vez: "DRE: o resultado do mês".</li>
+      <li>Alerte com calma e solução: "Inadimplência em 9%. Três unidades concentram 70%."</li>
+      <li>Use uma metáfora de luz ou céu por peça, no máximo.</li>
+      <li>Diga "planejamento tributário dentro da lei".</li>
+      <li>Use apenas cases reais e aprovados.</li>
+    </ul></div>
+    <div class="nao"><h3>Não faça</h3><ul>
+      <li>Superlativos vazios: "a melhor", "soluções completas".</li>
+      <li>Falar como instituição sem rosto.</li>
+      <li>Jargão sem tradução.</li>
+      <li>Usar o medo: "Seu condomínio pode estar sendo roubado!"</li>
+      <li>Empilhar estrela, magia, universo e jornada.</li>
+      <li>Prometer "pagar menos imposto" sem contexto.</li>
+      <li>Publicar case ilustrativo como se fosse real.</li>
+    </ul></div>
+  </div>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c7">
+        <h3>Palavras proibidas</h3>
+        <ul class="proibidas"><li>mágica</li><li>energia</li><li>destino</li><li>alquimia</li><li>brilho</li></ul>
+        <ul class="proibidas menor" style="margin-top:18px"><li>horóscopo</li><li>signo</li><li>o universo conspira</li><li>sagrado</li><li>cósmico</li><li>sonegar</li><li>brecha</li></ul>
+      </div>
+      <div class="c5">
+        <h3>Trocamos</h3>
+        <table class="tb">
+          <thead><tr><th scope="col">Evitamos</th><th scope="col">Usamos</th></tr></thead>
+          <tbody>
+            <tr><td>soluções</td><td>o que fazemos, com nome</td></tr>
+            <tr><td>insights / dashboard</td><td>leitura / painel</td></tr>
+            <tr><td>compliance solto</td><td>conformidade</td></tr>
+            <tr><td>inovador, disruptivo, IA</td><td>cortar</td></tr>
+            <tr><td>contabilidade online</td><td>consultoria</td></tr>
+            <tr><td>"Fireflies" sozinho</td><td>Fireflies Consultoria</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 11 ARQUIVOS -->
+<section class="s esc" id="arquivos" aria-labelledby="h-arq">
+ <div class="wrap">
+  <div class="cab"><span class="num">11</span><h2 id="h-arq">Arquivos</h2><p>Tudo o que vale está em fireflies-brand/v2/. Cada pasta tem um README e os geradores em _build/.</p></div>
+  <table class="tb pilha arqs">
+    <thead><tr><th scope="col">Pasta</th><th scope="col">O que tem</th><th scope="col">Formatos</th><th scope="col">Para quem</th></tr></thead>
+    <tbody>
+      <tr><td data-l="Pasta">logo/</td><td data-l="O que tem">8 versões × 7 cores, favicon.ico, ícones de app, avatar, OG, construção</td><td data-l="Formatos" class="fmt">SVG, PNG 2000 px, ICO</td><td data-l="Para quem">Gráfica, site, redes, time</td></tr>
+      <tr><td data-l="Pasta">cores/</td><td data-l="O que tem">Tokens, paleta Adobe e GIMP, matriz de contraste</td><td data-l="Formatos" class="fmt">CSS, JSON, ASE, GPL</td><td data-l="Para quem">Site, designers, gráfica</td></tr>
+      <tr><td data-l="Pasta">tipografia/</td><td data-l="O que tem">Sora, IBM Plex Sans e Mono, escala e regras</td><td data-l="Formatos" class="fmt">TTF (OFL)</td><td data-l="Para quem">Time, designers, site</td></tr>
+      <tr><td data-l="Pasta">iconografia/</td><td data-l="O que tem">79 ícones e sprite, 8 constelações, 21 ornamentos, 8 padrões</td><td data-l="Formatos" class="fmt">SVG, PNG claro / escuro / mono</td><td data-l="Para quem">Site, redes, time (Office e Canva)</td></tr>
+      <tr><td data-l="Pasta">manual-de-aplicacao/</td><td data-l="O que tem">Matriz de fundos, árvore, distribuição de cor, fichas por material</td><td data-l="Formatos" class="fmt">MD, PNG</td><td data-l="Para quem">Time, fornecedores</td></tr>
+      <tr><td data-l="Pasta">aplicacoes/</td><td data-l="O que tem">45 peças: slides, documentos, papelaria, digital, redes, ambientação</td><td data-l="Formatos" class="fmt">SVG em curvas, PNG, PDF, HTML editável</td><td data-l="Para quem">Gráfica, redes, time</td></tr>
+      <tr><td data-l="Pasta">documentos/</td><td data-l="O que tem">Artigo NFS-e para condomínios, web e impresso</td><td data-l="Formatos" class="fmt">HTML, PDF</td><td data-l="Para quem">Site, clientes</td></tr>
+      <tr><td data-l="Pasta">estrategia/</td><td data-l="O que tem">Plataforma de marca v2 e territórios</td><td data-l="Formatos" class="fmt">MD</td><td data-l="Para quem">Time, agências</td></tr>
+      <tr><td data-l="Pasta">manual-de-marca/</td><td data-l="O que tem">Este manual</td><td data-l="Formatos" class="fmt">HTML, JPG, PNG</td><td data-l="Para quem">Cliente, time, fornecedores</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub">
+    <div class="g">
+      <div class="c4"><h3>Pendências antes de publicar</h3><p style="color:var(--fumaca)">Itens que dependem do cliente. Nas peças, aparecem como "[a confirmar]".</p></div>
+      <ol class="pend c8">
+        <li><div><b>Número do CRC-SP.</b> <span>Rodapés de documentos, cartão, e-mail e certificado.</span></div></li>
+        <li><div><b>CNPJ.</b> <span>Rodapé de documentos, timbrado e contratos.</span></div></li>
+        <li><div><b>Foto do autor.</b> <span>Avatar do artigo NFS-e (hoje usa o F de luz).</span></div></li>
+        <li><div><b>Link da live.</b> <span>Botão "Assistir à live completa" do artigo NFS-e.</span></div></li>
+        <li><div><b>Rotas dos QR codes.</b> <span>/selo/AUD-2026-031 e /academy/verificar no fireflies.com.br, e o handle @firefliesconsultoria.</span></div></li>
+      </ol>
+    </div>
+  </div>
+ </div>
+</section>
+
+<!-- 12 HISTÓRICO -->
+<section class="s cla" id="historico" aria-labelledby="h-hist">
+ <div class="wrap">
+  <div class="cab"><span class="num">12</span><h2 id="h-hist">Como chegamos aqui</h2><p>Quatro rodadas com o cliente e uma banca externa. Cada etapa corrigiu a anterior.</p></div>
+  <ol class="linha">
+    <li><span class="q">Ponto de partida</span><div class="t"><h4>O logo original</h4><p>Rede de pontos verde e laranja com meia-lua, e o E laranja. Dele ficaram o anel, a meia-lua (que virou rastro de luz) e o E aceso.</p></div><figure><img src="img/hist-0-logo-original.jpg" width="1000" height="346" loading="lazy" alt="Logo original da Fireflies: constelação de pontos verdes e laranja dentro de uma meia-lua, FIREFLIES em azul escuro com o E laranja e CONSULTORIA em verde."></figure></li>
+    <li><span class="q">Rodadas 1 e 2</span><div class="t"><h4>Lampyris e Noite de São João</h4><p>A banca escolheu o vagalume pontilhado "Lampyris", redesenhado com 7 estrelas e lanterna. A paleta Noite de São João foi aprovada e a Jabuticaba (roxa) descartada.</p></div><figure><img src="img/hist-2-lampyris.jpg" width="1200" height="375" loading="lazy" alt="Símbolo Lampyris v2: vagalume desenhado com estrelas e pontilhado, em cinco fundos e escalas."></figure></li>
+    <li><span class="q">Rodada 3</span><div class="t"><h4>Sora no lugar da serifa</h4><p>O cliente reprovou a Cormorant ("queria algo mais digital") e o Lampyris, que perdeu o anel e o brilho do original. Entraram Sora 620 com o E de luz e três rotas de símbolo; venceu a Lua-constelação.</p></div><figure><img src="img/hist-3-rodada3.jpg" width="1200" height="755" loading="lazy" alt="Rodada 3: três rotas de símbolo (Lua-constelação, Saturno-lanterna, Rastro que acende) com o wordmark em Sora."></figure></li>
+    <li><span class="q">Rodada 4</span><div class="t"><h4>A lua vira rastro</h4><p>"Deixar a lua como o rastro do vagalume, só fazendo luz." O arco passou a ser o rastro de luz, com transição de fio para âmbar no sentido do voo.</p></div><figure><img src="img/hist-4-rodada4.jpg" width="1200" height="442" loading="lazy" alt="Rodada 4: variações do símbolo Rastro que acende, com o rastro de luz terminando no vagalume."></figure></li>
+    <li><span class="q">v2 final</span><div class="t"><h4>Órbita do vagalume</h4><p>O rastro fecha em volta do nome: constelação atrás, luz na frente, vagalume sobre o E de luz. Um gesto só, que escala da fachada ao favicon.</p></div><figure><img src="img/hist-5-finalistas.jpg" width="1200" height="688" loading="lazy" alt="Finalistas do anel total: a órbita envolvendo FIREFLIES CONSULTORIA, em claro e escuro e em várias escalas."></figure></li>
+  </ol>
+ </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap"><span>Fireflies Consultoria · Manual de marca v2</span><span>Luz medida.</span></div>
+</footer>
+
+<div hidden>{{SPRITE}}</div>
+
+<script>
+(function(){
+  var b=document.getElementById('abreMenu'),m=document.getElementById('menu');
+  if(b&&m){b.addEventListener('click',function(){var a=m.classList.toggle('aberto');b.setAttribute('aria-expanded',a?'true':'false');});
+    m.addEventListener('click',function(e){if(e.target.closest('a')){m.classList.remove('aberto');b.setAttribute('aria-expanded','false');}});}
+  function copiar(t){
+    if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t);}
+    return new Promise(function(ok,err){var x=document.createElement('textarea');x.value=t;x.setAttribute('readonly','');x.style.position='fixed';x.style.left='-9999px';document.body.appendChild(x);x.select();try{document.execCommand('copy')?ok():err();}catch(e){err(e);}document.body.removeChild(x);});
+  }
+  document.querySelectorAll('.copiar').forEach(function(btn){
+    btn.addEventListener('click',function(){var h=btn.getAttribute('data-hex'),o=btn.textContent;
+      copiar(h).then(function(){btn.textContent='Copiado '+h;btn.setAttribute('data-ok','');},function(){btn.textContent='Selecione e copie: '+h;})
+      .then(function(){setTimeout(function(){btn.textContent=o;btn.removeAttribute('data-ok');},1800);});});
+  });
+  var links=document.querySelectorAll('.side li a');
+  if('IntersectionObserver' in window&&links.length){
+    var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.removeAttribute('aria-current');});var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');}});},{rootMargin:'-45% 0px -50% 0px'});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});
+  }
+})();
+</script>

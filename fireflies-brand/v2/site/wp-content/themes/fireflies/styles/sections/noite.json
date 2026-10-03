@@ -1,0 +1,42 @@
+{
+	"$schema": "https://schemas.wp.org/wp/6.6/theme.json",
+	"version": 3,
+	"title": "Noite (Anil)",
+	"slug": "noite",
+	"blockTypes": [ "core/group", "core/columns", "core/column", "core/cover", "core/details", "core/quote" ],
+	"styles": {
+		"color": { "background": "var(--wp--preset--color--anil)", "text": "var(--wp--preset--color--cal)" },
+		"elements": {
+			"heading": { "color": { "text": "var(--wp--preset--color--branco)" } },
+			"link": {
+				"color": { "text": "var(--wp--preset--color--ambar)" },
+				":hover": { "color": { "text": "var(--wp--preset--color--branco)" } },
+				":focus": { "color": { "text": "var(--wp--preset--color--branco)" } }
+			},
+			"button": {
+				"color": { "background": "var(--wp--preset--color--ambar)", "text": "var(--wp--preset--color--anil)" },
+				"border": { "color": "var(--wp--preset--color--ambar)" },
+				":hover": { "color": { "background": "var(--wp--preset--color--cal)", "text": "var(--wp--preset--color--anil)" }, "border": { "color": "var(--wp--preset--color--cal)" } },
+				":focus": { "outline": { "color": "var(--wp--preset--color--ambar)" } }
+			},
+			"caption": { "color": { "text": "var(--wp--preset--color--fumaca)" } },
+			"cite": { "color": { "text": "var(--wp--preset--color--fumaca)" } }
+		},
+		"blocks": {
+			"core/button": {
+				"variations": {
+					"outline": {
+						"color": { "background": "transparent", "text": "var(--wp--preset--color--cal)" },
+						"border": { "color": "var(--wp--preset--color--cal)" },
+						":hover": { "color": { "background": "var(--wp--preset--color--cal)", "text": "var(--wp--preset--color--anil)" } }
+					}
+				}
+			},
+			"core/separator": { "color": { "text": "rgba(237,238,234,.18)", "background": "rgba(237,238,234,.18)" } },
+			"core/quote": { "color": { "text": "var(--wp--preset--color--cal)" }, "border": { "left": { "color": "var(--wp--preset--color--vermelhao)" } } },
+			"core/navigation": { "elements": { "link": { "color": { "text": "var(--wp--preset--color--cal)" } } } },
+			"core/post-date": { "color": { "text": "var(--wp--preset--color--fumaca)" } },
+			"core/details": { "border": { "top": { "color": "rgba(237,238,234,.18)" } } }
+		}
+	}
+}

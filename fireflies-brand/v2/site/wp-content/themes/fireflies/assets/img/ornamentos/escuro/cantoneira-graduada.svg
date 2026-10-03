@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" fill="none">
+  <title>Cantoneira graduada</title>
+  <path d="M6 94V6H94" stroke="#EDEEEA" stroke-width="1.25"/>
+  <path d="M12 94V12H94" stroke="#6E89B4" stroke-width=".6"/>
+  <path d="M16 6v6M6 16h6" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M22 6v3M6 22h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M28 6v3M6 28h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M34 6v3M6 34h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M40 6v6M6 40h6" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M46 6v3M6 46h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M52 6v3M6 52h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M58 6v3M6 58h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M64 6v6M6 64h6" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M70 6v3M6 70h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M76 6v3M6 76h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M82 6v3M6 82h3" stroke="#EDEEEA" stroke-width=".7"/>
+  <path d="M88 6v6M6 88h6" stroke="#EDEEEA" stroke-width=".7"/>
+  <circle cx="6" cy="6" r="2.6" fill="#EDEEEA"/>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" stroke="#17183A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+  <title>Contábil · Ratio</title>
+  <polygon points="3,6 61,6 61,60 24,60 24,50 3,50" fill="none" stroke="#5E6271" stroke-width=".5" stroke-dasharray="2 2" opacity=".55"/>
+  <path d="M10.97 14.5 15.75 13.91" stroke-dasharray="0 2.4"/>
+  <path d="M22.3 13.63 27.22 13.82" stroke-dasharray="0 2.45"/>
+  <path d="M36.77 14.55 41.74 15.12" stroke-dasharray="0 2.49"/>
+  <path d="M48.27 15.09 53.05 14.49" stroke-dasharray="0 2.4"/>
+  <path d="M32 18.8 32 24.72" stroke-dasharray="0 2.95"/>
+  <path d="M32 31.3 32 37.02" stroke-dasharray="0 2.85"/>
+  <path d="M32 45 32 50.22" stroke-dasharray="0 2.6"/>
+  <circle cx="7" cy="15" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="19" cy="13.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="32" cy="14" r="2.6" fill="#17183A" stroke="none"/>
+  <circle cx="45" cy="15.5" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="57" cy="14" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="32" cy="28" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="32" cy="41" r="1.8" fill="#17183A" stroke="none"/>
+  <circle cx="32" cy="55" r="2.6" fill="#17183A" stroke="none"/>
+  <circle cx="15" cy="26" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="20" cy="37" r="1.1" fill="#17183A" stroke="none"/>
+  <circle cx="46" cy="27" r="1.1" fill="#17183A" stroke="none"/>
+  <circle class="lit" cx="47" cy="42" r="4.2" style="fill:#F2B544;stroke:#17183A" stroke-width="1"/>
+</svg>
