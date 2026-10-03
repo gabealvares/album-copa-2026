@@ -128,7 +128,8 @@ function simbolo(o, cor, { pequeno = false, id = 'x' } = {}) {
   const s = o.fH / 100, fx = o.cx - 58.9 * s / 2 + (o.fDx || 0), fy = o.cy - 102.88 * s / 2 - 1.44 * s + (o.fDy || 0);
   // F: bicolor (braço de luz separado por respiro) ou cor única (fUnico); fUnico + fJunto = F inteiro, um só desenho
   const fT = `<g transform="translate(${r2(fx)} ${r2(fy)}) scale(${r2(s * 1000) / 1000})">`;
-  if (o.fUnico && o.fJunto) body += `${fT}<path d="${F_INTEIRO}" fill="${pal.f}"/></g>`;
+  if (o.semF) { /* só a órbita (ex.: em volta de uma foto) */ }
+  else if (o.fUnico && o.fJunto) body += `${fT}<path d="${F_INTEIRO}" fill="${pal.f}"/></g>`;
   else {
     const bx = pequeno ? 26.14 : 24.64;
     body += `${fT}<path d="${F_HASTE}" fill="${pal.f}"/><path d="M${bx},44.5616h${r2(57.13 - bx)}v16.9863h-${r2(57.13 - bx)}z" fill="${o.fUnico ? pal.f : pal.braco}"/></g>`;
