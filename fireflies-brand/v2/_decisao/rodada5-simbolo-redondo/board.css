@@ -113,3 +113,21 @@ td:nth-child(3) { background: #FFF6E2; font-weight: 600; }
 .lado figure:last-child { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: flex-end; }
 .lado figure:last-child figcaption { width: 100%; }
 @media (max-width: 760px) { .gap { width: 100%; height: 0; } }
+
+.fv-op { display: flex; flex-direction: column; gap: 14px; padding-top: 18px; border-top: 1px solid var(--linha); }
+.fv-grid { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.fv-grid figure { padding: 10px 8px 8px; border-radius: 6px; }
+.app-fv { width: 96px; height: 96px; }
+.fv-tams { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; }
+.fv-tams span { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px; border-radius: 6px; }
+.fv-tams i { font: normal 11px var(--f-mono); }
+.t-claro { background: var(--branco); color: var(--suave); }
+.t-escuro { background: #202124; color: #9AA0A6; }
+.t-anil { background: transparent; color: var(--suave); }
+.abas { display: flex; flex-wrap: wrap; gap: 12px; }
+.aba { display: flex; align-items: center; gap: 8px; width: 240px; max-width: 100%; height: 36px; padding: 0 12px; border-radius: 8px 8px 0 0; font: 12px system-ui, sans-serif; }
+.aba span { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.aba b { font-weight: 400; opacity: .6; }
+.aba.claro { background: var(--branco); color: #202124; box-shadow: 0 -1px 0 var(--linha) inset; }
+.aba.escuro { background: #35363A; color: #E8EAED; }
+.aba svg { flex: none; }

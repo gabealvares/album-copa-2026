@@ -1,8 +1,10 @@
 // Monta a prancha de aprovação: board.html
 const fs = require('fs');
-const { simbolo, construcao, favicon } = require('./simbolo');
+const { simbolo, construcao, favicon, rastro } = require('./simbolo');
+const FAV = require('./favicons');
 const O = require('./opcoes');
 const R5 = O.r5;
+const RS = (o, cor, px, x = {}) => rastro(o, cor, { id: 'rs' + (n++), ...x }).replace(/<title>.*?<\/title>/, '').replace('<svg ', `<svg width="${px}" height="${px}" aria-hidden="true" `);
 const FV = (cor, px, fUnico) => favicon(cor, { fUnico, id: 'fv' + (n++) }).replace(/<title>.*?<\/title>/, '').replace('<svg ', `<svg width="${px}" height="${px}" aria-hidden="true" `);
 const LOGO = '/home/user/album-copa-2026/fireflies-brand/v2/logo/svg/';
 const rd = f => fs.readFileSync(LOGO + f, 'utf8').replace(/<title>.*?<\/title>/, '');
@@ -56,10 +58,10 @@ const html = `<title>Revisão do F de luz</title>
 <style>${css}</style>
 <main>
 <header class="capa">
-  <p class="eyebrow">Fireflies Consultoria · Identidade v2 · Rodada 5b · 03/10/2026</p>
+  <p class="eyebrow">Fireflies Consultoria · Identidade v2 · Rodadas 5b e 5c · 03/10/2026</p>
   <h1>F de luz: órbita redonda, F numa cor só</h1>
   <p class="lead">As opções A e C seguem, agora sem a segunda cor no F. O braço laranja disputava atenção com o vagalume. Sem ele, o vagalume passa a ser a única luz do símbolo.</p>
-  <nav class="saltos"><a href="#mudanca">O que mudou</a><a href="#opcao-a">Opção A</a><a href="#opcao-c">Opção C</a><a href="#favicon">Favicon</a><a href="#comparativo">Comparativo</a><a href="#decidir">Para decidir</a></nav>
+  <nav class="saltos"><a href="#mudanca">O que mudou</a><a href="#opcao-a">Opção A</a><a href="#opcao-c">Opção C</a><a href="#favicon">Favicon com rastro</a><a href="#comparativo">Comparativo</a><a href="#decidir">Para decidir</a></nav>
 </header>
 
 <section id="mudanca" class="mud">
@@ -85,15 +87,27 @@ const html = `<title>Revisão do F de luz</title>
 ${['A', 'C'].map(opcao).join('\n')}
 
 <section id="favicon" class="fav">
-  <h2>Favicon acompanha</h2>
-  <p>O favicon é só o F com o vagalume. Para não ficar diferente do símbolo, ele também perde o braço colorido.</p>
-  <div class="fav-row">
-    <figure class="f-claro">${FV('digital', 96, false)}<figcaption>Antes</figcaption></figure>
-    <figure class="f-claro rec-fig">${FV('digital', 96, true)}<figcaption>Depois</figcaption></figure>
-    <figure class="f-anil">${FV('digital-negativo', 96, false)}<figcaption>Antes</figcaption></figure>
-    <figure class="f-anil rec-fig">${FV('digital-negativo', 96, true)}<figcaption>Depois</figcaption></figure>
-    <figure><div class="tams">${[32, 16].map(p => `<span>${FV('digital', p, true)}<i>${p}</i></span>`).join('')}</div><figcaption>Tamanho real</figcaption></figure>
-  </div>
+  <p class="tag">Rodada 5c</p>
+  <h2>Favicon: o vagalume com rastro</h2>
+  <p>O favicon deixa de ser o F com um ponto e passa a ser o próprio vagalume com um trecho curto do voo. O F continua no símbolo e no app. No favicon, que aparece ao lado do nome na aba, quem assina é a luz.</p>
+  <div class="fav-row"><figure class="f-claro">${FV('digital', 96, true)}<figcaption>Favicon da rodada 5b</figcaption></figure><figure class="f-anil">${FV('digital-negativo', 96, true)}<figcaption>Favicon da rodada 5b</figcaption></figure></div>
+  ${Object.entries(FAV).map(([k, o]) => `
+  <div class="fv-op">
+    <header class="op-h"><span class="tag">Favicon · ${o.nome}</span>${k === 'arco' ? '<span class="rec">Recomendado</span>' : ''}</header>
+    <p>${{ arco: 'Um arco de 150°: é literalmente o fim da órbita do símbolo, recortado. O vagalume sobe à direita, no mesmo sentido de voo.', diagonal: 'Um rastro quase reto, subindo na diagonal. É a forma mais rápida de ler, mas se aproxima de uma estrela cadente genérica.', laco: 'Um rastro de 260° que quase fecha o círculo. É o que mais lembra o símbolo, mas em 16 px pode ser lido como a letra C.' }[k]}</p>
+    <div class="fv-grid">
+      ${[['digital', 'f-claro'], ['digital-negativo', 'f-anil'], ['chapado', 'f-cal'], ['mono-anil', 'f-branco']].map(([c, f]) => `<figure class="${f}">${RS(o, c, 104, { asas: true })}<figcaption>${c}</figcaption></figure>`).join('')}
+      <figure><div class="app-fv">${RS(o, 'digital-negativo', 96, { fundo: true, asas: true })}</div><figcaption>.ico / app</figcaption></figure>
+    </div>
+    <div class="fv-tams">
+      ${[48, 32, 16].map(px => `<span class="t-claro">${RS(o, 'digital', px, { asas: px >= 32, micro: px < 32 })}<i>${px}</i></span><span class="t-escuro">${RS(o, 'digital-negativo', px, { asas: px >= 32, micro: px < 32 })}<i>${px}</i></span><span class="t-anil">${RS(o, 'digital-negativo', px, { fundo: true, asas: px >= 32, micro: px < 32 })}<i>${px}</i></span>`).join('')}
+    </div>
+    <div class="abas">
+      <div class="aba claro">${RS(o, 'digital', 16, { micro: true })}<span>Fireflies Consultoria</span><b>×</b></div>
+      <div class="aba escuro">${RS(o, 'digital-negativo', 16, { micro: true })}<span>Fireflies Consultoria</span><b>×</b></div>
+    </div>
+  </div>`).join('')}
+  <p class="nota">Em 16 px o desenho é próprio: as asas saem e o rastro fica mais grosso e sem esmaecer, para não sumir na aba. A partir de 32 px as asas voltam. Recomendo o <b>Arco</b>: ele conta a mesma história do símbolo, o fim do voo chegando aceso, e não se confunde com uma estrela cadente nem com uma letra.</p>
 </section>
 
 <section id="comparativo" class="comp">
@@ -120,6 +134,7 @@ ${['A', 'C'].map(opcao).join('\n')}
 <section id="decidir" class="decidir">
   <h2>Para decidir</h2>
   <ol>
+    <li><b>Favicon.</b> Arco, Diagonal ou Laço (recomendo o Arco).</li>
     <li><b>A, C ou as duas juntas.</b> A sugestão é usar A como símbolo, a partir de 40 px, e o desenho de C como símbolo pequeno, entre 24 e 39 px. Cada uma fica no tamanho em que funciona melhor.</li>
     <li><b>O "E de luz" no nome.</b> O braço laranja do E no wordmark tem a mesma lógica do braço do F. Ele fica como está, ou sai também para manter a coerência?</li>
   </ol>

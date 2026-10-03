@@ -9,3 +9,5 @@ Rodada 5b: A e C com o F numa cor só (F inteiro) e favicon acompanhando, em `bo
 - `node board.js`: regera a prancha.
 
 Status: aguardando aprovação. Depois da escolha, o gerador vai para `v2/logo/_build/` e regera logo, manuais e aplicações.
+
+Rodada 5c: favicon = vagalume com rastro curto (Arco, Diagonal, Laço), em `favicons.js`; seção "Favicon" de `board.html`.

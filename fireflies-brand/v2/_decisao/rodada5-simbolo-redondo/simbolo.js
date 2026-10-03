@@ -175,3 +175,46 @@ function favicon(cor, { fUnico = true, id = 'fv' } = {}) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><title>Fireflies · favicon (16 px)</title><g transform="translate(${fx} ${fy}) scale(${s})">${F}</g>${luz}</svg>`;
 }
 module.exports.favicon = favicon;
+
+// favicon "vagalume com rastro": só o fim do voo (trecho de luz) e o vagalume, sem F
+// o: cx, cy, a, b, inc, fim, voo, w0, w1, nucleo, halo; asas: mostra asas (≥ 32 px); fundo: quadrado Anil arredondado
+function rastro(o, cor, { asas = false, fundo = false, micro = false, id = 'rs' } = {}) {
+  const pal = PAL[cor];
+  // micro (16 px): rastro mais grosso, sem esmaecer, núcleo maior
+  if (micro) o = { ...o, w0: o.w0 * 4, w1: o.w1 * 1.3, nucleo: o.nucleo * 1.3 };
+  const g = geometria({ ...o, corte: 0 }, false);
+  let defs = '', body = '';
+  // enquadramento: caixa do rastro + vagalume (+ asas) centrada e ajustada à área útil
+  const bb = [1e9, 1e9, -1e9, -1e9], add = (x, y, r) => { bb[0] = Math.min(bb[0], x - r); bb[1] = Math.min(bb[1], y - r); bb[2] = Math.max(bb[2], x + r); bb[3] = Math.max(bb[3], y + r); };
+  for (let i = 0; i <= 60; i++) { const t = i / 60, q = g.at(t).p; add(q[0], q[1], g.larg(t) / 2); }
+  const e = g.at(1); add(e.p[0], e.p[1], o.nucleo);
+  if (asas) { const an = Math.atan2(e.d[1], e.d[0]); for (const da of [-50, -26, 0, 26, 50]) { const k = (an + Math.PI + da * deg); add(e.p[0] + Math.cos(k) * 15 * o.asa, e.p[1] + Math.sin(k) * 15 * o.asa, o.asaW); } }
+  const util = fundo ? 78 : 104, sc = Math.min(util / (bb[2] - bb[0]), util / (bb[3] - bb[1]));
+  const tx = 60 - sc * (bb[0] + bb[2]) / 2, ty = 60 - sc * (bb[1] + bb[3]) / 2;
+  const fio = pal.fio.length > 2;
+  if (!fio) body += `<path d="${trecho(g, 0, 1, 200, true, true)}" fill="${pal.fio[0][1]}"/>`;
+  else {
+    const a = g.at(0).p, b = g.at(1).p, v = [b[0] - a[0], b[1] - a[1]], vv = v[0] ** 2 + v[1] ** 2;
+    let st = '';
+    for (let j = 0; j <= 8; j++) {
+      const t = j / 8, p = g.at(t).p;
+      const off = Math.min(1, Math.max(0, ((p[0] - a[0]) * v[0] + (p[1] - a[1]) * v[1]) / vv));
+      const [c] = corEm(pal.fio, .3 + .7 * t);
+      st += `<stop offset="${r2(off)}" stop-color="${c}"${t < .5 && !micro ? ` stop-opacity="${r2(.25 + 1.5 * t)}"` : ''}/>`;
+    }
+    defs += `<linearGradient id="ff-${id}-g" gradientUnits="userSpaceOnUse" x1="${r2(a[0])}" y1="${r2(a[1])}" x2="${r2(b[0])}" y2="${r2(b[1])}">${st}</linearGradient>`;
+    body += `<path d="${trecho(g, 0, 1, 200, true, true)}" fill="url(#ff-${id}-g)"/>`;
+  }
+  const { p, d } = g.at(1), ang = Math.atan2(d[1], d[0]) / deg, vx = r2(p[0]), vy = r2(p[1]);
+  const asa = fundo && cor.startsWith('digital') ? C.cal : pal.asa;
+  if (asas) body += `<g transform="translate(${vx} ${vy}) rotate(${r2(ang)})"><path d="${ASA}" transform="rotate(-26) scale(${o.asa})" fill="none" stroke="${asa}" stroke-width="${o.asaW}" stroke-linecap="round" stroke-linejoin="round"/><path d="${ASA2}" transform="rotate(26) scale(${o.asa})" fill="none" stroke="${asa}" stroke-width="${o.asaW}" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+  if (pal.halo) {
+    const [hc, h0, h1] = pal.halo, [n0, n1, n2] = pal.nucleo;
+    defs += `<radialGradient id="ff-${id}-h" cx="${vx}" cy="${vy}" r="${o.halo}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${hc}" stop-opacity="${h0}"/><stop offset="0.35" stop-color="${hc}" stop-opacity="${h1}"/><stop offset="1" stop-color="${hc}" stop-opacity="0"/></radialGradient>`;
+    defs += `<radialGradient id="ff-${id}-c" cx="${r2(p[0] - o.nucleo * .3)}" cy="${r2(p[1] - o.nucleo * .3)}" r="${r2(o.nucleo * 1.3)}" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${n0}"/><stop offset="0.55" stop-color="${n1}"/><stop offset="1" stop-color="${n2}"/></radialGradient>`;
+    body += `<circle cx="${vx}" cy="${vy}" r="${o.halo}" fill="url(#ff-${id}-h)"/><circle cx="${vx}" cy="${vy}" r="${o.nucleo}" fill="url(#ff-${id}-c)"/>`;
+  } else body += `<circle cx="${vx}" cy="${vy}" r="${o.nucleo}" fill="${pal.nucleoChapado}"/>`;
+  const bg = fundo ? `<rect x="0" y="0" width="120" height="120" rx="26" fill="${C.anil}"/>` : '';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><title>Fireflies · favicon (vagalume com rastro)</title><defs>${defs}</defs>${bg}<g transform="translate(${r2(tx)} ${r2(ty)}) scale(${r2(sc * 1000) / 1000})">${body}</g></svg>`;
+}
+module.exports.rastro = rastro;
