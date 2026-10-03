@@ -8,7 +8,7 @@ const { C, t, para, logo, rect, line } = L;
 const { simbolo } = require('../../logo/_build/simbolo');
 const P = require('../../logo/_build/parametros');
 const DIR = 'redes/';
-const HANDLE = '@firefliesconsultoria';
+const SITE = 'www.fireflies.com.br';
 const CRC = 'CRC-SP [nº a confirmar]';
 
 const titulo = (s, o) => para(s, { f: 'sora7', lh: o.s * 1.08, fill: C.cal, tr: 0.02, bf: 'sora7', bfill: C.vermelhao, btr: 0.02, ...o });
@@ -55,10 +55,10 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
   const tt = titulo('VEJA AS NOVAS DEFINIÇÕES DA **REFORMA TRIBUTÁRIA** PARA O RAMO CONDOMINIAL.', { s: 68, w: 1020, x: M, y: 930 });
   b += tt.svg;
   b += corpo('O Ato Técnico Conjunto nº 7 aprova a nova versão da Nota Técnica SE/CGNFS-e nº 009 (**versão 1.01**). Entenda o que muda na nota fiscal de serviço do seu condomínio.', { s: 32, lh: 44, w: 1000, x: M, y: tt.y + 84 }).svg;
-  // rodapé: wordmark + handle (sem o símbolo: a luz do card já é o vagalume do retrato)
+  // rodapé: wordmark + site (sem o símbolo: a luz do card já é o vagalume do retrato)
   b += line(M, H - 130, W - M, H - 130, C.fuligem, 1.5);
   b += logo('wordmark', 'digital-negativo', { w: 190, x: M, y: H - 100 }).svg;
-  b += t(HANDLE, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: C.fumaca, a: 'end', tr: 0.04 });
+  b += t(SITE, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: C.fumaca, a: 'end', tr: 0.04 });
   L.save(DIR + 'linkedin-comunicado-nfse-reforma_1200x1500', { w: W, h: H, bg: C.anil, body: b, title: 'LinkedIn · comunicado · Reforma tributária no condomínio (NT SE/CGNFS-e nº 009 v1.01)' });
 }
 L.flush('comunicados');
