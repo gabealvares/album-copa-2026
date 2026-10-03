@@ -8,7 +8,7 @@ require_once __DIR__ . '/lib.php';
 
 /** Hero Anil. $lado: html de blocos da coluna direita (constelação, ficha ou emblema). */
 function s_hero_anil( array $d ): string {
-	$d += array( 'rotulo' => '', 'h1' => '', 'lead' => '', 'botoes' => array(), 'nota' => '', 'lado' => '', 'padrao' => 'reticula', 'versal' => true, 'lockup' => '' );
+	$d += array( 'rotulo' => '', 'h1' => '', 'lead' => '', 'botoes' => array(), 'nota' => '', 'lado' => '', 'padrao' => 'reticula', 'versal' => true, 'lockup' => '', 'longo' => false );
 	$esq  = '';
 	if ( $d['lockup'] ) {
 		$esq .= img( "{{A}}img/logo/fireflies_{$d['lockup']}-horizontal_digital-negativo.svg", 'Fireflies ' . ucfirst( $d['lockup'] ), array( 'w' => '300px', 'class' => 'ff-lockup' ) );
@@ -16,7 +16,7 @@ function s_hero_anil( array $d ): string {
 	if ( $d['rotulo'] ) {
 		$esq .= rotulo( $d['rotulo'] );
 	}
-	$esq .= h( 1, $d['h1'], array( 'class' => $d['versal'] ? 'is-style-versal' : '', 'size' => 'display' ) );
+	$esq .= h( 1, $d['h1'], array( 'class' => $d['versal'] ? 'is-style-versal' : '', 'size' => $d['longo'] ? 'titulo-1' : 'display' ) );
 	$esq .= abertura( $d['lead'] );
 	if ( $d['botoes'] ) {
 		$esq .= botoes( $d['botoes'], array( 'mar' => array( 'top' => sp( '50' ) ) ) );
@@ -145,6 +145,10 @@ function s_servicos( array $d, string $v = '' ): string {
 	return secao( $in, $v );
 }
 
+function wp_strip_tags_simples( string $t ): string {
+	return trim( preg_replace( '/<[^>]+>/', '', $t ) );
+}
+
 /** Frase grande (manifesto). */
 function s_manifesto( array $d, string $v = 'cal' ): string {
 	$d += array( 'rotulo' => '', 'frase' => '', 'texto' => array(), 'nota' => '', 'assinatura' => '' );
@@ -152,7 +156,7 @@ function s_manifesto( array $d, string $v = 'cal' ): string {
 	if ( $d['rotulo'] ) {
 		$in .= rotulo( $d['rotulo'] );
 	}
-	$in .= p( $d['frase'], array( 'class' => 'ff-manifesto' ) );
+	$in .= p( $d['frase'], array( 'class' => 'ff-manifesto' . ( mb_strlen( wp_strip_tags_simples( $d['frase'] ) ) > 110 ? ' ff-manifesto--longo' : '' ) ) );
 	$corpo = '';
 	foreach ( (array) $d['texto'] as $t ) {
 		$corpo .= p( $t, array( 'size' => 'lead' ) );
@@ -195,30 +199,22 @@ function s_painel( array $d, string $v = '' ): string {
 	return secao( $in, $v );
 }
 
-/** CTA raio-X do condomínio (noite, emblema Domus). */
+/** Raio-X do condomínio (noite): texto, simulador ilustrativo do plugin e chamada. */
 function s_raio_x( array $d ): string {
-	$d += array( 'rotulo' => '', 'h2' => 'Raio-X do seu condomínio.', 'texto' => '', 'itens' => array(), 'nota' => '', 'botoes' => array() );
-	$esq = '';
-	if ( $d['rotulo'] ) {
-		$esq .= rotulo( $d['rotulo'] );
-	}
-	$esq .= h( 2, $d['h2'], array( 'class' => 'is-style-versal', 'size' => 'titulo-1' ) ) . p( $d['texto'], array( 'size' => 'lead' ) );
-	if ( $d['itens'] ) {
-		$esq .= lista( $d['itens'], array( 'class' => 'is-style-estrelas' ) );
-	}
-	if ( $d['botoes'] ) {
-		$esq .= botoes( $d['botoes'], array( 'mar' => array( 'top' => sp( '40' ) ) ) );
+	$d += array( 'rotulo' => '', 'h2' => 'Raio-X do seu condomínio.', 'texto' => '', 'nota' => '', 'botoes' => array(), 'emblema' => true, 'simulador' => true );
+	$esq = ( $d['rotulo'] ? rotulo( $d['rotulo'] ) : '' ) . h( 2, $d['h2'], array( 'class' => 'is-style-versal', 'size' => 'titulo-1' ) ) . p( $d['texto'], array( 'size' => 'lead' ) );
+	$in  = $d['emblema']
+		? colunas( array( array( 'html' => $esq, 'w' => '66%' ), array( 'html' => constelacao( 'condominios', 'escuro', array( 'w' => '170px', 'class' => 'is-style-emblema aligncenter' ) ), 'va' => 'center', 'class' => 'ff-hero__lado' ) ), array( 'va' => 'center', 'gap' => sp( '60' ) ) )
+		: estreito( $esq, '760px' );
+	if ( $d['simulador'] ) {
+		$in .= grupo( shortcode( '[fireflies_raio_x]' ), array( 'class' => 'ff-raio-x__sim', 'mar' => array( 'top' => sp( '50' ) ) ) );
 	}
 	if ( $d['nota'] ) {
-		$esq .= nota( $d['nota'], array( 'text' => 'fumaca' ) );
+		$in .= nota( $d['nota'], array( 'text' => 'fumaca', 'mar' => array( 'top' => sp( '40' ) ) ) );
 	}
-	$in = colunas(
-		array(
-			array( 'html' => $esq, 'w' => '60%' ),
-			array( 'html' => constelacao( 'condominios', 'escuro', array( 'w' => '300px', 'class' => 'is-style-emblema aligncenter' ) ), 'va' => 'center' ),
-		),
-		array( 'va' => 'center', 'gap' => sp( '60' ) )
-	);
+	if ( $d['botoes'] ) {
+		$in .= botoes( $d['botoes'], array( 'mar' => array( 'top' => sp( '40' ) ) ) );
+	}
 	return secao( $in, 'noite', array( 'class' => 'ff-raio-x' ) );
 }
 

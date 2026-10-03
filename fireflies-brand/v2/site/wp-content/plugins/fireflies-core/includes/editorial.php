@@ -20,7 +20,7 @@ function fireflies_core_ancora( string $texto ): string {
 add_filter(
 	'render_block_core/heading',
 	static function ( string $html, array $block ): string {
-		if ( ! is_singular( 'post' ) || ! empty( $block['attrs']['anchor'] ) || ( $block['attrs']['level'] ?? 2 ) !== 2 ) {
+		if ( ! is_singular() || ! empty( $block['attrs']['anchor'] ) || ( $block['attrs']['level'] ?? 2 ) !== 2 ) {
 			return $html;
 		}
 		if ( str_contains( $html, ' id=' ) ) {
@@ -39,12 +39,23 @@ add_filter(
  * @return array<int, array{id:string, texto:string}>
  */
 function fireflies_core_titulos( int $post_id ): array {
-	$itens = array();
-	foreach ( parse_blocks( (string) get_post_field( 'post_content', $post_id ) ) as $bloco ) {
+	$itens  = array();
+	$blocos = parse_blocks( (string) get_post_field( 'post_content', $post_id ) );
+	$planos = array();
+	$andar  = static function ( array $lista ) use ( &$andar, &$planos ): void {
+		foreach ( $lista as $b ) {
+			$planos[] = $b;
+			if ( ! empty( $b['innerBlocks'] ) ) {
+				$andar( $b['innerBlocks'] );
+			}
+		}
+	};
+	$andar( $blocos );
+	foreach ( $planos as $bloco ) {
 		if ( 'core/heading' !== $bloco['blockName'] || ( $bloco['attrs']['level'] ?? 2 ) !== 2 ) {
 			continue;
 		}
-		$texto = trim( wp_strip_all_tags( $bloco['innerHTML'] ) );
+		$texto = trim( preg_replace( '/^\d+\s*·\s*/u', '', trim( html_entity_decode( wp_strip_all_tags( $bloco['innerHTML'] ) ) ) ) );
 		if ( '' === $texto ) {
 			continue;
 		}
@@ -110,7 +121,7 @@ function fireflies_core_formulario( array $atts = array() ): string {
 	}
 	$email = fireflies_core_opcao( 'email' );
 	return '<div class="ff-form-fallback">'
-		. '<p>O formulário volta em breve. Enquanto isso, fale com a gente pelo WhatsApp ou por e-mail: a resposta sai no mesmo dia útil.</p>'
+		. '<p>Conte em poucas linhas o que você precisa, pelo WhatsApp ou por e-mail. A gente responde no mesmo dia útil, de segunda a sexta, das 8h às 18h.</p>'
 		. fireflies_core_whatsapp( array( 'texto' => 'Agendar pelo WhatsApp' ) )
 		. '<p><a href="mailto:' . esc_attr( antispambot( $email ) ) . '">' . esc_html( antispambot( $email ) ) . '</a></p>'
 		. '</div>';
@@ -164,3 +175,37 @@ function fireflies_core_eyebrow( int $post_id ): string {
 	}
 	return $txt;
 }
+
+/**
+ * Seção de relacionados some quando não há posts para mostrar.
+ */
+add_filter(
+	'render_block_core/group',
+	static function ( string $html, array $block ): string {
+		$cls = $block['attrs']['className'] ?? '';
+		if ( str_contains( $cls, 'ff-secao-relacionados' ) && ! str_contains( $html, 'wp-block-post ' ) ) {
+			return '';
+		}
+		return $html;
+	},
+	10,
+	2
+);
+
+/**
+ * Shortcodes dentro de blocos Shortcode em modelos e padrões do tema
+ * (o núcleo só os processa no conteúdo do post).
+ */
+add_filter(
+	'render_block_core/shortcode',
+	static function ( string $html, array $block ): string {
+		$raw = trim( (string) ( $block['innerHTML'] ?? '' ) );
+		// Só um shortcode no bloco: renderiza sem o <p> do wpautop (evita <div> dentro de <p>).
+		if ( preg_match( '/^\[[^\]]+\](?:.*\[\/[^\]]+\])?$/s', $raw ) ) {
+			return do_shortcode( $raw );
+		}
+		return str_contains( $html, '[' ) ? do_shortcode( $html ) : $html;
+	},
+	10,
+	2
+);

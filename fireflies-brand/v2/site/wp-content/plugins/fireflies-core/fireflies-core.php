@@ -27,6 +27,7 @@ require_once FIREFLIES_CORE_DIR . 'includes/leitura.php';
 require_once FIREFLIES_CORE_DIR . 'includes/whatsapp.php';
 require_once FIREFLIES_CORE_DIR . 'includes/editorial.php';
 require_once FIREFLIES_CORE_DIR . 'includes/estilos.php';
+require_once FIREFLIES_CORE_DIR . 'includes/raio-x.php';
 require_once FIREFLIES_CORE_DIR . 'includes/blocos.php';
 require_once FIREFLIES_CORE_DIR . 'includes/schema.php';
 require_once FIREFLIES_CORE_DIR . 'includes/icones.php';

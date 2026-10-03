@@ -257,7 +257,7 @@ pattern(
 			'h2'     => 'Comece pelo diagnóstico.',
 			'texto'  => 'Uma conversa sem custo e sem compromisso para entender o que está travando os seus números.',
 			'botoes' => array( array( 'Conversar no WhatsApp', $WA ), array( 'Agendar pelo formulário', u( '/contato/' ), 'outline' ) ),
-			'linha'  => 'contato@fireflies.com.br   Segunda a sexta, 8h às 18h',
+			'linha'  => 'contato@fireflies.com.br · Segunda a sexta, 8h às 18h',
 		)
 	)
 );

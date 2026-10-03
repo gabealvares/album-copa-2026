@@ -273,5 +273,51 @@ if ( file_exists( $og ) ) {
 	}
 }
 
+
+// ---------------------------------------------------------------- formulário (Contact Form 7, se ativo)
+if ( class_exists( 'WPCF7_ContactForm' ) ) {
+	foreach ( get_posts( array( 'post_type' => 'wpcf7_contact_form', 'numberposts' => -1 ) ) as $f ) {
+		wp_delete_post( $f->ID, true );
+	}
+	$form = <<<'CF7'
+<label>Nome [text* nome autocomplete:name]</label>
+<label>E-mail [email* email autocomplete:email]</label>
+<label>WhatsApp <span class="ff-opcional">(opcional)</span> [tel whatsapp autocomplete:tel]</label>
+<label>Você é [select* perfil include_blank "Síndico ou conselheiro" "Administradora" "Empresa" "Grande empresa ou grupo" "Interessado na Academy"]</label>
+<label>Assunto [select* assunto default:get include_blank "Auditoria de condomínios|auditoria-de-condominios" "Consultoria contábil|consultoria-contabil" "Consultoria fiscal|consultoria-fiscal" "Consultoria financeira|consultoria-financeira" "Gestão de projetos e processos|gestao-de-projetos-e-processos" "Sindicância|sindicancia" "Fireflies Academy|academy" "Outro|outro"]</label>
+<label>Como podemos ajudar? [textarea* mensagem x4 placeholder "Ex.: condomínio com 120 unidades, queremos conferir as contas de 2025 antes da assembleia."]</label>
+[acceptance consentimento] Li a <a href="/politica-de-privacidade/">Política de Privacidade</a> e autorizo o uso destes dados para retornar o meu contato. [/acceptance]
+[submit "Enviar e agendar diagnóstico"]
+CF7;
+	$cf = WPCF7_ContactForm::get_template( array( 'title' => 'Diagnóstico gratuito' ) );
+	$cf->set_properties(
+		array(
+			'form'     => $form,
+			'mail'     => array(
+				'subject'            => '[Site] Diagnóstico: [assunto] · [nome]',
+				'sender'             => 'Site Fireflies <wordpress@fireflies.com.br>',
+				'recipient'          => 'contato@fireflies.com.br',
+				'body'               => "Nome: [nome]\nE-mail: [email]\nWhatsApp: [whatsapp]\nPerfil: [perfil]\nAssunto: [assunto]\n\n[mensagem]",
+				'additional_headers' => 'Reply-To: [email]',
+				'attachments'        => '',
+				'use_html'           => false,
+				'exclude_blank'      => true,
+				'active'             => true,
+			),
+			'messages' => array_merge(
+				WPCF7_ContactForm::get_template()->prop( 'messages' ),
+				array(
+					'mail_sent_ok'     => 'Recebido. A gente responde no mesmo dia útil, de segunda a sexta, das 8h às 18h. Se for urgente, chame no WhatsApp.',
+					'mail_sent_ng'     => 'Não conseguimos enviar agora. Tente de novo ou fale pelo WhatsApp: +55 11 98245-0527.',
+					'validation_error' => 'Confira os campos marcados e tente de novo.',
+				)
+			),
+		)
+	);
+	$cf->save();
+	update_option( 'fireflies_form', '[contact-form-7 id="' . $cf->hash() . '" title="Diagnóstico gratuito"]' );
+	log_( 'formulário CF7 criado' );
+}
+
 flush_rewrite_rules();
 WP_CLI::success( 'Conteúdo montado.' );
