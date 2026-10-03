@@ -124,3 +124,10 @@ add_action( 'init', 'fireflies_register_blocks' );
 function fireflies_asset( string $path ): string {
 	return esc_url( get_theme_file_uri( 'assets/' . ltrim( $path, '/' ) ) );
 }
+
+/**
+ * Helper para os padrões: URL interna do site (funciona em subpasta).
+ */
+function fireflies_url( string $path = '/' ): string {
+	return esc_url( home_url( $path ) );
+}
