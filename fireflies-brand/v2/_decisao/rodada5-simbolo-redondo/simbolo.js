@@ -8,6 +8,7 @@ const C = {
   laranja1: '#EB7A3F', laranja2: '#EE8A3C', preto: '#000000', branco: '#FFFFFF',
 };
 const F_HASTE = 'M0,2.87671v100h20.13699V19.72603h38.76712V2.87671z';
+const F_INTEIRO = 'M0,2.87671v100h20.13699V61.5479h36.99301V44.5616H20.13699V19.72603h38.76712V2.87671z';
 const ASA = 'M-1,0C-5,5.5 -14,8 -16,4.5C-17,1.5 -9,-0.5 -1,0';
 const ASA2 = 'M-1,0C-5,-5.5 -14,-8 -16,-4.5C-17,-1.5 -9,0.5 -1,0';
 
@@ -124,8 +125,13 @@ function simbolo(o, cor, { pequeno = false, id = 'x' } = {}) {
   }
   // F de luz
   const s = o.fH / 100, fx = o.cx - 58.9 * s / 2 + (o.fDx || 0), fy = o.cy - 102.88 * s / 2 - 1.44 * s + (o.fDy || 0);
-  const bx = pequeno ? 26.14 : 24.64;
-  body += `<g transform="translate(${r2(fx)} ${r2(fy)}) scale(${r2(s * 1000) / 1000})"><path d="${F_HASTE}" fill="${pal.f}"/><path d="M${bx},44.5616h${r2(57.13 - bx)}v16.9863h-${r2(57.13 - bx)}z" fill="${pal.braco}"/></g>`;
+  // F: bicolor (braço de luz separado por respiro) ou cor única (fUnico); fUnico + fJunto = F inteiro, um só desenho
+  const fT = `<g transform="translate(${r2(fx)} ${r2(fy)}) scale(${r2(s * 1000) / 1000})">`;
+  if (o.fUnico && o.fJunto) body += `${fT}<path d="${F_INTEIRO}" fill="${pal.f}"/></g>`;
+  else {
+    const bx = pequeno ? 26.14 : 24.64;
+    body += `${fT}<path d="${F_HASTE}" fill="${pal.f}"/><path d="M${bx},44.5616h${r2(57.13 - bx)}v16.9863h-${r2(57.13 - bx)}z" fill="${o.fUnico ? pal.f : pal.braco}"/></g>`;
+  }
   // vagalume
   const { p, d } = g.at(1), ang = Math.atan2(d[1], d[0]) / deg;
   const vx = r2(p[0]), vy = r2(p[1]);
@@ -159,3 +165,13 @@ function construcao(o, cor = '#2F7DE1') {
 <circle cx="${o.cx}" cy="${o.cy}" r="1" fill="${cor}"/></svg>`;
 }
 module.exports.construcao = construcao;
+
+// favicon: F + vagalume (sem órbita); fUnico tira o braço colorido
+function favicon(cor, { fUnico = true, id = 'fv' } = {}) {
+  const pal = PAL[cor], s = .86, fx = 28.67, fy = 25.52;
+  const F = fUnico ? `<path d="${F_INTEIRO}" fill="${pal.f}"/>` : `<path d="${F_HASTE}" fill="${pal.f}"/><path d="M29.14,44.5616h27.99v16.9863h-27.99z" fill="${pal.braco}"/>`;
+  const luz = pal.nucleo ? `<defs><radialGradient id="ff-${id}-c" cx="84.47" cy="31.52" r="19" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="${pal.nucleo[0]}"/><stop offset="0.55" stop-color="${pal.nucleo[1]}"/><stop offset="1" stop-color="${pal.nucleo[2]}"/></radialGradient></defs><circle cx="88.47" cy="35.52" r="15" fill="url(#ff-${id}-c)"/>`
+    : `<circle cx="88.47" cy="35.52" r="15" fill="${pal.nucleoChapado}"/>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><title>Fireflies · favicon (16 px)</title><g transform="translate(${fx} ${fy}) scale(${s})">${F}</g>${luz}</svg>`;
+}
+module.exports.favicon = favicon;

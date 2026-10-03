@@ -98,3 +98,18 @@ td:nth-child(3) { background: #FFF6E2; font-weight: 600; }
   .sep { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .guia { transition: none; } }
+
+.mud { display: flex; flex-direction: column; gap: 20px; }
+.antes-depois { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.antes-depois figure, .fforma figure, .fav-row figure { padding: 12px 10px 10px; border-radius: 6px; }
+.seta { font: 300 28px var(--f-disp); color: var(--rubrica); }
+.gap { width: 24px; }
+.mud-txt { display: flex; flex-direction: column; gap: 12px; }
+.fforma, .fav-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; }
+.rec-fig { outline: 2px solid var(--ambar); }
+.fav { display: flex; flex-direction: column; gap: 14px; }
+.decidir { display: flex; flex-direction: column; gap: 12px; background: var(--branco); padding: 20px 22px; border-radius: 8px; border-left: 3px solid var(--ambar); }
+.decidir ol { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; max-width: 75ch; }
+.lado figure:last-child { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: flex-end; }
+.lado figure:last-child figcaption { width: 100%; }
+@media (max-width: 760px) { .gap { width: 100%; height: 0; } }

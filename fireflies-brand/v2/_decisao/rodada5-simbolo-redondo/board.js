@@ -1,7 +1,9 @@
 // Monta a prancha de aprovação: board.html
 const fs = require('fs');
-const { simbolo, construcao } = require('./simbolo');
+const { simbolo, construcao, favicon } = require('./simbolo');
 const O = require('./opcoes');
+const R5 = O.r5;
+const FV = (cor, px, fUnico) => favicon(cor, { fUnico, id: 'fv' + (n++) }).replace(/<title>.*?<\/title>/, '').replace('<svg ', `<svg width="${px}" height="${px}" aria-hidden="true" `);
 const LOGO = '/home/user/album-copa-2026/fireflies-brand/v2/logo/svg/';
 const rd = f => fs.readFileSync(LOGO + f, 'utf8').replace(/<title>.*?<\/title>/, '');
 let n = 0;
@@ -14,19 +16,14 @@ const hzN = rd('fireflies_horizontal_digital-negativo.svg').replace('<svg ', '<s
 
 const TXT = {
   A: {
-    tese: 'A mesma órbita do logo horizontal, agora vista de frente. Vira um círculo perfeito, com a abertura centrada no alto e o vagalume às 11 horas, sobre a haste do F.',
-    pros: ['O mais equilibrado: o peso fica no centro e o círculo preenche o avatar e o ícone de app.', 'Narrativa simples para o manual: no nome a órbita aparece de lado, no símbolo aparece de frente.', 'Mantém tudo que dá sentido: voo horário, 40 % constelação e 60 % luz, 8 estrelas, vagalume com asas.'],
-    contras: ['Perde a inclinação de −5°, que era um traço compartilhado com o horizontal.'],
-  },
-  B: {
-    tese: 'A órbita fica quase redonda (proporção 0,80) e mantém uma inclinação de −12°. Ainda se lê como uma órbita vista em perspectiva, como no horizontal, só que bem menos achatada.',
-    pros: ['É a mais próxima do símbolo atual. A família com o horizontal fica evidente.', 'A inclinação dá mais movimento do que um círculo perfeito.'],
-    contras: ['Ocupa um pouco menos o quadrado e o círculo do avatar.', 'Em 24 px a elipse inclinada fica ambígua e pode parecer um erro de desenho.'],
+    tese: 'A mesma órbita do logo horizontal, vista de frente: um círculo perfeito com a abertura centrada no alto. O vagalume fica às 11 horas, sobre a haste do F, que agora tem uma cor só.',
+    pros: ['É a mais equilibrada: o peso fica no centro e o círculo preenche o avatar e o ícone de app.', 'Com o F numa cor só, o olho vai direto para o vagalume, que passa a ser a única luz do símbolo.', 'Mantém o sentido: voo horário, constelação atrás, luz na frente, 8 estrelas e vagalume com asas.'],
+    contras: ['Perde a inclinação de −5° que era compartilhada com o horizontal.'],
   },
   C: {
-    tese: 'Um círculo mais justo, com 330° de voo e a abertura mínima. O F fica maior e o fio de luz mais grosso. Funciona como um selo.',
-    pros: ['A melhor leitura em tamanhos pequenos (24–48 px), com o F 10 % maior que em A.', 'Muito sólido em carimbo, bordado, gravação e favicon de app.'],
-    contras: ['É a mais fechada: a órbita se aproxima de um "C" e a sensação de voo diminui.', 'Fica mais pesado ao lado do horizontal, que é leve e aéreo.'],
+    tese: 'Um círculo mais justo, com 330° de voo e abertura mínima. O F é 10 % maior e o fio de luz mais grosso. Funciona como um selo.',
+    pros: ['Tem a melhor leitura entre 24 e 48 px. O F inteiro, numa cor só, fica ainda mais firme pequeno.', 'É muito sólido em carimbo, bordado, gravação e ícone de app.'],
+    contras: ['É a mais fechada: a sensação de voo diminui.', 'Fica mais pesado ao lado do horizontal, que é leve.'],
   },
 };
 
@@ -34,7 +31,7 @@ function opcao(k) {
   const o = O[k], t = TXT[k];
   const cores = [['chapado', 'cal'], ['chapado-negativo', 'anil'], ['mono-anil', 'branco'], ['mono-branco', 'anil2']];
   return `<section class="op" id="opcao-${k.toLowerCase()}">
-  <header class="op-h"><span class="tag">Opção ${k}</span><h2>${o.nome}</h2>${k === 'A' ? '<span class="rec">Recomendada</span>' : ''}</header>
+  <header class="op-h"><span class="tag">Opção ${k}</span><h2>${o.nome}</h2></header>
   <p class="tese">${t.tese}</p>
   <div class="hero">
     <figure class="f-claro"><div class="stage">${S(o, 'digital', 300)}<div class="guia">${construcao(o)}</div></div><figcaption>digital · Branco</figcaption></figure>
@@ -59,65 +56,86 @@ const html = `<title>Revisão do F de luz</title>
 <style>${css}</style>
 <main>
 <header class="capa">
-  <p class="eyebrow">Fireflies Consultoria · Identidade v2 · Rodada 5 · 03/10/2026</p>
-  <h1>F de luz: a órbita redonda</h1>
-  <p class="lead">Três opções para redesenhar a órbita da versão reduzida. Em todas, o símbolo fica redondo e equilibrado e mantém o que dá sentido à marca: voo horário, constelação atrás, luz na frente e o vagalume aceso sobre o F.</p>
-  <nav class="saltos"><a href="#diagnostico">Diagnóstico</a><a href="#opcao-a">Opção A</a><a href="#opcao-b">Opção B</a><a href="#opcao-c">Opção C</a><a href="#comparativo">Comparativo</a><a href="#depois">Depois da aprovação</a></nav>
+  <p class="eyebrow">Fireflies Consultoria · Identidade v2 · Rodada 5b · 03/10/2026</p>
+  <h1>F de luz: órbita redonda, F numa cor só</h1>
+  <p class="lead">As opções A e C seguem, agora sem a segunda cor no F. O braço laranja disputava atenção com o vagalume. Sem ele, o vagalume passa a ser a única luz do símbolo.</p>
+  <nav class="saltos"><a href="#mudanca">O que mudou</a><a href="#opcao-a">Opção A</a><a href="#opcao-c">Opção C</a><a href="#favicon">Favicon</a><a href="#comparativo">Comparativo</a><a href="#decidir">Para decidir</a></nav>
 </header>
 
-<section id="diagnostico" class="diag">
-  <div class="diag-fig">
-    <figure class="f-claro"><div class="stage stage-q">${atual('digital', 260)}</div><figcaption>Atual · no quadrado</figcaption></figure>
-    <figure><div class="avatar">${atual('digital-negativo', 104)}</div><figcaption>Atual · avatar</figcaption></figure>
+<section id="mudanca" class="mud">
+  <h2>O que mudou</h2>
+  <div class="antes-depois">
+    ${['A', 'C'].map(k => `<figure class="f-claro">${S(R5[k], 'digital', 150)}<figcaption>${k} · rodada 5 (F bicolor)</figcaption></figure><span class="seta" aria-hidden="true">→</span><figure class="f-claro">${S(O[k], 'digital', 150)}<figcaption>${k} · agora (F numa cor)</figcaption></figure>`).join('<span class="gap"></span>')}
   </div>
-  <div class="diag-txt">
-    <h2>Por que mexer</h2>
-    <p>A regra atual diz que o símbolo é "a mesma órbita do horizontal × 0,1". Só que a órbita do horizontal foi desenhada para abraçar uma palavra longa. Por isso ela é muito achatada, com eixo menor de apenas 0,33 do maior.</p>
-    <ul class="num">
-      <li><b>3 : 1.</b> Em formatos quadrados ou circulares, o símbolo ocupa só um terço da altura. Sobra vazio em cima e embaixo.</li>
-      <li><b>F pequeno.</b> O F tem 20 % da largura da órbita. No avatar ele vira um detalhe.</li>
-      <li><b>Peso deslocado.</b> O F e o vagalume ficam à esquerda e a cauda de estrelas à direita. O conjunto parece cair para um lado.</li>
-    </ul>
-    <p class="nota">A proposta troca a regra por <b>"a mesma órbita, vista de frente"</b>. No nome, a órbita aparece de lado e por isso é achatada. No símbolo, olhamos de frente e ela fica redonda. Voo, trechos, estrelas e vagalume seguem iguais.</p>
+  <div class="mud-txt">
+    <h3>Como o F ficou numa cor só</h3>
+    <p>Testamos duas formas. Na primeira, o braço do meio continua separado da haste por um respiro, como já acontece nas versões mono. Na segunda, o F vira um desenho inteiro.</p>
+    <div class="fforma">
+      <figure class="f-claro">${S({ ...O.A, fJunto: false }, 'digital', 120)}<figcaption>Com respiro</figcaption></figure>
+      <figure class="f-claro rec-fig">${S(O.A, 'digital', 120)}<figcaption>F inteiro · adotado</figcaption></figure>
+      <figure class="f-anil">${S({ ...O.A, fJunto: false }, 'digital-negativo', 120)}<figcaption>Com respiro</figcaption></figure>
+      <figure class="f-anil rec-fig">${S(O.A, 'digital-negativo', 120)}<figcaption>F inteiro · adotado</figcaption></figure>
+    </div>
+    <p>Adotamos o <b>F inteiro</b>. Sem a cor, o respiro parece uma falha de desenho.</p>
   </div>
 </section>
 
 <div class="guia-tgl"><button type="button" id="tgl" aria-pressed="false">Mostrar construção</button><span>Sobrepõe a órbita completa, os eixos e a caixa do F nas peças grandes.</span></div>
 
-${['A', 'B', 'C'].map(opcao).join('\n')}
+${['A', 'C'].map(opcao).join('\n')}
+
+<section id="favicon" class="fav">
+  <h2>Favicon acompanha</h2>
+  <p>O favicon é só o F com o vagalume. Para não ficar diferente do símbolo, ele também perde o braço colorido.</p>
+  <div class="fav-row">
+    <figure class="f-claro">${FV('digital', 96, false)}<figcaption>Antes</figcaption></figure>
+    <figure class="f-claro rec-fig">${FV('digital', 96, true)}<figcaption>Depois</figcaption></figure>
+    <figure class="f-anil">${FV('digital-negativo', 96, false)}<figcaption>Antes</figcaption></figure>
+    <figure class="f-anil rec-fig">${FV('digital-negativo', 96, true)}<figcaption>Depois</figcaption></figure>
+    <figure><div class="tams">${[32, 16].map(p => `<span>${FV('digital', p, true)}<i>${p}</i></span>`).join('')}</div><figcaption>Tamanho real</figcaption></figure>
+  </div>
+</section>
 
 <section id="comparativo" class="comp">
   <h2>Comparativo</h2>
   <div class="tbl"><table>
-    <thead><tr><th></th><th>Atual</th><th>A · De frente</th><th>B · Três quartos</th><th>C · Selo</th></tr></thead>
+    <thead><tr><th></th><th>Atual</th><th>A · De frente</th><th>C · Selo</th></tr></thead>
     <tbody>
-      <tr><th>Proporção da órbita (b/a)</th><td>0,33</td><td>1,00</td><td>0,80</td><td>1,00</td></tr>
-      <tr><th>Inclinação</th><td>−5°</td><td>0°</td><td>−12°</td><td>0°</td></tr>
-      <tr><th>Voo (varredura)</th><td>304°</td><td>300°</td><td>300°</td><td>330°</td></tr>
-      <tr><th>Altura do F / largura da órbita</th><td>0,20</td><td>0,46</td><td>0,39</td><td>0,55</td></tr>
-      <tr><th>Preenche avatar e app</th><td>Fraco</td><td>Ótimo</td><td>Bom</td><td>Ótimo</td></tr>
-      <tr><th>Leitura em 24 px</th><td>Fraca</td><td>Boa</td><td>Regular</td><td>Ótima</td></tr>
-      <tr><th>Parentesco visível com o horizontal</th><td>Literal</td><td>Por conceito</td><td>Forte</td><td>Por conceito</td></tr>
+      <tr><th>Proporção da órbita (b/a)</th><td>0,33</td><td>1,00</td><td>1,00</td></tr>
+      <tr><th>Voo (varredura)</th><td>304°</td><td>300°</td><td>330°</td></tr>
+      <tr><th>Altura do F / largura da órbita</th><td>0,20</td><td>0,46</td><td>0,55</td></tr>
+      <tr><th>Cores no F</th><td>2</td><td>1</td><td>1</td></tr>
+      <tr><th>Preenche avatar e app</th><td>Fraco</td><td>Ótimo</td><td>Ótimo</td></tr>
+      <tr><th>Leitura em 24 px</th><td>Fraca</td><td>Boa</td><td>Ótima</td></tr>
+      <tr><th>Sensação de voo</th><td>Forte</td><td>Forte</td><td>Média</td></tr>
     </tbody>
   </table></div>
   <div class="lado">
     <figure class="f-claro">${atual('digital', 120)}<figcaption>Atual</figcaption></figure>
-    ${['A', 'B', 'C'].map(k => `<figure class="f-claro">${S(O[k], 'digital', 120)}<figcaption>${k}</figcaption></figure>`).join('')}
+    ${['A', 'C'].map(k => `<figure class="f-claro">${S(O[k], 'digital', 120)}<figcaption>${k}</figcaption></figure>`).join('')}
+    <figure class="f-claro">${S(O.A, 'digital', 64)}${S(O.C, 'digital', 32, { pequeno: true })}<figcaption>A + C pequeno</figcaption></figure>
   </div>
-  <p class="rec-txt"><b>Recomendação: Opção A.</b> É a que melhor resolve o pedido, redonda e equilibrada, e a explicação cabe numa frase do manual. Se quiserem mais movimento, a B é o caminho. Se a prioridade for uso pequeno, como app, carimbo e bordado, a C. Também dá para combinar: A como símbolo e o desenho de C como símbolo pequeno.</p>
+</section>
+
+<section id="decidir" class="decidir">
+  <h2>Para decidir</h2>
+  <ol>
+    <li><b>A, C ou as duas juntas.</b> A sugestão é usar A como símbolo, a partir de 40 px, e o desenho de C como símbolo pequeno, entre 24 e 39 px. Cada uma fica no tamanho em que funciona melhor.</li>
+    <li><b>O "E de luz" no nome.</b> O braço laranja do E no wordmark tem a mesma lógica do braço do F. Ele fica como está, ou sai também para manter a coerência?</li>
+  </ol>
 </section>
 
 <section id="depois" class="depois">
   <h2>Depois da aprovação</h2>
   <p>Com a opção escolhida, gero de novo, a partir de um script versionado em <code>v2/logo/_build/</code>:</p>
   <ul>
-    <li><b>Logo:</b> <code>simbolo</code> e <code>simbolo-pequeno</code> nas 7 cores (14 SVG + 14 PNG de 2000 px), além de avatar, ícones de app (Apple e Android), <code>construcao.svg</code> e a prancha do sistema.</li>
+    <li><b>Logo:</b> <code>simbolo</code>, <code>simbolo-pequeno</code> e <code>favicon</code> nas 7 cores (21 SVG + 21 PNG de 2000 px), além de <code>favicon.ico</code>, avatar, ícones de app (Apple e Android), <code>construcao.svg</code> e a prancha do sistema.</li>
     <li><b>Manual de marca:</b> as seções "O símbolo" e "Logo" (construção, área de proteção e mínimos), além das imagens do símbolo.</li>
     <li><b>Manual de aplicação:</b> as pranchas "versões do logo por fundo" e "matriz de fundos".</li>
     <li><b>Aplicações</b> que usam o símbolo: slides, posts, carrossel, story, LinkedIn, avatar, cartão, crachá, timbrado e selo. Todas são regeneradas em SVG, PNG e PDF.</li>
     <li><b>README do logo:</b> a regra nova de construção ("a mesma órbita, vista de frente") e os novos tamanhos mínimos.</li>
   </ul>
-  <p class="nota">O favicon (só F + luz) e as versões com o nome não mudam.</p>
+  <p class="nota">As versões com o nome só mudam se o "E de luz" também perder a segunda cor.</p>
 </section>
 </main>
 <script>

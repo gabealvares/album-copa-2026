@@ -1,6 +1,7 @@
 # Rodada 5: órbita redonda para o F de luz (símbolo reduzido)
 
-Prancha de aprovação com três opções (A: órbita de frente, B: três quartos, C: selo).
+Rodada 5: três opções (A: órbita de frente, B: três quartos, C: selo), em `board-r5.html`.
+Rodada 5b: A e C com o F numa cor só (F inteiro) e favicon acompanhando, em `board.html`.
 
 - `board.html`: prancha (abrir no navegador). Imagem: `prancha-opcoes.png`.
 - `simbolo.js`: gerador paramétrico do símbolo (7 cores, normal e pequeno).
