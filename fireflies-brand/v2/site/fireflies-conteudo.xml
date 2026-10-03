@@ -285,7 +285,7 @@
 <p class="is-style-numero ff-numero--palavra has-titulo-1-font-size">CRC ativo</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Contador responsável em todo projeto · CRC-SP [a confirmar]</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Escritório registrado no CRC-SP sob o nº 2SP053069</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -932,7 +932,7 @@
 <!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%">
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ff-retrato"} -->
-<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/retrato-placeholder.svg" alt="Espaço para o retrato de Gabriel Alvares (foto real a inserir)"/></figure>
+<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/gabriel-alvares.jpg" alt="Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -942,7 +942,7 @@
 <h2 class="wp-block-heading has-titulo-1-font-size">Gabriel Alvares</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável · CRC-SP [a confirmar]</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável</p>
 <!-- /wp:paragraph -->
 <!-- wp:separator {"className":"is-style-fio-rubrica"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-fio-rubrica"/>
@@ -1590,7 +1590,7 @@
 </div>
 <!-- /wp:buttons -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">CRC-SP [a confirmar] · Residenciais e comerciais · São Paulo</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">CRC-SP 2SP053069 · Residenciais e comerciais · São Paulo</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -4621,7 +4621,7 @@
 <h3 class="wp-block-heading">Um contador responsável</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Conduz o projeto do diagnóstico à rotina, assina e responde pelo trabalho. Hoje é Gabriel Alvares, CRC-SP [a confirmar].</p>
+<p>Conduz o projeto do diagnóstico à rotina, assina e responde pelo trabalho. Hoje é Gabriel Alvares.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -5117,7 +5117,7 @@
 <!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%">
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ff-retrato"} -->
-<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/retrato-placeholder.svg" alt="Espaço para o retrato de Gabriel Alvares (foto real a inserir)"/></figure>
+<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/gabriel-alvares.jpg" alt="Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria"/></figure>
 <!-- /wp:image -->
 </div>
 <!-- /wp:column -->
@@ -5291,7 +5291,7 @@
 <!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%">
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ff-retrato"} -->
-<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/retrato-placeholder.svg" alt="Espaço para o retrato de Gabriel Alvares (foto real a inserir)"/></figure>
+<figure class="wp-block-image size-full ff-retrato"><img src="/wp-content/themes/fireflies/assets/img/gabriel-alvares.jpg" alt="Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria"/></figure>
 <!-- /wp:image -->
 <!-- wp:group {"className":"ff-ficha","style":{"spacing":{"blockGap":"0"}}} -->
 <div class="wp-block-group ff-ficha">
@@ -5315,7 +5315,7 @@
 <h2 class="wp-block-heading has-titulo-1-font-size">Gabriel Alvares</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável · CRC-SP [a confirmar]</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável</p>
 <!-- /wp:paragraph -->
 <!-- wp:separator {"className":"is-style-fio-rubrica"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-fio-rubrica"/>
@@ -5327,7 +5327,7 @@
 <p class="has-lead-font-size">Ele conecta estratégia, governança, processos e tecnologia numa mesma leitura e organiza, para cada cliente, uma equipe de especialistas do tamanho do desafio.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"lead"} -->
-<p class="has-lead-font-size"><strong>Formação e registros:</strong> [a confirmar: graduação, especializações, número do CRC-SP]</p>
+<p class="has-lead-font-size"><strong>Registro:</strong> o escritório é inscrito no CRC-SP sob o nº 2SP053069.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -5547,7 +5547,7 @@
 <p class="is-style-rotulo">Razão social</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>[a confirmar]</p>
+<p>Fireflies Consultoria LTDA</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -5557,7 +5557,7 @@
 <p class="is-style-rotulo">Cnpj</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>[a confirmar]</p>
+<p>66.630.305/0001-95</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -5567,7 +5567,7 @@
 <p class="is-style-rotulo">Responsável técnico</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Gabriel Alvares, CRC-SP [a confirmar]</p>
+<p>Gabriel Alvares</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -5585,17 +5585,7 @@
 <p class="is-style-rotulo">Registro da organização contábil no crc-sp</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>[a confirmar se aplicável]</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-<!-- wp:group {"layout":{"type":"flex","orientation":"vertical"},"style":{"spacing":{"blockGap":"0.25rem"}}} -->
-<div class="wp-block-group">
-<!-- wp:paragraph {"className":"is-style-rotulo"} -->
-<p class="is-style-rotulo">Endereço</p>
-<!-- /wp:paragraph -->
-<!-- wp:paragraph -->
-<p>[a confirmar] · São Paulo · SP</p>
+<p>2SP053069</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -5818,7 +5808,7 @@
 <p class="is-style-rotulo">Responsável</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Gabriel Alvares, CRC-SP [a confirmar]</p>
+<p>Gabriel Alvares</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -6010,7 +6000,7 @@
 <h2 id="1-quem-somos" class="wp-block-heading">1. Quem somos</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>A <strong>Fireflies Consultoria</strong> ([razão social a confirmar], CNPJ [a confirmar], com sede em [endereço a confirmar], São Paulo/SP) é uma consultoria financeira, contábil e fiscal. Nesta política, "Fireflies", "nós" e "nosso" se referem a ela.</p>
+<p>A <strong>Fireflies Consultoria</strong> (Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP) é uma consultoria financeira, contábil e fiscal. Nesta política, "Fireflies", "nós" e "nosso" se referem a ela.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Esta política explica como tratamos dados pessoais quando você visita o site fireflies.com.br, fala conosco pelo WhatsApp ou por e-mail, contrata nossos serviços ou participa de um treinamento da Fireflies Academy. Ela segue a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei nº 13.709/2018) e o Marco Civil da Internet (Lei nº 12.965/2014).</p>
@@ -6028,9 +6018,6 @@
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>E-mail:</strong> [privacidade@fireflies.com.br a confirmar] ou contato@fireflies.com.br</li>
-<!-- /wp:list-item -->
-<!-- wp:list-item -->
-<li><strong>Endereço:</strong> [a confirmar]</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
@@ -6211,7 +6198,7 @@
 <h2 id="14-contato" class="wp-block-heading">14. Contato</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Fireflies Consultoria · [razão social e CNPJ a confirmar] · São Paulo/SP · contato@fireflies.com.br · WhatsApp +55 11 98245-0527.</p>
+<p>Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95 · São Paulo/SP · contato@fireflies.com.br · WhatsApp +55 11 98245-0527.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -6317,7 +6304,7 @@
 <h2 id="1-sobre-estes-termos" class="wp-block-heading">1. Sobre estes termos</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Estes termos regulam o uso do site fireflies.com.br, mantido pela <strong>Fireflies Consultoria</strong> ([razão social a confirmar], CNPJ [a confirmar], São Paulo/SP). Ao navegar no site, você concorda com eles. Se não concordar, não use o site.</p>
+<p>Estes termos regulam o uso do site fireflies.com.br, mantido pela <strong>Fireflies Consultoria</strong> (Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP). Ao navegar no site, você concorda com eles. Se não concordar, não use o site.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>A contratação de serviços e de treinamentos não acontece pelo site: ela é feita por proposta e contrato próprios, que prevalecem sobre estes termos no que tratarem.</p>

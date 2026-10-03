@@ -62,7 +62,7 @@
 <p class="is-style-rotulo">Responsável</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p>Gabriel Alvares, CRC-SP [a confirmar]</p>
+<p>Gabriel Alvares</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

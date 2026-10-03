@@ -43,7 +43,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* ---------- Cabeçalho ---------- */
 .ff-header { position: relative; z-index: 20; }
 .ff-header .ff-logo { margin: 0; line-height: 0; flex: none; }
-.ff-header .ff-logo img { width: 232px; height: auto; display: block; margin: -14px 0 -14px -22px; }
+.ff-header .ff-logo img { width: 264px; max-width: none; height: auto; display: block; margin: -4px 0 -4px -25px; }
 .ff-header .wp-block-navigation { gap: 0; }
 .ff-header .wp-block-navigation .wp-block-navigation-item__content { padding: .5rem .7rem; }
 .ff-header .wp-block-navigation .current-menu-item > a,
@@ -77,7 +77,7 @@ a:hover { text-decoration-thickness: 2px; }
 	.ff-header .ff-header__cta { display: none; }
 }
 @media (max-width: 600px) {
-	.ff-header .ff-logo img { width: 196px; margin: -10px 0 -10px -18px; }
+	.ff-header .ff-logo img { width: 240px; margin: -2px 0 -2px -23px; }
 }
 
 /* ---------- Tipografia de apoio ---------- */
@@ -360,7 +360,7 @@ h1.is-style-versal, .wp-block-post-title.is-style-versal { letter-spacing: .02em
 .ff-footer .wp-block-list { list-style: none; padding: 0; margin: 0; }
 .ff-footer .wp-block-list li { padding: .3rem 0; }
 .ff-footer .is-style-rotulo { color: var(--wp--preset--color--fumaca); }
-.ff-footer .ff-logo img { width: 240px; height: auto; margin-left: -24px; }
+.ff-footer .ff-logo img { width: 280px; max-width: none; height: auto; margin-left: -28px; }
 .ff-footer .ff-assinatura { font: 700 clamp(2rem, 4vw, 3rem)/1 var(--ff-sora); text-transform: uppercase; letter-spacing: .02em; color: var(--wp--preset--color--branco); }
 .ff-footer .ff-legal { font-family: var(--ff-mono); font-size: .75rem; color: var(--wp--preset--color--fumaca); }
 .ff-footer .ff-legal a { color: var(--wp--preset--color--fumaca); text-decoration: underline; }

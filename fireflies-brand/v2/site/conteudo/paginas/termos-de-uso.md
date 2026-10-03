@@ -28,7 +28,7 @@ seo:
 [pattern: texto-legal]
 
 ### 1. Sobre estes termos
-Estes termos regulam o uso do site fireflies.com.br, mantido pela **Fireflies Consultoria** ([razão social a confirmar], CNPJ [a confirmar], São Paulo/SP). Ao navegar no site, você concorda com eles. Se não concordar, não use o site.
+Estes termos regulam o uso do site fireflies.com.br, mantido pela **Fireflies Consultoria** (Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP). Ao navegar no site, você concorda com eles. Se não concordar, não use o site.
 
 A contratação de serviços e de treinamentos não acontece pelo site: ela é feita por proposta e contrato próprios, que prevalecem sobre estes termos no que tratarem.
 

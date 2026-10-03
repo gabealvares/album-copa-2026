@@ -29,13 +29,13 @@ seo:
 [pattern: responsavel]
 
 - **Nome:** Gabriel Alvares
-- **Cargo (mono):** FUNDADOR E CONTADOR RESPONSÁVEL · CRC-SP [a confirmar]
-- **Foto:** retrato real [a confirmar]
+- **Cargo (mono):** FUNDADOR E CONTADOR RESPONSÁVEL
+- **Foto:** retrato real (tema: assets/img/gabriel-alvares.jpg)
 - **Texto:**
   Gabriel tem mais de 8 anos de experiência em contabilidade, auditoria e gestão financeira. Fundou a Fireflies para estabelecer um padrão simples: todo cliente sabe quem é o responsável pelos seus números e recebe esses números explicados.
   Ele conecta estratégia, governança, processos e tecnologia numa mesma leitura e organiza, para cada cliente, uma equipe de especialistas do tamanho do desafio.
 - **Áreas (lista mono com fio):** CONTABILIDADE GERENCIAL · AUDITORIA · PLANEJAMENTO TRIBUTÁRIO · GESTÃO DE PROJETOS E PROCESSOS · ERP E TECNOLOGIA · TREINAMENTO EMPRESARIAL
-- **Formação e registros:** [a confirmar: graduação, especializações, número do CRC-SP]
+- **Registro:** o escritório é inscrito no CRC-SP sob o nº 2SP053069.
 - **Link:** LinkedIn [a confirmar URL]
 
 ## 3. O nome e o símbolo
@@ -66,11 +66,10 @@ seo:
 [pattern: dados-institucionais]
 
 Lista em mono, duas colunas:
-- RAZÃO SOCIAL · [a confirmar]
-- CNPJ · [a confirmar]
-- RESPONSÁVEL TÉCNICO · Gabriel Alvares, CRC-SP [a confirmar]
-- REGISTRO DA ORGANIZAÇÃO CONTÁBIL NO CRC-SP · [a confirmar se aplicável]
-- ENDEREÇO · [a confirmar] · São Paulo · SP
+- RAZÃO SOCIAL · Fireflies Consultoria LTDA
+- CNPJ · 66.630.305/0001-95
+- RESPONSÁVEL TÉCNICO · Gabriel Alvares
+- REGISTRO DA ORGANIZAÇÃO CONTÁBIL NO CRC-SP · 2SP053069
 - ATENDIMENTO · Seg–sex, 8h–18h
 
 ## 7. Próximo passo

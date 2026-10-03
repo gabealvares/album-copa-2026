@@ -1,0 +1,132 @@
+[
+ [
+  "s",
+  "Contador responsável em todo projeto · CRC-SP [a confirmar]",
+  "Escritório registrado no CRC-SP sob o nº 2SP053069"
+ ],
+ [
+  "s",
+  "Contador responsável em todo projeto. CRC-SP [a confirmar]",
+  "Escritório registrado no CRC-SP sob o nº 2SP053069"
+ ],
+ [
+  "s",
+  "Fundador e contador responsável · CRC-SP [a confirmar]",
+  "Fundador e contador responsável"
+ ],
+ [
+  "s",
+  "Fundador e contador responsável. CRC-SP [a confirmar]",
+  "Fundador e contador responsável"
+ ],
+ [
+  "s",
+  "FUNDADOR E CONTADOR RESPONSÁVEL · CRC-SP [a confirmar]",
+  "FUNDADOR E CONTADOR RESPONSÁVEL"
+ ],
+ [
+  "s",
+  "CRC-SP [a confirmar] · Residenciais",
+  "CRC-SP 2SP053069 · Residenciais"
+ ],
+ [
+  "s",
+  "Hoje é Gabriel Alvares, CRC-SP [a confirmar].",
+  "Hoje é Gabriel Alvares."
+ ],
+ [
+  "r",
+  "Formação e registros:(</strong>|\\*\\*) \\[a confirmar: graduação, especializações, número do CRC-SP\\]",
+  "Registro:${1} o escritório é inscrito no CRC-SP sob o nº 2SP053069."
+ ],
+ [
+  "s",
+  "© 2026 Fireflies Consultoria. CNPJ [a confirmar]<br>Responsável técnico: Gabriel Alvares, CRC-SP [a confirmar]",
+  "© 2026 Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95<br>CRC-SP 2SP053069 · Responsável técnico: Gabriel Alvares"
+ ],
+ [
+  "s",
+  "Gabriel Alvares, CRC-SP [a confirmar]",
+  "Gabriel Alvares"
+ ],
+ [
+  "s",
+  "([razão social a confirmar], CNPJ [a confirmar], com sede em [endereço a confirmar], São Paulo/SP)",
+  "(Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP)"
+ ],
+ [
+  "s",
+  "([razão social a confirmar], CNPJ [a confirmar], São Paulo/SP)",
+  "(Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP)"
+ ],
+ [
+  "s",
+  "Fireflies Consultoria · [razão social e CNPJ a confirmar]",
+  "Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95"
+ ],
+ [
+  "r",
+  "(Razão social</p>\\s*<!-- /wp:paragraph -->\\s*<!-- wp:paragraph -->\\s*<p>)\\[a confirmar\\]",
+  "${1}Fireflies Consultoria LTDA"
+ ],
+ [
+  "r",
+  "(Cnpj</p>\\s*<!-- /wp:paragraph -->\\s*<!-- wp:paragraph -->\\s*<p>)\\[a confirmar\\]",
+  "${1}66.630.305/0001-95"
+ ],
+ [
+  "s",
+  "[a confirmar se aplicável]",
+  "2SP053069"
+ ],
+ [
+  "r",
+  "<!-- wp:group \\{[^>]*\\} -->\\s*<div class=\"wp-block-group\">\\s*<!-- wp:paragraph \\{\"className\":\"is-style-rotulo\"\\} -->\\s*<p class=\"is-style-rotulo\">Endereço</p>.*?<!-- /wp:group -->\\s*",
+  ""
+ ],
+ [
+  "r",
+  "<!-- wp:list-item -->\\s*<li><strong>Endereço:</strong> \\[a confirmar\\]</li>\\s*<!-- /wp:list-item -->\\s*",
+  ""
+ ],
+ [
+  "s",
+  "- RAZÃO SOCIAL · [a confirmar]",
+  "- RAZÃO SOCIAL · Fireflies Consultoria LTDA"
+ ],
+ [
+  "s",
+  "- CNPJ · [a confirmar]",
+  "- CNPJ · 66.630.305/0001-95"
+ ],
+ [
+  "s",
+  "- ENDEREÇO · [a confirmar] · São Paulo · SP\n",
+  ""
+ ],
+ [
+  "s",
+  "- **Endereço:** [a confirmar]\n",
+  ""
+ ],
+ [
+  "s",
+  "São Paulo · SP [endereço a confirmar; se o atendimento for só remoto e em visita, manter apenas \"São Paulo · SP\"]",
+  "São Paulo · SP"
+ ],
+ [
+  "s",
+  "img/retrato-placeholder.svg",
+  "img/gabriel-alvares.jpg"
+ ],
+ [
+  "s",
+  "Espaço para o retrato de Gabriel Alvares (foto real a inserir)",
+  "Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria"
+ ],
+ [
+  "s",
+  "retrato real [a confirmar]",
+  "retrato real (tema: assets/img/gabriel-alvares.jpg)"
+ ]
+]

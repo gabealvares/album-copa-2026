@@ -30,7 +30,7 @@ wp_option: wp_page_for_privacy_policy   # definir esta página em Configuraçõe
 [pattern: texto-legal]  (coluna de leitura com sumário lateral fixo; títulos numerados)
 
 ### 1. Quem somos
-A **Fireflies Consultoria** ([razão social a confirmar], CNPJ [a confirmar], com sede em [endereço a confirmar], São Paulo/SP) é uma consultoria financeira, contábil e fiscal. Nesta política, "Fireflies", "nós" e "nosso" se referem a ela.
+A **Fireflies Consultoria** (Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, São Paulo/SP) é uma consultoria financeira, contábil e fiscal. Nesta política, "Fireflies", "nós" e "nosso" se referem a ela.
 
 Esta política explica como tratamos dados pessoais quando você visita o site fireflies.com.br, fala conosco pelo WhatsApp ou por e-mail, contrata nossos serviços ou participa de um treinamento da Fireflies Academy. Ela segue a Lei Geral de Proteção de Dados Pessoais (LGPD, Lei nº 13.709/2018) e o Marco Civil da Internet (Lei nº 12.965/2014).
 
@@ -38,7 +38,6 @@ Esta política explica como tratamos dados pessoais quando você visita o site f
 Para qualquer assunto sobre dados pessoais, fale com o encarregado pelo tratamento de dados pessoais:
 - **Encarregado:** [nome a confirmar]
 - **E-mail:** [privacidade@fireflies.com.br a confirmar] ou contato@fireflies.com.br
-- **Endereço:** [a confirmar]
 
 ### 3. Quais dados tratamos
 
@@ -134,4 +133,4 @@ O site e os serviços não são dirigidos a menores de 18 anos. Se dados de cria
 Podemos atualizar esta política. A data da última atualização fica no topo da página. Mudanças relevantes serão destacadas no site.
 
 ### 14. Contato
-Fireflies Consultoria · [razão social e CNPJ a confirmar] · São Paulo/SP · contato@fireflies.com.br · WhatsApp +55 11 98245-0527.
+Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95 · São Paulo/SP · contato@fireflies.com.br · WhatsApp +55 11 98245-0527.

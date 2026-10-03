@@ -293,7 +293,7 @@ function s_responsavel( array $d, string $v = 'cal' ): string {
 	if ( $d['link'] ) {
 		$dir .= p( '<a href="' . $d['link'][1] . '">' . $d['link'][0] . '</a>' );
 	}
-	$esq = img( '{{A}}img/retrato-placeholder.svg', 'Espaço para o retrato de Gabriel Alvares (foto real a inserir)', array( 'class' => 'ff-retrato' ) );
+	$esq = img( '{{A}}img/gabriel-alvares.jpg', 'Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria', array( 'class' => 'ff-retrato' ) );
 	if ( $d['areas'] ) {
 		$esq .= ficha( array( array( 'Áreas', implode( '<br>', $d['areas'] ) ) ) );
 	}
@@ -493,7 +493,7 @@ function s_contato( array $d = array(), string $v = '' ): string {
 			array( 'E-mail', '<a href="mailto:contato@fireflies.com.br">contato@fireflies.com.br</a>' ),
 			array( 'Atendimento', 'Segunda a sexta, das 8h às 18h' ),
 			array( 'Localização', 'São Paulo/SP' ),
-			array( 'Responsável', 'Gabriel Alvares, CRC-SP [a confirmar]' ),
+			array( 'Responsável', 'Gabriel Alvares' ),
 		),
 		'h2'     => 'Conte o que você precisa',
 	);

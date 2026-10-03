@@ -56,7 +56,7 @@ Entregável (mono): PAINEL + REUNIÃO MENSAL
 ## 4. Quem faz
 [pattern: diferenciais-grid]
 
-- **Um contador responsável.** Conduz o projeto do diagnóstico à rotina, assina e responde pelo trabalho. Hoje é Gabriel Alvares, CRC-SP [a confirmar].
+- **Um contador responsável.** Conduz o projeto do diagnóstico à rotina, assina e responde pelo trabalho. Hoje é Gabriel Alvares.
 - **Especialistas sob medida.** Um backoffice de especialistas em contabilidade, fiscal, finanças, auditoria e processos, montado conforme o tamanho e o tipo do desafio.
 - **Um canal só.** WhatsApp e e-mail com o mesmo time, de segunda a sexta, das 8h às 18h.
 - **Tudo registrado.** Decisões, pendências e prazos ficam escritos e são revisados na reunião seguinte.

@@ -17,6 +17,13 @@ function fireflies_core_organizacao(): array {
 		'@type'        => array( 'Organization', 'AccountingService' ),
 		'@id'          => $home . '#organizacao',
 		'name'         => 'Fireflies Consultoria',
+		'legalName'    => 'Fireflies Consultoria LTDA',
+		'taxID'        => '66.630.305/0001-95',
+		'identifier'   => array(
+			'@type'      => 'PropertyValue',
+			'propertyID' => 'CRC-SP',
+			'value'      => '2SP053069',
+		),
 		'slogan'       => 'Precisão que ilumina decisões.',
 		'description'  => 'Consultoria financeira, contábil e fiscal em São Paulo, especialista em auditoria de condomínios.',
 		'url'          => $home,
@@ -46,6 +53,7 @@ function fireflies_core_organizacao(): array {
 			'@type'    => 'Person',
 			'name'     => 'Gabriel Alvares',
 			'jobTitle' => 'Contador responsável',
+			'image'    => get_theme_file_uri( 'assets/img/gabriel-alvares.jpg' ),
 		),
 		'knowsAbout'   => array( 'Auditoria de condomínios', 'Contabilidade', 'Planejamento tributário', 'Consultoria financeira', 'Reforma tributária' ),
 	);
