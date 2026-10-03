@@ -9,7 +9,6 @@ const { simbolo } = require('../../logo/_build/simbolo');
 const P = require('../../logo/_build/parametros');
 const DIR = 'redes/';
 const SITE = 'www.fireflies.com.br';
-const CRC = 'CRC-SP [nº a confirmar]';
 
 const titulo = (s, o) => para(s, { f: 'sora7', lh: o.s * 1.08, fill: C.cal, tr: 0.02, bf: 'sora7', bfill: C.vermelhao, btr: 0.02, ...o });
 const corpo = (s, o) => para(s, { f: 'sans4', s: 34, lh: 46, fill: C.fumaca, bf: 'sans6', bfill: C.cal, ...o });

@@ -183,7 +183,7 @@ const add = (nome, titulo, bg, body, defs = '') => slides.push({ nome, titulo, b
   });
   b += line(xc, 650, W - M, 650, C.ceu, 1);
   b += t('GABRIEL ALVARES', { f: 'mono5', s: 15, x: xc, y: 690, fill: C.cal, tr: 0.12 });
-  b += t('CONTADOR RESPONSÁVEL · CRC-SP [A CONFIRMAR]', { f: 'mono4', s: 15, x: xc, y: 718, fill: C.fumaca, tr: 0.08 });
+  b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 15, x: xc, y: 718, fill: C.fumaca, tr: 0.08 });
   const lg = logo('horizontal', 'digital-negativo', { w: 360 });
   b += logo('horizontal', 'digital-negativo', { w: 360, x: M, y: H - BOT - lg.h }).svg;
   add('slide-08-encerramento', 'Encerramento / contato', C.anil, b);

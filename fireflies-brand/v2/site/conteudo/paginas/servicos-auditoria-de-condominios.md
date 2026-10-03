@@ -25,7 +25,7 @@ seo:
 - **H1:** Auditoria de condomínios
 - **Lead:** A gente confere a prestação de contas do seu condomínio, linha por linha, e entrega um relatório que o conselho lê em uma reunião. Sem jargão, sem tom de acusação e com um contador que assina.
 - **Botão:** Pedir uma proposta de auditoria → `/contato/?assunto=auditoria-de-condominios`
-- **Nota (mono):** CRC-SP [a confirmar] · Residenciais e comerciais · São Paulo
+- **Nota (mono):** CRC-SP 2SP053069 · Residenciais e comerciais · São Paulo
 
 ## 2. Quando faz sentido
 [pattern: lista-sinais]

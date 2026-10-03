@@ -15,8 +15,8 @@
 <div class="wp-block-columns">
 <!-- wp:column {"width":"40%"} -->
 <div class="wp-block-column" style="flex-basis:40%">
-<!-- wp:image {"width":"240px","sizeSlug":"full","linkDestination":"custom","className":"ff-logo"} -->
-<figure class="wp-block-image size-full is-resized ff-logo"><a href="<?php echo fireflies_url( '/' ); ?>"><img src="<?php echo fireflies_asset( 'img/logo/fireflies_horizontal_digital-negativo.svg' ); ?>" alt="Fireflies Consultoria, página inicial" style="width:240px"/></a></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"custom","className":"ff-logo"} -->
+<figure class="wp-block-image size-full ff-logo"><a href="<?php echo fireflies_url( '/' ); ?>"><img src="<?php echo fireflies_asset( 'img/logo/fireflies_horizontal_digital-negativo.svg' ); ?>" alt="Fireflies Consultoria, página inicial"/></a></figure>
 <!-- /wp:image -->
 <!-- wp:paragraph {"className":"ff-assinatura","style":{"spacing":{"margin":{"top":"var:preset|spacing|50"}}}} -->
 <p class="ff-assinatura" style="margin-top:var(--wp--preset--spacing--50)">Luz medida.</p>
@@ -88,7 +88,7 @@
 <!-- wp:group {"className":"ff-legal","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"},"style":{"spacing":{"blockGap":"1rem 2rem"}}} -->
 <div class="wp-block-group ff-legal">
 <!-- wp:paragraph -->
-<p>© 2026 Fireflies Consultoria. CNPJ [a confirmar]<br>Responsável técnico: Gabriel Alvares, CRC-SP [a confirmar]</p>
+<p>© 2026 Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95<br>CRC-SP 2SP053069 · Responsável técnico: Gabriel Alvares</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p>Tratamos dados pessoais conforme a LGPD (Lei 13.709/2018).<br><a href="<?php echo fireflies_url( '/politica-de-privacidade/' ); ?>">Política de privacidade</a>   <a href="<?php echo fireflies_url( '/termos-de-uso/' ); ?>">Termos de uso</a>   <a href="#preferencias-cookies">Preferências de cookies</a></p>

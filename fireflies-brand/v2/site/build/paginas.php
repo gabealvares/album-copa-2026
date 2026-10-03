@@ -98,7 +98,7 @@ function pagina_md( string $arquivo ): array {
 	array_shift( $secoes );
 	$out   = '';
 	$meta  = array( 'lead' => '' );
-	$cinza = false; // alterna fundos claros para não repetir
+	alternar_fundo( '__reset__' );
 	foreach ( $secoes as $sec ) {
 		$linhas = explode( "\n", $sec );
 		$titulo = trim( preg_replace( '/^\d+\.\s*/', '', array_shift( $linhas ) ) );
@@ -108,7 +108,7 @@ function pagina_md( string $arquivo ): array {
 		}
 		$pat = $pm[2];
 		$c   = md_campos( $linhas );
-		$out .= secao_md( $pat, $c, $titulo, $txt, $slug, $meta );
+		$out .= alternar_fundo( secao_md( $pat, $c, $titulo, $txt, $slug, $meta ) );
 	}
 	return array( $out, $fm + array( '_lead' => $meta['lead'] ) );
 }
@@ -125,7 +125,7 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 				$lado = html( svg_constelacao_servicos() );
 			} elseif ( isset( FF_EMBLEMAS[ $slug ] ) ) {
 				$lado   = constelacao( FF_EMBLEMAS[ $slug ], 'escuro', array( 'w' => '280px', 'class' => 'is-style-emblema aligncenter' ) );
-				$lockup = f( $c, 'lockup' ) ? $slug : '';
+				$lockup = ''; // o lockup já está no cabeçalho; aqui fica só o emblema
 			} elseif ( 'como-trabalhamos' === $slug ) {
 				$lado = img( '{{A}}img/ornamentos/escuro/trilha-photinus.svg', '', array( 'w' => '260px', 'class' => 'is-style-emblema aligncenter ff-trilha-photinus' ) );
 			}
@@ -139,6 +139,7 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 					'lado'   => $lado,
 					'lockup' => $lockup,
 					'versal' => mb_strlen( sem_md( f( $c, 'h1' ) ) ) < 40,
+					'longo'  => mb_strlen( sem_md( f( $c, 'h1' ) ) ) > 26,
 				)
 			);
 
@@ -238,9 +239,10 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 				array(
 					'rotulo' => '',
 					'h2'     => $h2,
-					'texto'  => fin( $c, 'texto' ),
-					'itens'  => array( 'Receitas, despesas e contratos conferidos por período', 'Fundo de reserva e inadimplência por unidade', 'Relatório executivo para o conselho e a assembleia' ),
-					'botoes' => $bs,
+					'texto'   => fin( $c, 'texto' ),
+					'nota'    => preg_match( '/(Simulação ilustrativa[^\n]*)/u', $txt, $nm ) ? md_in( $nm[1] ) : '',
+					'botoes'  => $bs,
+					'emblema' => 'condominios' !== $slug,
 				)
 			);
 
@@ -308,7 +310,7 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 
 		case 'responsavel':
 			$textos = array_filter( array_map( 'md_in', explode( "\n", f( $c, 'texto' ) ) ) );
-			$areas  = f( $c, 'áreas' ) ? array_map( 'ucfirst', array_map( 'mb_strtolower', array_map( 'trim', explode( '·', sem_md( f( $c, 'áreas' ) ) ) ) ) ) : array();
+			$areas  = f( $c, 'áreas' ) ? array_map( fn( $a ) => str_replace( 'Erp ', 'ERP ', ucfirst( $a ) ), array_map( 'mb_strtolower', array_map( 'trim', explode( '·', sem_md( f( $c, 'áreas' ) ) ) ) ) ) : array();
 			$link   = link_de( $c );
 			if ( $v = f( $c, 'formação e registros' ) ) {
 				$textos[] = '<strong>Formação e registros:</strong> ' . md_in( $v );
@@ -341,7 +343,7 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 
 		case 'cta-diagnostico':
 			$bs = botoes_de( $c );
-			return s_cta( array( 'rotulo' => '', 'h2' => $h2, 'texto' => fin( $c, 'texto' ), 'botoes' => $bs, 'linha' => md_in( str_replace( ' · ', '   ', f( $c, 'linha mono' ) ) ) ) );
+			return s_cta( array( 'rotulo' => '', 'h2' => $h2, 'texto' => fin( $c, 'texto' ), 'botoes' => $bs, 'linha' => md_in( f( $c, 'linha mono' ) ) ) );
 
 		case 'cta-whatsapp':
 			$b   = f( $c, 'botão' );
@@ -443,4 +445,38 @@ function secao_md( string $pat, array $c, string $titulo, string $txt, string $s
 	}
 	fwrite( STDERR, "pattern sem mapeamento: {$pat}\n" );
 	return '';
+}
+
+/**
+ * Evita duas faixas claras iguais em sequência (Branco/Cal alternam).
+ */
+function alternar_fundo( string $sec ): string {
+	static $anterior = '';
+	if ( '__reset__' === $sec ) {
+		$anterior = '';
+		return '';
+	}
+	if ( '' === $sec ) {
+		return $sec;
+	}
+	$linha = strtok( $sec, "\n" );
+	$atual = str_contains( $linha, 'is-style-noite' ) ? 'noite' : ( str_contains( $linha, 'is-style-cal' ) ? 'cal' : 'branco' );
+	if ( 'noite' !== $atual && $atual === $anterior && str_contains( $linha, '"tagName":"section"' ) ) {
+		if ( 'cal' === $atual ) {
+			$sec   = preg_replace( '/"className":"is-style-cal ?/', '"className":"', $sec, 1 );
+			$sec   = preg_replace( '/(<section class="wp-block-group) is-style-cal/', '$1', $sec, 1 );
+			$sec   = str_replace( '"className":"",', '', $sec );
+			$atual = 'branco';
+		} else {
+			if ( preg_match( '/^<!-- wp:group \{[^\n]*"className":"/', $sec ) ) {
+				$sec = preg_replace( '/"className":"/', '"className":"is-style-cal ', $sec, 1 );
+			} else {
+				$sec = preg_replace( '/^<!-- wp:group \{/', '<!-- wp:group {"className":"is-style-cal",', $sec, 1 );
+			}
+			$sec   = preg_replace( '/<section class="wp-block-group/', '<section class="wp-block-group is-style-cal', $sec, 1 );
+			$atual = 'cal';
+		}
+	}
+	$anterior = $atual;
+	return $sec;
 }

@@ -32,8 +32,8 @@ seo:
 - WHATSAPP · +55 11 98245-0527 → `https://wa.me/5511982450527` (canal mais rápido)
 - E-MAIL · contato@fireflies.com.br → `mailto:contato@fireflies.com.br`
 - ATENDIMENTO · Seg–sex, 8h às 18h
-- LOCALIZAÇÃO · São Paulo · SP [endereço a confirmar; se o atendimento for só remoto e em visita, manter apenas "São Paulo · SP"]
-- RESPONSÁVEL · Gabriel Alvares, CRC-SP [a confirmar]
+- LOCALIZAÇÃO · São Paulo · SP
+- RESPONSÁVEL · Gabriel Alvares
 
 **Coluna 2 · Formulário** (slot de shortcode do Contact Form 7 ou WPForms; sem plugin, o pattern mostra o botão do WhatsApp)
 

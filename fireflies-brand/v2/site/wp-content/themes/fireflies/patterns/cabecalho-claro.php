@@ -12,8 +12,8 @@
 <header class="wp-block-group alignfull ff-header ff-header--claro has-branco-background-color has-background" style="padding-top:0.9rem;padding-bottom:0.9rem">
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"},"style":{"spacing":{"blockGap":"1.25rem"}}} -->
 <div class="wp-block-group">
-<!-- wp:image {"width":"232px","sizeSlug":"full","linkDestination":"custom","className":"ff-logo"} -->
-<figure class="wp-block-image size-full is-resized ff-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo fireflies_asset( 'img/logo/fireflies_horizontal_digital.svg' ); ?>" alt="Fireflies Consultoria, página inicial" style="width:232px"/></a></figure>
+<!-- wp:image {"sizeSlug":"full","linkDestination":"custom","className":"ff-logo"} -->
+<figure class="wp-block-image size-full ff-logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo fireflies_asset( 'img/logo/fireflies_horizontal_digital.svg' ); ?>" alt="Fireflies Consultoria, página inicial"/></a></figure>
 <!-- /wp:image -->
 <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"},"style":{"spacing":{"blockGap":"0.75rem"}}} -->
 <div class="wp-block-group">

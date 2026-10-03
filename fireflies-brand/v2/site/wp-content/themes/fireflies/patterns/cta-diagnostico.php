@@ -29,7 +29,7 @@
 </div>
 <!-- /wp:buttons -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family">contato@fireflies.com.br   Segunda a sexta, 8h às 18h</p>
+<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family">contato@fireflies.com.br · Segunda a sexta, 8h às 18h</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->

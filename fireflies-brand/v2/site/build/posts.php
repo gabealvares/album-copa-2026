@@ -196,7 +196,7 @@ function bloco_post( string $nome, string $cabecalho, array $ls, array &$meta ):
 				$txt = implode( ' ', array_filter( $ls, fn( $l ) => '' !== trim( $l ) ) );
 				if ( preg_match( '/^\*\*(Nossa [^:*]+):\*\*\s*(.*)$/u', $txt, $m ) ) {
 					$rot = $m[1];
-					$txt = $m[2];
+					$txt = mb_strtoupper( mb_substr( $m[2], 0, 1 ) ) . mb_substr( $m[2], 1 );
 				}
 				$in .= p( md_in( $txt ) );
 			}

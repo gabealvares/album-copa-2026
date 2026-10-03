@@ -15,7 +15,7 @@
 <!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%">
 <!-- wp:image {"sizeSlug":"full","linkDestination":"none","className":"ff-retrato"} -->
-<figure class="wp-block-image size-full ff-retrato"><img src="<?php echo fireflies_asset( 'img/retrato-placeholder.svg' ); ?>" alt="Espaço para o retrato de Gabriel Alvares (foto real a inserir)"/></figure>
+<figure class="wp-block-image size-full ff-retrato"><img src="<?php echo fireflies_asset( 'img/gabriel-alvares.jpg' ); ?>" alt="Gabriel Alvares, fundador e contador responsável da Fireflies Consultoria"/></figure>
 <!-- /wp:image -->
 <!-- wp:group {"className":"ff-ficha","style":{"spacing":{"blockGap":"0"}}} -->
 <div class="wp-block-group ff-ficha">
@@ -39,7 +39,7 @@
 <h2 class="wp-block-heading has-titulo-1-font-size">Gabriel Alvares</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável. CRC-SP [a confirmar]</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Fundador e contador responsável</p>
 <!-- /wp:paragraph -->
 <!-- wp:separator {"className":"is-style-fio-rubrica"} -->
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-fio-rubrica"/>

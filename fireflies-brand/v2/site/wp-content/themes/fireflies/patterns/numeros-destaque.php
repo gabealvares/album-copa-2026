@@ -18,7 +18,7 @@
 <p class="is-style-numero ff-numero--palavra has-titulo-1-font-size">CRC ativo</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Contador responsável em todo projeto. CRC-SP [a confirmar]</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">Escritório registrado no CRC-SP sob o nº 2SP053069</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->

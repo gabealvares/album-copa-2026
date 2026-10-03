@@ -117,7 +117,7 @@ const E = 'contenteditable';
     <h1 class="capa" style="top:262px;width:1100px;color:var(--cal)" ${E}>30 DIAS ATÉ A<br><em>PRIMEIRA LUZ.</em></h1>
     <p class="sub" style="top:470px;width:900px;color:var(--fumaca)" ${E}>Diagnóstico gratuito. Em 30 dias, o primeiro painel do condomínio, explicado em reunião e assinado pelo contador responsável.</p>
     <dl class="contato" ${E}><dt>WHATSAPP</dt><dd>+55 11 98245-0527</dd><dt>E-MAIL</dt><dd>contato@fireflies.com.br</dd><dt>SITE</dt><dd>fireflies.com.br</dd></dl>
-    <p class="meta" style="left:1264px;top:675px;color:var(--cal)" ${E}>GABRIEL ALVARES<br><span style="color:var(--fumaca)">CONTADOR RESPONSÁVEL · CRC-SP [A CONFIRMAR]</span></p>` });
+    <p class="meta" style="left:1264px;top:675px;color:var(--cal)" ${E}>GABRIEL ALVARES<br><span style="color:var(--fumaca)">CONTADOR RESPONSÁVEL</span></p>` });
 
   const css = `<style>
   @page{size:1920px 1080px;margin:0}
@@ -171,7 +171,7 @@ ${S.map((s, i) => `<section class="slide ${s.cls}" id="s${i + 1}">${svgLayer(192
   const lg40 = logo('horizontal', 'digital', { w: 40, x: 0, y: 0 });
   const svgMM = (w, h, body, defs = '') => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}mm" height="${h}mm">${defs ? `<defs>${defs}</defs>` : ''}${body}</svg>`;
   const logoTopo = (w = 40) => { const l = logo('horizontal', 'digital', { w, x: 0, y: 0 }); return `<div class="logo">${svgMM(w, Math.ceil(l.h), l.svg)}</div>`; };
-  const rodape = (ref, pag) => `<footer><i></i><div><span ${E}>Fireflies Consultoria · CNPJ [a confirmar] · São Paulo/SP · fireflies.com.br</span><span>${pag || ''}</span></div><div ${E}>Responsável técnico: Gabriel Alvares, CRC-SP [nº a confirmar]${ref ? ' · ' + ref : ''} · Confidencial</div></footer>`;
+  const rodape = (ref, pag) => `<footer><i></i><div><span ${E}>Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95 · São Paulo/SP · fireflies.com.br</span><span>${pag || ''}</span></div><div ${E}>CRC-SP 2SP053069 · Responsável técnico: Gabriel Alvares${ref ? ' · ' + ref : ''} · Confidencial</div></footer>`;
   const cabec = (d1, d2) => `<header>${logoTopo(40)}<div class="dir" ${E}>${d1}<br>${d2}</div></header>`;
   const css = `<style>
   @page{size:A4;margin:0}
@@ -216,8 +216,8 @@ ${S.map((s, i) => `<section class="slide ${s.cls}" id="s${i + 1}">${svgLayer(192
     'papel-timbrado': `<section class="pag">
       <div style="position:absolute;left:25mm;top:15mm">${logoTopo(45)}</div>
       <div class="dest" ${E}>Ao Conselho Fiscal do<br>Condomínio Edifício Jacarandá<br>Rua [endereço], [nº]<br>[CEP] São Paulo/SP</div>
-      <div class="carta" ${E}><p style="text-align:right">São Paulo, 2 de outubro de 2026.</p><p><b style="color:var(--anil);font-weight:600">Assunto: entrega do relatório de auditoria do 1º semestre</b></p><p>Prezados conselheiros,</p><p>Encaminhamos o relatório de auditoria das contas de janeiro a junho de 2026. O resumo para o conselho está na página 3, com cada achado numerado, o estado e a recomendação.</p><p>Propomos apresentar o relatório em reunião na semana de 14/10/2026, com 40 minutos para leitura e perguntas.</p><p>Ficamos à disposição pelo WhatsApp +55 11 98245-0527.</p><p style="margin-top:12mm">Atenciosamente,</p><p style="margin-top:14mm;border-top:.5pt solid var(--fuligem);width:70mm;padding-top:2mm"><b style="color:var(--anil);font-weight:600">Gabriel Alvares</b><br><span style="font:400 8pt var(--mono);color:var(--pedra)">Contador responsável · CRC-SP [nº a confirmar]</span></p></div>
-      <footer><i></i><div ${E}>Fireflies Consultoria · CNPJ [a confirmar] · São Paulo/SP</div><div ${E}>WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br</div><div ${E}>Responsável técnico: Gabriel Alvares, CRC-SP [nº a confirmar]</div></footer></section>`,
+      <div class="carta" ${E}><p style="text-align:right">São Paulo, 2 de outubro de 2026.</p><p><b style="color:var(--anil);font-weight:600">Assunto: entrega do relatório de auditoria do 1º semestre</b></p><p>Prezados conselheiros,</p><p>Encaminhamos o relatório de auditoria das contas de janeiro a junho de 2026. O resumo para o conselho está na página 3, com cada achado numerado, o estado e a recomendação.</p><p>Propomos apresentar o relatório em reunião na semana de 14/10/2026, com 40 minutos para leitura e perguntas.</p><p>Ficamos à disposição pelo WhatsApp +55 11 98245-0527.</p><p style="margin-top:12mm">Atenciosamente,</p><p style="margin-top:14mm;border-top:.5pt solid var(--fuligem);width:70mm;padding-top:2mm"><b style="color:var(--anil);font-weight:600">Gabriel Alvares</b><br><span style="font:400 8pt var(--mono);color:var(--pedra)">Contador responsável</span></p></div>
+      <footer><i></i><div ${E}>Fireflies Consultoria LTDA · CNPJ 66.630.305/0001-95 · CRC-SP 2SP053069 · São Paulo/SP</div><div ${E}>WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br</div><div ${E}>Responsável técnico: Gabriel Alvares</div></footer></section>`,
     'proposta-comercial': `<section class="pag capa">${capaSvg('horizontal', emb('condominios', { x: 112, y: 74, s: 82, c: C.cal, lit: C.cal, line: C.ceu }) + line(25, 172.5, 33, 172.5, C.vermelhao, 0.35))}
       <p class="ey" style="left:36mm" ${E}>Proposta comercial · PRO-2026-014</p>
       <h1 ${E}>AUDITORIA CONTÁBIL E FINANCEIRA DO <em>CONDOMÍNIO</em></h1>
@@ -230,13 +230,13 @@ ${S.map((s, i) => `<section class="slide ${s.cls}" id="s${i + 1}">${svgLayer(192
       <h2>2. Escopo</h2><ul><li>Conciliação bancária e dos fundos ordinário, de reserva e de obras.</li><li>Conferência dos rateios e das leituras de água e gás.</li><li>Revisão fiscal das notas de serviço: retenções de ISS, INSS e IR.</li><li>Relatório para o conselho, com achados numerados, estado e recomendação.</li></ul>
       <h2>3. 30 dias até a primeira luz</h2><table><thead><tr><th>ETAPA</th><th>QUANDO</th><th>ENTREGÁVEL</th></tr></thead><tbody><tr><td>Levantamento</td><td>Semana 1</td><td>Documentos e acessos</td></tr><tr><td>Organização</td><td>Semanas 2–3</td><td>Base conciliada</td></tr><tr><td>Leitura</td><td>Semana 4</td><td>Achados e estados</td></tr><tr><td>Primeira luz</td><td>Dia 30</td><td>Relatório explicado em reunião</td></tr></tbody></table>
       <h2>4. Investimento <span class="tag">DADOS DE EXEMPLO</span></h2><table><thead><tr><th>ITEM</th><th>PRAZO</th><th class="n">VALOR (R$)</th></tr></thead><tbody><tr><td>Auditoria contábil e financeira, 01/2025–09/2026</td><td>30 dias</td><td class="n">9.800,00</td></tr><tr><td>Acompanhamento mensal com painel (opcional, por mês)</td><td>mensal</td><td class="n">1.450,00</td></tr></tbody><tfoot><tr><td>Total do escopo principal</td><td></td><td class="n">9.800,00</td></tr></tfoot></table>
-      <h2>5. Responsável</h2><p>Gabriel Alvares, contador responsável, CRC-SP [nº a confirmar]. Ele conduz o trabalho, assina o relatório e apresenta os achados ao conselho em reunião.</p></div>
+      <h2>5. Responsável</h2><p>Gabriel Alvares, contador responsável. Ele conduz o trabalho, assina o relatório e apresenta os achados ao conselho em reunião.</p></div>
       ${rodape('PRO-2026-014', 'Página 2 de 6')}</section>`,
     'relatorio-auditoria': `<section class="pag capa">${capaSvg('condominios-horizontal', L.orn('selo-graduado-texto', { x: 128, y: 70, w: 58, c: C.ceu }) + line(25, 172.5, 33, 172.5, C.vermelhao, 0.35))}
       <p class="ey" style="left:36mm" ${E}>Relatório de auditoria</p>
       <h1 ${E}>CONDOMÍNIO EDIFÍCIO <em>JACARANDÁ</em></h1>
       <p class="cli" style="top:218mm" ${E}>Prestação de contas do 1º semestre de 2026</p>
-      <dl ${E}><dt>PERÍODO</dt><dd>01/2026–06/2026</dd><dt>EMISSÃO</dt><dd>10/10/2026</dd><dt>REFERÊNCIA</dt><dd>AUD-2026-031</dd><dt>RESP. TÉCNICO</dt><dd>Gabriel Alvares · CRC-SP [nº a confirmar]</dd></dl>
+      <dl ${E}><dt>PERÍODO</dt><dd>01/2026–06/2026</dd><dt>EMISSÃO</dt><dd>10/10/2026</dd><dt>REFERÊNCIA</dt><dd>AUD-2026-031</dd><dt>RESP. TÉCNICO</dt><dd>Gabriel Alvares</dd></dl>
       <div class="rodc"><span>Confidencial · uso do conselho</span><b>LUZ MEDIDA.</b></div></section>
     <section class="pag">${cabec('Relatório de auditoria · AUD-2026-031', 'Cond. Ed. Jacarandá · 01/2026–06/2026')}
       <div ${E}><p class="ey">Resumo para o conselho</p><h1>Três pontos pedem <em>ação</em></h1>
@@ -256,7 +256,7 @@ ${S.map((s, i) => `<section class="slide ${s.cls}" id="s${i + 1}">${svgLayer(192
       <h2>1. Consulta</h2><p>O conselho fiscal pergunta se o condomínio deveria ter retido o ISS das notas de manutenção de elevadores e de bombas emitidas entre janeiro e junho de 2026, e o que fazer com as notas já pagas sem retenção.</p>
       <h2>2. Análise</h2><p>A legislação do Município de São Paulo atribui ao condomínio edilício, quando toma determinados serviços, a responsabilidade pela retenção e pelo recolhimento do ISS. Entre esses serviços estão os de conservação e manutenção. O enquadramento depende do código do serviço em cada nota e do cadastro do prestador.</p><p>Das 14 notas do período, 9 se enquadram na hipótese de retenção e somam R$ 4.215,60 de ISS não retido. (Dados de exemplo.)</p>
       <h2>3. Conclusão</h2><div class="conclusao"><p>Recomendamos (i) reter o ISS a partir da próxima nota; (ii) pedir aos prestadores o comprovante de recolhimento das 9 notas; e (iii) registrar o tema em ata. <strong>Se o recolhimento não for comprovado em 30 dias, recomendamos que o condomínio, como responsável, regularize o imposto e cobre o valor do prestador.</strong></p></div><p>É o parecer.</p></div>
-      <div class="assinatura" ${E}><div><b>Gabriel Alvares</b><small>Contador responsável · CRC-SP [nº a confirmar]</small></div><span>São Paulo, 2 de outubro de 2026</span></div>
+      <div class="assinatura" ${E}><div><b>Gabriel Alvares</b><small>Contador responsável</small></div><span>São Paulo, 2 de outubro de 2026</span></div>
       ${rodape('PT-007/2026', 'Página 1 de 1')}</section>`,
   };
   for (const [nome, corpo] of Object.entries(pags)) {

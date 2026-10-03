@@ -32,7 +32,7 @@ figcaption{font:500 13px Mono;color:#5E6271;letter-spacing:.06em;margin-top:10px
 </style></head><body>
 <div class="top"><div><h1>APLICAÇÕES DA MARCA</h1><p>FIREFLIES CONSULTORIA · IDENTIDADE V2 "ÓRBITA DO VAGALUME" · SVG EM CURVAS + PNG + PDF</p></div><img src="file://${LOGO}"></div>
 ${G.map(([n, tit, h, itens]) => `<section><h2><b>${n}</b>${tit}</h2><div class="row">${itens.map(r => `<figure><img src="file://${path.join(OUT, r + '.png')}" style="height:${r.includes('linkedin-capa') ? 120 : r.includes('assinatura') ? 200 : r.includes('1200x627') ? 260 : h}px"><figcaption>${nome(r)}</figcaption></figure>`).join('')}</div></section>`).join('')}
-<div class="rod">LUZ MEDIDA. · NÚMEROS MARCADOS "DADOS DE EXEMPLO" SÃO FICTÍCIOS · CRC-SP E CNPJ A CONFIRMAR</div>
+<div class="rod">LUZ MEDIDA. · NÚMEROS MARCADOS "DADOS DE EXEMPLO" SÃO FICTÍCIOS</div>
 </body></html>`;
 (async () => {
   const f = path.join(__dirname, 'manifesto', '_mockups.html');

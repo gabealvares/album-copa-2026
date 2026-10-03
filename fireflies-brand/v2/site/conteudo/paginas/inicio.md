@@ -37,7 +37,7 @@ Quatro colunas separadas por fio fino. Número ou palavra grande em Sora, rótul
 
 | Grande | Rótulo |
 |---|---|
-| CRC ativo | Contador responsável em todo projeto · CRC-SP [a confirmar] |
+| CRC ativo | Escritório registrado no CRC-SP sob o nº 2SP053069 |
 | 8+ anos | De contabilidade, auditoria e gestão financeira |
 | 30 dias | Até o primeiro painel mensal |
 | São Paulo | Empresas e condomínios |
@@ -143,9 +143,9 @@ Grade 2 × 2 com fios, sem cards nem ícones em círculo.
 
 - **Eyebrow:** 06 · QUEM CONDUZ
 - **Nome:** Gabriel Alvares
-- **Cargo (mono):** FUNDADOR E CONTADOR RESPONSÁVEL · CRC-SP [a confirmar]
+- **Cargo (mono):** FUNDADOR E CONTADOR RESPONSÁVEL
 - **Texto:** São mais de 8 anos em contabilidade, auditoria e gestão financeira. Gabriel fundou a Fireflies para que todo cliente tivesse o que costuma faltar: alguém que assina o número e explica o que ele quer dizer.
-- **Foto:** retrato real [a confirmar]. Sem foto de banco de imagem.
+- **Foto:** retrato real (tema: assets/img/gabriel-alvares.jpg). Sem foto de banco de imagem.
 - **Link:** Conhecer a Fireflies → `/sobre/`
 
 ## 11. Fireflies Academy

@@ -6,24 +6,24 @@ const { C, pt, t, para, logo, icon, emb, orn, padrao, rect, line, exemplo, measu
 const A4W = 210, A4H = 297, B = 3;
 const ML = 25, MR = 20, MT = 25, MB = 22, TW = 165;
 const DIR = 'documentos/';
-const CNPJ = 'CNPJ [a confirmar]';
-const CRC = 'CRC-SP [nº a confirmar]';
+const CNPJ = 'CNPJ 66.630.305/0001-95';
+const CRC = 'CRC-SP 2SP053069';
 
 // ---------- componentes ----------
 function rodape(o, { ref = '', pag, total, sufixo = 'Confidencial' } = {}) {
   const x = o + ML, s = pt(7.5);
   let r = line(x, o + A4H - 18.6, x + 12, o + A4H - 18.6, C.rubrica, pt(0.75));
-  r += t('Fireflies Consultoria · ' + CNPJ + ' · São Paulo/SP · fireflies.com.br', { f: 'mono4', s, x, y: o + A4H - 14, fill: C.pedra });
-  r += t(['Responsável técnico: Gabriel Alvares, ' + CRC, ref, sufixo].filter(Boolean).join(' · '), { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
+  r += t('Fireflies Consultoria LTDA · ' + CNPJ + ' · São Paulo/SP · fireflies.com.br', { f: 'mono4', s, x, y: o + A4H - 14, fill: C.pedra });
+  r += t([CRC, 'Responsável técnico: Gabriel Alvares', ref, sufixo].filter(Boolean).join(' · '), { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
   if (pag) r += t(`Página ${pag} de ${total}`, { f: 'mono4', s, x: o + A4W - MR, y: o + A4H - 14, fill: C.pedra, a: 'end' });
   return r;
 }
 function rodapeTimbrado(o) {
   const x = o + ML, s = pt(7.5);
   let r = line(x, o + A4H - 22.6, x + 12, o + A4H - 22.6, C.rubrica, pt(0.75));
-  r += t('Fireflies Consultoria · ' + CNPJ + ' · São Paulo/SP', { f: 'mono4', s, x, y: o + A4H - 18, fill: C.pedra });
+  r += t('Fireflies Consultoria LTDA · ' + CNPJ + ' · ' + CRC + ' · São Paulo/SP', { f: 'mono4', s, x, y: o + A4H - 18, fill: C.pedra });
   r += t('WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · fireflies.com.br', { f: 'mono4', s, x, y: o + A4H - 14, fill: C.pedra });
-  r += t('Responsável técnico: Gabriel Alvares, ' + CRC, { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
+  r += t('Responsável técnico: Gabriel Alvares', { f: 'mono4', s, x, y: o + A4H - 10, fill: C.pedra });
   return r;
 }
 // cabeçalho da 1ª página interna: logo principal 40 mm; nas demais, símbolo 8 mm
@@ -173,7 +173,7 @@ for (const versao of ['grafica', 'escritorio']) {
   F.add(exemplo({ x: o + A4W - MR, y: F.y + 2, s: pt(6.5), a: 'end' }));
   F.p('Pagamento em duas parcelas: 50% no aceite e 50% na entrega do relatório.', { size: 8, lh: 11, fill: C.pedra, w: 120 });
   F.h1('5. Responsável');
-  F.p('Gabriel Alvares, contador responsável, ' + CRC + '. Ele conduz o trabalho, assina o relatório e apresenta os achados ao conselho em reunião.');
+  F.p('Gabriel Alvares, contador responsável. Ele conduz o trabalho, assina o relatório e apresenta os achados ao conselho em reunião.');
   L.save(DIR + 'proposta-comercial_02-interna', { w: W, h: H, unit: 'mm', bleed: o, bg: C.branco, body: cab.svg + F.svg + rodape(o, { ref: 'PRO-2026-014', pag: 2, total: 6 }), pdf: DIR + 'proposta-comercial_A4-sangria3mm', title: 'Fireflies Consultoria · proposta comercial · página interna' });
 }
 
@@ -182,7 +182,7 @@ for (const versao of ['grafica', 'escritorio']) {
 // =====================================================================
 {
   const o = B, W = A4W + 2 * o, H = A4H + 2 * o;
-  const dados = [['PERÍODO', '01/2026–06/2026'], ['EMISSÃO', '10/10/2026'], ['REFERÊNCIA', 'AUD-2026-031'], ['RESP. TÉCNICO', 'Gabriel Alvares · ' + CRC]];
+  const dados = [['PERÍODO', '01/2026–06/2026'], ['EMISSÃO', '10/10/2026'], ['REFERÊNCIA', 'AUD-2026-031'], ['RESP. TÉCNICO', 'Gabriel Alvares']];
   let b = rect(0, 0, W, H, C.anil);
   b += logo('condominios-horizontal', 'digital-negativo', { w: 60, x: o + ML, y: o + 25 }).svg;
   b += orn('selo-graduado-texto', { x: o + 128, y: o + 70, w: 58, c: C.ceu });
@@ -302,7 +302,7 @@ for (const versao of ['grafica', 'escritorio']) {
   const sy = 246;
   b += line(ML, sy, ML + 70, sy, C.fuligem, pt(0.5));
   b += t('Gabriel Alvares', { f: 'sans6', s: pt(10), x: ML, y: sy + 5, fill: C.anil });
-  b += t('Contador responsável · ' + CRC, { f: 'mono4', s: pt(8), x: ML, y: sy + 9.5, fill: C.pedra });
+  b += t('Contador responsável', { f: 'mono4', s: pt(8), x: ML, y: sy + 9.5, fill: C.pedra });
   b += t('São Paulo, 2 de outubro de 2026', { f: 'sans4', s: pt(10), x: A4W - MR, y: sy + 5, fill: C.fuligem, a: 'end' });
   b += rodape(0, { ref: 'PT-007/2026', pag: 1, total: 1, sufixo: 'Modelo' });
   L.save(DIR + 'parecer-tecnico_A4', { w: A4W, h: A4H, unit: 'mm', bg: C.branco, body: b + F.svg, pdf: true, title: 'Fireflies Consultoria · parecer técnico / nota técnica (modelo)' });

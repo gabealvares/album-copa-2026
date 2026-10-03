@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-const FIREFLIES_VERSION = '1.0.0';
+const FIREFLIES_VERSION = '1.0.1';
 
 /**
  * Suporte do tema.

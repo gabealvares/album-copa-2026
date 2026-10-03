@@ -26,8 +26,8 @@ Este é o pacote completo da nova identidade. Tudo o que vale está em **`v2/`**
 - **Frases:** a assinatura é "Luz medida."; a frase de apoio é "Precisão que ilumina decisões."; o conceito é "Nada trabalha sozinho.".
 
 ## Pendências do cliente
-- Número do **CRC-SP** e **CNPJ**, que aparecem como "[a confirmar]" nas peças.
-- **Foto do autor** e **link da live** no documento NFS-e.
+- **Link da live** no documento NFS-e.
+- Dados já aplicados: Fireflies Consultoria LTDA, CNPJ 66.630.305/0001-95, CRC-SP 2SP053069 (do escritório, nunca ao lado do nome do Gabriel), sem endereço físico. Foto do Gabriel em `v2/fotografia/`.
 - Rotas dos QR codes (`/selo/…`, `/academy/verificar`) e disponibilidade do handle `@firefliesconsultoria`.
 - **Assinatura de e-mail:** hospedar o PNG em HTTPS e trocar o `src`.
 - **Impressão:** pedir prova de cor na gráfica, porque o âmbar é sensível em CMYK.

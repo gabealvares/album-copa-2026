@@ -17,7 +17,7 @@ const DIR = 'digital/';
   const W = 600, H = 250, x = 24;
   let b = line(x, 30, x + 24, 30, C.rubrica, 2);
   b += t('Gabriel Alvares', { f: 'sans6', s: 14, x, y: 52, fill: C.anil });
-  b += t('Contador responsável · CRC-SP [nº a confirmar]', { s: 12, x, y: 72, fill: C.pedra });
+  b += t('Contador responsável', { s: 12, x, y: 72, fill: C.pedra });
   b += t('Fireflies Consultoria', { s: 12, x, y: 90, fill: C.fuligem });
   let cx = x;
   [['WhatsApp ', C.fuligem], ['+55 11 98245-0527', C.rubrica], [' · ', C.pedra], ['contato@fireflies.com.br', C.rubrica], [' · ', C.pedra], ['fireflies.com.br', C.rubrica]].forEach(([s, c]) => {
@@ -36,7 +36,7 @@ const DIR = 'digital/';
 <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;max-width:600px;font-family:'IBM Plex Sans',Arial,Helvetica,sans-serif;">
   <tr><td style="padding:0 0 10px 0;"><table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr><td width="24" height="2" style="background:#A9301F;font-size:0;line-height:0;">&nbsp;</td></tr></table></td></tr>
   <tr><td style="font-size:14px;line-height:20px;font-weight:bold;color:#17183A;">Gabriel Alvares</td></tr>
-  <tr><td style="font-size:12px;line-height:18px;color:#5E6271;">Contador responsável · CRC-SP [nº a confirmar]</td></tr>
+  <tr><td style="font-size:12px;line-height:18px;color:#5E6271;">Contador responsável</td></tr>
   <tr><td style="font-size:12px;line-height:18px;color:#2A2F3D;">Fireflies Consultoria</td></tr>
   <tr><td style="font-size:12px;line-height:18px;color:#2A2F3D;">WhatsApp <a href="https://wa.me/5511982450527" style="color:#A9301F;text-decoration:none;">+55 11 98245-0527</a> · <a href="mailto:contato@fireflies.com.br" style="color:#A9301F;text-decoration:none;">contato@fireflies.com.br</a> · <a href="https://fireflies.com.br" style="color:#A9301F;text-decoration:none;">fireflies.com.br</a></td></tr>
   <tr><td style="font-size:12px;line-height:18px;font-style:italic;color:#5E6271;padding:0 0 12px 0;">Precisão que ilumina decisões.</td></tr>

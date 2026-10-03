@@ -3,7 +3,7 @@ const L = require('./lib');
 const { C, pt, t, para, logo, icon, emb, orn, padrao, qr, rect, line, circle, measure } = L;
 const DIR = 'papelaria/';
 const B = 3;
-const CRC = 'CRC-SP [nº a confirmar]';
+const CRC = 'CRC-SP 2SP053069';
 const WA = 'https://wa.me/5511982450527';
 
 // =====================================================================
@@ -23,7 +23,7 @@ const WA = 'https://wa.me/5511982450527';
   let v = rect(0, 0, W, H, C.branco);
   v += line(s, s + 3, s + 8, s + 3, C.rubrica, pt(0.75));
   v += t('Gabriel Alvares', { f: 'sans6', s: pt(9), x: s, y: s + 9, fill: C.anil });
-  v += t('Contador responsável · ' + CRC, { f: 'sans4', s: pt(7), x: s, y: s + 13, fill: C.pedra });
+  v += t('Contador responsável', { f: 'sans4', s: pt(7), x: s, y: s + 13, fill: C.pedra });
   v += t('Fireflies Consultoria', { f: 'sans4', s: pt(7), x: s, y: s + 16.6, fill: C.pedra });
   ['+55 11 98245-0527', 'contato@fireflies.com.br', 'fireflies.com.br'].forEach((d, i) => {
     v += t(d, { f: 'mono4', s: pt(7), x: s, y: s + 28 + i * 3.6, fill: C.fuligem });
@@ -82,7 +82,6 @@ const WA = 'https://wa.me/5511982450527';
   b += t('Gabriel', { f: 'sans6', s: pt(14), x: o + 6, y: o + topo + 16, fill: C.anil });
   b += t('Alvares', { f: 'sans6', s: pt(14), x: o + 6, y: o + topo + 22, fill: C.anil });
   b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: pt(9), x: o + 6, y: o + topo + 29, fill: C.pedra, tr: 0.02 });
-  b += t(CRC, { f: 'mono4', s: pt(7), x: o + 6, y: o + topo + 33, fill: C.pedra });
   b += line(o + 6, o + 86 - 14, o + 48, o + 86 - 14, C.fumaca, pt(0.5));
   b += logo('wordmark', 'digital', { w: 19, x: o + 6, y: o + 86 - 10.5 }).svg;
   b += t('fireflies.com.br', { f: 'mono4', s: pt(6), x: o + 48, y: o + 86 - 6.6, fill: C.pedra, a: 'end' });
@@ -120,7 +119,7 @@ const WA = 'https://wa.me/5511982450527';
   b += line(o + 45, sy, o + 115, sy, C.fuligem, pt(0.5));
   b += t('Gabriel Alvares', { f: 'sans6', s: pt(10), x: o + 80, y: sy + 5, fill: C.anil, a: 'middle' });
   b += t('Instrutor e responsável técnico', { f: 'sans4', s: pt(9), x: o + 80, y: sy + 9.5, fill: C.fuligem, a: 'middle' });
-  b += t(CRC, { f: 'mono4', s: pt(8), x: o + 80, y: sy + 13.5, fill: C.pedra, a: 'middle' });
+  b += t('Fireflies Consultoria LTDA · ' + CRC, { f: 'mono4', s: pt(8), x: o + 80, y: sy + 13.5, fill: C.pedra, a: 'middle' });
   // Selo de Carta 40 mm com a Lanterna (a única luz: o logo é chapado, sem âmbar)
   b += orn('selo-graduado-texto', { x: cx - 20 + 8, y: sy - 26, w: 40, c: C.anil });
   b += circle(cx + 8, sy - 6, 2.6, C.ambar, ` stroke="${C.anil}" stroke-width="0.35"`);

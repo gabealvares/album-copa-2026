@@ -71,7 +71,7 @@ pattern(
 	$P,
 	s_numeros(
 		array(
-			array( 'CRC ativo', 'Contador responsável em todo projeto. CRC-SP [a confirmar]' ),
+			array( 'CRC ativo', 'Escritório registrado no CRC-SP sob o nº 2SP053069' ),
 			array( '8+ anos', 'De contabilidade, auditoria e gestão financeira' ),
 			array( '30 dias', 'Até o primeiro painel mensal' ),
 			array( 'São Paulo', 'Empresas e condomínios' ),
@@ -206,7 +206,7 @@ pattern(
 	$P,
 	s_responsavel(
 		array(
-			'cargo'  => 'Fundador e contador responsável. CRC-SP [a confirmar]',
+			'cargo'  => 'Fundador e contador responsável',
 			'textos' => array( 'São mais de 8 anos em contabilidade, auditoria e gestão financeira. Gabriel fundou a Fireflies para que todo cliente tivesse o que costuma faltar: alguém que assina o número e explica o que ele quer dizer.' ),
 			'areas'  => array( 'Contabilidade gerencial', 'Auditoria', 'Planejamento tributário', 'Gestão de projetos e processos', 'ERP e tecnologia', 'Treinamento empresarial' ),
 			'link'   => array( 'Conhecer a Fireflies', u( '/sobre/' ) ),
@@ -257,7 +257,7 @@ pattern(
 			'h2'     => 'Comece pelo diagnóstico.',
 			'texto'  => 'Uma conversa sem custo e sem compromisso para entender o que está travando os seus números.',
 			'botoes' => array( array( 'Conversar no WhatsApp', $WA ), array( 'Agendar pelo formulário', u( '/contato/' ), 'outline' ) ),
-			'linha'  => 'contato@fireflies.com.br   Segunda a sexta, 8h às 18h',
+			'linha'  => 'contato@fireflies.com.br · Segunda a sexta, 8h às 18h',
 		)
 	)
 );
