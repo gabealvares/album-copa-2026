@@ -36,7 +36,7 @@ function fireflies_core_dados_empresa_trocar( string $texto ): string {
 }
 
 function fireflies_core_dados_empresa(): void {
-	if ( get_option( 'fireflies_dados_empresa_v1' ) || wp_installing() || wp_doing_ajax() || wp_doing_cron() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
+	if ( get_option( 'fireflies_dados_empresa_v2' ) || wp_installing() || wp_doing_ajax() || wp_doing_cron() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
 		return;
 	}
 	if ( ! fireflies_core_dados_empresa_tema_ok() || ! get_page_by_path( 'sobre' ) ) {
@@ -45,27 +45,40 @@ function fireflies_core_dados_empresa(): void {
 
 	global $wpdb;
 	$ids = $wpdb->get_col(
-		"SELECT ID FROM {$wpdb->posts} WHERE post_type IN ('page','curso','wp_template_part','wp_template','wp_block')
-		 AND ( post_content LIKE '%a confirmar%' OR post_content LIKE '%retrato-placeholder%' )"
+		"SELECT ID FROM {$wpdb->posts} WHERE post_type IN ('page','post','curso','wp_template_part','wp_template','wp_block')
+		 AND ( post_content LIKE '%a confirmar%' OR post_content LIKE '%a definir%' OR post_content LIKE '%retrato-placeholder%' OR post_excerpt LIKE '%a confirmar%' )"
 	);
 	foreach ( $ids as $id ) {
-		$post = get_post( (int) $id );
-		$novo = fireflies_core_dados_empresa_trocar( $post->post_content );
-		if ( $novo !== $post->post_content ) {
+		$post    = get_post( (int) $id );
+		$novo    = fireflies_core_dados_empresa_trocar( $post->post_content );
+		$resumo  = fireflies_core_dados_empresa_trocar( $post->post_excerpt );
+		if ( $novo !== $post->post_content || $resumo !== $post->post_excerpt ) {
 			// Direto no banco: wp_update_post passaria pelo filtro de HTML de visitantes sem permissão.
-			$wpdb->update( $wpdb->posts, array( 'post_content' => $novo ), array( 'ID' => $post->ID ) );
+			$wpdb->update( $wpdb->posts, array( 'post_content' => $novo, 'post_excerpt' => $resumo ), array( 'ID' => $post->ID ) );
 			clean_post_cache( $post->ID );
 		}
 	}
 
-	update_option( 'fireflies_dados_empresa_v1', gmdate( 'c' ), false );
+	// Campos dos cursos ainda sem valor (ex.: carga horária "[a confirmar] h"): esvazia; a ficha omite campos vazios.
+	$metas = $wpdb->get_results( "SELECT meta_id, post_id FROM {$wpdb->postmeta} WHERE meta_key LIKE '_ff%' AND ( meta_value LIKE '%a confirmar%' OR meta_value LIKE '%a definir%' )" );
+	foreach ( $metas as $m ) {
+		delete_metadata_by_mid( 'post', (int) $m->meta_id );
+		clean_post_cache( (int) $m->post_id );
+	}
+
+	// Bio do autor (Usuários › Perfil › Informações biográficas), que aparece no fim dos posts.
+	foreach ( $wpdb->get_results( "SELECT umeta_id, user_id, meta_value FROM {$wpdb->usermeta} WHERE meta_key = 'description' AND ( meta_value LIKE '%a confirmar%' OR meta_value LIKE '%a definir%' )" ) as $u ) {
+		update_user_meta( (int) $u->user_id, 'description', fireflies_core_dados_empresa_trocar( $u->meta_value ) );
+	}
+
+	update_option( 'fireflies_dados_empresa_v2', gmdate( 'c' ), false );
 	if ( function_exists( 'fireflies_core_limpar_caches' ) ) {
 		fireflies_core_limpar_caches();
 	}
 }
 
 function fireflies_core_dados_empresa_aviso(): void {
-	if ( ! current_user_can( 'manage_options' ) || get_option( 'fireflies_dados_empresa_v1' ) || fireflies_core_dados_empresa_tema_ok() ) {
+	if ( ! current_user_can( 'manage_options' ) || get_option( 'fireflies_dados_empresa_v2' ) || fireflies_core_dados_empresa_tema_ok() ) {
 		return;
 	}
 	echo '<div class="notice notice-warning"><p><strong>Fireflies:</strong> atualize também o tema (Aparência › Temas › Adicionar › Enviar tema › <code>fireflies-tema.zip</code> › Substituir). Assim que o tema novo estiver ativo, o CNPJ, o CRC e a foto entram em todas as páginas.</p></div>';

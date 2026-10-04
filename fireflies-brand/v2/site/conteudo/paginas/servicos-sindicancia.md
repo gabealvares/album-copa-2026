@@ -15,7 +15,7 @@ seo:
   schema: [Service (serviceType "Sindicância"), FAQPage, BreadcrumbList]
 ```
 
-> Revisar com o Gabriel e com o advogado do cliente: o escopo da sindicância como serviço contábil (apuração documental) e os limites em relação a investigação privada e a atos jurídicos. [a confirmar]
+> Revisar com o Gabriel e com o advogado do cliente: o escopo da sindicância como serviço contábil (apuração documental) e os limites em relação a investigação privada e a atos jurídicos.
 
 ---
 

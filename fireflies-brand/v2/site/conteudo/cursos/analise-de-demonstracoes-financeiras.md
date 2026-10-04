@@ -8,7 +8,7 @@ url: /academy/cursos/analise-de-demonstracoes-financeiras/
 trilha: financeiro
 ordem: 6
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Intermediário
   _ff_publico: Gestores, analistas financeiros e conselheiros
@@ -25,7 +25,7 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA FINANCEIRO
 - **H1:** Análise de Demonstrações Financeiras
 - **Resumo:** Ler balanço, DRE e fluxo de caixa para responder às perguntas que importam: a empresa é rentável, tem caixa, depende de dívida?
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · NÍVEL INTERMEDIÁRIO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · NÍVEL INTERMEDIÁRIO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]

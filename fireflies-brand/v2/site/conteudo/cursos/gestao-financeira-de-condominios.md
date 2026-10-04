@@ -8,7 +8,7 @@ url: /academy/cursos/gestao-financeira-de-condominios/
 trilha: condominios
 ordem: 4
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Introdutório
   _ff_publico: Síndicos, subsíndicos, conselheiros e equipes de administradoras
@@ -25,7 +25,7 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA CONDOMÍNIOS
 - **H1:** Gestão Financeira de Condomínios
 - **Resumo:** O que todo síndico e conselheiro precisa saber para aprovar um orçamento, ler um balancete e dar parecer sobre as contas com segurança.
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]

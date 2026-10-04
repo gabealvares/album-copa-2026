@@ -29,9 +29,9 @@
       "horario": "Mo-Fr 08:00-18:00",
       "cidade": "São Paulo",
       "uf": "SP",
-      "endereco": "[a confirmar]",
-      "cnpj": "[a confirmar]",
-      "crc_responsavel": "CRC-SP [a confirmar]"
+      "endereco": "",
+      "cnpj": "",
+      "crc_responsavel": "CRC-SP"
     }
   },
   "autores": [
@@ -39,8 +39,8 @@
       "login": "gabriel-alvares",
       "display_name": "Gabriel Alvares",
       "nicename": "gabriel-alvares",
-      "email": "[a confirmar]",
-      "descricao": "Fundador e contador responsável da Fireflies Consultoria, CRC-SP [a confirmar]. Mais de 8 anos em contabilidade, auditoria e gestão financeira, com foco em condomínios.",
+      "email": "",
+      "descricao": "Fundador e contador responsável da Fireflies Consultoria. Mais de 8 anos em contabilidade, auditoria e gestão financeira, com foco em condomínios.",
       "role": "author",
       "jobTitle": "Contador responsável"
     }
@@ -673,7 +673,7 @@
       "menu_order": 1,
       "fonte": "cursos/contabilidade-para-gestores.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -698,7 +698,7 @@
       "menu_order": 2,
       "fonte": "cursos/planejamento-tributario-na-pratica.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -723,7 +723,7 @@
       "menu_order": 3,
       "fonte": "cursos/erp-do-basico-ao-avancado.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -748,7 +748,7 @@
       "menu_order": 4,
       "fonte": "cursos/gestao-financeira-de-condominios.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -773,7 +773,7 @@
       "menu_order": 5,
       "fonte": "cursos/auditoria-interna-fundamentos.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -798,7 +798,7 @@
       "menu_order": 6,
       "fonte": "cursos/analise-de-demonstracoes-financeiras.md",
       "meta": {
-        "_ff_carga_horaria": "[a confirmar] h",
+        "_ff_carga_horaria": " h",
         "_ff_formato": [
           "in-company",
           "online"
@@ -1103,7 +1103,7 @@
       "arquivo": "gabriel-alvares.jpg",
       "dim": "retrato real ≥ 800 px",
       "uso": "sobre, responsável, avatar do autor",
-      "status": "[a confirmar]"
+      "status": ""
     },
     {
       "arquivo": "nfse-condominios.pdf",
@@ -1113,7 +1113,7 @@
   ],
   "redirecionamentos_301": [
     {
-      "de": "[URLs do site antigo a confirmar]",
+      "de": "",
       "para": "/"
     }
   ],

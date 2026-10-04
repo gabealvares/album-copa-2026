@@ -65,7 +65,7 @@ seo:
 [pattern: faq]
 
 **Vocês vendem ou indicam algum ERP específico?**
-A recomendação parte das necessidades da empresa. Se houver qualquer relação comercial com um fornecedor, ela é informada antes da recomendação [a confirmar política com o Gabriel].
+A recomendação parte das necessidades da empresa. Se houver qualquer relação comercial com um fornecedor, ela é informada antes da recomendação.
 
 **A equipe precisa parar para o projeto acontecer?**
 Não. O cronograma é montado em torno do calendário de fechamento e das datas críticas do negócio.

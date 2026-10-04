@@ -9,7 +9,7 @@
 - Uma frase de luz por página, no máximo. A assinatura "Precisão que ilumina decisões." vive no rodapé global.
 - **Sem cases nem depoimentos.** Os do site antigo eram "Ilustrativos" e não são publicados. As provas usadas são verificáveis: CRC (a confirmar), 8+ anos, responsável nomeado, método de 30 dias e base legal citada.
 - Demonstrações (painel mensal, raio-X) levam sempre o rótulo **DADOS DE EXEMPLO** ou **Simulação ilustrativa**.
-- Dados pendentes aparecem como **[a confirmar]**: CRC, CNPJ, razão social, endereço, foto, carga horária, percentuais do raio-X e link da live.
+- Dados pendentes aparecem como ****: CRC, CNPJ, razão social, endereço, foto, carga horária, percentuais do raio-X e link da live.
 
 ---
 
@@ -77,7 +77,7 @@
 | SERVIÇOS | os 6 serviços |
 | FIREFLIES | Condomínios · Como trabalhamos · Academy · Blog · Sobre · Contato |
 | CONTATO | WhatsApp +55 11 98245-0527 · contato@fireflies.com.br · Seg–sex, 8h–18h · São Paulo · SP |
-| CREDENCIAIS (mono) | Responsável técnico: Gabriel Alvares · CRC-SP [a confirmar] · CNPJ [a confirmar] |
+| CREDENCIAIS (mono) | Responsável técnico: Gabriel Alvares · CNPJ |
 | Linha final | © 2026 Fireflies Consultoria · Política de Privacidade · Termos de Uso · Preferências de cookies |
 
 ---
@@ -174,7 +174,7 @@ São livres, mas seguem uma lista controlada para não pulverizar: `nfs-e`, `ibs
 - **`curso`:**
   - rewrite `academy/cursos` (with_front false), arquivo em `academy/cursos`, `show_in_rest`;
   - supports: title, editor, excerpt, thumbnail, page-attributes (ordem) e custom-fields;
-  - metas: `_ff_carga_horaria` ([a confirmar]), `_ff_formato` (in-company e/ou online), `_ff_nivel`, `_ff_publico`, `_ff_pre_requisito`, `_ff_certificado` (bool), `_ff_observacao`.
+  - metas: `_ff_carga_horaria` (), `_ff_formato` (in-company e/ou online), `_ff_nivel`, `_ff_publico`, `_ff_pre_requisito`, `_ff_certificado` (bool), `_ff_observacao`.
 - **`trilha`:** hierárquica, rewrite `academy/trilha`. Termos e descrições:
 
 | Slug | Nome | Descrição | Curso |
@@ -197,7 +197,7 @@ Os nomes usados em `paginas/*.md` (`hero-anil`, `hero-claro`, `faixa-provas`, `s
 
 ### 5.1 Princípios
 - **Foco local e de nicho.** Prioridade: "auditoria de condomínio São Paulo" e "consultoria contábil SP", conforme a plataforma de marca. A concorrência local nessas buscas é formada sobretudo por pequenos escritórios e anúncios em diretórios. Um conteúdo editorial com base legal citada é o diferencial que eles não têm.
-- **Desambiguação.** "Fireflies Consultoria" aparece em todo title, no schema `Organization.name` e no `alternateName` "Fireflies Consultoria Contábil" [a confirmar]. O `sameAs` aponta para o LinkedIn, o Instagram @firefliesconsultoria e o Google Business Profile.
+- **Desambiguação.** "Fireflies Consultoria" aparece em todo title, no schema `Organization.name` e no `alternateName` "Fireflies Consultoria Contábil". O `sameAs` aponta para o LinkedIn, o Instagram @firefliesconsultoria e o Google Business Profile.
 - **Uma intenção por URL.** Página de serviço para a intenção transacional, post para a informacional e landing para o público.
 - **E-E-A-T:** autor real com bio e CRC, data de corte do conteúdo, base legal literal, aviso informativo e "Consulte na íntegra".
 
@@ -240,7 +240,7 @@ Titles com até cerca de 60 caracteres e metas com até 155 caracteres (contagem
 
 ### 5.3 Schema (via Rank Math/Yoast; o `fireflies-core` gera o básico se nenhum plugin estiver ativo)
 - **Global:**
-  - `Organization` + `AccountingService` (subtipo de LocalBusiness), com name "Fireflies Consultoria", url, logo, telephone +55-11-98245-0527, email, `areaServed` "São Paulo, SP", `openingHoursSpecification` seg–sex 08:00–18:00, `address` [a confirmar] e `founder` → Person Gabriel Alvares;
+  - `Organization` + `AccountingService` (subtipo de LocalBusiness), com name "Fireflies Consultoria", url, logo, telephone +55-11-98245-0527, email, `areaServed` "São Paulo, SP", `openingHoursSpecification` seg–sex 08:00–18:00, `address` e `founder` → Person Gabriel Alvares;
   - `WebSite` com `SearchAction`.
 - **Serviços:** `Service` com `provider` → AccountingService, `serviceType` e `areaServed`. O `FAQPage` só quando houver FAQ visível; desde 2023 o Google limita o resultado rico de FAQ, mas a marcação continua válida.
 - **Posts:** `BlogPosting` com `author` (Person, url `/blog/autor/gabriel-alvares/`), `datePublished`, `dateModified`, `publisher` e `image`.
@@ -272,7 +272,7 @@ Regra: todo post tem pelo menos 1 link para uma página de serviço e 2 para pos
 - Canonical autorreferente. A paginação do blog usa `/blog/page/N/`.
 - OG images: genérica, Condomínios e Academy (ver `midia_necessaria` no JSON).
 - Google Business Profile: categoria "Consultor contábil" ou "Serviço de auditoria", com a mesma NAP do rodapé assim que o endereço for confirmado.
-- 301 das URLs do site antigo [lista a confirmar]. O site antigo era uma página única com âncoras, então o principal é preservar `/`.
+- 301 das URLs do site antigo. O site antigo era uma página única com âncoras, então o principal é preservar `/`.
 
 ---
 

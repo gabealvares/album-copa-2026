@@ -8,7 +8,7 @@ url: /academy/cursos/planejamento-tributario-na-pratica/
 trilha: fiscal
 ordem: 2
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Intermediário
   _ff_publico: Equipes financeiras e fiscais, controllers, donos de empresa
@@ -25,7 +25,7 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA FISCAL
 - **H1:** Planejamento Tributário na Prática
 - **Resumo:** Como comparar regimes, simular cenários com números reais e documentar decisões tributárias dentro da lei, já considerando a transição da Reforma Tributária.
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · NÍVEL INTERMEDIÁRIO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · NÍVEL INTERMEDIÁRIO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]

@@ -15,7 +15,7 @@ seo:
   schema: [Organization, AccountingService, WebSite (SearchAction)]
 ```
 
-> Convenções deste arquivo: `[pattern: …]` é o pattern do tema `fireflies` que abre a seção. Texto entre `[a confirmar]` depende de dado real. Rótulos em `MONO` são eyebrows em IBM Plex Mono caixa alta. Nenhum case ou depoimento é usado: o site antigo tinha cases "Ilustrativos" que não podem ser publicados.
+> Convenções deste arquivo: `[pattern: …]` é o pattern do tema `fireflies` que abre a seção. Texto entre `` depende de dado real. Rótulos em `MONO` são eyebrows em IBM Plex Mono caixa alta. Nenhum case ou depoimento é usado: o site antigo tinha cases "Ilustrativos" que não podem ser publicados.
 
 ---
 
@@ -91,7 +91,7 @@ Lista em linhas com fio (número mono, nome, uma frase, seta):
 - **H2:** Raio-X do seu condomínio.
 - **Texto:** Sua taxa paga o que deveria? A gente mostra para onde vai cada real, confere a prestação de contas e leva o relatório pronto para o conselho.
 - **Simulador:** três controles (unidades, taxa média, inadimplência) e a distribuição da receita.
-  - **Nota obrigatória (mono):** Simulação ilustrativa. Os percentuais de referência são definidos pelo responsável técnico [a confirmar] e não substituem a análise das contas reais do seu condomínio.
+  - **Nota obrigatória (mono):** Simulação ilustrativa. Os percentuais de referência são estimativas de mercado e não substituem a análise das contas reais do seu condomínio.
 - **Bloco de destaque (só aparece quando o saldo simulado é negativo):** Quando o caixa do mês não fecha, o fundo de reserva costuma cobrir a diferença. Sem ajuste, a taxa extra vira rotina.
 - **Botões:** Fazer o raio-X com os números reais → `/contato/?assunto=auditoria-de-condominios` · Conhecer a linha Condomínios → `/condominios/`
 

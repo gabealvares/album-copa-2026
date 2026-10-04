@@ -48,7 +48,7 @@ Linha de links em mono, separados por fio (sem pílulas): TODOS · REFORMA TRIBU
 [pattern: cta-whatsapp]
 
 - **H2:** Receba as atualizações da Reforma Tributária para condomínios.
-- **Texto:** Quando sair norma nova, a gente avisa com o resumo e o que fazer. [a confirmar: newsletter por e-mail ou lista de transmissão no WhatsApp]
+- **Texto:** Quando sair norma nova, a gente avisa com o resumo e o que fazer.
 - **Botão:** Quero receber pelo WhatsApp → `https://wa.me/5511982450527?text=Quero%20receber%20as%20atualiza%C3%A7%C3%B5es%20do%20blog`
 
 ---
@@ -57,6 +57,6 @@ Linha de links em mono, separados por fio (sem pílulas): TODOS · REFORMA TRIBU
 
 - **Categoria:** H1 = nome da categoria; lead = descrição da categoria (ver `arquitetura.md`, seção 4.3).
 - **Tag:** H1 = "Tag: {nome}"; lead = "Todos os artigos marcados com {nome}."
-- **Autor:** H1 = nome; lead = biografia do usuário. Bio de Gabriel Alvares: "Fundador e contador responsável da Fireflies Consultoria, CRC-SP [a confirmar]. Mais de 8 anos em contabilidade, auditoria e gestão financeira, com foco em condomínios."
+- **Autor:** H1 = nome; lead = biografia do usuário. Bio de Gabriel Alvares: "Fundador e contador responsável da Fireflies Consultoria. Mais de 8 anos em contabilidade, auditoria e gestão financeira, com foco em condomínios."
 - **Busca:** H1 = "Resultados para “{termo}”"; sem resultados: "Nada encontrado para essa busca. Tente outro termo ou pergunte direto pelo WhatsApp."
 - **404:** H1 = "Esta página saiu de órbita."; texto = "O endereço pode ter mudado. Tente a busca ou volte para o início." Botões: Ir para o início · Ver serviços.

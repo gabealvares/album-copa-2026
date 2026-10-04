@@ -36,7 +36,7 @@ seo:
   Ele conecta estratégia, governança, processos e tecnologia numa mesma leitura e organiza, para cada cliente, uma equipe de especialistas do tamanho do desafio.
 - **Áreas (lista mono com fio):** CONTABILIDADE GERENCIAL · AUDITORIA · PLANEJAMENTO TRIBUTÁRIO · GESTÃO DE PROJETOS E PROCESSOS · ERP E TECNOLOGIA · TREINAMENTO EMPRESARIAL
 - **Registro:** o escritório é inscrito no CRC-SP sob o nº 2SP053069.
-- **Link:** LinkedIn [a confirmar URL]
+- **Link:** LinkedIn
 
 ## 3. O nome e o símbolo
 [pattern: texto-manifesto]

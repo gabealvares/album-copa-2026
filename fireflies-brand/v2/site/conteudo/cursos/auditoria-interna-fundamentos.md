@@ -8,7 +8,7 @@ url: /academy/cursos/auditoria-interna-fundamentos/
 trilha: auditoria
 ordem: 5
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Introdutório
   _ff_publico: Equipes de controle, financeiro, compliance e conselhos
@@ -25,7 +25,7 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA AUDITORIA
 - **H1:** Auditoria Interna: Fundamentos
 - **Resumo:** Como identificar riscos, testar controles, documentar o trabalho e escrever um relatório que a diretoria ou o conselho lê e usa.
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]

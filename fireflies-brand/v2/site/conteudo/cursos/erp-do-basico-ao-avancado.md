@@ -8,13 +8,13 @@ url: /academy/cursos/erp-do-basico-ao-avancado/
 trilha: tecnologia
 ordem: 3
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Do introdutório ao avançado (módulos)
   _ff_publico: Equipes que usam ou vão implantar um ERP
   _ff_pre_requisito: Nenhum para o módulo básico
   _ff_certificado: sim
-  _ff_observacao: "ERPs atendidos [a confirmar com o Gabriel]"
+  _ff_observacao: "ERPs atendidos"
 seo:
   palavra_chave: treinamento ERP financeiro
   title: "ERP: do Básico ao Avançado · treinamento | Fireflies Academy"
@@ -26,11 +26,11 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA TECNOLOGIA
 - **H1:** ERP: do Básico ao Avançado
 - **Resumo:** Para equipes que precisam tirar do ERP o controle que ele promete: cadastros certos, rotinas completas e relatórios que batem com a contabilidade.
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · MÓDULOS BÁSICO, INTERMEDIÁRIO E AVANÇADO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · MÓDULOS BÁSICO, INTERMEDIÁRIO E AVANÇADO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]
-Um ERP só funciona quando cada pessoa sabe o que lançar, quando e onde. O curso é organizado em três módulos, que podem ser contratados separadamente. O conteúdo é ajustado ao sistema usado pela empresa [lista de ERPs a confirmar] e, sempre que possível, ministrado no ambiente de testes do próprio cliente.
+Um ERP só funciona quando cada pessoa sabe o que lançar, quando e onde. O curso é organizado em três módulos, que podem ser contratados separadamente. O conteúdo é ajustado ao sistema usado pela empresa e, sempre que possível, ministrado no ambiente de testes do próprio cliente.
 
 ## Para quem é
 - Equipes de financeiro, compras, faturamento e controladoria.

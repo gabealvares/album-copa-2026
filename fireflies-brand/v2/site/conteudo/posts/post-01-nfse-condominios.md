@@ -26,7 +26,7 @@ seo:
 imagem_destacada: og-nfse-condominios.png (1200×675, capa Anil com a constelação Domus) [a gerar]
 ```
 
-> Fonte: `v2/documentos/nfse-condominios/index.html`. Conteúdo mantido integralmente e na mesma ordem. Os componentes interativos do HTML (acordeão do exemplo da NFS-e, busca dos 37 tipos, checklist com progresso) viram blocos do plugin `fireflies-core`; abaixo está o conteúdo de cada um e, entre colchetes, o bloco correspondente. O link "Assistir à live completa" segue sem endereço `[a confirmar: link da live]`.
+> Fonte: `v2/documentos/nfse-condominios/index.html`. Conteúdo mantido integralmente e na mesma ordem. Os componentes interativos do HTML (acordeão do exemplo da NFS-e, busca dos 37 tipos, checklist com progresso) viram blocos do plugin `fireflies-core`; abaixo está o conteúdo de cada um e, entre colchetes, o bloco correspondente. O link "Assistir à live completa" segue sem endereço ``.
 
 ---
 
@@ -372,7 +372,7 @@ Voltaremos com uma atualização assim que o cronograma de implantação e event
 
 ## 07 · Fontes oficiais {#s07}
 
-[bloco: fontes] (lista numerada; o original não trazia URLs: acrescentar links oficiais quando confirmados [a confirmar])
+[bloco: fontes] (lista numerada; o original não trazia URLs: acrescentar links oficiais quando confirmados)
 1. Nota Técnica SE/CGNFS-e nº 009, versão 1.01 (PDF)
 2. Anexo VI – Leiaute e regras de negócio, v1.04.01 (planilha)
 3. Anexo VII – Indicadores da operação (cIndOp), v1.03.00 (planilha)
@@ -392,7 +392,7 @@ Voltaremos com uma atualização assim que o cronograma de implantação e event
 - **Eyebrow:** Precisa de ajuda com a carteira?
 - **H2:** Converse com nossos especialistas sobre como preparar a emissão dos seus condomínios até **01/12/2026**.
 - **Botão primário:** Fale com nossos especialistas → `https://wa.me/5511982450527`
-- **Botão secundário:** Assistir à live completa → `[a confirmar: link da live]`
+- **Botão secundário:** Assistir à live completa → ``
 
 ---
 

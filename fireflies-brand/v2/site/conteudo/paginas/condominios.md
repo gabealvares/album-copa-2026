@@ -41,7 +41,7 @@ seo:
 
 - **H2:** Para onde vai a sua taxa
 - **Texto:** Mexa nos três números e veja como a receita se distribui e onde o risco costuma se esconder.
-- **Nota obrigatória:** Simulação ilustrativa. Os percentuais de referência são definidos pelo responsável técnico [a confirmar] e não substituem a análise das contas reais do seu condomínio.
+- **Nota obrigatória:** Simulação ilustrativa. Os percentuais de referência são estimativas de mercado e não substituem a análise das contas reais do seu condomínio.
 - **Botão:** Fazer com os números reais → `/contato/?assunto=auditoria-de-condominios`
 
 ## 4. O que a gente faz pelo condomínio

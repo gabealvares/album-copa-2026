@@ -128,5 +128,85 @@
   "s",
   "retrato real [a confirmar]",
   "retrato real (tema: assets/img/gabriel-alvares.jpg)"
+ ],
+ [
+  "s",
+  "Os percentuais de referência são definidos pelo responsável técnico [a confirmar] e não substituem",
+  "Os percentuais de referência são estimativas de mercado e não substituem"
+ ],
+ [
+  "s",
+  "Turma fechada ou aberta [a confirmar].",
+  "Em turma fechada (in company) ou aberta."
+ ],
+ [
+  "s",
+  "com o Selo de Carta e código de verificação [a confirmar].",
+  "com o Selo de Carta."
+ ],
+ [
+  "s",
+  "com carga horária, período e código de verificação [a confirmar].",
+  "com carga horária e período."
+ ],
+ [
+  "s",
+  "[dd/mm/aaaa a confirmar]",
+  "04/10/2026"
+ ],
+ [
+  "s",
+  "[nome a confirmar]",
+  "Gabriel Alvares"
+ ],
+ [
+  "s",
+  "[privacidade@fireflies.com.br a confirmar] ou contato@fireflies.com.br",
+  "contato@fireflies.com.br"
+ ],
+ [
+  "s",
+  "hospedagem do site [a confirmar], e-mail [a confirmar], formulário [a confirmar],",
+  "hospedagem do site, e-mail, formulário de contato,"
+ ],
+ [
+  "s",
+  "[24 meses a confirmar] após",
+  "24 meses após"
+ ],
+ [
+  "s",
+  "Enquanto o código de verificação estiver ativo [a confirmar]",
+  "Pelo prazo necessário para comprovar a emissão do certificado"
+ ],
+ [
+  "s",
+  "[nome do cookie do plugin LGPD a confirmar]",
+  "Cookie de registro do consentimento"
+ ],
+ [
+  "s",
+  "Contar visitas e entender quais páginas são úteis</td><td>[a confirmar]</td>",
+  "Contar visitas e entender quais páginas são úteis</td><td>Ferramenta de estatísticas de visitas, quando ativada</td>"
+ ],
+ [
+  "s",
+  "Contar visitas e entender quais páginas são úteis | [a confirmar] |",
+  "Contar visitas e entender quais páginas são úteis | Ferramenta de estatísticas de visitas, quando ativada |"
+ ],
+ [
+  "s",
+  ", CRC-SP [a confirmar]",
+  ""
+ ],
+ [
+  "s",
+  " · CRC-SP [a confirmar]",
+  ""
+ ],
+ [
+  "r",
+  "\\s*\\[[^\\[\\]<>]{0,160}?\\b(?:a confirmar|a definir|a inserir|a preencher|a validar|a revisar)\\b[^\\[\\]<>]{0,160}?\\]",
+  ""
  ]
 ]
