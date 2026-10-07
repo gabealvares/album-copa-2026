@@ -13,24 +13,30 @@ const FIREFLIES_CORE_ETIQUETAS = array(
 	'auditoria'              => 'Auditoria',
 	'cadastro-de-condominos' => 'Cadastro de condôminos',
 	'cib'                    => 'CIB',
+	'efd-reinf'              => 'EFD-Reinf',
 	'codigo-civil'           => 'Código Civil',
 	'conselho-fiscal'        => 'Conselho fiscal',
 	'fundo-de-reserva'       => 'Fundo de reserva',
 	'ibs-cbs'                => 'IBS e CBS',
 	'inadimplencia'          => 'Inadimplência',
+	'inss'                   => 'INSS',
 	'iptu'                   => 'IPTU',
+	'irrf'                   => 'IRRF',
+	'iss'                    => 'ISS',
 	'lc-214-2025'            => 'LC 214/2025',
 	'lei-do-inquilinato'     => 'Lei do Inquilinato',
 	'nfs-e'                  => 'NFS-e',
+	'pcc'                    => 'PCC',
 	'prestacao-de-contas'    => 'Prestação de contas',
 	'previsao-orcamentaria'  => 'Previsão orçamentária',
+	'retencoes'              => 'Retenções',
 	'sindico'                => 'Síndico',
 );
 
 add_action( 'init', 'fireflies_core_etiquetas', 97 );
 
 function fireflies_core_etiquetas(): void {
-	if ( get_option( 'fireflies_etiquetas_v1' ) || wp_installing() || wp_doing_ajax() || wp_doing_cron() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
+	if ( get_option( 'fireflies_etiquetas_v2' ) || wp_installing() || wp_doing_ajax() || wp_doing_cron() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
 		return;
 	}
 	foreach ( FIREFLIES_CORE_ETIQUETAS as $slug => $nome ) {
@@ -39,5 +45,5 @@ function fireflies_core_etiquetas(): void {
 			wp_update_term( $t->term_id, 'post_tag', array( 'name' => $nome ) );
 		}
 	}
-	update_option( 'fireflies_etiquetas_v1', gmdate( 'c' ), false );
+	update_option( 'fireflies_etiquetas_v2', gmdate( 'c' ), false );
 }

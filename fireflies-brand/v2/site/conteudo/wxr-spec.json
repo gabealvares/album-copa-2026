@@ -949,6 +949,280 @@
         "description": "Prestação de contas sem documento, saldo que não bate, fundo de reserva pagando o mês: 5 sinais de que é hora de auditar, com a base legal.",
         "schema": "[BlogPosting, ItemList (5 sinais), BreadcrumbList]"
       }
+    },
+    {
+      "titulo": "Auditoria condominial: ferramenta de gestão, apoio e segurança para a administradora",
+      "slug": "auditoria-condominial-para-administradoras",
+      "url": "/blog/auditoria-condominial-para-administradoras/",
+      "data": "2026-10-14",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "condominios",
+      "categorias": [
+        "condominios"
+      ],
+      "tags": [
+        "auditoria",
+        "administradoras",
+        "prestacao-de-contas",
+        "conselho-fiscal",
+        "sindico"
+      ],
+      "excerpt": "Para a administradora, a auditoria não é ameaça: é controle interno, argumento comercial e proteção. Como usar a revisão independente das contas a favor da carteira, e não contra ela.",
+      "meta": {
+        "_ff_tempo_leitura": 8,
+        "_ff_eyebrow": "Condomínios · Auditoria · Para administradoras"
+      },
+      "fonte": "posts/post-05-auditoria-para-administradoras.md",
+      "seo": {
+        "focus_keyword": "auditoria condominial administradora",
+        "title": "Auditoria condominial para administradoras: gestão e segurança | Fireflies",
+        "description": "Por que a administradora ganha com a auditoria das contas dos condomínios: controle interno, apoio ao síndico, proteção da equipe e da carteira."
+      }
+    },
+    {
+      "titulo": "Retenções na fonte no condomínio: o mapa completo de PCC, INSS, IRRF e ISS",
+      "slug": "retencoes-na-fonte-no-condominio",
+      "url": "/blog/retencoes-na-fonte-no-condominio/",
+      "data": "2026-10-21",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "pcc",
+        "inss",
+        "irrf",
+        "iss",
+        "efd-reinf",
+        "administradoras"
+      ],
+      "excerpt": "O condomínio não paga imposto sobre a cota, mas é responsável por reter tributos de quem contrata. Um mapa de PCC, INSS, IRRF e ISS: quando reter, quanto, até quando recolher e onde declarar.",
+      "meta": {
+        "_ff_tempo_leitura": 9,
+        "_ff_eyebrow": "Fiscal · Condomínios · Retenções"
+      },
+      "fonte": "posts/post-06-retencoes-no-condominio.md",
+      "seo": {
+        "focus_keyword": "retenção de impostos condomínio",
+        "title": "Retenções no condomínio: PCC, INSS, IRRF e ISS | Fireflies Consultoria",
+        "description": "Quando o condomínio deve reter PCC (4,65%), INSS (11%), IRRF e ISS, os prazos de recolhimento e as declarações (EFD-Reinf e DCTFWeb)."
+      }
+    },
+    {
+      "titulo": "PIS, Cofins e CSLL retidos (4,65%): quando o condomínio deve reter",
+      "slug": "retencao-pcc-condominio",
+      "url": "/blog/retencao-pcc-condominio/",
+      "data": "2026-10-23",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "pcc",
+        "efd-reinf",
+        "administradoras"
+      ],
+      "excerpt": "O condomínio edilício está expressamente obrigado a reter PIS, Cofins e CSLL sobre limpeza, manutenção, vigilância e serviços profissionais. Quando reter, quando não reter, o valor mínimo e o que diz a Receita sobre manutenção e conserto.",
+      "meta": {
+        "_ff_tempo_leitura": 8,
+        "_ff_eyebrow": "Fiscal · Condomínios · Retenções · PCC"
+      },
+      "fonte": "posts/post-07-pcc-no-condominio.md",
+      "seo": {
+        "focus_keyword": "retenção PCC condomínio",
+        "title": "Retenção de PIS, Cofins e CSLL (4,65%) no condomínio | Fireflies",
+        "description": "Condomínio edilício deve reter 4,65% de PCC em limpeza, manutenção, vigilância e serviços profissionais. Valor mínimo, exceções, DARF 5952 e EFD-Reinf."
+      }
+    },
+    {
+      "titulo": "INSS retido de 11% no condomínio: cessão de mão de obra, empreitada e as dispensas",
+      "slug": "retencao-inss-11-condominio",
+      "url": "/blog/retencao-inss-11-condominio/",
+      "data": "2026-10-28",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "inss",
+        "efd-reinf",
+        "administradoras"
+      ],
+      "excerpt": "Portaria, limpeza, vigilância e obras costumam ter retenção de 11% de INSS. Quando o condomínio deve reter, as dispensas consolidadas pela Receita em 2025, a base de cálculo com materiais e o caso do Simples Nacional.",
+      "meta": {
+        "_ff_tempo_leitura": 9,
+        "_ff_eyebrow": "Fiscal · Condomínios · Retenções · INSS"
+      },
+      "fonte": "posts/post-08-inss-no-condominio.md",
+      "seo": {
+        "focus_keyword": "retenção INSS 11% condomínio",
+        "title": "Retenção de INSS de 11% no condomínio | Fireflies Consultoria",
+        "description": "Quando o condomínio deve reter 11% de INSS: cessão de mão de obra e empreitada, dispensas da IN 2.289/2025, materiais e equipamentos, Simples Nacional e EFD-Reinf."
+      }
+    },
+    {
+      "titulo": "Imposto de Renda na fonte: quando o condomínio retém (e quando não retém)",
+      "slug": "irrf-condominio-quando-reter",
+      "url": "/blog/irrf-condominio-quando-reter/",
+      "data": "2026-10-30",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "irrf",
+        "administradoras",
+        "sindico"
+      ],
+      "excerpt": "Condomínio não retém IR sobre serviços de empresas e de autônomos, mas retém sobre o salário dos empregados. A base dessa regra, o que mudou na tabela de 2026 e onde as administradoras mais erram.",
+      "meta": {
+        "_ff_tempo_leitura": 7,
+        "_ff_eyebrow": "Fiscal · Condomínios · Retenções · IRRF"
+      },
+      "fonte": "posts/post-09-irrf-no-condominio.md",
+      "seo": {
+        "focus_keyword": "condomínio retém imposto de renda",
+        "title": "IR na fonte no condomínio: quando reter | Fireflies Consultoria",
+        "description": "Condomínio não é obrigado a reter IR sobre serviços de PJ e autônomos (PN CST 37/1972), mas retém sobre salários. Tabela 2026, exceções e erros comuns."
+      }
+    },
+    {
+      "titulo": "ISS retido pelo condomínio em São Paulo: os 7 serviços e o fim do CPOM",
+      "slug": "iss-retido-condominio-sao-paulo",
+      "url": "/blog/iss-retido-condominio-sao-paulo/",
+      "data": "2026-11-04",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "iss",
+        "administradoras"
+      ],
+      "excerpt": "Em São Paulo, o condomínio é responsável pelo ISS de sete tipos de serviço, como vigilância, limpeza e fornecimento de mão de obra. Quais são, como reter e o que mudou com a decisão do STF sobre o CPOM.",
+      "meta": {
+        "_ff_tempo_leitura": 6,
+        "_ff_eyebrow": "Fiscal · Condomínios · Retenções · ISS"
+      },
+      "fonte": "posts/post-10-iss-retido-condominio-sp.md",
+      "seo": {
+        "focus_keyword": "ISS retido condomínio São Paulo",
+        "title": "ISS retido pelo condomínio em São Paulo | Fireflies Consultoria",
+        "description": "Os 7 serviços em que o condomínio de São Paulo deve reter ISS (Lei 13.701/2003, art. 9º), como recolher e o efeito da decisão do STF sobre o CPOM."
+      }
+    },
+    {
+      "titulo": "Contratou um MEI para pintura ou elétrica? O condomínio pode dever 20% de INSS",
+      "slug": "condominio-contrata-mei-inss-20",
+      "url": "/blog/condominio-contrata-mei-inss-20/",
+      "data": "2026-11-06",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "fiscal",
+      "categorias": [
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "inss",
+        "retencoes",
+        "administradoras",
+        "sindico"
+      ],
+      "excerpt": "MEI não sofre retenção, mas em seis tipos de serviço o condomínio que contrata paga 20% de contribuição previdenciária sobre o valor. Quais são, como calcular e como informar no eSocial.",
+      "meta": {
+        "_ff_tempo_leitura": 5,
+        "_ff_eyebrow": "Fiscal · Condomínios · INSS · MEI"
+      },
+      "fonte": "posts/post-11-mei-no-condominio.md",
+      "seo": {
+        "focus_keyword": "condomínio contrata MEI INSS",
+        "title": "Condomínio que contrata MEI: INSS de 20% | Fireflies Consultoria",
+        "description": "Em hidráulica, elétrica, pintura, alvenaria, carpintaria e manutenção de veículos, o condomínio que contrata MEI recolhe 20% de INSS (LC 123, art. 18-B)."
+      }
+    },
+    {
+      "titulo": "Retenções em 2027: o PCC de 4,65% vira CSLL de 1%. O que o condomínio precisa ajustar",
+      "slug": "retencoes-2027-pcc-csll-condominio",
+      "url": "/blog/retencoes-2027-pcc-csll-condominio/",
+      "data": "2026-11-11",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "reforma-tributaria",
+      "categorias": [
+        "reforma-tributaria",
+        "fiscal",
+        "condominios"
+      ],
+      "tags": [
+        "retencoes",
+        "pcc",
+        "ibs-cbs",
+        "lc-214-2025",
+        "administradoras"
+      ],
+      "excerpt": "Com o fim do PIS e da Cofins em 01/01/2027, a retenção de 4,65% passa a ser só de CSLL, 1%. Vale a data do pagamento. O que ajustar em sistemas, contratos e no fechamento de dezembro.",
+      "meta": {
+        "_ff_tempo_leitura": 6,
+        "_ff_eyebrow": "Reforma Tributária · Retenções · 2027"
+      },
+      "fonte": "posts/post-12-retencoes-2027.md",
+      "seo": {
+        "focus_keyword": "retenção 2027 CSLL 1%",
+        "title": "Retenções em 2027: PCC vira CSLL de 1% | Fireflies Consultoria",
+        "description": "A partir de 01/01/2027, a retenção de PIS, Cofins e CSLL (4,65%) passa a ser só CSLL (1%). Critério pela data do pagamento e o que o condomínio deve ajustar."
+      }
+    },
+    {
+      "titulo": "Síndico remunerado: INSS, Imposto de Renda e a isenção da cota",
+      "slug": "remuneracao-do-sindico-inss-ir",
+      "url": "/blog/remuneracao-do-sindico-inss-ir/",
+      "data": "2026-11-13",
+      "status": "future",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "condominios",
+      "categorias": [
+        "condominios",
+        "fiscal"
+      ],
+      "tags": [
+        "sindico",
+        "inss",
+        "irrf",
+        "administradoras"
+      ],
+      "excerpt": "Pró-labore ou isenção da cota, a remuneração do síndico tem encargos: o condomínio recolhe 20% de INSS e retém 11% do síndico. O IR é do próprio síndico, e a isenção da cota tem entendimentos diferentes na Receita e no STJ.",
+      "meta": {
+        "_ff_tempo_leitura": 6,
+        "_ff_eyebrow": "Condomínios · Síndico · Encargos"
+      },
+      "fonte": "posts/post-13-remuneracao-do-sindico.md",
+      "seo": {
+        "focus_keyword": "remuneração do síndico INSS",
+        "title": "Síndico remunerado: INSS, IR e isenção da cota | Fireflies",
+        "description": "Encargos da remuneração do síndico: 20% de INSS do condomínio, 11% retidos do síndico, IR pelo carnê-leão e a divergência entre Receita e STJ sobre a isenção da cota."
+      }
     }
   ],
   "rascunhos_pauta": [

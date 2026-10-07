@@ -27,13 +27,18 @@ foreach ( $ps['categorias'] as $c ) {
 		$cats[] = $t->term_id;
 	}
 }
-$data   = $ps['data'] . ' 09:00:00';
+foreach ( $ps['tags'] as $t ) {
+	if ( ! get_term_by( 'slug', $t, 'post_tag' ) ) {
+		wp_insert_term( defined( 'FIREFLIES_CORE_ETIQUETAS' ) ? ( FIREFLIES_CORE_ETIQUETAS[ $t ] ?? $t ) : $t, 'post_tag', array( 'slug' => $t ) );
+	}
+}
+$data   = ( getenv( 'FF_DATA' ) ?: $ps['data'] ) . ' 09:00:00';
 $existe = get_page_by_path( $ps['slug'], OBJECT, 'post' );
 $id     = wp_insert_post(
 	array(
 		'ID'             => $existe ? $existe->ID : 0,
 		'post_type'      => 'post',
-		'post_status'    => $ps['status'],
+		'post_status'    => getenv( 'FF_STATUS' ) ?: $ps['status'],
 		'post_title'     => $ps['titulo'],
 		'post_name'      => $ps['slug'],
 		'post_excerpt'   => $ps['excerpt'],

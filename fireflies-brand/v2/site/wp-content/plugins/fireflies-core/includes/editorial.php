@@ -234,3 +234,37 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * Tabelas com 3 colunas ou mais viram cartões no celular: cada célula recebe o rótulo da coluna
+ * (data-rotulo), e o CSS mostra esse rótulo acima do valor. Tabelas de códigos e de números ficam como estão.
+ */
+add_filter(
+	'render_block_core/table',
+	static function ( string $html ): string {
+		if ( str_contains( $html, 'is-style-codigos' ) || str_contains( $html, 'is-style-numeros' ) || ! preg_match( '~<thead>(.*?)</thead>~s', $html, $cab ) ) {
+			return $html;
+		}
+		preg_match_all( '~<th[^>]*>(.*?)</th>~s', $cab[1], $ths );
+		$rotulos = array_map( static fn( $t ) => trim( wp_strip_all_tags( $t ) ), $ths[1] );
+		if ( count( $rotulos ) < 3 ) {
+			return $html;
+		}
+		$html = preg_replace_callback(
+			'~<tr>(.*?)</tr>~s',
+			static function ( array $tr ) use ( $rotulos ): string {
+				$i = 0;
+				return '<tr>' . preg_replace_callback(
+					'~<td(\s[^>]*)?>~',
+					static function ( array $td ) use ( $rotulos, &$i ): string {
+						$r = $rotulos[ $i++ ] ?? '';
+						return '<td' . ( $td[1] ?? '' ) . ' data-rotulo="' . esc_attr( $r ) . '">';
+					},
+					$tr[1]
+				) . '</tr>';
+			},
+			$html
+		);
+		return preg_replace( '~class="wp-block-table~', 'class="wp-block-table ff-tabela-cartoes', $html, 1 );
+	}
+);
