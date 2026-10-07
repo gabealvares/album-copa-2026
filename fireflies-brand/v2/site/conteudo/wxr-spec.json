@@ -852,6 +852,38 @@
       }
     },
     {
+      "titulo": "Reforma tributária no condomínio: o que fazer até dezembro, começando pelo cadastro",
+      "slug": "reforma-tributaria-condominio-o-que-fazer-ate-dezembro",
+      "url": "/blog/reforma-tributaria-condominio-o-que-fazer-ate-dezembro/",
+      "data": "2026-10-07",
+      "status": "publish",
+      "autor": "gabriel-alvares",
+      "categoria_principal": "reforma-tributaria",
+      "categorias": [
+        "reforma-tributaria",
+        "condominios"
+      ],
+      "tags": [
+        "nfs-e",
+        "cib",
+        "iptu",
+        "cadastro-de-condominos",
+        "administradoras",
+        "lc-214-2025"
+      ],
+      "excerpt": "A partir de 01/12/2026, cada cobrança do condomínio sai em NFS-e, com o imóvel e o condômino identificados. Antes de pensar em sistema, o trabalho é de cadastro: inscrição de IPTU, código CIB e nome e CPF corretos de cada proprietário.",
+      "meta": {
+        "_ff_tempo_leitura": 10,
+        "_ff_eyebrow": "Reforma Tributária · Condomínios · O que fazer até 01/12/2026"
+      },
+      "fonte": "posts/post-04-cadastro-condominio-ate-dezembro.md",
+      "seo": {
+        "focus_keyword": "cadastro de condôminos NFS-e",
+        "title": "Condomínio até dezembro: IPTU, CIB e CPF dos condôminos | Fireflies Consultoria",
+        "description": "A NFS-e do condomínio começa em 01/12/2026. Por que o cadastro vem primeiro: inscrição de IPTU, código CIB e nome e CPF corretos de cada proprietário."
+      }
+    },
+    {
       "titulo": "Fundo de reserva não é caixa do mês",
       "slug": "fundo-de-reserva-nao-e-caixa-do-mes",
       "url": "/blog/fundo-de-reserva-nao-e-caixa-do-mes/",

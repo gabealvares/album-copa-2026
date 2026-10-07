@@ -44,6 +44,10 @@ function fireflies_core_titulos( int $post_id ): array {
 	$planos = array();
 	$andar  = static function ( array $lista ) use ( &$andar, &$planos ): void {
 		foreach ( $lista as $b ) {
+			// O chamado final (fundo Anil) não é seção do artigo: fica fora do índice.
+			if ( str_contains( (string) ( $b['attrs']['className'] ?? '' ), 'ff-cta-post' ) ) {
+				continue;
+			}
 			$planos[] = $b;
 			if ( ! empty( $b['innerBlocks'] ) ) {
 				$andar( $b['innerBlocks'] );
