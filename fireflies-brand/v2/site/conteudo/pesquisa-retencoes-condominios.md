@@ -27,3 +27,23 @@ Base para os posts 05 a 13. Material de partida: fichas internas "RET – INSS",
 - Receita Federal: perguntas frequentes do CIB; notícia de 11/2025 sobre a IN 2.289/2025; MIT/DCTFWeb (12/2024); EFD-Reinf perguntas e respostas.
 - Normas: Lei 10.833/2003; Lei 13.137/2015; IN SRF 459/2004; IN RFB 2.110/2022; IN RFB 2.289/2025; LC 214/2025 (arts. 26, 265, 266, 509); LC 123/2006 (art. 18-B); Lei 15.270/2025; PN CST 37/1972; SC Cosit 170/2026 e 190/2026; Lei municipal SP 13.701/2003; STF Tema 1020.
 - Publicações e administradoras/associações: Lowndes, SíndicoNet, Superlógica (condomínios), uCondo, Group Software, Auxiliadora Predial, CondoConta, SESCON-RJ, CRC-CE, CRC-GO, Contábeis, Portal Tributário, Migalhas, Rota da Jurisprudência, Carmelitas, Comunidade Contábil, LegisWeb, Lefisc.
+
+---
+
+# Pesquisa complementar · retenções de 2027 em diante (07/10/2026)
+
+Base do post 14 ("Retenções: hoje × 2027 × 2028 × 2033").
+
+| Tema | O que vale | Status | Fonte |
+|---|---|---|---|
+| PCC (4,65%) | A partir de 01/01/2027, só CSLL de 1%; critério: data do pagamento | Definido em lei | LC 214/2025, art. 509 (nova redação do art. 30 da Lei 10.833/2003); Contábeis, 29/09/2026 |
+| Código de DARF e leiaute da EFD-Reinf para a CSLL isolada | Não publicados até 07/10/2026; R-4020 precisará de ajuste | Depende de regulamentação | Contábeis; v360; Manual EFD-Reinf 2.1.2.1 (NT 03/2025) |
+| INSS 11% (regra geral) | Sem mudança pela reforma do consumo | Definido (sem alteração) | Lei 8.212/1991, art. 31; IN RFB 2.110/2022 |
+| INSS 3,5% para empresas na CPRB | Mantido em 2025, 2026 e 2027; volta a 11% em 01/01/2028, com o fim da CPRB | Definido (lei + solução de consulta) | Lei 14.973/2024; Lei 12.546/2011, art. 7º, § 6º; Solução de Consulta Cosit nº 153/2026 (20/08/2026) |
+| IRRF | Sem mudança pela reforma do consumo; condomínio só retém sobre salários | Definido | PN CST 37/1972; Lei 15.270/2025 (tabela 2026) |
+| CBS/IBS retidos pelo condomínio | Não há retenção de CBS/IBS pelo condomínio tomador no regulamento da CBS | Definido (regulamento) | Decreto 12.955/2026 (29/04/2026), arts. 25 (condomínio) e 28 a 35 (split payment) |
+| Split payment | Opcional a partir de 2027, começando por operações entre empresas; obrigatoriedade sem data | Cenário / depende de ato conjunto RFB e CGIBS | LC 214/2025, arts. 31 a 35 (art. 35, § 2º); Contábeis, 13/08/2026 |
+| Responsabilidade do adquirente sem split | O dispositivo que tornava o adquirente solidário foi vetado (art. 36, § 2º) | Definido | LC 214/2025; EY (05/2025) |
+| ISS | 2027-2028 igual; 2029-2032 alíquota a 90%, 80%, 70% e 60%; extinto em 2033 | Definido na Constituição | EC 132/2023; LC 214/2025 |
+| Retenção de ISS pelo tomador (SP) | Continua enquanto existir o ISS; diminui com a alíquota de 2029 a 2032; acaba com o ISS em 2033 | Definido (consequência) / forma de cobrança do IBS: cenário | Lei municipal SP 13.701/2003; EC 132/2023 |
+| Condomínio contribuinte de CBS/IBS | Só se optar pelo regime regular ou se as cotas forem menos de 80% da receita | Definido | LC 214/2025, art. 26; Decreto 12.955/2026, art. 25 |

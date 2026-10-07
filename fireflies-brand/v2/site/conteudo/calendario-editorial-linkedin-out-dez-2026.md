@@ -1,6 +1,6 @@
 # Calendário editorial · Blog + LinkedIn · 07/10 a 01/12/2026
 
-A planilha (.xlsx) com status, responsável e contagem de caracteres foi entregue diretamente; este arquivo é a versão em texto para o repositório.
+Versão em texto da planilha `calendario-editorial-linkedin-out-dez-2026.xlsx` (que tem status, responsável e contagem de caracteres).
 
 | Nº | Data | Dia | Tipo | Título | Formato no LinkedIn |
 |---|---|---|---|---|---|
@@ -17,8 +17,9 @@ A planilha (.xlsx) com status, responsável e contagem de caracteres foi entregu
 | 11 | 11/11/2026 | qua | Artigo | Retenções em 2027: o PCC de 4,65% vira CSLL de 1%. O que o condomínio precisa ajustar | Post com imagem (tabela dezembro × janeiro) |
 | 12 | 13/11/2026 | sex | Artigo | Síndico remunerado: INSS, Imposto de Renda e a isenção da cota | Post com imagem |
 | 13 | 18/11/2026 | qua | Lembrete | Contagem regressiva: 2 semanas para a NFS-e do condomínio | Post curto com imagem (contador "13 dias") |
-| 14 | 25/11/2026 | qua | Lembrete | Contagem regressiva: 1 semana para a NFS-e do condomínio | Post curto com imagem (contador "6 dias") |
-| 15 | 01/12/2026 | ter | Lembrete | Começou: NFS-e obrigatória para condomínios | Post com imagem |
+| 14 | 20/11/2026 | sex | Artigo | Retenções no condomínio: o que muda em 2027, 2028 e até 2033 (e o que continua igual) | Documento PDF (tabela hoje × futuro) ou carrossel |
+| 15 | 25/11/2026 | qua | Lembrete | Contagem regressiva: 1 semana para a NFS-e do condomínio | Post curto com imagem (contador "6 dias") |
+| 16 | 01/12/2026 | ter | Lembrete | Começou: NFS-e obrigatória para condomínios | Post com imagem |
 
 ## Textos do LinkedIn
 
@@ -290,7 +291,29 @@ https://fireflies.com.br/blog/reforma-tributaria-condominio-o-que-fazer-ate-deze
 #Condomínios #NFSe #ReformaTributária
 ```
 
-### 14 · 25/11 · Contagem regressiva: 1 semana para a NFS-e do condomínio
+### 14 · 20/11 · Retenções no condomínio: o que muda em 2027, 2028 e até 2033 (e o que continua igual)
+
+```
+4,65% vira 1%. 3,5% vira 11%. E o ISS acaba. Seu condomínio está pronto para as próximas viradas?
+
+A reforma tributária muda as retenções do condomínio aos poucos:
+
+→ 2027: PIS, Cofins e CSLL retidos (4,65%) viram só CSLL, 1%
+→ 2028: empresas da desoneração da folha saem dos 3,5% de INSS e voltam para 11%
+→ 2029 a 2032: o ISS diminui todo ano
+→ 2033: o ISS acaba, e a retenção de ISS também
+
+O que não muda: INSS de 11% na regra geral e o IR sobre salários.
+
+No artigo, uma tabela única de hoje até 2033, separando o que já é lei, o que falta regulamentar e o que ainda é cenário, com exemplos em reais.
+
+Veja a tabela completa:
+https://fireflies.com.br/blog/retencoes-condominio-2027-2028-2033/?utm_source=linkedin&utm_medium=social&utm_campaign=condominios-2026
+
+#Condomínios #ReformaTributária #Retenções #Administradoras
+```
+
+### 15 · 25/11 · Contagem regressiva: 1 semana para a NFS-e do condomínio
 
 ```
 Na próxima terça, 01/12, começa a NFS-e do condomínio.
@@ -308,7 +331,7 @@ https://fireflies.com.br/blog/nfse-condominios-codigo-99-05-01/?utm_source=linke
 #Condomínios #NFSe #Administradoras
 ```
 
-### 15 · 01/12 · Começou: NFS-e obrigatória para condomínios
+### 16 · 01/12 · Começou: NFS-e obrigatória para condomínios
 
 ```
 Hoje começa a NFS-e do condomínio. E agora?
