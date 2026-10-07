@@ -7,5 +7,32 @@
   "print": false,
   "bleed": 0,
   "png": true
+ },
+ {
+  "rel": "redes/linkedin-cadastro-01-capa_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-cadastro-02-tres-cadastros_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-cadastro-03-cpf-errado_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
  }
 ]
