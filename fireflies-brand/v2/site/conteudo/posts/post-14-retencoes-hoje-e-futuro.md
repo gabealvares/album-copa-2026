@@ -108,6 +108,11 @@ O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de
 [bloco: em-aberto] **Código de DARF e EFD-Reinf para a CSLL de 1%** · FALTA REGULAMENTAR
 Hoje, o PCC é pago no DARF 5952 e informado na EFD-Reinf (evento R-4020). Até 07/10/2026, a Receita não havia publicado o código e o ajuste da declaração para a retenção só de CSLL. É algo a acompanhar antes do fechamento de dezembro.
 
+[bloco: em-aberto] **Notas pequenas: o piso de R$ 10,00 com a CSLL de 1%** · A CONFIRMAR
+Hoje, a retenção de até R$ 10,00 é dispensada (art. 31, § 3º, da Lei nº 10.833/2003). Com a alíquota de 4,65%, ficam de fora as notas de até R$ 215,05.
+A LC 214/2025 trocou a alíquota desse artigo por 1% e, pelo texto consolidado, manteve o piso de R$ 10,00. Se for assim, a partir de 2027 ficam sem retenção as notas de até R$ 1.000,00, como a manutenção mensal de portão ou a dedetização.
+Ainda não temos certeza. A Receita não atualizou a IN SRF 459/2004, que detalha a dispensa, e pode ajustar a regra. Vale confirmar antes de configurar os pagamentos de 2027.
+
 [bloco: em-aberto] **Split payment** · CENÁRIO
 É o mecanismo que vai cobrar a CBS e o IBS: no momento do pagamento, o banco ou a instituição de pagamento separa a parte do imposto e manda direto para o governo. A lei prevê que ele comece de forma gradual. As notícias de agosto de 2026 indicam início **opcional em 2027**, primeiro entre empresas, e **ainda sem data para ser obrigatório**. Para o condomínio que só contrata serviços, o efeito esperado é pequeno: o valor da nota não muda, muda quem repassa o imposto.
 

@@ -408,6 +408,25 @@
 <!-- wp:group {"className":"is-style-em-aberto"} -->
 <div class="wp-block-group is-style-em-aberto">
 <!-- wp:paragraph {"className":"is-style-rotulo"} -->
+<p class="is-style-rotulo">A confirmar</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Notas pequenas: o piso de R$ 10,00 com a CSLL de 1%</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Hoje, a retenção de até R$ 10,00 é dispensada (art. 31, § 3º, da Lei nº 10.833/2003). Com a alíquota de 4,65%, ficam de fora as notas de até R$ 215,05.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A LC 214/2025 trocou a alíquota desse artigo por 1% e, pelo texto consolidado, manteve o piso de R$ 10,00. Se for assim, a partir de 2027 ficam sem retenção as notas de até R$ 1.000,00, como a manutenção mensal de portão ou a dedetização.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Ainda não temos certeza. A Receita não atualizou a IN SRF 459/2004, que detalha a dispensa, e pode ajustar a regra. Vale confirmar antes de configurar os pagamentos de 2027.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"is-style-em-aberto"} -->
+<div class="wp-block-group is-style-em-aberto">
+<!-- wp:paragraph {"className":"is-style-rotulo"} -->
 <p class="is-style-rotulo">Em aberto</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4} -->
