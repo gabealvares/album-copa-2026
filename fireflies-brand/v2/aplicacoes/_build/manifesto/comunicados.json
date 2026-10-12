@@ -149,7 +149,7 @@
   "unit": "px",
   "print": false,
   "bleed": 0,
-  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_5-paginas",
   "png": true
  },
  {
@@ -159,27 +159,37 @@
   "unit": "px",
   "print": false,
   "bleed": 0,
-  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_5-paginas",
   "png": true
  },
  {
-  "rel": "redes/linkedin-carrossel-retencoes-curto-03-em-aberto_1200x1500",
+  "rel": "redes/linkedin-carrossel-retencoes-curto-04-em-aberto_1200x1500",
   "w": 1200,
   "h": 1500,
   "unit": "px",
   "print": false,
   "bleed": 0,
-  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_5-paginas",
   "png": true
  },
  {
-  "rel": "redes/linkedin-carrossel-retencoes-curto-04-chamada_1200x1500",
+  "rel": "redes/linkedin-carrossel-retencoes-curto-03-dia-do-pagamento_1200x1500",
   "w": 1200,
   "h": 1500,
   "unit": "px",
   "print": false,
   "bleed": 0,
-  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_5-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-curto-05-chamada_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_5-paginas",
   "png": true
  }
 ]

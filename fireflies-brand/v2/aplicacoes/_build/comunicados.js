@@ -429,11 +429,11 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
   }
 }
 
-// 4 · Carrossel curto de retenções: chamada para o artigo (4 cards). Uma ideia por card, um destaque por título.
+// 4 · Carrossel curto de retenções: sem link para o blog (5 cards). Uma ideia por card, um destaque por título.
 {
-  const W = 1200, H = 1500, M = 90, N = 4;
+  const W = 1200, H = 1500, M = 90, N = 5;
   const foto = path.join(__dirname, 'fotos/gabriel-alvares.jpg');
-  const PDF = DIR + 'linkedin-carrossel-retencoes-curto_4-paginas';
+  const PDF = DIR + 'linkedin-carrossel-retencoes-curto_5-paginas';
   const topo = (n) => eyebrow(M, 140, 'Reforma tributária · Retenções')
     + t(`${n}/${N}`, { f: 'mono5', s: 22, x: W - M, y: 140, fill: C.fumaca, a: 'end', tr: 0.1 });
   const rodape = (seta = true) => line(M, H - 130, W - M, H - 130, C.fuligem, 1.5)
@@ -480,14 +480,14 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
       ['2033', 'Fim do ISS e da retenção dele'],
     ], tt.y + 110, 170, C.vermelhao);
     b += l.svg;
-    b += nota('DATAS JÁ DEFINIDAS EM LEI · DETALHES NA SEÇÃO 03', l.y + 70);
+    b += nota('DATAS JÁ DEFINIDAS EM LEI', l.y + 70);
     b += rodape();
     salvar(2, 'calendario', b, 'calendário');
   }
 
   // 3 · em aberto
   {
-    let b = topo(3);
+    let b = topo(4);
     const tt = titulo('O QUE **AINDA NÃO SABEMOS.**', { s: 84, w: 1020, x: M, y: 300 });
     b += tt.svg;
     const l = linhas([
@@ -496,24 +496,44 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
       ['CENÁRIO', 'Quando o split payment passa a ser obrigatório'],
     ], tt.y + 110, 230, C.ceu, true);
     b += l.svg;
-    b += nota('ACOMPANHAMOS CADA PONTO NA SEÇÃO 04', l.y + 70);
+    b += nota('SEGUIMOS ACOMPANHANDO CADA PONTO', l.y + 70);
     b += rodape();
-    salvar(3, 'em-aberto', b, 'o que ainda não sabemos');
+    salvar(4, 'em-aberto', b, 'o que ainda não sabemos');
   }
 
-  // 4 · chamada
+  // 3 · o dia do pagamento
   {
-    let b = topo(4);
-    const tt = titulo('A TABELA COMPLETA **ESTÁ NO BLOG.**', { s: 92, w: 1020, x: M, y: 360 });
+    let b = topo(3);
+    const tt = titulo('O DIA DO PAGAMENTO **DECIDE A ALÍQUOTA.**', { s: 80, w: 1020, x: M, y: 300 });
     b += tt.svg;
-    b += corpo('Exemplos em reais, a fonte de cada regra e o que conferir antes do fechamento de dezembro.', { s: 36, lh: 50, w: 1000, x: M, y: tt.y + 100 }).svg;
-    b += fio(tt.y + 330);
-    b += t('LINK NO PRIMEIRO COMENTÁRIO', { f: 'mono5', s: 26, x: M, y: tt.y + 410, fill: C.vermelhao, tr: 0.12 });
-    b += t('fireflies.com.br/blog', { f: 'sora7', s: 56, x: M, y: tt.y + 500, fill: C.cal });
-    b += fio(tt.y + 570);
-    b += corpo('**Quer as retenções da sua carteira prontas para 2027?** Fale com a gente.', { s: 32, lh: 44, w: 1000, x: M, y: tt.y + 660 }).svg;
+    b += corpo('Não importa a data da nota. A retenção segue a regra do dia em que o condomínio paga.', { s: 36, lh: 48, w: 1000, x: M, y: tt.y + 100 }).svg;
+    const lin = [['NOTA DE DEZEMBRO', 'PAGA EM DEZEMBRO', '4,65%'], ['NOTA DE DEZEMBRO', 'PAGA EM JANEIRO', '1%']];
+    let y = tt.y + 290;
+    lin.forEach(([a0, p0, v], k) => {
+      b += fio(y);
+      b += t(a0, { f: 'mono5', s: 22, x: M, y: y + 70, fill: C.fumaca, tr: 0.1 });
+      b += t(p0, { f: 'mono5', s: 22, x: M, y: y + 108, fill: C.ceu, tr: 0.1 });
+      b += t(v, { f: 'sora7', s: 88, x: W - M, y: y + 116, fill: k ? C.vermelhao : C.cal, a: 'end' });
+      y += 170;
+    });
+    b += fio(y);
+    b += corpo('Vale separar agora quais notas de dezembro de 2026 vão ser pagas só em janeiro.', { s: 32, lh: 44, w: 1000, x: M, y: y + 80 }).svg;
+    b += rodape();
+    salvar(3, 'dia-do-pagamento', b, 'o dia do pagamento');
+  }
+
+  // 5 · chamada (sem link): o retrato traz a única luz do card
+  {
+    let b = topo(5);
+    b += retrato(foto, { cx: W / 2, cy: 470, r: 200 });
+    b += t('Gabriel Alvares', { f: 'sans6', s: 30, x: W / 2, y: 790, fill: C.cal, a: 'middle' });
+    b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 18, x: W / 2, y: 824, fill: C.fumaca, a: 'middle', tr: 0.12 });
+    const tt = titulo('E NA SUA **CARTEIRA?**', { s: 84, w: 1020, x: M, y: 960 });
+    b += tt.svg;
+    b += corpo('A gente levanta os prestadores de cada condomínio e deixa as retenções prontas para 2027 e 2028.', { s: 34, lh: 46, w: 1000, x: M, y: tt.y + 84 }).svg;
+    b += t('WHATSAPP +55 11 98245-0527', { f: 'mono5', s: 28, x: M, y: tt.y + 250, fill: C.vermelhao, tr: 0.1 });
     b += rodape(false);
-    salvar(4, 'chamada', b, 'chamada');
+    salvar(5, 'chamada', b, 'chamada');
   }
 }
 L.flush('comunicados');
