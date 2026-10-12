@@ -22,7 +22,7 @@ seo:
 
 - **Breadcrumb:** Início / Termos de Uso
 - **H1:** Termos de Uso
-- **Linha mono:** ÚLTIMA ATUALIZAÇÃO · [dd/mm/aaaa a confirmar] · VERSÃO 1.0
+- **Linha mono:** ÚLTIMA ATUALIZAÇÃO · 04/10/2026 · VERSÃO 1.0
 
 ## 2. Texto
 [pattern: texto-legal]
@@ -61,7 +61,7 @@ O site tem links para normas oficiais, para o WhatsApp e para outros sites. Não
 Ao nos chamar pelo WhatsApp ou pelo formulário, você concorda em receber a resposta pelo mesmo canal. Os dados enviados são tratados conforme a [Política de Privacidade](/politica-de-privacidade/). Não envie documentos ou informações sensíveis antes da primeira conversa.
 
 ### 8. Fireflies Academy
-Inscrições, valores, carga horária, certificados e cancelamentos de treinamentos seguem a proposta ou o regulamento de cada turma [a confirmar]. A verificação de certificados pelo site, quando disponível, mostra apenas os dados necessários para confirmar a autenticidade.
+Inscrições, valores, carga horária, certificados e cancelamentos de treinamentos seguem a proposta ou o regulamento de cada turma. A verificação de certificados pelo site, quando disponível, mostra apenas os dados necessários para confirmar a autenticidade.
 
 ### 9. Responsabilidade
 Fazemos o possível para manter o site disponível, seguro e com informações corretas, mas não garantimos funcionamento ininterrupto nem ausência de erros. Na extensão permitida pela lei, a Fireflies não responde por decisões tomadas apenas com base no conteúdo informativo do site, sem análise profissional do caso.

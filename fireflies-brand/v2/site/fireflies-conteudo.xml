@@ -631,7 +631,7 @@
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"nota","fontFamily":"plex-mono","style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
-<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--40)">Simulação ilustrativa. Os percentuais de referência são definidos pelo responsável técnico [a confirmar] e não substituem a análise das contas reais do seu condomínio.</p>
+<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--40)">Simulação ilustrativa. Os percentuais de referência são estimativas de mercado e não substituem a análise das contas reais do seu condomínio.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
@@ -3410,7 +3410,7 @@
 <div class="wp-block-group ff-faq">
 <!-- wp:details -->
 <details class="wp-block-details"><summary>Vocês vendem ou indicam algum ERP específico?</summary><!-- wp:paragraph -->
-<p>A recomendação parte das necessidades da empresa. Se houver qualquer relação comercial com um fornecedor, ela é informada antes da recomendação [a confirmar política com o Gabriel].</p>
+<p>A recomendação parte das necessidades da empresa. Se houver qualquer relação comercial com um fornecedor, ela é informada antes da recomendação.</p>
 <!-- /wp:paragraph -->
 </details>
 <!-- /wp:details -->
@@ -3987,7 +3987,7 @@
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"nota","fontFamily":"plex-mono","style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
-<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--40)">Simulação ilustrativa. Os percentuais de referência são definidos pelo responsável técnico [a confirmar] e não substituem a análise das contas reais do seu condomínio.</p>
+<p class="has-fumaca-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--40)">Simulação ilustrativa. Os percentuais de referência são estimativas de mercado e não substituem a análise das contas reais do seu condomínio.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
@@ -4992,7 +4992,7 @@
 <li>Mesma carga horária, dividida em encontros mais curtos.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Turma fechada ou aberta [a confirmar].</li>
+<li>Em turma fechada (in company) ou aberta.</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
@@ -5001,7 +5001,7 @@
 </div>
 <!-- /wp:columns -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono","style":{"spacing":{"margin":{"top":"var:preset|spacing|30"}}}} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--30)">Carga horária, número de participantes e valor são definidos na proposta [a confirmar].</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family" style="margin-top:var(--wp--preset--spacing--30)">Carga horária, número de participantes e valor são definidos na proposta.</p>
 <!-- /wp:paragraph -->
 </section>
 <!-- /wp:group -->
@@ -5102,7 +5102,7 @@
 <h3 class="wp-block-heading">Certificado</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Certificado da Fireflies Academy com o Selo de Carta e código de verificação [a confirmar].</p>
+<p>Certificado da Fireflies Academy com o Selo de Carta.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -5133,7 +5133,7 @@
 <hr class="wp-block-separator has-alpha-channel-opacity is-style-fio-rubrica"/>
 <!-- /wp:separator -->
 <!-- wp:paragraph {"fontSize":"lead"} -->
-<p class="has-lead-font-size">As aulas são conduzidas por Gabriel Alvares, contador responsável da Fireflies Consultoria, e por especialistas do backoffice conforme o tema. Os nomes e as credenciais de cada instrutor aparecem na proposta [a confirmar].</p>
+<p class="has-lead-font-size">As aulas são conduzidas por Gabriel Alvares, contador responsável da Fireflies Consultoria, e por especialistas do backoffice conforme o tema. Os nomes e as credenciais de cada instrutor aparecem na proposta.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
@@ -5161,7 +5161,7 @@
 <div class="wp-block-group ff-faq">
 <!-- wp:details -->
 <details class="wp-block-details"><summary>Os cursos têm turma aberta?</summary><!-- wp:paragraph -->
-<p>O formato principal é a turma fechada, in company ou online. Turmas abertas serão divulgadas aqui e no blog [a confirmar].</p>
+<p>O formato principal é a turma fechada, in company ou online. Turmas abertas serão divulgadas aqui e no blog.</p>
 <!-- /wp:paragraph -->
 </details>
 <!-- /wp:details -->
@@ -5173,7 +5173,7 @@
 <!-- /wp:details -->
 <!-- wp:details -->
 <details class="wp-block-details"><summary>O certificado tem validade?</summary><!-- wp:paragraph -->
-<p>É um certificado de participação emitido pela Fireflies Academy, com carga horária, período e código de verificação [a confirmar].</p>
+<p>É um certificado de participação emitido pela Fireflies Academy, com carga horária e período.</p>
 <!-- /wp:paragraph -->
 </details>
 <!-- /wp:details -->
@@ -5973,7 +5973,7 @@
 <p class="is-style-abertura"></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">ÚLTIMA ATUALIZAÇÃO · [dd/mm/aaaa a confirmar] · VERSÃO 1.0</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">ÚLTIMA ATUALIZAÇÃO · 04/10/2026 · VERSÃO 1.0</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -6014,10 +6014,10 @@
 <!-- wp:list {"className":"is-style-estrelas"} -->
 <ul class="wp-block-list is-style-estrelas">
 <!-- wp:list-item -->
-<li><strong>Encarregado:</strong> [nome a confirmar]</li>
+<li><strong>Encarregado:</strong> Gabriel Alvares</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>E-mail:</strong> [privacidade@fireflies.com.br a confirmar] ou contato@fireflies.com.br</li>
+<li><strong>E-mail:</strong> contato@fireflies.com.br</li>
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
@@ -6067,7 +6067,7 @@
 </ul>
 <!-- /wp:list -->
 <!-- wp:paragraph -->
-<p>O papel de cada parte fica descrito no contrato de cada cliente [a confirmar cláusula padrão].</p>
+<p>O papel de cada parte fica descrito no contrato de cada cliente.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p><strong>3.4 Na Fireflies Academy</strong> Nome, e-mail, empresa, cargo, presença e dados do certificado (curso, carga horária, período e código de verificação).</p>
@@ -6099,7 +6099,7 @@
 <!-- wp:list {"className":"is-style-estrelas"} -->
 <ul class="wp-block-list is-style-estrelas">
 <!-- wp:list-item -->
-<li><strong>Fornecedores que nos ajudam a operar:</strong> hospedagem do site [a confirmar], e-mail [a confirmar], formulário [a confirmar], WhatsApp Business (Meta), armazenamento em nuvem e sistemas contábeis [a confirmar]. Eles tratam os dados conforme as nossas instruções e com obrigações de segurança.</li>
+<li><strong>Fornecedores que nos ajudam a operar:</strong> hospedagem do site, e-mail, formulário de contato, WhatsApp Business (Meta), armazenamento em nuvem e sistemas contábeis. Eles tratam os dados conforme as nossas instruções e com obrigações de segurança.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Especialistas do nosso backoffice</strong>, quando participam de um projeto, sob dever de confidencialidade.</li>
@@ -6116,13 +6116,13 @@
 <h2 id="7-transferencia-internacional" class="wp-block-heading">7. Transferência internacional</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Alguns fornecedores (por exemplo, WhatsApp e serviços de e-mail ou nuvem) podem armazenar dados fora do Brasil. Nesses casos, a transferência segue o art. 33 da LGPD e a regulamentação da Autoridade Nacional de Proteção de Dados (ANPD) [a confirmar mecanismo com cada fornecedor].</p>
+<p>Alguns fornecedores (por exemplo, WhatsApp e serviços de e-mail ou nuvem) podem armazenar dados fora do Brasil. Nesses casos, a transferência segue o art. 33 da LGPD e a regulamentação da Autoridade Nacional de Proteção de Dados (ANPD).</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"anchor":"8-por-quanto-tempo-guardamos"} -->
 <h2 id="8-por-quanto-tempo-guardamos" class="wp-block-heading">8. Por quanto tempo guardamos</h2>
 <!-- /wp:heading -->
 <!-- wp:table {"hasFixedLayout":false} -->
-<figure class="wp-block-table"><table><thead><tr><th>Dado</th><th>Prazo</th></tr></thead><tbody><tr><td>Contatos que não viraram contrato</td><td>[24 meses a confirmar] após o último contato, salvo pedido de exclusão antes</td></tr><tr><td>Registros de acesso ao site</td><td>6 meses, conforme o art. 15 da Lei 12.965/2014</td></tr><tr><td>Documentos e registros dos serviços contábeis e fiscais</td><td>Enquanto não ocorrer a prescrição ou decadência dos atos neles registrados, conforme a legislação contábil e tributária (por exemplo, Código Civil, art. 1.194, e Código Tributário Nacional, arts. 173 e 174) [prazos por tipo de documento a confirmar]</td></tr><tr><td>Certificados da Academy</td><td>Enquanto o código de verificação estiver ativo [a confirmar]</td></tr><tr><td>Dados tratados por consentimento</td><td>Até a revogação do consentimento</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table><thead><tr><th>Dado</th><th>Prazo</th></tr></thead><tbody><tr><td>Contatos que não viraram contrato</td><td>24 meses após o último contato, salvo pedido de exclusão antes</td></tr><tr><td>Registros de acesso ao site</td><td>6 meses, conforme o art. 15 da Lei 12.965/2014</td></tr><tr><td>Documentos e registros dos serviços contábeis e fiscais</td><td>Enquanto não ocorrer a prescrição ou decadência dos atos neles registrados, conforme a legislação contábil e tributária (por exemplo, Código Civil, art. 1.194, e Código Tributário Nacional, arts. 173 e 174)</td></tr><tr><td>Certificados da Academy</td><td>Pelo prazo necessário para comprovar a emissão do certificado</td></tr><tr><td>Dados tratados por consentimento</td><td>Até a revogação do consentimento</td></tr></tbody></table></figure>
 <!-- /wp:table -->
 <!-- wp:paragraph -->
 <p>Ao fim do prazo, os dados são eliminados ou anonimizados, salvo as hipóteses de conservação do art. 16 da LGPD.</p>
@@ -6131,10 +6131,10 @@
 <h2 id="9-cookies" class="wp-block-heading">9. Cookies</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Usamos cookies <strong>necessários</strong> (para o site funcionar e guardar as suas preferências de consentimento) e, apenas se você autorizar, cookies <strong>analíticos</strong> [ferramenta a confirmar]. Não usamos cookies de publicidade [a confirmar]. Você pode mudar a sua escolha a qualquer momento no link "Preferências de cookies", no rodapé.</p>
+<p>Usamos cookies <strong>necessários</strong> (para o site funcionar e guardar as suas preferências de consentimento) e, apenas se você autorizar, cookies <strong>analíticos</strong>. Não usamos cookies de publicidade. Você pode mudar a sua escolha a qualquer momento no link "Preferências de cookies", no rodapé.</p>
 <!-- /wp:paragraph -->
 <!-- wp:table {"hasFixedLayout":false} -->
-<figure class="wp-block-table"><table><thead><tr><th>Categoria</th><th>Para que serve</th><th>Exemplo</th><th>Base legal</th></tr></thead><tbody><tr><td>Necessários</td><td>Funcionamento, segurança e registro do consentimento</td><td>[nome do cookie do plugin LGPD a confirmar]</td><td>Legítimo interesse (art. 7º, IX)</td></tr><tr><td>Analíticos</td><td>Contar visitas e entender quais páginas são úteis</td><td>[a confirmar]</td><td>Consentimento</td></tr></tbody></table></figure>
+<figure class="wp-block-table"><table><thead><tr><th>Categoria</th><th>Para que serve</th><th>Exemplo</th><th>Base legal</th></tr></thead><tbody><tr><td>Necessários</td><td>Funcionamento, segurança e registro do consentimento</td><td>Cookie de registro do consentimento</td><td>Legítimo interesse (art. 7º, IX)</td></tr><tr><td>Analíticos</td><td>Contar visitas e entender quais páginas são úteis</td><td>Ferramenta de estatísticas de visitas, quando ativada</td><td>Consentimento</td></tr></tbody></table></figure>
 <!-- /wp:table -->
 <!-- wp:heading {"anchor":"10-seus-direitos"} -->
 <h2 id="10-seus-direitos" class="wp-block-heading">10. Seus direitos</h2>
@@ -6180,7 +6180,7 @@
 <h2 id="11-seguranca" class="wp-block-heading">11. Segurança</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Adotamos medidas técnicas e administrativas para proteger os dados (LGPD, art. 46), como controle de acesso por pessoa, autenticação em dois fatores nos sistemas que permitem, conexão criptografada (HTTPS) e cópias de segurança [a confirmar lista]. Se ocorrer um incidente de segurança que possa trazer risco ou dano relevante, comunicaremos a ANPD e os titulares afetados, conforme o art. 48 da LGPD e a regulamentação da ANPD.</p>
+<p>Adotamos medidas técnicas e administrativas para proteger os dados (LGPD, art. 46), como controle de acesso por pessoa, autenticação em dois fatores nos sistemas que permitem, conexão criptografada (HTTPS) e cópias de segurança. Se ocorrer um incidente de segurança que possa trazer risco ou dano relevante, comunicaremos a ANPD e os titulares afetados, conforme o art. 48 da LGPD e a regulamentação da ANPD.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"anchor":"12-criancas-e-adolescentes"} -->
 <h2 id="12-criancas-e-adolescentes" class="wp-block-heading">12. Crianças e adolescentes</h2>
@@ -6277,7 +6277,7 @@
 <p class="is-style-abertura"></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"pedra","fontSize":"nota","fontFamily":"plex-mono"} -->
-<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">ÚLTIMA ATUALIZAÇÃO · [dd/mm/aaaa a confirmar] · VERSÃO 1.0</p>
+<p class="has-pedra-color has-text-color has-nota-font-size has-plex-mono-font-family">ÚLTIMA ATUALIZAÇÃO · 04/10/2026 · VERSÃO 1.0</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -6374,7 +6374,7 @@
 <h2 id="8-fireflies-academy" class="wp-block-heading">8. Fireflies Academy</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Inscrições, valores, carga horária, certificados e cancelamentos de treinamentos seguem a proposta ou o regulamento de cada turma [a confirmar]. A verificação de certificados pelo site, quando disponível, mostra apenas os dados necessários para confirmar a autenticidade.</p>
+<p>Inscrições, valores, carga horária, certificados e cancelamentos de treinamentos seguem a proposta ou o regulamento de cada turma. A verificação de certificados pelo site, quando disponível, mostra apenas os dados necessários para confirmar a autenticidade.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"anchor":"9-responsabilidade"} -->
 <h2 id="9-responsabilidade" class="wp-block-heading">9. Responsabilidade</h2>
@@ -6564,7 +6564,7 @@
   <category domain="trilha" nicename="contabil"><![CDATA[Contábil]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>
@@ -6710,7 +6710,7 @@
   <category domain="trilha" nicename="fiscal"><![CDATA[Fiscal]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>
@@ -6768,7 +6768,7 @@
 <h2 id="descricao" class="wp-block-heading">Descrição</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Um ERP só funciona quando cada pessoa sabe o que lançar, quando e onde. O curso é organizado em três módulos, que podem ser contratados separadamente. O conteúdo é ajustado ao sistema usado pela empresa [lista de ERPs a confirmar] e, sempre que possível, ministrado no ambiente de testes do próprio cliente.</p>
+<p>Um ERP só funciona quando cada pessoa sabe o que lançar, quando e onde. O curso é organizado em três módulos, que podem ser contratados separadamente. O conteúdo é ajustado ao sistema usado pela empresa e, sempre que possível, ministrado no ambiente de testes do próprio cliente.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"anchor":"para-quem-e"} -->
 <h2 id="para-quem-e" class="wp-block-heading">Para quem é</h2>
@@ -6868,7 +6868,7 @@
   <category domain="trilha" nicename="tecnologia"><![CDATA[Tecnologia]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>
@@ -7023,7 +7023,7 @@
   <category domain="trilha" nicename="condominios"><![CDATA[Condomínios]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>
@@ -7172,7 +7172,7 @@
   <category domain="trilha" nicename="auditoria"><![CDATA[Auditoria]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>
@@ -7324,7 +7324,7 @@
   <category domain="trilha" nicename="financeiro"><![CDATA[Financeiro]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_carga_horaria</wp:meta_key>
-    <wp:meta_value><![CDATA[[a confirmar] h]]></wp:meta_value>
+    <wp:meta_value><![CDATA[]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_formato</wp:meta_key>

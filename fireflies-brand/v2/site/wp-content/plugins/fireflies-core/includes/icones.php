@@ -17,10 +17,11 @@ function fireflies_core_icones(): void {
 		return;
 	}
 	$u = FIREFLIES_CORE_URL . 'assets/';
-	printf( '<link rel="icon" href="%s" sizes="48x48">' . "\n", esc_url( $u . 'favicon.ico' ) );
-	printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( $u . 'favicon.svg' ) );
-	printf( '<link rel="icon" href="%s" sizes="192x192">' . "\n", esc_url( $u . 'android-192.png' ) );
-	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $u . 'apple-touch-icon-180.png' ) );
+	$v = '?v=' . FIREFLIES_CORE_VERSION; // muda a cada versão: o navegador não fica preso ao ícone antigo
+	printf( '<link rel="icon" href="%s" sizes="48x48">' . "\n", esc_url( $u . 'favicon.ico' . $v ) );
+	printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( $u . 'favicon.svg' . $v ) );
+	printf( '<link rel="icon" href="%s" sizes="192x192">' . "\n", esc_url( $u . 'android-192.png' . $v ) );
+	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $u . 'apple-touch-icon-180.png' . $v ) );
 	echo '<meta name="theme-color" content="#17183A">' . "\n";
 }
 add_action( 'wp_head', 'fireflies_core_icones', 2 );
@@ -35,7 +36,7 @@ add_action(
 			return;
 		}
 		header( 'Content-Type: image/x-icon' );
-		header( 'Cache-Control: public, max-age=604800' );
+		header( 'Cache-Control: public, max-age=86400' );
 		readfile( FIREFLIES_CORE_DIR . 'assets/favicon.ico' );
 		exit;
 	}

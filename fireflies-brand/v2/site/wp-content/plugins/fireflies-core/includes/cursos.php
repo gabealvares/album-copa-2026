@@ -112,7 +112,7 @@ function fireflies_core_ficha_curso( int $post_id, bool $compacta = false ): str
 			$valor = $valor ? 'Fireflies Academy' : '';
 		}
 		$valor = (string) $valor;
-		if ( '' !== $valor ) {
+		if ( '' !== $valor && false === stripos( $valor, 'a confirmar' ) && false === stripos( $valor, 'a definir' ) ) {
 			$itens[ FIREFLIES_CURSO_METAS[ $meta ] ] = esc_html( $valor );
 		}
 	}

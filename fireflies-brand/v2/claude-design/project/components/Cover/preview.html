@@ -1,0 +1,39 @@
+<!-- @dsCard height=300 -->
+<!doctype html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Cover</title>
+<style>
+  html, body { margin: 0; background: var(--fundo); }
+  .capa { position: relative; width: 960px; height: 300px; overflow: hidden; background: var(--fundo); }
+  .capa svg { position: absolute; inset: 0; }
+  .inv { fill: var(--superficie-inversa); }
+  .verm { fill: var(--vermelhao); }
+  .ceu { fill: var(--ceu); }
+  .luz { fill: var(--ambar); }
+  .orbita { fill: none; stroke: var(--ceu); stroke-width: 1.5px; }
+  .orbita-pont { fill: none; stroke: var(--ceu); stroke-width: 2px; stroke-dasharray: 0 8; stroke-linecap: round; }
+  .nome { position: absolute; left: 48px; bottom: 64px; max-width: 440px; margin: 0; font: 700 64px/.95 var(--font-sora); color: var(--texto-forte); letter-spacing: .005em; }
+  .frase { position: absolute; left: 48px; bottom: 32px; max-width: 440px; margin: 0; font: 400 14px/1.4 var(--font-sans); color: var(--texto-suave); }
+</style></head>
+<body>
+<div class="capa">
+  <svg width="960" height="300" viewBox="0 0 960 300" aria-hidden="true">
+    <!--
+      blocos: superficie-inversa 360x300 (espaco-80 x2.5, sangra topo/direita/base), ceu 96x96 (espaco-70), vermelhao 96x144 (espaco-70 x espaco-80), ambar disco r12 (espaco-40/2): Anil, Céu e Vermelhão são as cores de identidade; o Âmbar é a única luz.
+      arranjo: laje alta à direita com dois satélites empilhados à esquerda (Céu sobre Vermelhão), tudo à direita de x=480.
+      padrão: motivo literal (a órbita do vagalume) -> arcos concêntricos de raio espaco-70, espaco-80 e 240 a partir do canto inferior direito; o de fora é pontilhado (a constelação) e termina na luz, como no logo.
+      passos e raios: espaco-40/70/80; raio-0 nos blocos (marca de cantos retos), raio-circulo só na luz; traço = fio-forte, pontilhado = fio-destaque.
+    -->
+    <rect class="inv" x="600" y="0" width="360" height="300"/>
+    <rect class="ceu" x="504" y="60" width="96" height="96"/>
+    <rect class="verm" x="504" y="156" width="96" height="144"/>
+    <path class="orbita" d="M864 300 A96 96 0 0 1 960 204"/>
+    <path class="orbita" d="M816 300 A144 144 0 0 1 960 156"/>
+    <path class="orbita-pont" d="M720 300 A240 240 0 0 1 790.3 130.3"/>
+    <circle class="luz" cx="790.3" cy="130.3" r="12"/>
+  </svg>
+  <p class="nome">Fireflies<br>Consultoria</p>
+  <p class="frase">Luz medida.</p>
+</div>
+</body>
+</html>

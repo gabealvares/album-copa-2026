@@ -323,3 +323,14 @@ ol.is-style-fontes.ff-programa > li { font-size: 1rem; padding: .9rem 0; }
 @media (max-width: 781px) { .ff-rx { grid-template-columns: 1fr; } }
 .is-style-cal .is-style-base-legal { background: var(--wp--preset--color--branco, #fff); }
 ol.is-style-fontes, ul.is-style-codigos { padding-left: 0 !important; }
+/* Tabelas de 3+ colunas: cartões no celular (rótulo da coluna acima de cada valor) */
+@media (max-width: 600px) {
+	.ff-tabela-cartoes { overflow: visible; }
+	.ff-tabela-cartoes table, .ff-tabela-cartoes tbody, .ff-tabela-cartoes tr, .ff-tabela-cartoes td { display: block; width: 100%; }
+	.ff-tabela-cartoes thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+	.ff-tabela-cartoes tr { padding: .9rem 0; border-bottom: 1px solid var(--ff-line, #D2D4DA); }
+	.ff-tabela-cartoes td { border: 0 !important; padding: .2rem 0 !important; }
+	.ff-tabela-cartoes td::before { content: attr(data-rotulo); display: block; font: 500 .6875rem/1.4 var(--ff-mono, "IBM Plex Mono", monospace); letter-spacing: .08em; text-transform: uppercase; color: var(--wp--preset--color--pedra, #5E6271); margin-top: .35rem; }
+	.ff-tabela-cartoes td:first-child { font-weight: 600; color: var(--wp--preset--color--anil, #17183A); }
+	.ff-tabela-cartoes td:first-child::before { margin-top: 0; }
+}

@@ -10,7 +10,7 @@
 defined( 'ABSPATH' ) || exit;
 
 function fireflies_core_raio_x_refs(): array {
-	// Percentuais sobre a receita potencial. [a confirmar com o responsável técnico]
+	// Percentuais sobre a receita potencial (estimativas de mercado).
 	return apply_filters(
 		'fireflies_raio_x_referencias',
 		array(

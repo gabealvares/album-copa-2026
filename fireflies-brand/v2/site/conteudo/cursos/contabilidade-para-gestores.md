@@ -8,7 +8,7 @@ url: /academy/cursos/contabilidade-para-gestores/
 trilha: contabil              # taxonomia trilha
 ordem: 1
 meta:
-  _ff_carga_horaria: "[a confirmar] h"
+  _ff_carga_horaria: " h"
   _ff_formato: [in-company, online]
   _ff_nivel: Introdutório
   _ff_publico: Gestores, donos e líderes de área sem formação contábil
@@ -25,7 +25,7 @@ seo:
 - **Eyebrow:** FIREFLIES ACADEMY · TRILHA CONTÁBIL
 - **H1:** Contabilidade para Gestores
 - **Resumo:** Para quem decide com base em números, mas nunca aprendeu a ler um balanço. Ao fim do curso, o gestor entende de onde vem cada linha da DRE e do balanço e sabe que perguntas fazer ao contador.
-- **Ficha (mono):** CARGA HORÁRIA [a confirmar] · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
+- **Ficha (mono):** CARGA HORÁRIA · IN COMPANY OU ONLINE · NÍVEL INTRODUTÓRIO · CERTIFICADO
 
 ## Descrição
 [pattern: texto-curso]
