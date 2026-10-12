@@ -308,7 +308,7 @@ O que não muda: INSS de 11% na regra geral e o IR sobre salários.
 No artigo, uma tabela única de hoje até 2033, separando o que já é lei, o que falta regulamentar e o que ainda é cenário, com exemplos em reais.
 
 Veja a tabela completa:
-https://fireflies.com.br/blog/retencoes-condominio-2027-2028-2033/?utm_source=linkedin&utm_medium=social&utm_campaign=condominios-2026
+https://fireflies.com.br/blog/retencao-pcc-condominio/?utm_source=linkedin&utm_medium=social&utm_campaign=condominios-2026
 
 #Condomínios #ReformaTributária #Retenções #Administradoras
 ```

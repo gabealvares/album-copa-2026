@@ -120,7 +120,9 @@ function bloco_post( string $nome, string $cabecalho, array $ls, array &$meta ):
 			if ( preg_match( '/^\*\*(.+?)\*\*/u', $cab_txt, $m ) ) {
 				$titulo = $m[1];
 			}
-			$in = rotulo( 'Em aberto' );
+			// selo depois do título ("**Título** · FALTA REGULAMENTAR"): vira o rótulo do bloco
+			$selo = preg_match( '/\*\*\s*·\s*(.+)$/u', $cab_txt, $ms ) ? trim( $ms[1] ) : '';
+			$in   = rotulo( $selo ? mb_strtoupper( mb_substr( $selo, 0, 1 ) ) . mb_strtolower( mb_substr( $selo, 1 ) ) : 'Em aberto' );
 			if ( $titulo ) {
 				$in .= h( 4, md_in( $titulo ) );
 			}

@@ -1348,73 +1348,104 @@
   </wp:postmeta>
 </item>
 <item>
-  <title><![CDATA[PIS, Cofins e CSLL retidos (4,65%): quando o condomínio deve reter]]></title>
+  <title><![CDATA[Retenções no condomínio: o PCC de 4,65% hoje e o que muda em 2027, 2028 e até 2033]]></title>
   <link>https://fireflies.com.br/?p=430</link>
   <pubDate>Fri, 23 Oct 2026 12:00:00 +0000</pubDate>
   <dc:creator>gabriel-alvares</dc:creator>
-  <guid isPermaLink="false">https://fireflies.com.br/?p=430</guid>
+  <guid isPermaLink="false">https://fireflies.com.br/blog/retencao-pcc-condominio/</guid>
   <description/>
   <content:encoded><![CDATA[<!-- wp:paragraph -->
-<p>A retenção de PIS, Cofins e CSLL, o chamado <strong>PCC</strong>, é a retenção mais frequente na rotina de um condomínio. A lei cita os condomínios edilícios de forma expressa entre os obrigados a reter, e a lista de serviços alcançados inclui quase tudo o que um prédio contrata todo mês: limpeza, conservação, manutenção, vigilância.</p>
+<p>O condomínio retém tributos quando paga a maior parte dos prestadores. A retenção mais frequente é a de PIS, Cofins e CSLL, o chamado <strong>PCC</strong>, de 4,65%. Com a reforma tributária, ela muda em 2027, e outras retenções mudam nos anos seguintes.</p>
 <!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Este artigo explica a regra de hoje e o calendário até 2033. Cada mudança vem com um selo:</p>
+<!-- /wp:paragraph -->
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Selo</th><th>O que significa</th></tr></thead><tbody><tr><td><strong>Definido</strong></td><td>Está na lei ou na Constituição, com data</td></tr><tr><td><strong>Falta regulamentar</strong></td><td>A regra existe, mas a Receita ainda não publicou como aplicar (códigos, declarações)</td></tr><tr><td><strong>A confirmar</strong></td><td>Leitura do texto da lei que ainda depende de confirmação da Receita</td></tr><tr><td><strong>Cenário</strong></td><td>Previsão baseada no que a lei permite, sem data ou detalhe definido</td></tr></tbody></table></figure>
+<!-- /wp:table -->
 <!-- wp:columns {"className":"ff-numeros-post"} -->
 <div class="wp-block-columns ff-numeros-post">
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:paragraph {"className":"is-style-rotulo"} -->
-<p class="is-style-rotulo">Alíquota total</p>
+<p class="is-style-rotulo">PIS, Cofins e CSLL retidos</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"ff-numero-post"} -->
-<p class="ff-numero-post">4,65%</p>
+<p class="ff-numero-post">4,65% → 1%</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>PIS 0,65% · Cofins 3% · CSLL 1%</strong></p>
+<p><strong>Em 01/01/2027</strong></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"pequeno"} -->
-<p class="has-fumaca-color has-text-color has-pequeno-font-size">Sobre o valor bruto da nota.</p>
+<p class="has-fumaca-color has-text-color has-pequeno-font-size">Fica só a CSLL. <strong>Definido.</strong></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:paragraph {"className":"is-style-rotulo"} -->
-<p class="is-style-rotulo">Dispensa</p>
+<p class="is-style-rotulo">INSS de empresas desoneradas</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"ff-numero-post"} -->
-<p class="ff-numero-post">R$ 10</p>
+<p class="ff-numero-post">3,5% → 11%</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>Retenção de até R$ 10 não é feita</strong></p>
+<p><strong>Em 01/01/2028</strong></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"pequeno"} -->
-<p class="has-fumaca-color has-text-color has-pequeno-font-size">Na prática, notas de até R$ 215,05.</p>
+<p class="has-fumaca-color has-text-color has-pequeno-font-size">Fim da desoneração da folha. <strong>Definido.</strong></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 <!-- wp:column -->
 <div class="wp-block-column">
 <!-- wp:paragraph {"className":"is-style-rotulo"} -->
-<p class="is-style-rotulo">Recolhimento</p>
+<p class="is-style-rotulo">ISS</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"className":"ff-numero-post"} -->
-<p class="ff-numero-post">dia 20</p>
+<p class="ff-numero-post">2033</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
-<p><strong>DARF 5952</strong></p>
+<p><strong>Deixa de existir</strong></p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"textColor":"fumaca","fontSize":"pequeno"} -->
-<p class="has-fumaca-color has-text-color has-pequeno-font-size">Do mês seguinte ao pagamento.</p>
+<p class="has-fumaca-color has-text-color has-pequeno-font-size">Diminui aos poucos a partir de 2029. <strong>Definido.</strong></p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 <!-- wp:paragraph {"className":"is-style-aviso"} -->
-<p class="is-style-aviso">Conteúdo informativo, baseado nas normas publicadas até 07/10/2026. Não substitui a análise do contador do condomínio.</p>
+<p class="is-style-aviso">Conteúdo informativo, baseado nas normas publicadas até 12/10/2026. Não substitui a análise do contador do condomínio.</p>
 <!-- /wp:paragraph -->
 <!-- wp:fireflies/indice /-->
 <!-- wp:heading {"anchor":"s01"} -->
-<h2 id="s01" class="wp-block-heading">01 · Quem retém e sobre quais serviços</h2>
+<h2 id="s01" class="wp-block-heading">01 · Em poucas palavras</h2>
+<!-- /wp:heading -->
+<!-- wp:list {"className":"is-style-estrelas"} -->
+<ul class="wp-block-list is-style-estrelas">
+<!-- wp:list-item -->
+<li><strong>Hoje</strong>, o condomínio retém 4,65% de PIS, Cofins e CSLL quando paga limpeza, conservação, manutenção, vigilância ou serviços profissionais a uma empresa fora do Simples Nacional.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Em 2027</strong>, essa retenção passa a ser <strong>só de CSLL, 1%</strong>. Vale a data em que o condomínio paga a nota.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Em 2028</strong>, as empresas da desoneração da folha, comuns na construção civil, saem da retenção de INSS de 3,5% e voltam para a regra geral de <strong>11%</strong>.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>De 2029 a 2032</strong>, o ISS diminui, e o ISS retido diminui junto. <strong>Em 2033</strong>, o ISS acaba.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Não mudam com a reforma:</strong> o INSS de 11% na regra geral e o Imposto de Renda, que o condomínio só retém sobre o salário dos empregados.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>O condomínio não vai reter os impostos novos</strong> (CBS e IBS).</li>
+<!-- /wp:list-item -->
+</ul>
+<!-- /wp:list -->
+<!-- wp:heading {"anchor":"s02"} -->
+<h2 id="s02" class="wp-block-heading">02 · PCC hoje: quem retém e sobre quais serviços</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
 <p>A obrigação está no art. 30 da Lei nº 10.833/2003, com a redação da Lei nº 13.137/2015. Ela vale para pagamentos de pessoas jurídicas de direito privado a outras pessoas jurídicas e alcança, <strong>inclusive, os condomínios edilícios</strong>.</p>
@@ -1450,8 +1481,8 @@
 <!-- wp:table {"hasFixedLayout":false} -->
 <figure class="wp-block-table"><table><thead><tr><th>Serviço</th><th>O que entra</th></tr></thead><tbody><tr><td>Limpeza, conservação e zeladoria</td><td>Varrição, lavagem, higienização, desentupimento, dedetização, desratização e tudo o que mantém a limpeza e a conservação das áreas e instalações</td></tr><tr><td>Manutenção</td><td>Serviços que mantêm edificações, instalações, máquinas, elevadores e equipamentos em condições de operação, <strong>exceto o conserto isolado</strong> de um bem defeituoso</td></tr><tr><td>Segurança e vigilância</td><td>Garantia da integridade física de pessoas e preservação de valores e bens patrimoniais</td></tr><tr><td>Profissionais</td><td>Os listados no regulamento do IR: advocacia, contabilidade, auditoria, engenharia, arquitetura, consultoria, administração de bens, entre outros</td></tr></tbody></table></figure>
 <!-- /wp:table -->
-<!-- wp:heading {"anchor":"s02"} -->
-<h2 id="s02" class="wp-block-heading">02 · Manutenção contínua × conserto isolado</h2>
+<!-- wp:heading {"anchor":"s03"} -->
+<h2 id="s03" class="wp-block-heading">03 · Manutenção contínua × conserto isolado</h2>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
 <p>É o ponto que mais gera dúvida. A regra prática que funciona:</p>
@@ -1500,8 +1531,8 @@
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
-<!-- wp:heading {"anchor":"s03"} -->
-<h2 id="s03" class="wp-block-heading">03 · Quando não há retenção</h2>
+<!-- wp:heading {"anchor":"s04"} -->
+<h2 id="s04" class="wp-block-heading">04 · Quando não há retenção</h2>
 <!-- /wp:heading -->
 <!-- wp:list {"className":"is-style-estrelas"} -->
 <ul class="wp-block-list is-style-estrelas">
@@ -1509,7 +1540,7 @@
 <li><strong>Prestador optante do Simples Nacional.</strong> Exige declaração do prestador, que o condomínio deve arquivar.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Retenção de até R$ 10,00.</strong> Ou seja, notas de até R$ 215,05 (Lei nº 10.833/2003, art. 31, § 3º).</li>
+<li><strong>Retenção de até R$ 10,00.</strong> Com a alíquota de 4,65%, são as notas de até R$ 215,05 (Lei nº 10.833/2003, art. 31, § 3º). Em 2027, esse limite pode subir; veja a seção 08.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Conserto isolado</strong>, sem contrato de manutenção.</li>
@@ -1535,8 +1566,8 @@
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
-<!-- wp:heading {"anchor":"s04"} -->
-<h2 id="s04" class="wp-block-heading">04 · Base, cálculo e recolhimento</h2>
+<!-- wp:heading {"anchor":"s05"} -->
+<h2 id="s05" class="wp-block-heading">05 · Base, cálculo e recolhimento</h2>
 <!-- /wp:heading -->
 <!-- wp:list {"className":"is-style-estrelas"} -->
 <ul class="wp-block-list is-style-estrelas">
@@ -1544,10 +1575,10 @@
 <li><strong>Base:</strong> o valor bruto da nota, sem deduções.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Momento:</strong> a retenção é feita na data do <strong>pagamento</strong>, inclusive de adiantamentos.</li>
+<li><strong>Momento:</strong> a retenção é feita na data do <strong>pagamento</strong>, inclusive de adiantamentos. É esse dia que decide a alíquota na virada para 2027.</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li><strong>Guia:</strong> DARF código 5952, até o último dia útil do segundo decêndio do mês seguinte ao pagamento (o dia 20, ou o dia útil anterior).</li>
+<li><strong>Guia:</strong> DARF código 5952, até o dia 20 do mês seguinte ao pagamento (ou o dia útil anterior).</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li><strong>Declaração:</strong> EFD-Reinf (evento R-4020) até o dia 15 do mês seguinte e DCTFWeb até o dia 25.</li>
@@ -1557,28 +1588,189 @@
 <!-- /wp:list-item -->
 </ul>
 <!-- /wp:list -->
-<!-- wp:heading {"anchor":"s05"} -->
-<h2 id="s05" class="wp-block-heading">05 · O que muda em 2027</h2>
+<!-- wp:heading {"anchor":"s06"} -->
+<h2 id="s06" class="wp-block-heading">06 · A tabela: hoje × futuro</h2>
+<!-- /wp:heading -->
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Retenção</th><th>Hoje (2026)</th><th>2027</th><th>2028</th><th>2029 a 2032</th><th>2033 em diante</th></tr></thead><tbody><tr><td>PIS, Cofins e CSLL (PCC)</td><td>4,65%</td><td><strong>1% (só CSLL)</strong> · Definido</td><td>1% (só CSLL)</td><td>1% (só CSLL)</td><td>1% (só CSLL)</td></tr><tr><td>INSS, regra geral</td><td>11%</td><td>11%</td><td>11%</td><td>11%</td><td>11%</td></tr><tr><td>INSS, empresa desonerada (CPRB)</td><td>3,5%</td><td>3,5%</td><td><strong>11%</strong> · Definido</td><td>11%</td><td>11%</td></tr><tr><td>IR sobre salários</td><td>Tabela</td><td>Tabela</td><td>Tabela</td><td>Tabela</td><td>Tabela</td></tr><tr><td>IR sobre serviços de empresas</td><td>Não há</td><td>Não há</td><td>Não há</td><td>Não há</td><td>Não há</td></tr><tr><td>ISS (São Paulo, 7 serviços)</td><td>Alíquota cheia</td><td>Alíquota cheia</td><td>Alíquota cheia</td><td><strong>90%, 80%, 70% e 60%</strong> da alíquota · Definido</td><td><strong>Acaba</strong> · Definido</td></tr><tr><td>CBS e IBS (impostos novos)</td><td>Não há</td><td>Não há retenção pelo condomínio</td><td>Não há</td><td>Não há</td><td>Não há</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:heading {"anchor":"s07"} -->
+<h2 id="s07" class="wp-block-heading">07 · O que já está definido</h2>
+<!-- /wp:heading -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">PCC vira CSLL de 1% em 2027</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>Com a extinção do PIS e da Cofins em 01/01/2027, a retenção passa a ser <strong>só de CSLL, 1%</strong>, pela nova redação do art. 30 dada pelo art. 509 da LC nº 214/2025. Vale a data do pagamento: uma nota emitida em dezembro de 2026 e paga em janeiro de 2027 já tem retenção de 1%.</p>
+<p>A Lei Complementar nº 214/2025 (art. 509) reescreveu os arts. 30 e 31 da Lei nº 10.833/2003. A partir de 01/01/2027, o PIS e a Cofins deixam de existir (no lugar entra a CBS) e saem da retenção. A lista de serviços da seção 02 continua a mesma.</p>
 <!-- /wp:paragraph -->
-<!-- wp:heading {"anchor":"s06"} -->
-<h2 id="s06" class="wp-block-heading">06 · Fontes oficiais</h2>
+<!-- wp:paragraph -->
+<p><strong>O que decide é o dia do pagamento</strong>, não o dia da nota:</p>
+<!-- /wp:paragraph -->
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Nota emitida</th><th>Paga em</th><th>Retenção</th></tr></thead><tbody><tr><td>Dezembro de 2026</td><td>Dezembro de 2026</td><td>4,65%</td></tr><tr><td>Dezembro de 2026</td><td>Janeiro de 2027</td><td>1%</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">INSS de 3,5% acaba em 2028</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Algumas empresas, principalmente de construção civil, pagam a contribuição previdenciária sobre o faturamento, e não sobre a folha (a "desoneração da folha", ou CPRB). Quando o condomínio contrata uma delas por empreitada ou cessão de mão de obra, a retenção é de <strong>3,5%</strong>, e não de 11%.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>A Lei nº 14.973/2024 acaba com a desoneração aos poucos, e ela termina em <strong>01/01/2028</strong>. Em agosto de 2026, a Receita confirmou (Solução de Consulta Cosit nº 153/2026) que os 3,5% valem até o fim de 2027. Em 2028, essas empresas passam para a regra geral de <strong>11%</strong>.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">ISS diminui e acaba</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A Emenda Constitucional nº 132/2023 fixou o calendário: o ISS é cobrado normalmente até 2028; de 2029 a 2032, a alíquota cai para 90%, 80%, 70% e 60% do valor original; em 2033, o ISS deixa de existir e é substituído pelo IBS. Enquanto houver ISS, a regra municipal de retenção continua valendo, mas o valor retido acompanha a alíquota menor.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">O condomínio não retém CBS nem IBS</h3>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de CBS pelo condomínio que contrata serviços. O condomínio, em regra, nem é contribuinte desses impostos. As cotas condominiais só são tributadas se o condomínio optar pelo regime regular. Sem essa opção, se as cotas forem menos de 80% da receita total, o condomínio passa a recolher apenas sobre as operações com terceiros (como a locação de espaços), e não sobre as cotas.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"anchor":"s08"} -->
+<h2 id="s08" class="wp-block-heading">08 · O que ainda falta regulamentar e os cenários</h2>
+<!-- /wp:heading -->
+<!-- wp:group {"className":"is-style-em-aberto"} -->
+<div class="wp-block-group is-style-em-aberto">
+<!-- wp:paragraph {"className":"is-style-rotulo"} -->
+<p class="is-style-rotulo">Falta regulamentar</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Código de DARF e EFD-Reinf para a CSLL de 1%</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>Hoje, o PCC é pago no DARF 5952 e informado na EFD-Reinf (evento R-4020). Até 12/10/2026, a Receita não havia publicado o código e o ajuste da declaração para a retenção só de CSLL. É algo a acompanhar antes do fechamento de dezembro.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"is-style-em-aberto"} -->
+<div class="wp-block-group is-style-em-aberto">
+<!-- wp:paragraph {"className":"is-style-rotulo"} -->
+<p class="is-style-rotulo">A confirmar</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Notas pequenas: o piso de R$ 10,00 com a CSLL de 1%</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>A LC 214/2025 trocou a alíquota do art. 31 por 1% e, pelo texto consolidado, manteve a dispensa de retenção de até R$ 10,00. Se for assim, a partir de 2027 ficam sem retenção as notas de até R$ 1.000,00, como a manutenção mensal de portão ou a dedetização. Ainda não temos certeza. A Receita não atualizou a IN SRF 459/2004, que detalha a dispensa, e pode ajustar a regra. Vale confirmar antes de configurar os pagamentos de 2027.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"is-style-em-aberto"} -->
+<div class="wp-block-group is-style-em-aberto">
+<!-- wp:paragraph {"className":"is-style-rotulo"} -->
+<p class="is-style-rotulo">Cenário</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Split payment</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>É o mecanismo que vai cobrar a CBS e o IBS: no momento do pagamento, o banco ou a instituição de pagamento separa a parte do imposto e manda direto para o governo. A lei prevê que ele comece de forma gradual. As notícias de agosto de 2026 indicam início <strong>opcional em 2027</strong>, primeiro entre empresas, e <strong>ainda sem data para ser obrigatório</strong>. Para o condomínio que só contrata serviços, o efeito esperado é pequeno: o valor da nota não muda, muda quem repassa o imposto.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:group {"className":"is-style-em-aberto"} -->
+<div class="wp-block-group is-style-em-aberto">
+<!-- wp:paragraph {"className":"is-style-rotulo"} -->
+<p class="is-style-rotulo">Cenário</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">O que substitui a retenção de ISS em 2033</h4>
+<!-- /wp:heading -->
+<!-- wp:paragraph -->
+<p>O IBS não tem uma "retenção pelo tomador" como a do ISS paulista. A tendência é que o split payment ocupe esse papel. Os detalhes dependem de regulamentação do Comitê Gestor do IBS.</p>
+<!-- /wp:paragraph -->
+</div>
+<!-- /wp:group -->
+<!-- wp:heading {"anchor":"s09"} -->
+<h2 id="s09" class="wp-block-heading">09 · Exemplos em reais</h2>
+<!-- /wp:heading -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">A mesma nota de limpeza da seção 05 (R$ 12.000,00, contrato mensal, prestador fora do Simples, sem materiais), paga em 2026 e em 2027:</h4>
+<!-- /wp:heading -->
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Retenção</th><th>Paga em 2026</th><th>Paga em 2027</th></tr></thead><tbody><tr><td>PCC / CSLL</td><td>R$ 558,00 (4,65%)</td><td>R$ 120,00 (1%)</td></tr><tr><td>INSS</td><td>R$ 1.320,00 (11%)</td><td>R$ 1.320,00 (11%)</td></tr><tr><td>Total retido (sem ISS)</td><td>R$ 1.878,00</td><td>R$ 1.440,00</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>O custo da nota para o condomínio é o mesmo, R$ 12.000,00. O que muda é quanto vai para a guia e quanto vai para o prestador.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"level":4} -->
+<h4 class="wp-block-heading">Obra de impermeabilização por construtora na desoneração, nota de R$ 50.000,00, sem materiais previstos no contrato:</h4>
+<!-- /wp:heading -->
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Paga em</th><th>INSS retido</th></tr></thead><tbody><tr><td>2027</td><td>R$ 1.750,00 (3,5%)</td></tr><tr><td>2028</td><td>R$ 5.500,00 (11%)</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+<!-- wp:paragraph -->
+<p>Obras que atravessam a virada de 2027 para 2028 precisam ter essa diferença prevista no cronograma de pagamentos.</p>
+<!-- /wp:paragraph -->
+<!-- wp:heading {"anchor":"s10"} -->
+<h2 id="s10" class="wp-block-heading">10 · O que fazer agora</h2>
+<!-- /wp:heading -->
+<!-- wp:list {"ordered":true,"className":"is-style-checklist ff-com-progresso"} -->
+<ol class="wp-block-list is-style-checklist ff-com-progresso">
+<!-- wp:list-item -->
+<li><strong>Classifique cada prestador pelo contrato</strong>Manutenção contínua tem retenção; conserto isolado, não. Arquive a declaração dos optantes do Simples.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Marque quem está na desoneração (CPRB)</strong>São esses prestadores que mudam de 3,5% para 11% em 2028.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Prepare os pagamentos de 2027</strong>A retenção de PCC cai para 1% pela data do pagamento.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Revise contratos que citam "4,65%"</strong>E avise os prestadores sobre a mudança.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Planeje o fechamento de dezembro de 2026</strong>Defina quais notas serão pagas em dezembro e quais em janeiro.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Acompanhe a Receita</strong>Código de DARF, ajuste da EFD-Reinf e a regra da dispensa de R$ 10,00 para a CSLL isolada.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><strong>Não mude o que não mudou</strong>INSS de 11% na regra geral e IR sobre salários continuam iguais.</li>
+<!-- /wp:list-item -->
+</ol>
+<!-- /wp:list -->
+<!-- wp:heading {"anchor":"s11"} -->
+<h2 id="s11" class="wp-block-heading">11 · Fontes</h2>
 <!-- /wp:heading -->
 <!-- wp:list {"ordered":true,"className":"is-style-fontes"} -->
 <ol class="wp-block-list is-style-fontes">
 <!-- wp:list-item -->
-<li>Lei nº 10.833/2003 – arts. 30 a 36, com a redação da Lei nº 13.137/2015</li>
+<li>Lei nº 10.833/2003 – arts. 30 a 36, com a redação da Lei nº 13.137/2015 (retenção de PIS, Cofins e CSLL; dispensa de até R$ 10,00 no art. 31, § 3º)</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Instrução Normativa SRF nº 459/2004</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Solução de Consulta Cosit nº 190/2026 (DOU de 30/09/2026)</li>
+<li>Solução de Consulta Cosit nº 190/2026 (DOU de 30/09/2026) – manutenção contínua × conserto isolado</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
-<li>Lei Complementar nº 214/2025 – art. 509</li>
+<li>Lei Complementar nº 214/2025 – art. 26 (condomínio), arts. 31 a 36 (split payment) e art. 509 (nova redação dos arts. 30 e 31 da Lei nº 10.833/2003, retenção a partir de 2027)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Decreto nº 12.955/2026 – Regulamento da CBS (art. 25: condomínio; arts. 28 a 35: split payment)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Lei nº 14.973/2024 – reoneração gradual da folha (fim da CPRB em 2028)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Lei nº 12.546/2011 – art. 7º, § 6º (retenção de 3,5%)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Solução de Consulta Cosit nº 153/2026 – retenção de 3,5% de 2025 a 2027</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Lei nº 8.212/1991 – art. 31 (retenção de 11%)</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Emenda Constitucional nº 132/2023 – calendário de transição do ISS para o IBS</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Parecer Normativo CST nº 37/1972 – IR na fonte e condomínios</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Receita Federal – EFD-Reinf, perguntas e respostas (série R-4000)</li>
@@ -1590,10 +1782,10 @@
 <!-- wp:group {"layout":{"type":"constrained","contentSize":"760px","justifyContent":"left"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"className":"is-style-rotulo"} -->
-<p class="is-style-rotulo">PCC sem surpresa</p>
+<p class="is-style-rotulo">Retenções sem surpresa</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"fontSize":"titulo-2"} -->
-<h2 class="wp-block-heading has-titulo-2-font-size">Classificamos os prestadores da sua carteira e deixamos a regra de retenção registrada para cada um.</h2>
+<h2 class="wp-block-heading has-titulo-2-font-size">Classificamos os prestadores da sua carteira e deixamos as retenções prontas para cada ano.</h2>
 <!-- /wp:heading -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|40"}}}} -->
 <div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--40)">
@@ -1607,12 +1799,12 @@
 </section>
 <!-- /wp:group -->
 ]]></content:encoded>
-  <excerpt:encoded><![CDATA[O condomínio edilício está expressamente obrigado a reter PIS, Cofins e CSLL sobre limpeza, manutenção, vigilância e serviços profissionais. Quando reter, quando não reter, o valor mínimo e o que diz a Receita sobre manutenção e conserto.]]></excerpt:encoded>
+  <excerpt:encoded><![CDATA[Quando o condomínio retém PIS, Cofins e CSLL hoje, como calcular e recolher, e o calendário das retenções até 2033: o que já é lei, o que falta regulamentar e o que ainda é cenário. Com exemplos em reais.]]></excerpt:encoded>
   <wp:post_id>430</wp:post_id>
   <wp:post_date>2026-10-23 09:00:00</wp:post_date>
   <wp:post_date_gmt>2026-10-23 12:00:00</wp:post_date_gmt>
-  <wp:post_modified>2026-10-07 12:04:04</wp:post_modified>
-  <wp:post_modified_gmt>2026-10-07 15:04:04</wp:post_modified_gmt>
+  <wp:post_modified>2026-10-12 09:00:00</wp:post_modified>
+  <wp:post_modified_gmt>2026-10-12 12:00:00</wp:post_modified_gmt>
   <wp:comment_status>closed</wp:comment_status>
   <wp:ping_status>closed</wp:ping_status>
   <wp:post_name>retencao-pcc-condominio</wp:post_name>
@@ -1622,39 +1814,40 @@
   <wp:post_type>post</wp:post_type>
   <wp:post_password/>
   <wp:is_sticky>0</wp:is_sticky>
-  <category domain="post_tag" nicename="administradoras"><![CDATA[Administradoras]]></category>
-  <category domain="category" nicename="condominios"><![CDATA[Condomínios]]></category>
-  <category domain="post_tag" nicename="efd-reinf"><![CDATA[EFD-Reinf]]></category>
   <category domain="category" nicename="fiscal"><![CDATA[Fiscal]]></category>
-  <category domain="post_tag" nicename="pcc"><![CDATA[PCC]]></category>
+  <category domain="category" nicename="reforma-tributaria"><![CDATA[Reforma Tributária]]></category>
+  <category domain="category" nicename="condominios"><![CDATA[Condomínios]]></category>
   <category domain="post_tag" nicename="retencoes"><![CDATA[Retenções]]></category>
+  <category domain="post_tag" nicename="pcc"><![CDATA[PCC]]></category>
+  <category domain="post_tag" nicename="inss"><![CDATA[INSS]]></category>
+  <category domain="post_tag" nicename="iss"><![CDATA[ISS]]></category>
+  <category domain="post_tag" nicename="ibs-cbs"><![CDATA[IBS e CBS]]></category>
+  <category domain="post_tag" nicename="lc-214-2025"><![CDATA[LC 214/2025]]></category>
+  <category domain="post_tag" nicename="efd-reinf"><![CDATA[EFD-Reinf]]></category>
+  <category domain="post_tag" nicename="administradoras"><![CDATA[Administradoras]]></category>
   <wp:postmeta>
     <wp:meta_key>_ff_tempo_leitura</wp:meta_key>
-    <wp:meta_value><![CDATA[8]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_ff_tempo_leitura_auto</wp:meta_key>
-    <wp:meta_value><![CDATA[5]]></wp:meta_value>
+    <wp:meta_value><![CDATA[12]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_ff_eyebrow</wp:meta_key>
-    <wp:meta_value><![CDATA[Fiscal · Condomínios · Retenções · PCC]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Fiscal · Reforma Tributária · Retenções]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>rank_math_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Retenção de PIS, Cofins e CSLL (4,65%) no condomínio | Fireflies]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Retenções no condomínio: PCC hoje e o que muda até 2033 | Fireflies]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_yoast_wpseo_title</wp:meta_key>
-    <wp:meta_value><![CDATA[Retenção de PIS, Cofins e CSLL (4,65%) no condomínio | Fireflies]]></wp:meta_value>
+    <wp:meta_value><![CDATA[Retenções no condomínio: PCC hoje e o que muda até 2033 | Fireflies]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>rank_math_description</wp:meta_key>
-    <wp:meta_value><![CDATA[Condomínio edilício deve reter 4,65% de PCC em limpeza, manutenção, vigilância e serviços profissionais. Valor mínimo, exceções, DARF 5952 e EFD-Reinf.]]></wp:meta_value>
+    <wp:meta_value><![CDATA[_ff_tempo_leitura: 12]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>_yoast_wpseo_metadesc</wp:meta_key>
-    <wp:meta_value><![CDATA[Condomínio edilício deve reter 4,65% de PCC em limpeza, manutenção, vigilância e serviços profissionais. Valor mínimo, exceções, DARF 5952 e EFD-Reinf.]]></wp:meta_value>
+    <wp:meta_value><![CDATA[_ff_tempo_leitura: 12]]></wp:meta_value>
   </wp:postmeta>
   <wp:postmeta>
     <wp:meta_key>rank_math_focus_keyword</wp:meta_key>
@@ -1663,14 +1856,6 @@
   <wp:postmeta>
     <wp:meta_key>_yoast_wpseo_focuskw</wp:meta_key>
     <wp:meta_value><![CDATA[retenção PCC condomínio]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_pingme</wp:meta_key>
-    <wp:meta_value><![CDATA[1]]></wp:meta_value>
-  </wp:postmeta>
-  <wp:postmeta>
-    <wp:meta_key>_wp_old_date</wp:meta_key>
-    <wp:meta_value><![CDATA[2026-10-23]]></wp:meta_value>
   </wp:postmeta>
 </item>
 <item>

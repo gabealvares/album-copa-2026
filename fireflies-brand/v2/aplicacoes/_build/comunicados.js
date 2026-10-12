@@ -431,8 +431,8 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
 
 // 4 · Carrossel curto de retenções, 5 cards, sem link para o blog.
 // Um fundo da paleta por card (Anil, Cal, Branco, Rubrica, Anil) e um recurso gráfico por card:
-// favicon + constelação + logo na capa, trilha de estrelas, notas fiscais, ícone de alerta, retrato.
-// Uma luz por card: o vagalume (favicon ou retrato); nos demais, destaque em Rubrica, Vermelhão ou Âmbar no Rubrica.
+// constelação + logo na capa, trilha de estrelas, notas fiscais, ícone de alerta, retrato.
+// Uma luz por card: o vagalume (do logo na capa, do retrato no fim); nos demais, destaque em Rubrica, Vermelhão ou Âmbar no Rubrica.
 {
   const W = 1200, H = 1500, M = 90, N = 5;
   const foto = path.join(__dirname, 'fotos/gabriel-alvares.jpg');
@@ -454,23 +454,18 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
     + t(dir, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: T.mute, a: 'end', tr: 0.12 });
   const salvar = (n, nome, T, b, t0) => L.save(DIR + `linkedin-carrossel-retencoes-curto-${String(n).padStart(2, '0')}-${nome}_1200x1500`, { w: W, h: H, bg: T.bg, body: b, pdf: PDF, title: `LinkedIn · carrossel curto retenções ${n}/${N} · ${t0}` });
 
-  // 1 · capa (Anil): favicon Arco voando em direção à constelação Fiscal; logo horizontal em mono-branco
+  // 1 · capa (Anil): constelação do Fiscal (Libra Fisci) e o logo horizontal, cujo vagalume é a luz do card
   {
     const T = TEMA.anil;
     const pt = L.padrao('campo-estrelas-escuro', { lit: C.ceu, k: 1.4 });
     let b = rect(0, 0, W, H, pt.fill, ' opacity=".45"');
     b += topo(T, 1);
-    b += L.emb('fiscal-sem-letras', { x: 560, y: 230, s: 540, c: C.cal, lit: C.cal, line: C.ceu });
-    b += t('LIBRA FISCI · A CONSTELAÇÃO DO FISCAL', { f: 'mono4', s: 18, x: 1110, y: 810, fill: C.ceu, a: 'end', tr: 0.12 });
-    const fav = fs.readFileSync(path.join(L.V2, 'logo/svg/fireflies_favicon_digital-negativo.svg'), 'utf8')
-      .replace(/<title>.*?<\/title>/, '').replace(/id="([^"]+)"/g, 'id="cap-$1"').replace(/url\(#([^)]+)\)/g, 'url(#cap-$1)')
-      .replace('<svg ', '<svg x="70" y="300" width="380" height="380" ');
-    b += fav;
+    b += L.emb('fiscal-sem-letras', { x: (W - 600) / 2, y: 220, s: 600, c: C.cal, lit: C.cal, line: C.ceu });
     const tt = tit(T, 'A RETENÇÃO DE 4,65% **TEM DATA PARA MUDAR.**', { s: 78, w: 1020, x: M, y: 990 });
     b += tt.svg;
     b += txt(T, 'Em 01/01/2027, ela cai para 1%. E não é a única mudança no condomínio até 2033.', { w: 1000, x: M, y: tt.y + 92 }).svg;
     b += fio(T, H - 130);
-    b += logo('horizontal', 'mono-branco', { w: 250, x: M - 22, y: H - 118 }).svg;
+    b += logo('horizontal', 'digital-negativo', { w: 250, x: M - 22, y: H - 118 }).svg;
     b += t('ARRASTE →', { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: T.mute, a: 'end', tr: 0.12 });
     salvar(1, 'capa', T, b, 'capa');
   }
@@ -562,8 +557,7 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
     b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 18, x: W / 2, y: 824, fill: C.fumaca, a: 'middle', tr: 0.12 });
     const tt = tit(T, 'E NA SUA **CARTEIRA?**', { s: 84, w: 1020, x: M, y: 960 });
     b += tt.svg;
-    b += txt(T, 'A gente levanta os prestadores de cada condomínio e deixa as retenções prontas para 2027 e 2028.', { w: 1000, x: M, y: tt.y + 84 }).svg;
-    b += t('WHATSAPP +55 11 98245-0527', { f: 'mono5', s: 28, x: M, y: tt.y + 250, fill: C.vermelhao, tr: 0.1 });
+    b += txt(T, 'A gente levanta os prestadores de cada condomínio e deixa as retenções prontas para 2027 e 2028. **Fale com a gente.**', { w: 1000, x: M, y: tt.y + 84 }).svg;
     b += rodape(T, SITE);
     salvar(5, 'chamada', T, b, 'chamada');
   }
