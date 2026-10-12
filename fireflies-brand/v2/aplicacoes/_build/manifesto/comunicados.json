@@ -61,5 +61,85 @@
   "print": false,
   "bleed": 0,
   "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-01-capa_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-02-tres-datas_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-03-pcc-csll_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-04-inss_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-05-iss_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-06-nao-muda_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-07-checklist_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-08-chamada_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
+  "png": true
  }
 ]

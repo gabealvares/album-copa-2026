@@ -77,7 +77,7 @@ Conteúdo informativo, baseado nas normas publicadas até 07/10/2026. Não subst
 
 ### PCC vira CSLL de 1% em 2027
 
-A Lei Complementar nº 214/2025 (art. 509) reescreveu a regra da retenção. A partir de 01/01/2027, o PIS e a Cofins deixam de existir (no lugar entra a CBS) e saem da retenção. A lista de serviços continua a mesma: limpeza, conservação, manutenção, vigilância, serviços profissionais.
+A Lei Complementar nº 214/2025 (art. 509) reescreveu a regra da retenção (arts. 30 e 31 da Lei nº 10.833/2003). A partir de 01/01/2027, o PIS e a Cofins deixam de existir (no lugar entra a CBS) e saem da retenção. A lista de serviços continua a mesma: limpeza, conservação, manutenção, vigilância, serviços profissionais.
 
 **O que decide é o dia do pagamento**, não o dia da nota:
 
@@ -99,7 +99,7 @@ A Emenda Constitucional nº 132/2023 fixou o calendário: o ISS é cobrado norma
 
 ### O condomínio não retém CBS nem IBS
 
-O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de CBS pelo condomínio que contrata serviços. O condomínio, em regra, nem é contribuinte desses impostos: só passa a ser se optar pelo regime regular ou se as cotas condominiais forem menos de 80% da receita.
+O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de CBS pelo condomínio que contrata serviços. O condomínio, em regra, nem é contribuinte desses impostos. As cotas condominiais só são tributadas se o condomínio optar pelo regime regular. Sem essa opção, se as cotas forem menos de 80% da receita total, o condomínio passa a recolher apenas sobre as operações com terceiros (como a locação de espaços), e não sobre as cotas.
 
 ---
 
@@ -156,7 +156,7 @@ Obras que atravessam a virada de 2027 para 2028 precisam ter essa diferença pre
 ## 07 · Fontes {#s07}
 
 [bloco: fontes]
-1. Lei Complementar nº 214/2025 – art. 26 (condomínio), arts. 31 a 36 (split payment) e art. 509 (retenção a partir de 2027)
+1. Lei Complementar nº 214/2025 – art. 26 (condomínio), arts. 31 a 36 (split payment) e art. 509 (nova redação dos arts. 30 e 31 da Lei nº 10.833/2003, retenção a partir de 2027)
 2. Lei nº 10.833/2003 – arts. 30 a 36 (retenção de PIS, Cofins e CSLL)
 3. Decreto nº 12.955/2026 – Regulamento da CBS (art. 25: condomínio; arts. 28 a 35: split payment)
 4. Lei nº 14.973/2024 – reoneração gradual da folha (fim da CPRB em 2028)

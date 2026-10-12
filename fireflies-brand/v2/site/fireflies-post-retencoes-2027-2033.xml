@@ -360,7 +360,7 @@
 <h3 class="wp-block-heading">PCC vira CSLL de 1% em 2027</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>A Lei Complementar nº 214/2025 (art. 509) reescreveu a regra da retenção. A partir de 01/01/2027, o PIS e a Cofins deixam de existir (no lugar entra a CBS) e saem da retenção. A lista de serviços continua a mesma: limpeza, conservação, manutenção, vigilância, serviços profissionais.</p>
+<p>A Lei Complementar nº 214/2025 (art. 509) reescreveu a regra da retenção (arts. 30 e 31 da Lei nº 10.833/2003). A partir de 01/01/2027, o PIS e a Cofins deixam de existir (no lugar entra a CBS) e saem da retenção. A lista de serviços continua a mesma: limpeza, conservação, manutenção, vigilância, serviços profissionais.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph -->
 <p><strong>O que decide é o dia do pagamento</strong>, não o dia da nota:</p>
@@ -387,7 +387,7 @@
 <h3 class="wp-block-heading">O condomínio não retém CBS nem IBS</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph -->
-<p>O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de CBS pelo condomínio que contrata serviços. O condomínio, em regra, nem é contribuinte desses impostos: só passa a ser se optar pelo regime regular ou se as cotas condominiais forem menos de 80% da receita.</p>
+<p>O regulamento da CBS (Decreto nº 12.955, de 29/04/2026) não cria retenção de CBS pelo condomínio que contrata serviços. O condomínio, em regra, nem é contribuinte desses impostos: as cotas condominiais só são tributadas se o condomínio optar pelo regime regular. Sem essa opção, se as cotas forem menos de 80% da receita total, o condomínio passa a recolher apenas sobre as operações com terceiros (como a locação de espaços), e não sobre as cotas.</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"anchor":"s04"} -->
 <h2 id="s04" class="wp-block-heading">04 · O que ainda falta regulamentar e os cenários</h2>
@@ -483,7 +483,7 @@
 <!-- wp:list {"ordered":true,"className":"is-style-fontes"} -->
 <ol class="wp-block-list is-style-fontes">
 <!-- wp:list-item -->
-<li>Lei Complementar nº 214/2025 – art. 26 (condomínio), arts. 31 a 36 (split payment) e art. 509 (retenção a partir de 2027)</li>
+<li>Lei Complementar nº 214/2025 – art. 26 (condomínio), arts. 31 a 36 (split payment) e art. 509 (nova redação dos arts. 30 e 31 da Lei nº 10.833/2003, retenção a partir de 2027)</li>
 <!-- /wp:list-item -->
 <!-- wp:list-item -->
 <li>Lei nº 10.833/2003 – arts. 30 a 36 (retenção de PIS, Cofins e CSLL)</li>
