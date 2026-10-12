@@ -428,4 +428,85 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
     salvar(8, 'chamada', b, 'chamada final');
   }
 }
+
+// 4 · Carrossel curto de retenções: chamada para o artigo (4 cards, tópicos que levam às seções do post 14)
+{
+  const W = 1200, H = 1500, M = 90, N = 4;
+  const foto = path.join(__dirname, 'fotos/gabriel-alvares.jpg');
+  const PDF = DIR + 'linkedin-carrossel-retencoes-curto_4-paginas';
+  const topo = (n) => eyebrow(M, 140, 'Reforma tributária · Retenções')
+    + t(`${n}/${N}`, { f: 'mono5', s: 22, x: W - M, y: 140, fill: C.fumaca, a: 'end', tr: 0.1 });
+  const rodape = (seta = true) => line(M, H - 130, W - M, H - 130, C.fuligem, 1.5)
+    + logo('wordmark', 'digital-negativo', { w: 190, x: M, y: H - 100 }).svg
+    + t(seta ? 'ARRASTE →' : SITE, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: seta ? C.ceu : C.fumaca, a: 'end', tr: seta ? 0.12 : 0.04 });
+  const salvar = (n, nome, b, tit) => L.save(DIR + `linkedin-carrossel-retencoes-curto-${String(n).padStart(2, '0')}-${nome}_1200x1500`, { w: W, h: H, bg: C.anil, body: b, pdf: PDF, title: `LinkedIn · carrossel curto retenções ${n}/${N} · ${tit}` });
+  // tópicos: estrela (marcador da constelação) + texto curto + seção do artigo à direita
+  const topicos = (itens, y0) => {
+    let b = '', y = y0;
+    itens.forEach(([txt, sec]) => {
+      b += line(M, y, W - M, y, C.fuligem, 1.5);
+      b += `<circle cx="${M + 12}" cy="${y + 72}" r="9" fill="${C.cal}"/>`;
+      b += corpo(txt, { s: 40, lh: 50, w: 800, x: M + 56, y: y + 86, fill: C.cal, bfill: C.vermelhao, bf: 'sans6' }).svg;
+      b += t(sec, { f: 'mono5', s: 20, x: W - M, y: y + 82, fill: C.ceu, a: 'end', tr: 0.12 });
+      y += 200;
+    });
+    return b + line(M, y, W - M, y, C.fuligem, 1.5);
+  };
+
+  // 1 · capa
+  {
+    let b = topo(1);
+    b += retrato(foto, { cx: W / 2, cy: 500, r: 230 });
+    const tt = titulo('RETENÇÕES DO CONDOMÍNIO: **O QUE MUDA ATÉ 2033.**', { s: 76, w: 1020, x: M, y: 930 });
+    b += tt.svg;
+    b += corpo('Três datas, uma regra que pesa já em dezembro e o que continua igual.', { s: 34, lh: 46, w: 1000, x: M, y: tt.y + 90 }).svg;
+    b += rodape();
+    salvar(1, 'capa', b, 'capa');
+  }
+
+  // 2 · as mudanças
+  {
+    let b = topo(2);
+    const tt = titulo('NO ARTIGO, **O QUE MUDA:**', { s: 80, w: 1020, x: M, y: 300 });
+    b += tt.svg;
+    b += topicos([
+      ['PCC de 4,65% vira **CSLL de 1%** em 2027', 'SEÇÃO 03'],
+      ['INSS de 3,5% volta a **11%** em 2028', 'SEÇÃO 03'],
+      ['ISS diminui e **acaba em 2033**', 'SEÇÃO 03'],
+      ['Por que **a data do pagamento** decide tudo', 'SEÇÃO 03'],
+    ], tt.y + 110);
+    b += rodape();
+    salvar(2, 'o-que-muda', b, 'o que muda');
+  }
+
+  // 3 · o que mais tem
+  {
+    let b = topo(3);
+    const tt = titulo('E TAMBÉM **NO ARTIGO:**', { s: 80, w: 1020, x: M, y: 300 });
+    b += tt.svg;
+    b += topicos([
+      ['O que **não muda** com a reforma', 'SEÇÃO 01'],
+      ['O que ainda **falta regulamentar**', 'SEÇÃO 04'],
+      ['**Exemplos em reais**: limpeza e obra', 'SEÇÃO 05'],
+      ['**Checklist** do que fazer agora', 'SEÇÃO 06'],
+    ], tt.y + 110);
+    b += rodape();
+    salvar(3, 'tambem-no-artigo', b, 'também no artigo');
+  }
+
+  // 4 · chamada
+  {
+    let b = topo(4);
+    const tt = titulo('LEIA O ARTIGO **COMPLETO.**', { s: 96, w: 1020, x: M, y: 360 });
+    b += tt.svg;
+    b += corpo('Uma tabela só com cada retenção do condomínio, hoje e nos próximos anos, com as fontes de cada regra.', { s: 36, lh: 50, w: 1000, x: M, y: tt.y + 100 }).svg;
+    b += line(M, tt.y + 330, W - M, tt.y + 330, C.fuligem, 1.5);
+    b += t('LINK NO PRIMEIRO COMENTÁRIO', { f: 'mono5', s: 26, x: M, y: tt.y + 410, fill: C.vermelhao, tr: 0.12 });
+    b += t('fireflies.com.br/blog', { f: 'sora7', s: 56, x: M, y: tt.y + 500, fill: C.cal });
+    b += line(M, tt.y + 570, W - M, tt.y + 570, C.fuligem, 1.5);
+    b += corpo('**Quer as retenções da sua carteira prontas para cada ano?** Fale com a gente.', { s: 32, lh: 44, w: 1000, x: M, y: tt.y + 660 }).svg;
+    b += rodape(false);
+    salvar(4, 'chamada', b, 'chamada');
+  }
+}
 L.flush('comunicados');

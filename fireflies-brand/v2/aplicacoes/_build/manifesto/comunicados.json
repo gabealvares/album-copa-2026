@@ -141,5 +141,45 @@
   "bleed": 0,
   "pdf": "redes/linkedin-carrossel-retencoes_8-paginas",
   "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-curto-01-capa_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-curto-02-o-que-muda_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-curto-03-tambem-no-artigo_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-retencoes-curto-04-chamada_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "pdf": "redes/linkedin-carrossel-retencoes-curto_4-paginas",
+  "png": true
  }
 ]
