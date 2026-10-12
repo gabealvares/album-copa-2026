@@ -429,111 +429,143 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
   }
 }
 
-// 4 · Carrossel curto de retenções: sem link para o blog (5 cards). Uma ideia por card, um destaque por título.
+// 4 · Carrossel curto de retenções, 5 cards, sem link para o blog.
+// Um fundo da paleta por card (Anil, Cal, Branco, Rubrica, Anil) e um recurso gráfico por card:
+// favicon + constelação + logo na capa, trilha de estrelas, notas fiscais, ícone de alerta, retrato.
+// Uma luz por card: o vagalume (favicon ou retrato); nos demais, destaque em Rubrica, Vermelhão ou Âmbar no Rubrica.
 {
   const W = 1200, H = 1500, M = 90, N = 5;
   const foto = path.join(__dirname, 'fotos/gabriel-alvares.jpg');
   const PDF = DIR + 'linkedin-carrossel-retencoes-curto_5-paginas';
-  const topo = (n) => eyebrow(M, 140, 'Reforma tributária · Retenções')
-    + t(`${n}/${N}`, { f: 'mono5', s: 22, x: W - M, y: 140, fill: C.fumaca, a: 'end', tr: 0.1 });
-  const rodape = (seta = true) => line(M, H - 130, W - M, H - 130, C.fuligem, 1.5)
-    + logo('wordmark', 'digital-negativo', { w: 190, x: M, y: H - 100 }).svg
-    + t(seta ? 'ARRASTE →' : SITE, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: seta ? C.ceu : C.fumaca, a: 'end', tr: seta ? 0.12 : 0.04 });
-  const salvar = (n, nome, b, tit) => L.save(DIR + `linkedin-carrossel-retencoes-curto-${String(n).padStart(2, '0')}-${nome}_1200x1500`, { w: W, h: H, bg: C.anil, body: b, pdf: PDF, title: `LinkedIn · carrossel curto retenções ${n}/${N} · ${tit}` });
-  const fio = (y) => line(M, y, W - M, y, C.fuligem, 1.5);
-  // linhas: rótulo em Mono à esquerda + texto; uma nota no pé indica a seção do artigo
-  // empilhado = rótulo acima do texto (para rótulos longos)
-  const linhas = (itens, y0, passo, corRot, empilhado = false) => {
-    let b = '', y = y0;
-    itens.forEach(([rot, txt]) => {
-      b += fio(y);
-      b += t(rot, { f: 'mono5', s: 24, x: M, y: y + 66, fill: corRot, tr: 0.1 });
-      b += empilhado
-        ? corpo(txt, { s: 36, lh: 46, w: 1020, x: M, y: y + 122, fill: C.cal }).svg
-        : corpo(txt, { s: 36, lh: 46, w: 690, x: 420, y: y + 70, fill: C.cal }).svg;
-      y += passo;
-    });
-    return { svg: b + fio(y), y };
+  const TEMA = {
+    anil: { bg: C.anil, tx: C.cal, hl: C.vermelhao, body: C.fumaca, mute: C.ceu, fio: C.fuligem, wm: 'digital-negativo' },
+    cal: { bg: C.cal, tx: C.anil, hl: C.rubrica, body: C.fuligem, mute: C.pedra, fio: C.fumaca, wm: 'digital' },
+    branco: { bg: C.branco, tx: C.anil, hl: C.rubrica, body: C.fuligem, mute: C.pedra, fio: C.fumaca, wm: 'digital' },
+    rubrica: { bg: C.rubrica, tx: C.cal, hl: C.ambar, body: C.cal, mute: C.fumaca, fio: C.vermelhao, wm: 'mono-branco' },
   };
-  const nota = (txt, y) => t(txt, { f: 'mono4', s: 20, x: M, y, fill: C.ceu, tr: 0.1 });
+  const tit = (T, s0, o) => para(s0, { f: 'sora7', lh: o.s * 1.08, fill: T.tx, tr: 0.02, bf: 'sora7', bfill: T.hl, btr: 0.02, ...o });
+  const txt = (T, s0, o) => para(s0, { f: 'sans4', s: 34, lh: 46, fill: T.body, bf: 'sans6', bfill: T.tx, ...o });
+  const fio = (T, y) => line(M, y, W - M, y, T.fio, 1.5);
+  const topo = (T, n) => line(M, 133, M + 40, 133, T.hl === C.ambar ? C.cal : T.hl, 3)
+    + t('REFORMA TRIBUTÁRIA · RETENÇÕES', { f: 'mono5', s: 22, x: M + 56, y: 140, fill: T.mute, tr: 0.12 })
+    + t(`${n}/${N}`, { f: 'mono5', s: 22, x: W - M, y: 140, fill: T.mute, a: 'end', tr: 0.1 });
+  const rodape = (T, dir = 'ARRASTE →', wm = T.wm) => fio(T, H - 130)
+    + logo('wordmark', wm, { w: 190, x: M, y: H - 100 }).svg
+    + t(dir, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: T.mute, a: 'end', tr: 0.12 });
+  const salvar = (n, nome, T, b, t0) => L.save(DIR + `linkedin-carrossel-retencoes-curto-${String(n).padStart(2, '0')}-${nome}_1200x1500`, { w: W, h: H, bg: T.bg, body: b, pdf: PDF, title: `LinkedIn · carrossel curto retenções ${n}/${N} · ${t0}` });
 
-  // 1 · capa
+  // 1 · capa (Anil): favicon Arco voando em direção à constelação Fiscal; logo horizontal em mono-branco
   {
-    let b = topo(1);
-    b += retrato(foto, { cx: W / 2, cy: 500, r: 230 });
-    const tt = titulo('A RETENÇÃO DE 4,65% **TEM DATA PARA MUDAR.**', { s: 76, w: 1020, x: M, y: 930 });
+    const T = TEMA.anil;
+    const pt = L.padrao('campo-estrelas-escuro', { lit: C.ceu, k: 1.4 });
+    let b = rect(0, 0, W, H, pt.fill, ' opacity=".45"');
+    b += topo(T, 1);
+    b += L.emb('fiscal-sem-letras', { x: 560, y: 230, s: 540, c: C.cal, lit: C.cal, line: C.ceu });
+    b += t('LIBRA FISCI · A CONSTELAÇÃO DO FISCAL', { f: 'mono4', s: 18, x: 1110, y: 810, fill: C.ceu, a: 'end', tr: 0.12 });
+    const fav = fs.readFileSync(path.join(L.V2, 'logo/svg/fireflies_favicon_digital-negativo.svg'), 'utf8')
+      .replace(/<title>.*?<\/title>/, '').replace(/id="([^"]+)"/g, 'id="cap-$1"').replace(/url\(#([^)]+)\)/g, 'url(#cap-$1)')
+      .replace('<svg ', '<svg x="70" y="300" width="380" height="380" ');
+    b += fav;
+    const tt = tit(T, 'A RETENÇÃO DE 4,65% **TEM DATA PARA MUDAR.**', { s: 78, w: 1020, x: M, y: 990 });
     b += tt.svg;
-    b += corpo('Em 01/01/2027, ela cai para 1%. E não é a única mudança no condomínio até 2033.', { s: 34, lh: 46, w: 1000, x: M, y: tt.y + 90 }).svg;
-    b += rodape();
-    salvar(1, 'capa', b, 'capa');
+    b += txt(T, 'Em 01/01/2027, ela cai para 1%. E não é a única mudança no condomínio até 2033.', { w: 1000, x: M, y: tt.y + 92 }).svg;
+    b += fio(T, H - 130);
+    b += logo('horizontal', 'mono-branco', { w: 250, x: M - 22, y: H - 118 }).svg;
+    b += t('ARRASTE →', { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: T.mute, a: 'end', tr: 0.12 });
+    salvar(1, 'capa', T, b, 'capa');
   }
 
-  // 2 · o calendário
+  // 2 · calendário (Cal): trilha de estrelas que cresce até 2033
   {
-    let b = topo(2);
-    const tt = titulo('O CALENDÁRIO **ATÉ 2033.**', { s: 84, w: 1020, x: M, y: 300 });
+    const T = TEMA.cal;
+    let b = topo(T, 2);
+    const tt = tit(T, 'O CALENDÁRIO **ATÉ 2033.**', { s: 88, w: 860, x: M, y: 300 });
     b += tt.svg;
-    const l = linhas([
-      ['2027', 'PIS, Cofins e CSLL retidos: de 4,65% para 1%, só de CSLL'],
-      ['2028', 'INSS de empresa desonerada: de 3,5% para 11%'],
-      ['2029 A 2032', 'ISS menor a cada ano'],
-      ['2033', 'Fim do ISS e da retenção dele'],
-    ], tt.y + 110, 170, C.vermelhao);
-    b += l.svg;
-    b += nota('DATAS JÁ DEFINIDAS EM LEI', l.y + 70);
-    b += rodape();
-    salvar(2, 'calendario', b, 'calendário');
-  }
-
-  // 3 · em aberto
-  {
-    let b = topo(4);
-    const tt = titulo('O QUE **AINDA NÃO SABEMOS.**', { s: 84, w: 1020, x: M, y: 300 });
-    b += tt.svg;
-    const l = linhas([
-      ['A CONFIRMAR', 'Notas de até R$ 1.000,00 sem retenção em 2027, se o piso de R$ 10,00 continuar'],
-      ['FALTA REGULAMENTAR', 'O código de DARF da CSLL de 1%'],
-      ['CENÁRIO', 'Quando o split payment passa a ser obrigatório'],
-    ], tt.y + 110, 230, C.ceu, true);
-    b += l.svg;
-    b += nota('SEGUIMOS ACOMPANHANDO CADA PONTO', l.y + 70);
-    b += rodape();
-    salvar(4, 'em-aberto', b, 'o que ainda não sabemos');
-  }
-
-  // 3 · o dia do pagamento
-  {
-    let b = topo(3);
-    const tt = titulo('O DIA DO PAGAMENTO **DECIDE A ALÍQUOTA.**', { s: 80, w: 1020, x: M, y: 300 });
-    b += tt.svg;
-    b += corpo('Não importa a data da nota. A retenção segue a regra do dia em que o condomínio paga.', { s: 36, lh: 48, w: 1000, x: M, y: tt.y + 100 }).svg;
-    const lin = [['NOTA DE DEZEMBRO', 'PAGA EM DEZEMBRO', '4,65%'], ['NOTA DE DEZEMBRO', 'PAGA EM JANEIRO', '1%']];
-    let y = tt.y + 290;
-    lin.forEach(([a0, p0, v], k) => {
-      b += fio(y);
-      b += t(a0, { f: 'mono5', s: 22, x: M, y: y + 70, fill: C.fumaca, tr: 0.1 });
-      b += t(p0, { f: 'mono5', s: 22, x: M, y: y + 108, fill: C.ceu, tr: 0.1 });
-      b += t(v, { f: 'sora7', s: 88, x: W - M, y: y + 116, fill: k ? C.vermelhao : C.cal, a: 'end' });
-      y += 170;
+    b += L.icon('calendario', { x: W - M - 120, y: 205, s: 120, c: C.anil });
+    const anos = [
+      ['2027', 'PIS, Cofins e CSLL retidos passam de 4,65% para 1%, só de CSLL.', 7],
+      ['2028', 'O INSS de empresa desonerada sobe de 3,5% para 11%.', 9],
+      ['2029 A 2032', 'O ISS fica menor a cada ano.', 11],
+      ['2033', 'O ISS acaba, e a retenção dele também.', 15],
+    ];
+    const x0 = M + 22, y0 = tt.y + 140, passo = 195;
+    b += line(x0, y0, x0, y0 + passo * (anos.length - 1), C.ceu, 2.5);
+    anos.forEach(([a, d, r], k) => {
+      const y = y0 + passo * k;
+      b += L.circle(x0, y, r, k === anos.length - 1 ? C.rubrica : C.anil);
+      b += t(a, { f: 'mono5', s: 26, x: M + 90, y: y + 9, fill: C.rubrica, tr: 0.1 });
+      b += txt(T, d, { s: 36, lh: 46, w: 900, x: M + 90, y: y + 62, fill: C.anil }).svg;
     });
-    b += fio(y);
-    b += corpo('Vale separar agora quais notas de dezembro de 2026 vão ser pagas só em janeiro.', { s: 32, lh: 44, w: 1000, x: M, y: y + 80 }).svg;
-    b += rodape();
-    salvar(3, 'dia-do-pagamento', b, 'o dia do pagamento');
+    b += t('DATAS JÁ DEFINIDAS EM LEI', { f: 'mono5', s: 20, x: M, y: H - 190, fill: T.mute, tr: 0.12 });
+    b += rodape(T);
+    salvar(2, 'calendario', T, b, 'calendário');
   }
 
-  // 5 · chamada (sem link): o retrato traz a única luz do card
+  // 3 · dia do pagamento (Branco, retícula clara): duas notas lado a lado
   {
-    let b = topo(5);
+    const T = TEMA.branco;
+    const pt = L.padrao('reticula-celeste-claro', { lit: C.ceu, k: 1.6 });
+    let b = rect(0, 0, W, H, pt.fill, ' opacity=".5"');
+    b += topo(T, 3);
+    const tt = tit(T, 'O DIA DO PAGAMENTO **DECIDE A ALÍQUOTA.**', { s: 80, w: 1020, x: M, y: 300 });
+    b += tt.svg;
+    b += txt(T, 'A data da nota não importa. Vale a regra do dia em que o condomínio paga.', { w: 1000, x: M, y: tt.y + 96 }).svg;
+    const cw = 485, ch = 560, cy = tt.y + 230;
+    [['PAGA EM DEZEMBRO', '4,65%', C.anil], ['PAGA EM JANEIRO', '1%', C.rubrica]].forEach(([q, v, cor], k) => {
+      const x = M + k * (cw + 50);
+      b += `<rect x="${x}" y="${cy}" width="${cw}" height="${ch}" rx="10" fill="${C.branco}" stroke="${cor}" stroke-width="${k ? 4 : 2}"/>`;
+      b += L.icon('nota-fiscal', { x: x + 40, y: cy + 44, s: 84, c: cor });
+      b += t('NOTA DE DEZEMBRO', { f: 'mono5', s: 22, x: x + 40, y: cy + 200, fill: C.pedra, tr: 0.1 });
+      b += t(q, { f: 'mono5', s: 22, x: x + 40, y: cy + 240, fill: cor, tr: 0.1 });
+      b += line(x + 40, cy + 290, x + cw - 40, cy + 290, C.fumaca, 1.5);
+      b += t('RETENÇÃO', { f: 'mono4', s: 20, x: x + 40, y: cy + 350, fill: C.pedra, tr: 0.12 });
+      b += t(v, { f: 'sora7', s: 120, x: x + 34, y: cy + 490, fill: cor });
+    });
+    b += txt(T, 'Vale separar agora as notas de dezembro de 2026 que vão ser pagas só em janeiro.', { s: 30, lh: 42, w: 1000, x: M, y: cy + ch + 80 }).svg;
+    b += rodape(T);
+    salvar(3, 'dia-do-pagamento', T, b, 'o dia do pagamento');
+  }
+
+  // 4 · em aberto (Rubrica): ícone de alerta e três perguntas
+  {
+    const T = TEMA.rubrica;
+    let b = topo(T, 4);
+    b += L.icon('alerta', { x: W - M - 130, y: 210, s: 130, c: C.cal });
+    const tt = tit(T, 'O QUE **AINDA NÃO SABEMOS.**', { s: 88, w: 860, x: M, y: 300 });
+    b += tt.svg;
+    const itens = [
+      ['A CONFIRMAR', 'Notas de até R$ 1.000,00 sem retenção em 2027, se o piso de R$ 10,00 continuar.'],
+      ['FALTA REGULAMENTAR', 'O código de DARF da CSLL de 1%.'],
+      ['CENÁRIO', 'Quando o split payment passa a ser obrigatório.'],
+    ];
+    let y = tt.y + 120;
+    itens.forEach(([r0, d]) => {
+      b += fio(T, y);
+      const w = L.measure(r0, 'mono5', 20, 0.12) + 36;
+      b += `<rect x="${M}" y="${y + 40}" width="${L.n2(w)}" height="44" rx="22" fill="none" stroke="${C.cal}" stroke-width="2"/>`;
+      b += t(r0, { f: 'mono5', s: 20, x: M + 18, y: y + 70, fill: C.cal, tr: 0.12 });
+      b += txt(T, d, { s: 36, lh: 46, w: 1020, x: M, y: y + 150 }).svg;
+      y += 260;
+    });
+    b += fio(T, y);
+    b += t('SEGUIMOS ACOMPANHANDO CADA PONTO', { f: 'mono5', s: 20, x: M, y: y + 70, fill: T.mute, tr: 0.12 });
+    b += rodape(T);
+    salvar(4, 'em-aberto', T, b, 'o que ainda não sabemos');
+  }
+
+  // 5 · chamada (Anil): a única foto do carrossel, com a órbita
+  {
+    const T = TEMA.anil;
+    let b = topo(T, 5);
     b += retrato(foto, { cx: W / 2, cy: 470, r: 200 });
     b += t('Gabriel Alvares', { f: 'sans6', s: 30, x: W / 2, y: 790, fill: C.cal, a: 'middle' });
     b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 18, x: W / 2, y: 824, fill: C.fumaca, a: 'middle', tr: 0.12 });
-    const tt = titulo('E NA SUA **CARTEIRA?**', { s: 84, w: 1020, x: M, y: 960 });
+    const tt = tit(T, 'E NA SUA **CARTEIRA?**', { s: 84, w: 1020, x: M, y: 960 });
     b += tt.svg;
-    b += corpo('A gente levanta os prestadores de cada condomínio e deixa as retenções prontas para 2027 e 2028.', { s: 34, lh: 46, w: 1000, x: M, y: tt.y + 84 }).svg;
+    b += txt(T, 'A gente levanta os prestadores de cada condomínio e deixa as retenções prontas para 2027 e 2028.', { w: 1000, x: M, y: tt.y + 84 }).svg;
     b += t('WHATSAPP +55 11 98245-0527', { f: 'mono5', s: 28, x: M, y: tt.y + 250, fill: C.vermelhao, tr: 0.1 });
-    b += rodape(false);
-    salvar(5, 'chamada', b, 'chamada');
+    b += rodape(T, SITE);
+    salvar(5, 'chamada', T, b, 'chamada');
   }
 }
 L.flush('comunicados');
