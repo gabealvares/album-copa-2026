@@ -214,4 +214,171 @@ function retrato(foto, { cx, cy, r, zoom = 1.12, fx = 0.5, fy = 0.47 }) {
     salvar(6, 'chamada', b, 'chamada final');
   }
 }
+
+// 3 · Carrossel "o que o governo anunciou sobre a NFS-e dos condomínios" (coletiva de 11/11/2026) --------
+// Separa o que já é oficial (nova data, Ato Conjunto RFB/CGIBS nº 7) do que foi só anunciado (regra dos 20%).
+{
+  const W = 1200, H = 1500, M = 90, N = 6;
+  const foto = path.join(__dirname, 'fotos/gabriel-alvares.jpg');
+  const topo = (n) => eyebrow(M, 140, 'Reforma tributária · NFS-e')
+    + t(`${n}/${N}`, { f: 'mono5', s: 22, x: W - M, y: 140, fill: C.fumaca, a: 'end', tr: 0.1 });
+  const rodape = (comLogoHorizontal, seta = true) => {
+    let r = line(M, H - 130, W - M, H - 130, C.fuligem, 1.5);
+    r += comLogoHorizontal
+      ? logo('horizontal', 'digital-negativo', { w: 250, x: M - 22, y: H - 118 }).svg
+      : logo('wordmark', 'digital-negativo', { w: 190, x: M, y: H - 100 }).svg;
+    r += t(seta ? 'ARRASTE →' : SITE, { f: 'mono4', s: 22, x: W - M, y: H - 72, fill: seta ? C.ceu : C.fumaca, a: 'end', tr: seta ? 0.12 : 0.04 });
+    return r;
+  };
+  // selo de status: OFICIAL (Céu, contorno) ou ANUNCIADO (Vermelhão, contorno)
+  const selo = (txt, x, y, cor) => {
+    const w = txt.length * 15.5 + 40;
+    return `<rect x="${x}" y="${y - 30}" width="${w}" height="44" fill="none" stroke="${cor}" stroke-width="2"/>`
+      + t(txt, { f: 'mono5', s: 20, x: x + 20, y: y, fill: cor, tr: 0.12 });
+  };
+  const salvar = (n, nome, b, titulo) => L.save(DIR + `linkedin-carrossel-nfse-coletiva-${String(n).padStart(2, '0')}-${nome}_1200x1500`, { w: W, h: H, bg: C.anil, body: b, title: `LinkedIn · carrossel NFS-e coletiva ${n}/${N} · ${titulo}` });
+  const linha = (y) => line(M, y, W - M, y, C.fuligem, 1.5);
+
+  // 1 · capa
+  {
+    let b = topo(1);
+    b += retrato(foto, { cx: 840, cy: 450, r: 215 });
+    const fy = 300;
+    b += t('NFS-E DO CONDOMÍNIO', { f: 'mono5', s: 22, x: M, y: fy, fill: C.ceu, tr: 0.1 });
+    b += t('01/01/27', { f: 'sora7', s: 88, x: M - 4, y: fy + 96, fill: C.cal });
+    b += line(M, fy + 146, M + 400, fy + 146, C.ceu, 1.5);
+    b += t('ANTES ERA', { f: 'mono5', s: 22, x: M, y: fy + 196, fill: C.ceu, tr: 0.1 });
+    b += t('01/12/2026', { f: 'sora7', s: 40, x: M, y: fy + 250, fill: C.fumaca });
+    b += line(M, fy + 236, M + 238, fy + 236, C.vermelhao, 3);
+    b += t('COLETIVA DE 11/11/2026', { f: 'mono5', s: 24, x: M, y: fy + 300, fill: C.vermelhao, tr: 0.12 });
+    b += t('Gabriel Alvares', { f: 'sans6', s: 30, x: 840, y: 780, fill: C.cal, a: 'middle' });
+    b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 18, x: 840, y: 814, fill: C.fumaca, a: 'middle', tr: 0.12 });
+    const tt = titulo('O QUE O GOVERNO ANUNCIOU SOBRE A **NFS-E DOS CONDOMÍNIOS.**', { s: 66, w: 1020, x: M, y: 920 });
+    b += tt.svg;
+    b += corpo('Ministério da Fazenda e Receita Federal falaram sobre o Programa de Conformidade. Separamos **o que já é oficial** do que **ainda depende de publicação**.', { s: 32, lh: 44, w: 1000, x: M, y: tt.y + 80 }).svg;
+    b += rodape(false);
+    salvar(1, 'capa', b, 'capa');
+  }
+
+  // 2 · nova data (oficial)
+  {
+    let b = topo(2);
+    b += selo('OFICIAL', M, 250, C.ceu);
+    const tt = titulo('NOVA DATA: **01/01/2027.**', { s: 92, w: 1020, x: M, y: 380 });
+    b += tt.svg;
+    const it = [
+      ['ANTES', '01/12/2026', 'Data do Ato Conjunto nº 4/2026.'],
+      ['AGORA', '01/01/2027', 'Ato Conjunto RFB/CGIBS **nº 7**, de 11/11/2026, publicado no DOU em 13/11/2026.'],
+    ];
+    let y = tt.y + 90;
+    it.forEach(([rot, data, txt]) => {
+      b += linha(y);
+      b += t(rot, { f: 'mono5', s: 22, x: M, y: y + 62, fill: rot === 'AGORA' ? C.vermelhao : C.ceu, tr: 0.1 });
+      b += t(data, { f: 'sora7', s: 56, x: M, y: y + 138, fill: rot === 'AGORA' ? C.cal : C.fumaca });
+      b += corpo(txt, { s: 30, lh: 41, w: 600, x: 510, y: y + 70 }).svg;
+      y += 200;
+    });
+    b += linha(y);
+    b += t('VALE PARA A NOTA FISCAL NA COBRANÇA DE', { f: 'mono5', s: 22, x: M, y: y + 70, fill: C.ceu, tr: 0.1 });
+    b += corpo('**Taxas e demais receitas do condomínio**, nas **locações** e nos **arrendamentos**.', { s: 36, lh: 48, w: 1020, x: M, y: y + 130 }).svg;
+    b += rodape(true);
+    salvar(2, 'nova-data', b, 'nova data');
+  }
+
+  // 3 · a regra dos 20% (anunciada)
+  {
+    let b = topo(3);
+    b += selo('ANUNCIADO · AINDA NÃO PUBLICADO', M, 250, C.vermelhao);
+    const tt = titulo('NOTA SÓ ACIMA DE **20% DE OUTRAS RECEITAS.**', { s: 76, w: 1020, x: M, y: 380 });
+    b += tt.svg;
+    b += corpo('Na coletiva, o secretário especial da Receita, Robinson Barreirinhas, disse que o condomínio, em geral, **não terá obrigação na transição**.', { s: 32, lh: 44, w: 1020, x: M, y: tt.y + 80 }).svg;
+    // barra: receita total do condomínio, marca de 20%
+    const by = tt.y + 290, bw = W - 2 * M, bh = 90, x20 = M + bw * 0.8;
+    b += t('RECEITA TOTAL DO CONDOMÍNIO', { f: 'mono5', s: 20, x: M, y: by - 24, fill: C.ceu, tr: 0.1 });
+    b += rect(M, by, bw * 0.8, bh, C.profundo, ` stroke="${C.ceu}" stroke-width="1.5"`);
+    b += `<rect x="${x20}" y="${by}" width="${bw * 0.2}" height="${bh}" fill="none" stroke="${C.vermelhao}" stroke-width="2" stroke-dasharray="6 6"/>`;
+    b += t('Taxa condominial', { f: 'sans5', s: 30, x: M + 28, y: by + 56, fill: C.cal });
+    b += t('20%', { f: 'sora7', s: 40, x: x20 + bw * 0.1, y: by + 60, fill: C.vermelhao, a: 'middle' });
+    b += t('OUTRAS RECEITAS', { f: 'mono5', s: 18, x: W - M, y: by + bh + 36, fill: C.vermelhao, a: 'end', tr: 0.1 });
+    b += corpo('**Outras receitas** são as que vão além da taxa: aluguel de espaços, antenas, lojas no térreo. Pelo anúncio, só emite nota quem **passar de 20%** da receita total.', { s: 32, lh: 44, w: 1020, x: M, y: by + bh + 110 }).svg;
+    b += rodape(true);
+    salvar(3, 'regra-20', b, 'regra dos 20%');
+  }
+
+  // 4 · transição sem punição + o que vem por aí
+  {
+    let b = topo(4);
+    const tt = titulo('2027: TRANSIÇÃO **SEM PUNIÇÃO** PARA ERRO DE BOA-FÉ.', { s: 72, w: 1020, x: M, y: 280 });
+    b += tt.svg;
+    const itens = ['Assistência na emissão dos documentos', 'Correção preventiva dos erros', 'Sem penalidade para erro de boa-fé'];
+    let y = tt.y + 90;
+    itens.forEach((txt, i) => {
+      b += linha(y);
+      b += t(String(i + 1).padStart(2, '0'), { f: 'mono5', s: 22, x: M, y: y + 64, fill: C.vermelhao, tr: 0.1 });
+      b += t(txt, { f: 'sans5', s: 36, x: M + 72, y: y + 66, fill: C.cal });
+      y += 104;
+    });
+    b += linha(y);
+    y += 120;
+    b += t('A CAMINHO', { f: 'mono5', s: 22, x: M, y, fill: C.ceu, tr: 0.12 });
+    const prox = [
+      ['ESTA SEMANA', 'Nova versão dos **regulamentos do IBS e da CBS**.'],
+      ['ATÉ O INÍCIO DE DEZEMBRO', '**Normas complementares**: atos conjuntos da Receita e do Comitê Gestor do IBS.'],
+    ];
+    y += 40;
+    prox.forEach(([quando, txt]) => {
+      b += linha(y);
+      b += t(quando, { f: 'mono5', s: 20, x: M, y: y + 58, fill: C.ceu, tr: 0.1 });
+      b += corpo(txt, { s: 32, lh: 44, w: 1020, x: M, y: y + 108 }).svg;
+      y += 180;
+    });
+    b += rodape(true);
+    salvar(4, 'transicao', b, 'transição sem punição');
+  }
+
+  // 5 · o que já vale e o que falta
+  {
+    let b = topo(5);
+    const tt = titulo('O QUE JÁ VALE E **O QUE FALTA SAIR.**', { s: 76, w: 1020, x: M, y: 280 });
+    b += tt.svg;
+    let y = tt.y + 90;
+    b += linha(y);
+    b += selo('OFICIAL', M, y + 74, C.ceu);
+    b += corpo('**Nova data: 01/01/2027.** Até a dispensa ser publicada, vale a obrigação de emitir nos termos do Ato Conjunto nº 4/2026.', { s: 30, lh: 42, w: 700, x: 410, y: y + 64 }).svg;
+    y += 190;
+    b += linha(y);
+    b += selo('FALTA SAIR', M, y + 74, C.vermelhao);
+    const falta = [
+      'A dispensa para quem tem até 20% de outras receitas',
+      'Como os 20% serão medidos: por mês, por ano?',
+      'Quais receitas entram no cálculo',
+      'Que documentos o condomínio dispensado guarda',
+    ];
+    let yy = y + 64;
+    falta.forEach((txt, i) => {
+      const c = corpo(txt, { s: 30, lh: 40, w: 700, x: 410, y: yy });
+      b += t('—', { f: 'mono5', s: 26, x: 370, y: yy, fill: C.vermelhao });
+      b += c.svg;
+      yy = c.y + 62;
+    });
+    y = yy + 20;
+    b += linha(y);
+    b += corpo('**Consulta de 13/11/2026, 12h.** Atualizamos assim que os atos forem publicados.', { s: 28, lh: 40, w: 1020, x: M, y: y + 66 }).svg;
+    b += rodape(true);
+    salvar(5, 'vale-e-falta', b, 'o que vale e o que falta');
+  }
+
+  // 6 · chamada final
+  {
+    let b = topo(6);
+    b += retrato(foto, { cx: W / 2, cy: 470, r: 200 });
+    b += t('Gabriel Alvares', { f: 'sans6', s: 30, x: W / 2, y: 790, fill: C.cal, a: 'middle' });
+    b += t('CONTADOR RESPONSÁVEL', { f: 'mono4', s: 18, x: W / 2, y: 824, fill: C.fumaca, a: 'middle', tr: 0.12 });
+    const tt = titulo('USE O MÊS EXTRA **PARA SE PREPARAR.**', { s: 76, w: 1020, x: M, y: 950 });
+    b += tt.svg;
+    b += corpo('Mais um mês não é dispensa. Meça as **outras receitas** de cada condomínio e mantenha o **cadastro das unidades** em dia. Os links oficiais estão no texto do post.', { s: 32, lh: 44, w: 1000, x: M, y: tt.y + 80 }).svg;
+    b += rodape(false, false);
+    salvar(6, 'chamada', b, 'chamada final');
+  }
+}
 L.flush('comunicados');
