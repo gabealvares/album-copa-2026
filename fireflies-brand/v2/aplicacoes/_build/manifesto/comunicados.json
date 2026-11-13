@@ -61,5 +61,59 @@
   "print": false,
   "bleed": 0,
   "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-01-capa_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-02-nova-data_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-03-regra-20_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-04-transicao_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-05-vale-e-falta_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
+ },
+ {
+  "rel": "redes/linkedin-carrossel-nfse-coletiva-06-chamada_1200x1500",
+  "w": 1200,
+  "h": 1500,
+  "unit": "px",
+  "print": false,
+  "bleed": 0,
+  "png": true
  }
 ]
